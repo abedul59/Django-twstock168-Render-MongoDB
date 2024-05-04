@@ -35,7 +35,7 @@ psycopg2==2.9.1
 asgiref
 html5lib
 lxml
-djongo
+djongo==1.3.4
 pymongo==3.12.3
 dnspython
 sqlparse==0.2.4
