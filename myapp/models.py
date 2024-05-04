@@ -6571,7 +6571,7 @@ class StockFavs_jonyi(models.Model):
     cPredict_low_price_down30 = models.CharField(max_length=15) #預估未來最低價  
     
     cNew_up_profit_down30 = models.CharField(max_length=25) #預估未來往上空間
-    cNew_down_loss_down30 = models.CharField(max_length=25) #預估未來往下空間
+    cNew_down_loss_down30 = models.CharField(max_length=25,blank=True,null=True) #預估未來往下空間
 
 
     cDBURL = models.CharField(max_length=40) #  
