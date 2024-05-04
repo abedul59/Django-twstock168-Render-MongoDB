@@ -2,8 +2,8 @@ from django.db import models
 from django.contrib.auth.models import User
 
 class Person(User):
-    cName = models.CharField(max_length=20,blank=True,null=True)
-    cCellphone = models.CharField(max_length=10,blank=True,null=True, default=False)
+    cName = models.CharField(max_length=20,blank=True)
+    cCellphone = models.CharField(max_length=10,blank=True, default=False)
 
     class Meta:
         permissions = (
@@ -23,9 +23,9 @@ class Person(User):
         return self.cName
 
 class NewsUnit(models.Model):
-    catego = models.CharField(max_length=10,blank=True,null=True)
-    nickname = models.CharField(max_length=20,blank=True,null=True)
-    title = models.CharField(max_length=50,blank=True,null=True)
+    catego = models.CharField(max_length=10,blank=True)
+    nickname = models.CharField(max_length=20,blank=True)
+    title = models.CharField(max_length=50,blank=True)
     message = models.TextField(null=False)
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
@@ -47,7 +47,7 @@ class City(models.Model):
 '''
 class Stock6sta2021(models.Model):
 
-    cTime = models.CharField(max_length=10, null=True, blank=True)
+    cTime = models.CharField(max_length=10, blank=True)
     cOver3p = models.IntegerField(null=True, blank=True)
     cOver2p = models.IntegerField(null=True, blank=True)
     cOver1p = models.IntegerField(null=True, blank=True)
@@ -134,15 +134,15 @@ class USBondYieldDB(models.Model):
     
     
 class Stock6Sign(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
-    cSign1 = models.CharField(max_length=10,blank=True,null=True)
-    cSign2 = models.CharField(max_length=10,blank=True,null=True)
-    cSign3 = models.CharField(max_length=10,blank=True,null=True)
-    cSign4 = models.CharField(max_length=10,blank=True,null=True)
-    cSign5 = models.CharField(max_length=10,blank=True,null=True)
-    cSign6 = models.CharField(max_length=10,blank=True,null=True)
-    cAverageScore = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
+    cSign1 = models.CharField(max_length=10,blank=True)
+    cSign2 = models.CharField(max_length=10,blank=True)
+    cSign3 = models.CharField(max_length=10,blank=True)
+    cSign4 = models.CharField(max_length=10,blank=True)
+    cSign5 = models.CharField(max_length=10,blank=True)
+    cSign6 = models.CharField(max_length=10,blank=True)
+    cAverageScore = models.CharField(max_length=5,blank=True)
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
     press = models.IntegerField(default=0)
@@ -151,16 +151,16 @@ class Stock6Sign(models.Model):
     
 
 class Stock6Sign202005(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
-    cSign1 = models.CharField(max_length=10,blank=True,null=True)
-    cSign2 = models.CharField(max_length=10,blank=True,null=True)
-    cSign3 = models.CharField(max_length=10,blank=True,null=True)
-    cSign4 = models.CharField(max_length=10,blank=True,null=True)
-    cSign5 = models.CharField(max_length=10,blank=True,null=True)
-    cSign6 = models.CharField(max_length=10,blank=True,null=True)
-    cAverageScore = models.CharField(max_length=10,blank=True,null=True)
-    #cLossGain  = models.CharField(max_length=10,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
+    cSign1 = models.CharField(max_length=10,blank=True)
+    cSign2 = models.CharField(max_length=10,blank=True)
+    cSign3 = models.CharField(max_length=10,blank=True)
+    cSign4 = models.CharField(max_length=10,blank=True)
+    cSign5 = models.CharField(max_length=10,blank=True)
+    cSign6 = models.CharField(max_length=10,blank=True)
+    cAverageScore = models.CharField(max_length=10,blank=True)
+    #cLossGain  = models.CharField(max_length=10,blank=True)
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
     press = models.IntegerField(default=0)
@@ -169,16 +169,16 @@ class Stock6Sign202005(models.Model):
 
 
 class Stock6Sign202006(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
-    cSign1 = models.CharField(max_length=10,blank=True,null=True)
-    cSign2 = models.CharField(max_length=10,blank=True,null=True)
-    cSign3 = models.CharField(max_length=10,blank=True,null=True)
-    cSign4 = models.CharField(max_length=10,blank=True,null=True)
-    cSign5 = models.CharField(max_length=10,blank=True,null=True)
-    cSign6 = models.CharField(max_length=10,blank=True,null=True)
-    cAverageScore = models.CharField(max_length=10,blank=True,null=True)
-    cLossGain  = models.CharField(max_length=10,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
+    cSign1 = models.CharField(max_length=10,blank=True)
+    cSign2 = models.CharField(max_length=10,blank=True)
+    cSign3 = models.CharField(max_length=10,blank=True)
+    cSign4 = models.CharField(max_length=10,blank=True)
+    cSign5 = models.CharField(max_length=10,blank=True)
+    cSign6 = models.CharField(max_length=10,blank=True)
+    cAverageScore = models.CharField(max_length=10,blank=True)
+    cLossGain  = models.CharField(max_length=10,blank=True)
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
     press = models.IntegerField(default=0)
@@ -190,21 +190,21 @@ class Stock6Sign202006(models.Model):
 
 
 class Stock6Sign2020Q2(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
     
     
-    cNewestSeason = models.CharField(max_length=15,blank=True,null=True, default='')
-    cNewestRev = models.CharField(max_length=15,blank=True,null=True, default='')
+    cNewestSeason = models.CharField(max_length=15,blank=True, default='')
+    cNewestRev = models.CharField(max_length=15,blank=True, default='')
     
-    cSign1 = models.CharField(max_length=10,blank=True,null=True)
-    cSign2 = models.CharField(max_length=10,blank=True,null=True)
-    cSign3 = models.CharField(max_length=10,blank=True,null=True)
-    cSign4 = models.CharField(max_length=10,blank=True,null=True)
-    cSign5 = models.CharField(max_length=10,blank=True,null=True)
-    cSign6 = models.CharField(max_length=10,blank=True,null=True)
-    cAverageScore = models.CharField(max_length=10,blank=True,null=True)
-    cLossGain  = models.CharField(max_length=10,blank=True,null=True)
+    cSign1 = models.CharField(max_length=10,blank=True)
+    cSign2 = models.CharField(max_length=10,blank=True)
+    cSign3 = models.CharField(max_length=10,blank=True)
+    cSign4 = models.CharField(max_length=10,blank=True)
+    cSign5 = models.CharField(max_length=10,blank=True)
+    cSign6 = models.CharField(max_length=10,blank=True)
+    cAverageScore = models.CharField(max_length=10,blank=True)
+    cLossGain  = models.CharField(max_length=10,blank=True)
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
     press = models.IntegerField(default=0)
@@ -212,21 +212,21 @@ class Stock6Sign2020Q2(models.Model):
         return self.cStockID 
     
 class Stock6Sign202007(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
     
     
-    cNewestSeason = models.CharField(max_length=15,blank=True,null=True, default='')
-    cNewestRev = models.CharField(max_length=15,blank=True,null=True, default='')
+    cNewestSeason = models.CharField(max_length=15,blank=True, default='')
+    cNewestRev = models.CharField(max_length=15,blank=True, default='')
     
-    cSign1 = models.CharField(max_length=10,blank=True,null=True)
-    cSign2 = models.CharField(max_length=10,blank=True,null=True)
-    cSign3 = models.CharField(max_length=10,blank=True,null=True)
-    cSign4 = models.CharField(max_length=10,blank=True,null=True)
-    cSign5 = models.CharField(max_length=10,blank=True,null=True)
-    cSign6 = models.CharField(max_length=10,blank=True,null=True)
-    cAverageScore = models.CharField(max_length=10,blank=True,null=True)
-    cLossGain  = models.CharField(max_length=10,blank=True,null=True)
+    cSign1 = models.CharField(max_length=10,blank=True)
+    cSign2 = models.CharField(max_length=10,blank=True)
+    cSign3 = models.CharField(max_length=10,blank=True)
+    cSign4 = models.CharField(max_length=10,blank=True)
+    cSign5 = models.CharField(max_length=10,blank=True)
+    cSign6 = models.CharField(max_length=10,blank=True)
+    cAverageScore = models.CharField(max_length=10,blank=True)
+    cLossGain  = models.CharField(max_length=10,blank=True)
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
     press = models.IntegerField(default=0)
@@ -234,21 +234,21 @@ class Stock6Sign202007(models.Model):
         return self.cStockID   
 
 class Stock6Sign202008(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
     
     
-    cNewestSeason = models.CharField(max_length=15,blank=True,null=True, default='')
-    cNewestRev = models.CharField(max_length=15,blank=True,null=True, default='')
+    cNewestSeason = models.CharField(max_length=15,blank=True, default='')
+    cNewestRev = models.CharField(max_length=15,blank=True, default='')
     
-    cSign1 = models.CharField(max_length=10,blank=True,null=True)
-    cSign2 = models.CharField(max_length=10,blank=True,null=True)
-    cSign3 = models.CharField(max_length=10,blank=True,null=True)
-    cSign4 = models.CharField(max_length=10,blank=True,null=True)
-    cSign5 = models.CharField(max_length=10,blank=True,null=True)
-    cSign6 = models.CharField(max_length=10,blank=True,null=True)
-    cAverageScore = models.CharField(max_length=10,blank=True,null=True)
-    cLossGain  = models.CharField(max_length=10,blank=True,null=True)
+    cSign1 = models.CharField(max_length=10,blank=True)
+    cSign2 = models.CharField(max_length=10,blank=True)
+    cSign3 = models.CharField(max_length=10,blank=True)
+    cSign4 = models.CharField(max_length=10,blank=True)
+    cSign5 = models.CharField(max_length=10,blank=True)
+    cSign6 = models.CharField(max_length=10,blank=True)
+    cAverageScore = models.CharField(max_length=10,blank=True)
+    cLossGain  = models.CharField(max_length=10,blank=True)
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
     press = models.IntegerField(default=0)
@@ -256,21 +256,21 @@ class Stock6Sign202008(models.Model):
         return self.cStockID  
 
 class Stock6Sign202009(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
     
     
-    cNewestSeason = models.CharField(max_length=15,blank=True,null=True, default='')
-    cNewestRev = models.CharField(max_length=15,blank=True,null=True, default='')
+    cNewestSeason = models.CharField(max_length=15,blank=True, default='')
+    cNewestRev = models.CharField(max_length=15,blank=True, default='')
     
-    cSign1 = models.CharField(max_length=10,blank=True,null=True)
-    cSign2 = models.CharField(max_length=10,blank=True,null=True)
-    cSign3 = models.CharField(max_length=10,blank=True,null=True)
-    cSign4 = models.CharField(max_length=10,blank=True,null=True)
-    cSign5 = models.CharField(max_length=10,blank=True,null=True)
-    cSign6 = models.CharField(max_length=10,blank=True,null=True)
-    cAverageScore = models.CharField(max_length=10,blank=True,null=True)
-    cLossGain  = models.CharField(max_length=10,blank=True,null=True)
+    cSign1 = models.CharField(max_length=10,blank=True)
+    cSign2 = models.CharField(max_length=10,blank=True)
+    cSign3 = models.CharField(max_length=10,blank=True)
+    cSign4 = models.CharField(max_length=10,blank=True)
+    cSign5 = models.CharField(max_length=10,blank=True)
+    cSign6 = models.CharField(max_length=10,blank=True)
+    cAverageScore = models.CharField(max_length=10,blank=True)
+    cLossGain  = models.CharField(max_length=10,blank=True)
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
     press = models.IntegerField(default=0)
@@ -3015,62 +3015,62 @@ class DCStock6Sign202112(models.Model):
         return self.cStockID
 #####################################################
 class StockPERseg(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
-    cH1 = models.CharField(max_length=8,blank=True,null=True)  #以下為最近五年最高價和最低價
-    cL1 = models.CharField(max_length=8,blank=True,null=True)
-    cH2 = models.CharField(max_length=8,blank=True,null=True)
-    cL2 = models.CharField(max_length=8,blank=True,null=True)
-    cH3 = models.CharField(max_length=8,blank=True,null=True)
-    cL3 = models.CharField(max_length=8,blank=True,null=True)
-    cH4 = models.CharField(max_length=8,blank=True,null=True)
-    cL4 = models.CharField(max_length=8,blank=True,null=True)
-    cH5 = models.CharField(max_length=8,blank=True,null=True)
-    cL5 = models.CharField(max_length=8,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
+    cH1 = models.CharField(max_length=8,blank=True)  #以下為最近五年最高價和最低價
+    cL1 = models.CharField(max_length=8,blank=True)
+    cH2 = models.CharField(max_length=8,blank=True)
+    cL2 = models.CharField(max_length=8,blank=True)
+    cH3 = models.CharField(max_length=8,blank=True)
+    cL3 = models.CharField(max_length=8,blank=True)
+    cH4 = models.CharField(max_length=8,blank=True)
+    cL4 = models.CharField(max_length=8,blank=True)
+    cH5 = models.CharField(max_length=8,blank=True)
+    cL5 = models.CharField(max_length=8,blank=True)
 
-    cEPS1 = models.CharField(max_length=8,blank=True,null=True)  #以下為最近五年EPS
-    cEPS2 = models.CharField(max_length=8,blank=True,null=True)
-    cEPS3 = models.CharField(max_length=8,blank=True,null=True)
-    cEPS4 = models.CharField(max_length=8,blank=True,null=True)
-    cEPS5 = models.CharField(max_length=8,blank=True,null=True)
+    cEPS1 = models.CharField(max_length=8,blank=True)  #以下為最近五年EPS
+    cEPS2 = models.CharField(max_length=8,blank=True)
+    cEPS3 = models.CharField(max_length=8,blank=True)
+    cEPS4 = models.CharField(max_length=8,blank=True)
+    cEPS5 = models.CharField(max_length=8,blank=True)
     
-    cPER_H1 = models.CharField(max_length=15,blank=True,null=True)   #以下為最近五年最高和最低本益比區間
-    cPER_L1 = models.CharField(max_length=15,blank=True,null=True)
-    cPER_H2 = models.CharField(max_length=15,blank=True,null=True)
-    cPER_L2 = models.CharField(max_length=15,blank=True,null=True)
-    cPER_H3 = models.CharField(max_length=15,blank=True,null=True)
-    cPER_L3 = models.CharField(max_length=15,blank=True,null=True)
-    cPER_H4 = models.CharField(max_length=15,blank=True,null=True)
-    cPER_L4 = models.CharField(max_length=15,blank=True,null=True)
-    cPER_H5 = models.CharField(max_length=15,blank=True,null=True)
-    cPER_L5 = models.CharField(max_length=15,blank=True,null=True)
+    cPER_H1 = models.CharField(max_length=15,blank=True)   #以下為最近五年最高和最低本益比區間
+    cPER_L1 = models.CharField(max_length=15,blank=True)
+    cPER_H2 = models.CharField(max_length=15,blank=True)
+    cPER_L2 = models.CharField(max_length=15,blank=True)
+    cPER_H3 = models.CharField(max_length=15,blank=True)
+    cPER_L3 = models.CharField(max_length=15,blank=True)
+    cPER_H4 = models.CharField(max_length=15,blank=True)
+    cPER_L4 = models.CharField(max_length=15,blank=True)
+    cPER_H5 = models.CharField(max_length=15,blank=True)
+    cPER_L5 = models.CharField(max_length=15,blank=True)
     
-    cPER_H_average = models.CharField(max_length=15,blank=True,null=True)  #最近五年平均
-    cPER_L_average = models.CharField(max_length=15,blank=True,null=True)
+    cPER_H_average = models.CharField(max_length=15,blank=True)  #最近五年平均
+    cPER_L_average = models.CharField(max_length=15,blank=True)
 
-    cPER_H = models.CharField(max_length=15,blank=True,null=True)  #本益比兩者孰低
-    cPER_L = models.CharField(max_length=15,blank=True,null=True)    
+    cPER_H = models.CharField(max_length=15,blank=True)  #本益比兩者孰低
+    cPER_L = models.CharField(max_length=15,blank=True)    
     
-    cYoY6Average = models.CharField(max_length=15,blank=True,null=True)  #營收六個月平均
-    cRevYoY = models.CharField(max_length=15,blank=True,null=True)  #營收兩者孰低    
+    cYoY6Average = models.CharField(max_length=15,blank=True)  #營收六個月平均
+    cRevYoY = models.CharField(max_length=15,blank=True)  #營收兩者孰低    
     
-    cNet1 = models.CharField(max_length=15,blank=True,null=True)
-    cNet2 = models.CharField(max_length=15,blank=True,null=True)
-    cNet3 = models.CharField(max_length=15,blank=True,null=True)
-    cNet4 = models.CharField(max_length=15,blank=True,null=True)
-    cNet4Average = models.CharField(max_length=15,blank=True,null=True)    
+    cNet1 = models.CharField(max_length=15,blank=True)
+    cNet2 = models.CharField(max_length=15,blank=True)
+    cNet3 = models.CharField(max_length=15,blank=True)
+    cNet4 = models.CharField(max_length=15,blank=True)
+    cNet4Average = models.CharField(max_length=15,blank=True)    
 
-    cRev_Predict = models.CharField(max_length=15,blank=True,null=True) #預估未來營收
-    cNet_Predict = models.CharField(max_length=15,blank=True,null=True) #預估未來淨利
-    cCapital_stock = models.CharField(max_length=15,blank=True,null=True) #最新股本
-    cPredict_EPS = models.CharField(max_length=15,blank=True,null=True) #預估未來EPS
-    cPredict_high_price = models.CharField(max_length=15,blank=True,null=True) #預估未來最高價
-    cPredict_low_price = models.CharField(max_length=15,blank=True,null=True) #預估未來最低價    
-    cLatest_price = models.CharField(max_length=15,blank=True,null=True) #目前最新成交價
-    cNew_up_profit = models.CharField(max_length=15,blank=True,null=True) #預估未來往上空間
-    cNew_down_loss = models.CharField(max_length=15,blank=True,null=True) #預估未來往下空間    
+    cRev_Predict = models.CharField(max_length=15,blank=True) #預估未來營收
+    cNet_Predict = models.CharField(max_length=15,blank=True) #預估未來淨利
+    cCapital_stock = models.CharField(max_length=15,blank=True) #最新股本
+    cPredict_EPS = models.CharField(max_length=15,blank=True) #預估未來EPS
+    cPredict_high_price = models.CharField(max_length=15,blank=True) #預估未來最高價
+    cPredict_low_price = models.CharField(max_length=15,blank=True) #預估未來最低價    
+    cLatest_price = models.CharField(max_length=15,blank=True) #目前最新成交價
+    cNew_up_profit = models.CharField(max_length=15,blank=True) #預估未來往上空間
+    cNew_down_loss = models.CharField(max_length=15,blank=True) #預估未來往下空間    
     
-    cRisk_reward = models.CharField(max_length=10,blank=True,null=True) #預估風險報酬比率
+    cRisk_reward = models.CharField(max_length=10,blank=True) #預估風險報酬比率
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
     press = models.IntegerField(default=0)
@@ -3079,62 +3079,62 @@ class StockPERseg(models.Model):
    
 
 class StockPERseg202005(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
-    cH1 = models.CharField(max_length=8,blank=True,null=True)  #以下為最近五年最高價和最低價
-    cL1 = models.CharField(max_length=8,blank=True,null=True)
-    cH2 = models.CharField(max_length=8,blank=True,null=True)
-    cL2 = models.CharField(max_length=8,blank=True,null=True)
-    cH3 = models.CharField(max_length=8,blank=True,null=True)
-    cL3 = models.CharField(max_length=8,blank=True,null=True)
-    cH4 = models.CharField(max_length=8,blank=True,null=True)
-    cL4 = models.CharField(max_length=8,blank=True,null=True)
-    cH5 = models.CharField(max_length=8,blank=True,null=True)
-    cL5 = models.CharField(max_length=8,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
+    cH1 = models.CharField(max_length=8,blank=True)  #以下為最近五年最高價和最低價
+    cL1 = models.CharField(max_length=8,blank=True)
+    cH2 = models.CharField(max_length=8,blank=True)
+    cL2 = models.CharField(max_length=8,blank=True)
+    cH3 = models.CharField(max_length=8,blank=True)
+    cL3 = models.CharField(max_length=8,blank=True)
+    cH4 = models.CharField(max_length=8,blank=True)
+    cL4 = models.CharField(max_length=8,blank=True)
+    cH5 = models.CharField(max_length=8,blank=True)
+    cL5 = models.CharField(max_length=8,blank=True)
 
-    cEPS1 = models.CharField(max_length=8,blank=True,null=True)  #以下為最近五年EPS
-    cEPS2 = models.CharField(max_length=8,blank=True,null=True)
-    cEPS3 = models.CharField(max_length=8,blank=True,null=True)
-    cEPS4 = models.CharField(max_length=8,blank=True,null=True)
-    cEPS5 = models.CharField(max_length=8,blank=True,null=True)
+    cEPS1 = models.CharField(max_length=8,blank=True)  #以下為最近五年EPS
+    cEPS2 = models.CharField(max_length=8,blank=True)
+    cEPS3 = models.CharField(max_length=8,blank=True)
+    cEPS4 = models.CharField(max_length=8,blank=True)
+    cEPS5 = models.CharField(max_length=8,blank=True)
     
-    cPER_H1 = models.CharField(max_length=15,blank=True,null=True)   #以下為最近五年最高和最低本益比區間
-    cPER_L1 = models.CharField(max_length=15,blank=True,null=True)
-    cPER_H2 = models.CharField(max_length=15,blank=True,null=True)
-    cPER_L2 = models.CharField(max_length=15,blank=True,null=True)
-    cPER_H3 = models.CharField(max_length=15,blank=True,null=True)
-    cPER_L3 = models.CharField(max_length=15,blank=True,null=True)
-    cPER_H4 = models.CharField(max_length=15,blank=True,null=True)
-    cPER_L4 = models.CharField(max_length=15,blank=True,null=True)
-    cPER_H5 = models.CharField(max_length=15,blank=True,null=True)
-    cPER_L5 = models.CharField(max_length=15,blank=True,null=True)
+    cPER_H1 = models.CharField(max_length=15,blank=True)   #以下為最近五年最高和最低本益比區間
+    cPER_L1 = models.CharField(max_length=15,blank=True)
+    cPER_H2 = models.CharField(max_length=15,blank=True)
+    cPER_L2 = models.CharField(max_length=15,blank=True)
+    cPER_H3 = models.CharField(max_length=15,blank=True)
+    cPER_L3 = models.CharField(max_length=15,blank=True)
+    cPER_H4 = models.CharField(max_length=15,blank=True)
+    cPER_L4 = models.CharField(max_length=15,blank=True)
+    cPER_H5 = models.CharField(max_length=15,blank=True)
+    cPER_L5 = models.CharField(max_length=15,blank=True)
     
-    cPER_H_average = models.CharField(max_length=15,blank=True,null=True)  #最近五年平均
-    cPER_L_average = models.CharField(max_length=15,blank=True,null=True)
+    cPER_H_average = models.CharField(max_length=15,blank=True)  #最近五年平均
+    cPER_L_average = models.CharField(max_length=15,blank=True)
 
-    cPER_H = models.CharField(max_length=15,blank=True,null=True)  #本益比兩者孰低
-    cPER_L = models.CharField(max_length=15,blank=True,null=True)    
+    cPER_H = models.CharField(max_length=15,blank=True)  #本益比兩者孰低
+    cPER_L = models.CharField(max_length=15,blank=True)    
     
-    cYoY6Average = models.CharField(max_length=15,blank=True,null=True)  #營收六個月平均
-    cRevYoY = models.CharField(max_length=15,blank=True,null=True)  #營收兩者孰低    
+    cYoY6Average = models.CharField(max_length=15,blank=True)  #營收六個月平均
+    cRevYoY = models.CharField(max_length=15,blank=True)  #營收兩者孰低    
     
-    cNet1 = models.CharField(max_length=15,blank=True,null=True)
-    cNet2 = models.CharField(max_length=15,blank=True,null=True)
-    cNet3 = models.CharField(max_length=15,blank=True,null=True)
-    cNet4 = models.CharField(max_length=15,blank=True,null=True)
-    cNet4Average = models.CharField(max_length=15,blank=True,null=True)    
+    cNet1 = models.CharField(max_length=15,blank=True)
+    cNet2 = models.CharField(max_length=15,blank=True)
+    cNet3 = models.CharField(max_length=15,blank=True)
+    cNet4 = models.CharField(max_length=15,blank=True)
+    cNet4Average = models.CharField(max_length=15,blank=True)    
 
-    cRev_Predict = models.CharField(max_length=15,blank=True,null=True) #預估未來營收
-    cNet_Predict = models.CharField(max_length=15,blank=True,null=True) #預估未來淨利
-    cCapital_stock = models.CharField(max_length=15,blank=True,null=True) #最新股本
-    cPredict_EPS = models.CharField(max_length=15,blank=True,null=True) #預估未來EPS
-    cPredict_high_price = models.CharField(max_length=15,blank=True,null=True) #預估未來最高價
-    cPredict_low_price = models.CharField(max_length=15,blank=True,null=True) #預估未來最低價    
-    cLatest_price = models.CharField(max_length=15,blank=True,null=True) #目前最新成交價
-    cNew_up_profit = models.CharField(max_length=15,blank=True,null=True) #預估未來往上空間
-    cNew_down_loss = models.CharField(max_length=15,blank=True,null=True) #預估未來往下空間    
+    cRev_Predict = models.CharField(max_length=15,blank=True) #預估未來營收
+    cNet_Predict = models.CharField(max_length=15,blank=True) #預估未來淨利
+    cCapital_stock = models.CharField(max_length=15,blank=True) #最新股本
+    cPredict_EPS = models.CharField(max_length=15,blank=True) #預估未來EPS
+    cPredict_high_price = models.CharField(max_length=15,blank=True) #預估未來最高價
+    cPredict_low_price = models.CharField(max_length=15,blank=True) #預估未來最低價    
+    cLatest_price = models.CharField(max_length=15,blank=True) #目前最新成交價
+    cNew_up_profit = models.CharField(max_length=15,blank=True) #預估未來往上空間
+    cNew_down_loss = models.CharField(max_length=15,blank=True) #預估未來往下空間    
     
-    cRisk_reward = models.CharField(max_length=10,blank=True,null=True) #預估風險報酬比率
+    cRisk_reward = models.CharField(max_length=10,blank=True) #預估風險報酬比率
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
     press = models.IntegerField(default=0)
@@ -3143,62 +3143,62 @@ class StockPERseg202005(models.Model):
 
 
 class StockPERseg202006(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
-    cH1 = models.CharField(max_length=8,blank=True,null=True)  #以下為最近五年最高價和最低價
-    cL1 = models.CharField(max_length=8,blank=True,null=True)
-    cH2 = models.CharField(max_length=8,blank=True,null=True)
-    cL2 = models.CharField(max_length=8,blank=True,null=True)
-    cH3 = models.CharField(max_length=8,blank=True,null=True)
-    cL3 = models.CharField(max_length=8,blank=True,null=True)
-    cH4 = models.CharField(max_length=8,blank=True,null=True)
-    cL4 = models.CharField(max_length=8,blank=True,null=True)
-    cH5 = models.CharField(max_length=8,blank=True,null=True)
-    cL5 = models.CharField(max_length=8,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
+    cH1 = models.CharField(max_length=8,blank=True)  #以下為最近五年最高價和最低價
+    cL1 = models.CharField(max_length=8,blank=True)
+    cH2 = models.CharField(max_length=8,blank=True)
+    cL2 = models.CharField(max_length=8,blank=True)
+    cH3 = models.CharField(max_length=8,blank=True)
+    cL3 = models.CharField(max_length=8,blank=True)
+    cH4 = models.CharField(max_length=8,blank=True)
+    cL4 = models.CharField(max_length=8,blank=True)
+    cH5 = models.CharField(max_length=8,blank=True)
+    cL5 = models.CharField(max_length=8,blank=True)
 
-    cEPS1 = models.CharField(max_length=8,blank=True,null=True)  #以下為最近五年EPS
-    cEPS2 = models.CharField(max_length=8,blank=True,null=True)
-    cEPS3 = models.CharField(max_length=8,blank=True,null=True)
-    cEPS4 = models.CharField(max_length=8,blank=True,null=True)
-    cEPS5 = models.CharField(max_length=8,blank=True,null=True)
+    cEPS1 = models.CharField(max_length=8,blank=True)  #以下為最近五年EPS
+    cEPS2 = models.CharField(max_length=8,blank=True)
+    cEPS3 = models.CharField(max_length=8,blank=True)
+    cEPS4 = models.CharField(max_length=8,blank=True)
+    cEPS5 = models.CharField(max_length=8,blank=True)
     
-    cPER_H1 = models.CharField(max_length=15,blank=True,null=True)   #以下為最近五年最高和最低本益比區間
-    cPER_L1 = models.CharField(max_length=15,blank=True,null=True)
-    cPER_H2 = models.CharField(max_length=15,blank=True,null=True)
-    cPER_L2 = models.CharField(max_length=15,blank=True,null=True)
-    cPER_H3 = models.CharField(max_length=15,blank=True,null=True)
-    cPER_L3 = models.CharField(max_length=15,blank=True,null=True)
-    cPER_H4 = models.CharField(max_length=15,blank=True,null=True)
-    cPER_L4 = models.CharField(max_length=15,blank=True,null=True)
-    cPER_H5 = models.CharField(max_length=15,blank=True,null=True)
-    cPER_L5 = models.CharField(max_length=15,blank=True,null=True)
+    cPER_H1 = models.CharField(max_length=15,blank=True)   #以下為最近五年最高和最低本益比區間
+    cPER_L1 = models.CharField(max_length=15,blank=True)
+    cPER_H2 = models.CharField(max_length=15,blank=True)
+    cPER_L2 = models.CharField(max_length=15,blank=True)
+    cPER_H3 = models.CharField(max_length=15,blank=True)
+    cPER_L3 = models.CharField(max_length=15,blank=True)
+    cPER_H4 = models.CharField(max_length=15,blank=True)
+    cPER_L4 = models.CharField(max_length=15,blank=True)
+    cPER_H5 = models.CharField(max_length=15,blank=True)
+    cPER_L5 = models.CharField(max_length=15,blank=True)
     
-    cPER_H_average = models.CharField(max_length=15,blank=True,null=True)  #最近五年平均
-    cPER_L_average = models.CharField(max_length=15,blank=True,null=True)
+    cPER_H_average = models.CharField(max_length=15,blank=True)  #最近五年平均
+    cPER_L_average = models.CharField(max_length=15,blank=True)
 
-    cPER_H = models.CharField(max_length=15,blank=True,null=True)  #本益比兩者孰低
-    cPER_L = models.CharField(max_length=15,blank=True,null=True)    
+    cPER_H = models.CharField(max_length=15,blank=True)  #本益比兩者孰低
+    cPER_L = models.CharField(max_length=15,blank=True)    
     
-    cYoY6Average = models.CharField(max_length=15,blank=True,null=True)  #營收六個月平均
-    cRevYoY = models.CharField(max_length=15,blank=True,null=True)  #營收兩者孰低    
+    cYoY6Average = models.CharField(max_length=15,blank=True)  #營收六個月平均
+    cRevYoY = models.CharField(max_length=15,blank=True)  #營收兩者孰低    
     
-    cNet1 = models.CharField(max_length=15,blank=True,null=True)
-    cNet2 = models.CharField(max_length=15,blank=True,null=True)
-    cNet3 = models.CharField(max_length=15,blank=True,null=True)
-    cNet4 = models.CharField(max_length=15,blank=True,null=True)
-    cNet4Average = models.CharField(max_length=15,blank=True,null=True)    
+    cNet1 = models.CharField(max_length=15,blank=True)
+    cNet2 = models.CharField(max_length=15,blank=True)
+    cNet3 = models.CharField(max_length=15,blank=True)
+    cNet4 = models.CharField(max_length=15,blank=True)
+    cNet4Average = models.CharField(max_length=15,blank=True)    
 
-    cRev_Predict = models.CharField(max_length=15,blank=True,null=True) #預估未來營收
-    cNet_Predict = models.CharField(max_length=15,blank=True,null=True) #預估未來淨利
-    cCapital_stock = models.CharField(max_length=15,blank=True,null=True) #最新股本
-    cPredict_EPS = models.CharField(max_length=15,blank=True,null=True) #預估未來EPS
-    cPredict_high_price = models.CharField(max_length=15,blank=True,null=True) #預估未來最高價
-    cPredict_low_price = models.CharField(max_length=15,blank=True,null=True) #預估未來最低價    
-    cLatest_price = models.CharField(max_length=15,blank=True,null=True) #目前最新成交價
-    cNew_up_profit = models.CharField(max_length=15,blank=True,null=True) #預估未來往上空間
-    cNew_down_loss = models.CharField(max_length=15,blank=True,null=True) #預估未來往下空間    
+    cRev_Predict = models.CharField(max_length=15,blank=True) #預估未來營收
+    cNet_Predict = models.CharField(max_length=15,blank=True) #預估未來淨利
+    cCapital_stock = models.CharField(max_length=15,blank=True) #最新股本
+    cPredict_EPS = models.CharField(max_length=15,blank=True) #預估未來EPS
+    cPredict_high_price = models.CharField(max_length=15,blank=True) #預估未來最高價
+    cPredict_low_price = models.CharField(max_length=15,blank=True) #預估未來最低價    
+    cLatest_price = models.CharField(max_length=15,blank=True) #目前最新成交價
+    cNew_up_profit = models.CharField(max_length=15,blank=True) #預估未來往上空間
+    cNew_down_loss = models.CharField(max_length=15,blank=True) #預估未來往下空間    
     
-    cRisk_reward = models.CharField(max_length=10,blank=True,null=True) #預估風險報酬比率
+    cRisk_reward = models.CharField(max_length=10,blank=True) #預估風險報酬比率
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
     press = models.IntegerField(default=0)
@@ -3207,22 +3207,22 @@ class StockPERseg202006(models.Model):
 
 
 class StockPERseg2020Q2(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
 
 
-    cRev_Predict = models.CharField(max_length=15,blank=True,null=True) #預估未來營收
-    cNet_Predict = models.CharField(max_length=15,blank=True,null=True) #預估未來淨利
-    cCapital_stock = models.CharField(max_length=15,blank=True,null=True) #最新股本
-    cPredict_EPS = models.CharField(max_length=15,blank=True,null=True) #預估未來EPS
-    cPredict_high_price = models.CharField(max_length=15,blank=True,null=True) #預估未來最高價
-    cPredict_low_price = models.CharField(max_length=15,blank=True,null=True) #預估未來最低價    
-    cLatest_price = models.CharField(max_length=25,blank=True,null=True) #目前最新成交價
-    cNew_up_profit = models.CharField(max_length=25,blank=True,null=True) #預估未來往上空間
-    cNew_down_loss = models.CharField(max_length=25,blank=True,null=True) #預估未來往下空間    
+    cRev_Predict = models.CharField(max_length=15,blank=True) #預估未來營收
+    cNet_Predict = models.CharField(max_length=15,blank=True) #預估未來淨利
+    cCapital_stock = models.CharField(max_length=15,blank=True) #最新股本
+    cPredict_EPS = models.CharField(max_length=15,blank=True) #預估未來EPS
+    cPredict_high_price = models.CharField(max_length=15,blank=True) #預估未來最高價
+    cPredict_low_price = models.CharField(max_length=15,blank=True) #預估未來最低價    
+    cLatest_price = models.CharField(max_length=25,blank=True) #目前最新成交價
+    cNew_up_profit = models.CharField(max_length=25,blank=True) #預估未來往上空間
+    cNew_down_loss = models.CharField(max_length=25,blank=True) #預估未來往下空間    
     
-    cRisk_reward = models.CharField(max_length=10,blank=True,null=True) #預估風險報酬比率
+    cRisk_reward = models.CharField(max_length=10,blank=True) #預估風險報酬比率
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
     press = models.IntegerField(default=0)
@@ -3232,22 +3232,22 @@ class StockPERseg2020Q2(models.Model):
 
 
 class StockPERseg202007(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
 
 
-    cRev_Predict = models.CharField(max_length=15,blank=True,null=True) #預估未來營收
-    cNet_Predict = models.CharField(max_length=15,blank=True,null=True) #預估未來淨利
-    cCapital_stock = models.CharField(max_length=15,blank=True,null=True) #最新股本
-    cPredict_EPS = models.CharField(max_length=15,blank=True,null=True) #預估未來EPS
-    cPredict_high_price = models.CharField(max_length=15,blank=True,null=True) #預估未來最高價
-    cPredict_low_price = models.CharField(max_length=15,blank=True,null=True) #預估未來最低價    
-    cLatest_price = models.CharField(max_length=25,blank=True,null=True) #目前最新成交價
-    cNew_up_profit = models.CharField(max_length=25,blank=True,null=True) #預估未來往上空間
-    cNew_down_loss = models.CharField(max_length=25,blank=True,null=True) #預估未來往下空間    
+    cRev_Predict = models.CharField(max_length=15,blank=True) #預估未來營收
+    cNet_Predict = models.CharField(max_length=15,blank=True) #預估未來淨利
+    cCapital_stock = models.CharField(max_length=15,blank=True) #最新股本
+    cPredict_EPS = models.CharField(max_length=15,blank=True) #預估未來EPS
+    cPredict_high_price = models.CharField(max_length=15,blank=True) #預估未來最高價
+    cPredict_low_price = models.CharField(max_length=15,blank=True) #預估未來最低價    
+    cLatest_price = models.CharField(max_length=25,blank=True) #目前最新成交價
+    cNew_up_profit = models.CharField(max_length=25,blank=True) #預估未來往上空間
+    cNew_down_loss = models.CharField(max_length=25,blank=True) #預估未來往下空間    
     
-    cRisk_reward = models.CharField(max_length=10,blank=True,null=True) #預估風險報酬比率
+    cRisk_reward = models.CharField(max_length=10,blank=True) #預估風險報酬比率
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
     press = models.IntegerField(default=0)
@@ -3255,22 +3255,22 @@ class StockPERseg202007(models.Model):
         return self.cStockID
 
 class StockPERseg202008(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
 
 
-    cRev_Predict = models.CharField(max_length=15,blank=True,null=True) #預估未來營收
-    cNet_Predict = models.CharField(max_length=15,blank=True,null=True) #預估未來淨利
-    cCapital_stock = models.CharField(max_length=15,blank=True,null=True) #最新股本
-    cPredict_EPS = models.CharField(max_length=15,blank=True,null=True) #預估未來EPS
-    cPredict_high_price = models.CharField(max_length=15,blank=True,null=True) #預估未來最高價
-    cPredict_low_price = models.CharField(max_length=15,blank=True,null=True) #預估未來最低價    
-    cLatest_price = models.CharField(max_length=25,blank=True,null=True) #目前最新成交價
-    cNew_up_profit = models.CharField(max_length=25,blank=True,null=True) #預估未來往上空間
-    cNew_down_loss = models.CharField(max_length=25,blank=True,null=True) #預估未來往下空間    
+    cRev_Predict = models.CharField(max_length=15,blank=True) #預估未來營收
+    cNet_Predict = models.CharField(max_length=15,blank=True) #預估未來淨利
+    cCapital_stock = models.CharField(max_length=15,blank=True) #最新股本
+    cPredict_EPS = models.CharField(max_length=15,blank=True) #預估未來EPS
+    cPredict_high_price = models.CharField(max_length=15,blank=True) #預估未來最高價
+    cPredict_low_price = models.CharField(max_length=15,blank=True) #預估未來最低價    
+    cLatest_price = models.CharField(max_length=25,blank=True) #目前最新成交價
+    cNew_up_profit = models.CharField(max_length=25,blank=True) #預估未來往上空間
+    cNew_down_loss = models.CharField(max_length=25,blank=True) #預估未來往下空間    
     
-    cRisk_reward = models.CharField(max_length=10,blank=True,null=True) #預估風險報酬比率
+    cRisk_reward = models.CharField(max_length=10,blank=True) #預估風險報酬比率
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
     press = models.IntegerField(default=0)
@@ -3278,22 +3278,22 @@ class StockPERseg202008(models.Model):
         return self.cStockID
 
 class StockPERseg202009(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
 
 
-    cRev_Predict = models.CharField(max_length=15,blank=True,null=True) #預估未來營收
-    cNet_Predict = models.CharField(max_length=15,blank=True,null=True) #預估未來淨利
-    cCapital_stock = models.CharField(max_length=15,blank=True,null=True) #最新股本
-    cPredict_EPS = models.CharField(max_length=15,blank=True,null=True) #預估未來EPS
-    cPredict_high_price = models.CharField(max_length=15,blank=True,null=True) #預估未來最高價
-    cPredict_low_price = models.CharField(max_length=15,blank=True,null=True) #預估未來最低價    
-    cLatest_price = models.CharField(max_length=25,blank=True,null=True) #目前最新成交價
-    cNew_up_profit = models.CharField(max_length=25,blank=True,null=True) #預估未來往上空間
-    cNew_down_loss = models.CharField(max_length=25,blank=True,null=True) #預估未來往下空間    
+    cRev_Predict = models.CharField(max_length=15,blank=True) #預估未來營收
+    cNet_Predict = models.CharField(max_length=15,blank=True) #預估未來淨利
+    cCapital_stock = models.CharField(max_length=15,blank=True) #最新股本
+    cPredict_EPS = models.CharField(max_length=15,blank=True) #預估未來EPS
+    cPredict_high_price = models.CharField(max_length=15,blank=True) #預估未來最高價
+    cPredict_low_price = models.CharField(max_length=15,blank=True) #預估未來最低價    
+    cLatest_price = models.CharField(max_length=25,blank=True) #目前最新成交價
+    cNew_up_profit = models.CharField(max_length=25,blank=True) #預估未來往上空間
+    cNew_down_loss = models.CharField(max_length=25,blank=True) #預估未來往下空間    
     
-    cRisk_reward = models.CharField(max_length=10,blank=True,null=True) #預估風險報酬比率
+    cRisk_reward = models.CharField(max_length=10,blank=True) #預估風險報酬比率
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
     press = models.IntegerField(default=0)
@@ -3301,20 +3301,20 @@ class StockPERseg202009(models.Model):
         return self.cStockID
 
 class StockPERseg2020Q3(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
 
 
-    cRev_Predict = models.CharField(max_length=15,blank=True,null=True) #預估未來營收
-    cNet_Predict = models.CharField(max_length=15,blank=True,null=True) #預估未來淨利
-    cCapital_stock = models.CharField(max_length=15,blank=True,null=True) #最新股本
-    cPredict_EPS = models.CharField(max_length=15,blank=True,null=True) #預估未來EPS
-    cPredict_high_price = models.CharField(max_length=15,blank=True,null=True) #預估未來最高價
-    cPredict_low_price = models.CharField(max_length=15,blank=True,null=True) #預估未來最低價    
-    cLatest_price = models.CharField(max_length=25,blank=True,null=True) #目前最新成交價
-    cNew_up_profit = models.CharField(max_length=25,blank=True,null=True) #預估未來往上空間
-    cNew_down_loss = models.CharField(max_length=25,blank=True,null=True) #預估未來往下空間    
+    cRev_Predict = models.CharField(max_length=15,blank=True) #預估未來營收
+    cNet_Predict = models.CharField(max_length=15,blank=True) #預估未來淨利
+    cCapital_stock = models.CharField(max_length=15,blank=True) #最新股本
+    cPredict_EPS = models.CharField(max_length=15,blank=True) #預估未來EPS
+    cPredict_high_price = models.CharField(max_length=15,blank=True) #預估未來最高價
+    cPredict_low_price = models.CharField(max_length=15,blank=True) #預估未來最低價    
+    cLatest_price = models.CharField(max_length=25,blank=True) #目前最新成交價
+    cNew_up_profit = models.CharField(max_length=25,blank=True) #預估未來往上空間
+    cNew_down_loss = models.CharField(max_length=25,blank=True) #預估未來往下空間    
     
     cRisk_reward = models.FloatField(max_length=20) #預估風險報酬比率
     pubtime = models.DateTimeField(auto_now=True)
@@ -3324,8 +3324,8 @@ class StockPERseg2020Q3(models.Model):
         return self.cStockID
 
 class StockPERseg202011(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
 
 
@@ -3347,8 +3347,8 @@ class StockPERseg202011(models.Model):
         return self.cStockID
     
 class StockPERseg2020Q4(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
 
 
@@ -3370,8 +3370,8 @@ class StockPERseg2020Q4(models.Model):
         return self.cStockID   
 
 class StockPERseg202101(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
 
 
@@ -3394,8 +3394,8 @@ class StockPERseg202101(models.Model):
 
 
 class StockPERseg202102(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
 
 
@@ -3417,8 +3417,8 @@ class StockPERseg202102(models.Model):
         return self.cStockID  
 
 class StockPERseg202103(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
 
 
@@ -3440,8 +3440,8 @@ class StockPERseg202103(models.Model):
         return self.cStockID 
 
 class StockPERseg202104(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
 
 
@@ -3463,8 +3463,8 @@ class StockPERseg202104(models.Model):
         return self.cStockID  
     
 class StockPERseg202105(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
 
 
@@ -3487,8 +3487,8 @@ class StockPERseg202105(models.Model):
 
 
 class StockPERseg202106(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
 
 
@@ -3510,8 +3510,8 @@ class StockPERseg202106(models.Model):
         return self.cStockID 
     
 class StockPERseg202107(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
 
 
@@ -3534,8 +3534,8 @@ class StockPERseg202107(models.Model):
 
 
 class StockPERseg202108(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
 
 
@@ -3557,8 +3557,8 @@ class StockPERseg202108(models.Model):
         return self.cStockID 
     
 class StockPERseg202109(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
 
 
@@ -3581,8 +3581,8 @@ class StockPERseg202109(models.Model):
 
 
 class StockPERseg202110(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
 
 
@@ -3604,8 +3604,8 @@ class StockPERseg202110(models.Model):
         return self.cStockID 
 
 class StockPERseg202111(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
 
 
@@ -3627,8 +3627,8 @@ class StockPERseg202111(models.Model):
         return self.cStockID 
 
 class StockPERseg202112(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
 
 
@@ -3650,8 +3650,8 @@ class StockPERseg202112(models.Model):
         return self.cStockID 
 
 class StockPERseg202201(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
 
 
@@ -3673,8 +3673,8 @@ class StockPERseg202201(models.Model):
         return self.cStockID 
     
 class StockPERseg202202(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
 
 
@@ -3696,8 +3696,8 @@ class StockPERseg202202(models.Model):
         return self.cStockID 
     
 class StockPERseg202203(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
 
 
@@ -3719,8 +3719,8 @@ class StockPERseg202203(models.Model):
         return self.cStockID 
     
 class StockPERseg202204(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
 
 
@@ -3742,8 +3742,8 @@ class StockPERseg202204(models.Model):
         return self.cStockID 
     
 class StockPERseg202205(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
 
 
@@ -3766,8 +3766,8 @@ class StockPERseg202205(models.Model):
     
     
 class StockPERseg202206(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
 
 
@@ -3789,8 +3789,8 @@ class StockPERseg202206(models.Model):
         return self.cStockID 
     
 class StockPERseg202207(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
 
 
@@ -3812,8 +3812,8 @@ class StockPERseg202207(models.Model):
         return self.cStockID 
     
 class StockPERseg202208(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
 
 
@@ -3835,8 +3835,8 @@ class StockPERseg202208(models.Model):
         return self.cStockID 
     
 class StockPERseg202209(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
 
 
@@ -3858,8 +3858,8 @@ class StockPERseg202209(models.Model):
         return self.cStockID 
     
 class StockPERseg202210(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
 
 
@@ -3881,8 +3881,8 @@ class StockPERseg202210(models.Model):
         return self.cStockID 
     
 class StockPERseg202211(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
 
 
@@ -3904,8 +3904,8 @@ class StockPERseg202211(models.Model):
         return self.cStockID 
     
 class StockPERseg202212(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
 
 
@@ -3928,8 +3928,8 @@ class StockPERseg202212(models.Model):
 #####
 
 class StockPERseg202301(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
 
 
@@ -3946,11 +3946,11 @@ class StockPERseg202301(models.Model):
     cRisk_reward = models.FloatField(max_length=20) #預估風險報酬比率  #20201202 可以使用Float
 
 
-    cPredict_high_price_down30 = models.CharField(max_length=15, null=True, blank=True) #預估未來最高價
-    cPredict_low_price_down30 = models.CharField(max_length=15, null=True, blank=True) #預估未來最低價      
-    cNew_up_profit_down30 = models.CharField(max_length=25, null=True, blank=True) #預估未來往上空間
-    cNew_down_loss_down30 = models.CharField(max_length=25, null=True, blank=True) #預估未來往下空間
-    cRisk_reward_down30 = models.FloatField(max_length=20, null=True, blank=True) #預估風險報酬比率  #20201202 可以使用Float
+    cPredict_high_price_down30 = models.CharField(max_length=15, blank=True) #預估未來最高價
+    cPredict_low_price_down30 = models.CharField(max_length=15, blank=True) #預估未來最低價      
+    cNew_up_profit_down30 = models.CharField(max_length=25, blank=True) #預估未來往上空間
+    cNew_down_loss_down30 = models.CharField(max_length=25, blank=True) #預估未來往下空間
+    cRisk_reward_down30 = models.FloatField(max_length=20, blank=True) #預估風險報酬比率  #20201202 可以使用Float
 
 
     pubtime = models.DateTimeField(auto_now=True)
@@ -3961,8 +3961,8 @@ class StockPERseg202301(models.Model):
     
 
 class StockPERseg202302(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
 
 
@@ -3979,11 +3979,11 @@ class StockPERseg202302(models.Model):
     cRisk_reward = models.FloatField(max_length=20) #預估風險報酬比率  #20201202 可以使用Float
 
 
-    cPredict_high_price_down30 = models.CharField(max_length=15, null=True, blank=True) #預估未來最高價
-    cPredict_low_price_down30 = models.CharField(max_length=15, null=True, blank=True) #預估未來最低價      
-    cNew_up_profit_down30 = models.CharField(max_length=25, null=True, blank=True) #預估未來往上空間
-    cNew_down_loss_down30 = models.CharField(max_length=25, null=True, blank=True) #預估未來往下空間
-    cRisk_reward_down30 = models.FloatField(max_length=20, null=True, blank=True) #預估風險報酬比率  #20201202 可以使用Float
+    cPredict_high_price_down30 = models.CharField(max_length=15, blank=True) #預估未來最高價
+    cPredict_low_price_down30 = models.CharField(max_length=15, blank=True) #預估未來最低價      
+    cNew_up_profit_down30 = models.CharField(max_length=25, blank=True) #預估未來往上空間
+    cNew_down_loss_down30 = models.CharField(max_length=25, blank=True) #預估未來往下空間
+    cRisk_reward_down30 = models.FloatField(max_length=20, blank=True) #預估風險報酬比率  #20201202 可以使用Float
 
 
     pubtime = models.DateTimeField(auto_now=True)
@@ -3994,8 +3994,8 @@ class StockPERseg202302(models.Model):
     
 
 class StockPERseg202303(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
 
 
@@ -4012,11 +4012,11 @@ class StockPERseg202303(models.Model):
     cRisk_reward = models.FloatField(max_length=20) #預估風險報酬比率  #20201202 可以使用Float
 
 
-    cPredict_high_price_down30 = models.CharField(max_length=15, null=True, blank=True) #預估未來最高價
-    cPredict_low_price_down30 = models.CharField(max_length=15, null=True, blank=True) #預估未來最低價      
-    cNew_up_profit_down30 = models.CharField(max_length=25, null=True, blank=True) #預估未來往上空間
-    cNew_down_loss_down30 = models.CharField(max_length=25, null=True, blank=True) #預估未來往下空間
-    cRisk_reward_down30 = models.FloatField(max_length=20, null=True, blank=True) #預估風險報酬比率  #20201202 可以使用Float
+    cPredict_high_price_down30 = models.CharField(max_length=15, blank=True) #預估未來最高價
+    cPredict_low_price_down30 = models.CharField(max_length=15, blank=True) #預估未來最低價      
+    cNew_up_profit_down30 = models.CharField(max_length=25, blank=True) #預估未來往上空間
+    cNew_down_loss_down30 = models.CharField(max_length=25, blank=True) #預估未來往下空間
+    cRisk_reward_down30 = models.FloatField(max_length=20, blank=True) #預估風險報酬比率  #20201202 可以使用Float
 
 
     pubtime = models.DateTimeField(auto_now=True)
@@ -4027,8 +4027,8 @@ class StockPERseg202303(models.Model):
     
 
 class StockPERseg202304(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
 
 
@@ -4045,11 +4045,11 @@ class StockPERseg202304(models.Model):
     cRisk_reward = models.FloatField(max_length=20) #預估風險報酬比率  #20201202 可以使用Float
 
 
-    cPredict_high_price_down30 = models.CharField(max_length=15, null=True, blank=True) #預估未來最高價
-    cPredict_low_price_down30 = models.CharField(max_length=15, null=True, blank=True) #預估未來最低價      
-    cNew_up_profit_down30 = models.CharField(max_length=25, null=True, blank=True) #預估未來往上空間
-    cNew_down_loss_down30 = models.CharField(max_length=25, null=True, blank=True) #預估未來往下空間
-    cRisk_reward_down30 = models.FloatField(max_length=20, null=True, blank=True) #預估風險報酬比率  #20201202 可以使用Float
+    cPredict_high_price_down30 = models.CharField(max_length=15, blank=True) #預估未來最高價
+    cPredict_low_price_down30 = models.CharField(max_length=15, blank=True) #預估未來最低價      
+    cNew_up_profit_down30 = models.CharField(max_length=25, blank=True) #預估未來往上空間
+    cNew_down_loss_down30 = models.CharField(max_length=25, blank=True) #預估未來往下空間
+    cRisk_reward_down30 = models.FloatField(max_length=20, blank=True) #預估風險報酬比率  #20201202 可以使用Float
 
 
     pubtime = models.DateTimeField(auto_now=True)
@@ -4060,8 +4060,8 @@ class StockPERseg202304(models.Model):
     
 
 class StockPERseg202305(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
 
 
@@ -4078,11 +4078,11 @@ class StockPERseg202305(models.Model):
     cRisk_reward = models.FloatField(max_length=20) #預估風險報酬比率  #20201202 可以使用Float
 
 
-    cPredict_high_price_down30 = models.CharField(max_length=15, null=True, blank=True) #預估未來最高價
-    cPredict_low_price_down30 = models.CharField(max_length=15, null=True, blank=True) #預估未來最低價      
-    cNew_up_profit_down30 = models.CharField(max_length=25, null=True, blank=True) #預估未來往上空間
-    cNew_down_loss_down30 = models.CharField(max_length=25, null=True, blank=True) #預估未來往下空間
-    cRisk_reward_down30 = models.FloatField(max_length=20, null=True, blank=True) #預估風險報酬比率  #20201202 可以使用Float
+    cPredict_high_price_down30 = models.CharField(max_length=15, blank=True) #預估未來最高價
+    cPredict_low_price_down30 = models.CharField(max_length=15, blank=True) #預估未來最低價      
+    cNew_up_profit_down30 = models.CharField(max_length=25, blank=True) #預估未來往上空間
+    cNew_down_loss_down30 = models.CharField(max_length=25, blank=True) #預估未來往下空間
+    cRisk_reward_down30 = models.FloatField(max_length=20, blank=True) #預估風險報酬比率  #20201202 可以使用Float
 
 
     pubtime = models.DateTimeField(auto_now=True)
@@ -4093,8 +4093,8 @@ class StockPERseg202305(models.Model):
     
 
 class StockPERseg202306(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
 
 
@@ -4111,11 +4111,11 @@ class StockPERseg202306(models.Model):
     cRisk_reward = models.FloatField(max_length=20) #預估風險報酬比率  #20201202 可以使用Float
 
 
-    cPredict_high_price_down30 = models.CharField(max_length=15, null=True, blank=True) #預估未來最高價
-    cPredict_low_price_down30 = models.CharField(max_length=15, null=True, blank=True) #預估未來最低價      
-    cNew_up_profit_down30 = models.CharField(max_length=25, null=True, blank=True) #預估未來往上空間
-    cNew_down_loss_down30 = models.CharField(max_length=25, null=True, blank=True) #預估未來往下空間
-    cRisk_reward_down30 = models.FloatField(max_length=20, null=True, blank=True) #預估風險報酬比率  #20201202 可以使用Float
+    cPredict_high_price_down30 = models.CharField(max_length=15, blank=True) #預估未來最高價
+    cPredict_low_price_down30 = models.CharField(max_length=15, blank=True) #預估未來最低價      
+    cNew_up_profit_down30 = models.CharField(max_length=25, blank=True) #預估未來往上空間
+    cNew_down_loss_down30 = models.CharField(max_length=25, blank=True) #預估未來往下空間
+    cRisk_reward_down30 = models.FloatField(max_length=20, blank=True) #預估風險報酬比率  #20201202 可以使用Float
 
 
     pubtime = models.DateTimeField(auto_now=True)
@@ -4127,8 +4127,8 @@ class StockPERseg202306(models.Model):
     
 
 class StockPERseg202307(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
 
 
@@ -4145,11 +4145,11 @@ class StockPERseg202307(models.Model):
     cRisk_reward = models.FloatField(max_length=20) #預估風險報酬比率  #20201202 可以使用Float
 
 
-    cPredict_high_price_down30 = models.CharField(max_length=15, null=True, blank=True) #預估未來最高價
-    cPredict_low_price_down30 = models.CharField(max_length=15, null=True, blank=True) #預估未來最低價      
-    cNew_up_profit_down30 = models.CharField(max_length=25, null=True, blank=True) #預估未來往上空間
-    cNew_down_loss_down30 = models.CharField(max_length=25, null=True, blank=True) #預估未來往下空間
-    cRisk_reward_down30 = models.FloatField(max_length=20, null=True, blank=True) #預估風險報酬比率  #20201202 可以使用Float
+    cPredict_high_price_down30 = models.CharField(max_length=15, blank=True) #預估未來最高價
+    cPredict_low_price_down30 = models.CharField(max_length=15, blank=True) #預估未來最低價      
+    cNew_up_profit_down30 = models.CharField(max_length=25, blank=True) #預估未來往上空間
+    cNew_down_loss_down30 = models.CharField(max_length=25, blank=True) #預估未來往下空間
+    cRisk_reward_down30 = models.FloatField(max_length=20, blank=True) #預估風險報酬比率  #20201202 可以使用Float
 
 
     pubtime = models.DateTimeField(auto_now=True)
@@ -4160,8 +4160,8 @@ class StockPERseg202307(models.Model):
     
 
 class StockPERseg202308(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
 
 
@@ -4178,11 +4178,11 @@ class StockPERseg202308(models.Model):
     cRisk_reward = models.FloatField(max_length=20) #預估風險報酬比率  #20201202 可以使用Float
 
 
-    cPredict_high_price_down30 = models.CharField(max_length=15, null=True, blank=True) #預估未來最高價
-    cPredict_low_price_down30 = models.CharField(max_length=15, null=True, blank=True) #預估未來最低價      
-    cNew_up_profit_down30 = models.CharField(max_length=25, null=True, blank=True) #預估未來往上空間
-    cNew_down_loss_down30 = models.CharField(max_length=25, null=True, blank=True) #預估未來往下空間
-    cRisk_reward_down30 = models.FloatField(max_length=20, null=True, blank=True) #預估風險報酬比率  #20201202 可以使用Float
+    cPredict_high_price_down30 = models.CharField(max_length=15, blank=True) #預估未來最高價
+    cPredict_low_price_down30 = models.CharField(max_length=15, blank=True) #預估未來最低價      
+    cNew_up_profit_down30 = models.CharField(max_length=25, blank=True) #預估未來往上空間
+    cNew_down_loss_down30 = models.CharField(max_length=25, blank=True) #預估未來往下空間
+    cRisk_reward_down30 = models.FloatField(max_length=20, blank=True) #預估風險報酬比率  #20201202 可以使用Float
 
 
     pubtime = models.DateTimeField(auto_now=True)
@@ -4193,8 +4193,8 @@ class StockPERseg202308(models.Model):
     
 
 class StockPERseg202309(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
 
 
@@ -4211,11 +4211,11 @@ class StockPERseg202309(models.Model):
     cRisk_reward = models.FloatField(max_length=20) #預估風險報酬比率  #20201202 可以使用Float
 
 
-    cPredict_high_price_down30 = models.CharField(max_length=15, null=True, blank=True) #預估未來最高價
-    cPredict_low_price_down30 = models.CharField(max_length=15, null=True, blank=True) #預估未來最低價      
-    cNew_up_profit_down30 = models.CharField(max_length=25, null=True, blank=True) #預估未來往上空間
-    cNew_down_loss_down30 = models.CharField(max_length=25, null=True, blank=True) #預估未來往下空間
-    cRisk_reward_down30 = models.FloatField(max_length=20, null=True, blank=True) #預估風險報酬比率  #20201202 可以使用Float
+    cPredict_high_price_down30 = models.CharField(max_length=15, blank=True) #預估未來最高價
+    cPredict_low_price_down30 = models.CharField(max_length=15, blank=True) #預估未來最低價      
+    cNew_up_profit_down30 = models.CharField(max_length=25, blank=True) #預估未來往上空間
+    cNew_down_loss_down30 = models.CharField(max_length=25, blank=True) #預估未來往下空間
+    cRisk_reward_down30 = models.FloatField(max_length=20, blank=True) #預估風險報酬比率  #20201202 可以使用Float
 
 
     pubtime = models.DateTimeField(auto_now=True)
@@ -4226,8 +4226,8 @@ class StockPERseg202309(models.Model):
     
 
 class StockPERseg202310(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
 
 
@@ -4244,11 +4244,11 @@ class StockPERseg202310(models.Model):
     cRisk_reward = models.FloatField(max_length=20) #預估風險報酬比率  #20201202 可以使用Float
 
 
-    cPredict_high_price_down30 = models.CharField(max_length=15, null=True, blank=True) #預估未來最高價
-    cPredict_low_price_down30 = models.CharField(max_length=15, null=True, blank=True) #預估未來最低價      
-    cNew_up_profit_down30 = models.CharField(max_length=25, null=True, blank=True) #預估未來往上空間
-    cNew_down_loss_down30 = models.CharField(max_length=25, null=True, blank=True) #預估未來往下空間
-    cRisk_reward_down30 = models.FloatField(max_length=20, null=True, blank=True) #預估風險報酬比率  #20201202 可以使用Float
+    cPredict_high_price_down30 = models.CharField(max_length=15, blank=True) #預估未來最高價
+    cPredict_low_price_down30 = models.CharField(max_length=15, blank=True) #預估未來最低價      
+    cNew_up_profit_down30 = models.CharField(max_length=25, blank=True) #預估未來往上空間
+    cNew_down_loss_down30 = models.CharField(max_length=25, blank=True) #預估未來往下空間
+    cRisk_reward_down30 = models.FloatField(max_length=20, blank=True) #預估風險報酬比率  #20201202 可以使用Float
 
 
     pubtime = models.DateTimeField(auto_now=True)
@@ -4259,8 +4259,8 @@ class StockPERseg202310(models.Model):
     
 
 class StockPERseg202311(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
 
 
@@ -4277,11 +4277,11 @@ class StockPERseg202311(models.Model):
     cRisk_reward = models.FloatField(max_length=20) #預估風險報酬比率  #20201202 可以使用Float
 
 
-    cPredict_high_price_down30 = models.CharField(max_length=15, null=True, blank=True) #預估未來最高價
-    cPredict_low_price_down30 = models.CharField(max_length=15, null=True, blank=True) #預估未來最低價      
-    cNew_up_profit_down30 = models.CharField(max_length=25, null=True, blank=True) #預估未來往上空間
-    cNew_down_loss_down30 = models.CharField(max_length=25, null=True, blank=True) #預估未來往下空間
-    cRisk_reward_down30 = models.FloatField(max_length=20, null=True, blank=True) #預估風險報酬比率  #20201202 可以使用Float
+    cPredict_high_price_down30 = models.CharField(max_length=15, blank=True) #預估未來最高價
+    cPredict_low_price_down30 = models.CharField(max_length=15, blank=True) #預估未來最低價      
+    cNew_up_profit_down30 = models.CharField(max_length=25, blank=True) #預估未來往上空間
+    cNew_down_loss_down30 = models.CharField(max_length=25, blank=True) #預估未來往下空間
+    cRisk_reward_down30 = models.FloatField(max_length=20, blank=True) #預估風險報酬比率  #20201202 可以使用Float
 
 
     pubtime = models.DateTimeField(auto_now=True)
@@ -4293,8 +4293,8 @@ class StockPERseg202311(models.Model):
     
 
 class StockPERseg202312(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
 
 
@@ -4311,11 +4311,11 @@ class StockPERseg202312(models.Model):
     cRisk_reward = models.FloatField(max_length=20) #預估風險報酬比率  #20201202 可以使用Float
 
 
-    cPredict_high_price_down30 = models.CharField(max_length=15, null=True, blank=True) #預估未來最高價
-    cPredict_low_price_down30 = models.CharField(max_length=15, null=True, blank=True) #預估未來最低價      
-    cNew_up_profit_down30 = models.CharField(max_length=25, null=True, blank=True) #預估未來往上空間
-    cNew_down_loss_down30 = models.CharField(max_length=25, null=True, blank=True) #預估未來往下空間
-    cRisk_reward_down30 = models.FloatField(max_length=20, null=True, blank=True) #預估風險報酬比率  #20201202 可以使用Float
+    cPredict_high_price_down30 = models.CharField(max_length=15, blank=True) #預估未來最高價
+    cPredict_low_price_down30 = models.CharField(max_length=15, blank=True) #預估未來最低價      
+    cNew_up_profit_down30 = models.CharField(max_length=25, blank=True) #預估未來往上空間
+    cNew_down_loss_down30 = models.CharField(max_length=25, blank=True) #預估未來往下空間
+    cRisk_reward_down30 = models.FloatField(max_length=20, blank=True) #預估風險報酬比率  #20201202 可以使用Float
 
 
     pubtime = models.DateTimeField(auto_now=True)
@@ -4327,8 +4327,8 @@ class StockPERseg202312(models.Model):
     
     
 class StockPERseg202401(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
 
 
@@ -4345,11 +4345,11 @@ class StockPERseg202401(models.Model):
     cRisk_reward = models.FloatField(max_length=20) #預估風險報酬比率  #20201202 可以使用Float
 
 
-    cPredict_high_price_down30 = models.CharField(max_length=15, null=True, blank=True) #預估未來最高價
-    cPredict_low_price_down30 = models.CharField(max_length=15, null=True, blank=True) #預估未來最低價      
-    cNew_up_profit_down30 = models.CharField(max_length=25, null=True, blank=True) #預估未來往上空間
-    cNew_down_loss_down30 = models.CharField(max_length=25, null=True, blank=True) #預估未來往下空間
-    cRisk_reward_down30 = models.FloatField(max_length=20, null=True, blank=True) #預估風險報酬比率  #20201202 可以使用Float
+    cPredict_high_price_down30 = models.CharField(max_length=15, blank=True) #預估未來最高價
+    cPredict_low_price_down30 = models.CharField(max_length=15, blank=True) #預估未來最低價      
+    cNew_up_profit_down30 = models.CharField(max_length=25, blank=True) #預估未來往上空間
+    cNew_down_loss_down30 = models.CharField(max_length=25, blank=True) #預估未來往下空間
+    cRisk_reward_down30 = models.FloatField(max_length=20, blank=True) #預估風險報酬比率  #20201202 可以使用Float
 
 
     pubtime = models.DateTimeField(auto_now=True)
@@ -4360,8 +4360,8 @@ class StockPERseg202401(models.Model):
     
 
 class StockPERseg202402(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
 
 
@@ -4378,11 +4378,11 @@ class StockPERseg202402(models.Model):
     cRisk_reward = models.FloatField(max_length=20) #預估風險報酬比率  #20201202 可以使用Float
 
 
-    cPredict_high_price_down30 = models.CharField(max_length=15, null=True, blank=True) #預估未來最高價
-    cPredict_low_price_down30 = models.CharField(max_length=15, null=True, blank=True) #預估未來最低價      
-    cNew_up_profit_down30 = models.CharField(max_length=25, null=True, blank=True) #預估未來往上空間
-    cNew_down_loss_down30 = models.CharField(max_length=25, null=True, blank=True) #預估未來往下空間
-    cRisk_reward_down30 = models.FloatField(max_length=20, null=True, blank=True) #預估風險報酬比率  #20201202 可以使用Float
+    cPredict_high_price_down30 = models.CharField(max_length=15, blank=True) #預估未來最高價
+    cPredict_low_price_down30 = models.CharField(max_length=15, blank=True) #預估未來最低價      
+    cNew_up_profit_down30 = models.CharField(max_length=25, blank=True) #預估未來往上空間
+    cNew_down_loss_down30 = models.CharField(max_length=25, blank=True) #預估未來往下空間
+    cRisk_reward_down30 = models.FloatField(max_length=20, blank=True) #預估風險報酬比率  #20201202 可以使用Float
 
 
     pubtime = models.DateTimeField(auto_now=True)
@@ -4393,8 +4393,8 @@ class StockPERseg202402(models.Model):
     
 
 class StockPERseg202403(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
 
 
@@ -4411,11 +4411,11 @@ class StockPERseg202403(models.Model):
     cRisk_reward = models.FloatField(max_length=20) #預估風險報酬比率  #20201202 可以使用Float
 
 
-    cPredict_high_price_down30 = models.CharField(max_length=15, null=True, blank=True) #預估未來最高價
-    cPredict_low_price_down30 = models.CharField(max_length=15, null=True, blank=True) #預估未來最低價      
-    cNew_up_profit_down30 = models.CharField(max_length=25, null=True, blank=True) #預估未來往上空間
-    cNew_down_loss_down30 = models.CharField(max_length=25, null=True, blank=True) #預估未來往下空間
-    cRisk_reward_down30 = models.FloatField(max_length=20, null=True, blank=True) #預估風險報酬比率  #20201202 可以使用Float
+    cPredict_high_price_down30 = models.CharField(max_length=15, blank=True) #預估未來最高價
+    cPredict_low_price_down30 = models.CharField(max_length=15, blank=True) #預估未來最低價      
+    cNew_up_profit_down30 = models.CharField(max_length=25, blank=True) #預估未來往上空間
+    cNew_down_loss_down30 = models.CharField(max_length=25, blank=True) #預估未來往下空間
+    cRisk_reward_down30 = models.FloatField(max_length=20, blank=True) #預估風險報酬比率  #20201202 可以使用Float
 
 
     pubtime = models.DateTimeField(auto_now=True)
@@ -4426,8 +4426,8 @@ class StockPERseg202403(models.Model):
     
 
 class StockPERseg202404(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
 
 
@@ -4444,11 +4444,11 @@ class StockPERseg202404(models.Model):
     cRisk_reward = models.FloatField(max_length=20) #預估風險報酬比率  #20201202 可以使用Float
 
 
-    cPredict_high_price_down30 = models.CharField(max_length=15, null=True, blank=True) #預估未來最高價
-    cPredict_low_price_down30 = models.CharField(max_length=15, null=True, blank=True) #預估未來最低價      
-    cNew_up_profit_down30 = models.CharField(max_length=25, null=True, blank=True) #預估未來往上空間
-    cNew_down_loss_down30 = models.CharField(max_length=25, null=True, blank=True) #預估未來往下空間
-    cRisk_reward_down30 = models.FloatField(max_length=20, null=True, blank=True) #預估風險報酬比率  #20201202 可以使用Float
+    cPredict_high_price_down30 = models.CharField(max_length=15, blank=True) #預估未來最高價
+    cPredict_low_price_down30 = models.CharField(max_length=15, blank=True) #預估未來最低價      
+    cNew_up_profit_down30 = models.CharField(max_length=25, blank=True) #預估未來往上空間
+    cNew_down_loss_down30 = models.CharField(max_length=25, blank=True) #預估未來往下空間
+    cRisk_reward_down30 = models.FloatField(max_length=20, blank=True) #預估風險報酬比率  #20201202 可以使用Float
 
 
     pubtime = models.DateTimeField(auto_now=True)
@@ -4459,8 +4459,8 @@ class StockPERseg202404(models.Model):
     
 
 class StockPERseg202405(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
 
 
@@ -4477,11 +4477,11 @@ class StockPERseg202405(models.Model):
     cRisk_reward = models.FloatField(max_length=20) #預估風險報酬比率  #20201202 可以使用Float
 
 
-    cPredict_high_price_down30 = models.CharField(max_length=15, null=True, blank=True) #預估未來最高價
-    cPredict_low_price_down30 = models.CharField(max_length=15, null=True, blank=True) #預估未來最低價      
-    cNew_up_profit_down30 = models.CharField(max_length=25, null=True, blank=True) #預估未來往上空間
-    cNew_down_loss_down30 = models.CharField(max_length=25, null=True, blank=True) #預估未來往下空間
-    cRisk_reward_down30 = models.FloatField(max_length=20, null=True, blank=True) #預估風險報酬比率  #20201202 可以使用Float
+    cPredict_high_price_down30 = models.CharField(max_length=15, blank=True) #預估未來最高價
+    cPredict_low_price_down30 = models.CharField(max_length=15, blank=True) #預估未來最低價      
+    cNew_up_profit_down30 = models.CharField(max_length=25, blank=True) #預估未來往上空間
+    cNew_down_loss_down30 = models.CharField(max_length=25, blank=True) #預估未來往下空間
+    cRisk_reward_down30 = models.FloatField(max_length=20, blank=True) #預估風險報酬比率  #20201202 可以使用Float
 
 
     pubtime = models.DateTimeField(auto_now=True)
@@ -4492,8 +4492,8 @@ class StockPERseg202405(models.Model):
     
 
 class StockPERseg202406(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
 
 
@@ -4510,11 +4510,11 @@ class StockPERseg202406(models.Model):
     cRisk_reward = models.FloatField(max_length=20) #預估風險報酬比率  #20201202 可以使用Float
 
 
-    cPredict_high_price_down30 = models.CharField(max_length=15, null=True, blank=True) #預估未來最高價
-    cPredict_low_price_down30 = models.CharField(max_length=15, null=True, blank=True) #預估未來最低價      
-    cNew_up_profit_down30 = models.CharField(max_length=25, null=True, blank=True) #預估未來往上空間
-    cNew_down_loss_down30 = models.CharField(max_length=25, null=True, blank=True) #預估未來往下空間
-    cRisk_reward_down30 = models.FloatField(max_length=20, null=True, blank=True) #預估風險報酬比率  #20201202 可以使用Float
+    cPredict_high_price_down30 = models.CharField(max_length=15, blank=True) #預估未來最高價
+    cPredict_low_price_down30 = models.CharField(max_length=15, blank=True) #預估未來最低價      
+    cNew_up_profit_down30 = models.CharField(max_length=25, blank=True) #預估未來往上空間
+    cNew_down_loss_down30 = models.CharField(max_length=25, blank=True) #預估未來往下空間
+    cRisk_reward_down30 = models.FloatField(max_length=20, blank=True) #預估風險報酬比率  #20201202 可以使用Float
 
 
     pubtime = models.DateTimeField(auto_now=True)
@@ -4528,13 +4528,13 @@ class StockPERseg202406(models.Model):
 ##########################################################################
     
 class EPSachieve(models.Model):
-    cStockID = models.CharField(max_length=8,blank=True,null=True)
-    cStockName = models.CharField(max_length=10,blank=True,null=True)
-    cEPS1 = models.CharField(max_length=10,blank=True,null=True)  
-    cEPSQ1 = models.CharField(max_length=10,blank=True,null=True)
+    cStockID = models.CharField(max_length=8,blank=True)
+    cStockName = models.CharField(max_length=10,blank=True)
+    cEPS1 = models.CharField(max_length=10,blank=True)  
+    cEPSQ1 = models.CharField(max_length=10,blank=True)
     #cEPSQ2 = models.CharField(max_length=10)
     #cEPSQ3 = models.CharField(max_length=10)
-    cEPSAchieveRate = models.CharField(max_length=10,blank=True,null=True)
+    cEPSAchieveRate = models.CharField(max_length=10,blank=True)
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
     press = models.IntegerField(default=0)
@@ -4542,13 +4542,13 @@ class EPSachieve(models.Model):
         return self.cStockID
     
 class EPSachieve2020Q2(models.Model):
-    cStockID = models.CharField(max_length=8,blank=True,null=True)
-    cStockName = models.CharField(max_length=10,blank=True,null=True)
-    cEPS1 = models.CharField(max_length=20,blank=True,null=True)  
-    cEPSQ1 = models.CharField(max_length=20,blank=True,null=True)
-    cEPSQ2 = models.CharField(max_length=20,blank=True,null=True)
+    cStockID = models.CharField(max_length=8,blank=True)
+    cStockName = models.CharField(max_length=10,blank=True)
+    cEPS1 = models.CharField(max_length=20,blank=True)  
+    cEPSQ1 = models.CharField(max_length=20,blank=True)
+    cEPSQ2 = models.CharField(max_length=20,blank=True)
     #cEPSQ3 = models.CharField(max_length=10)
-    cEPSAchieveRate = models.CharField(max_length=20,blank=True,null=True)
+    cEPSAchieveRate = models.CharField(max_length=20,blank=True)
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
     press = models.IntegerField(default=0)
@@ -4557,13 +4557,13 @@ class EPSachieve2020Q2(models.Model):
 
 
 class EPSachieve2020Q3(models.Model):
-    cStockID = models.CharField(max_length=8,blank=True,null=True)
-    cStockName = models.CharField(max_length=10,blank=True,null=True)
-    cEPS1 = models.CharField(max_length=20,blank=True,null=True)  
-    cEPSQ1 = models.CharField(max_length=20,blank=True,null=True)
-    cEPSQ2 = models.CharField(max_length=20,blank=True,null=True)
+    cStockID = models.CharField(max_length=8,blank=True)
+    cStockName = models.CharField(max_length=10,blank=True)
+    cEPS1 = models.CharField(max_length=20,blank=True)  
+    cEPSQ1 = models.CharField(max_length=20,blank=True)
+    cEPSQ2 = models.CharField(max_length=20,blank=True)
     cEPSQ3 = models.CharField(max_length=20)
-    cEPSAchieveRate = models.CharField(max_length=20,blank=True,null=True)
+    cEPSAchieveRate = models.CharField(max_length=20,blank=True)
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
     press = models.IntegerField(default=0)
@@ -4571,13 +4571,13 @@ class EPSachieve2020Q3(models.Model):
         return self.cStockID
 
 class EPSachieve2021Q1(models.Model):
-    cStockID = models.CharField(max_length=8,blank=True,null=True)
-    cStockName = models.CharField(max_length=10,blank=True,null=True)
-    cEPS1 = models.CharField(max_length=20,blank=True,null=True)  
-    cEPSQ1 = models.CharField(max_length=20,blank=True,null=True)
-    #cEPSQ2 = models.CharField(max_length=20,blank=True,null=True)
+    cStockID = models.CharField(max_length=8,blank=True)
+    cStockName = models.CharField(max_length=10,blank=True)
+    cEPS1 = models.CharField(max_length=20,blank=True)  
+    cEPSQ1 = models.CharField(max_length=20,blank=True)
+    #cEPSQ2 = models.CharField(max_length=20,blank=True)
     #cEPSQ3 = models.CharField(max_length=20)
-    cEPSAchieveRate = models.CharField(max_length=20,blank=True,null=True)
+    cEPSAchieveRate = models.CharField(max_length=20,blank=True)
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
     press = models.IntegerField(default=0)
@@ -4586,13 +4586,13 @@ class EPSachieve2021Q1(models.Model):
 
 
 class EPSachieve2021Q2(models.Model):
-    cStockID = models.CharField(max_length=8,blank=True,null=True)
-    cStockName = models.CharField(max_length=10,blank=True,null=True)
-    cEPS1 = models.CharField(max_length=20,blank=True,null=True)  
-    cEPSQ1 = models.CharField(max_length=20,blank=True,null=True)
-    cEPSQ2 = models.CharField(max_length=20,blank=True,null=True)
+    cStockID = models.CharField(max_length=8,blank=True)
+    cStockName = models.CharField(max_length=10,blank=True)
+    cEPS1 = models.CharField(max_length=20,blank=True)  
+    cEPSQ1 = models.CharField(max_length=20,blank=True)
+    cEPSQ2 = models.CharField(max_length=20,blank=True)
     #cEPSQ3 = models.CharField(max_length=20)
-    cEPSAchieveRate = models.CharField(max_length=20,blank=True,null=True)
+    cEPSAchieveRate = models.CharField(max_length=20,blank=True)
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
     press = models.IntegerField(default=0)
@@ -4601,13 +4601,13 @@ class EPSachieve2021Q2(models.Model):
 
 
 class EPSachieve2021Q3(models.Model):
-    cStockID = models.CharField(max_length=8,blank=True,null=True)
-    cStockName = models.CharField(max_length=10,blank=True,null=True)
-    cEPS1 = models.CharField(max_length=20,blank=True,null=True)  
-    cEPSQ1 = models.CharField(max_length=20,blank=True,null=True)
-    cEPSQ2 = models.CharField(max_length=20,blank=True,null=True)
-    cEPSQ3 = models.CharField(max_length=20,blank=True,null=True)
-    cEPSAchieveRate = models.CharField(max_length=20,blank=True,null=True)
+    cStockID = models.CharField(max_length=8,blank=True)
+    cStockName = models.CharField(max_length=10,blank=True)
+    cEPS1 = models.CharField(max_length=20,blank=True)  
+    cEPSQ1 = models.CharField(max_length=20,blank=True)
+    cEPSQ2 = models.CharField(max_length=20,blank=True)
+    cEPSQ3 = models.CharField(max_length=20,blank=True)
+    cEPSAchieveRate = models.CharField(max_length=20,blank=True)
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
     press = models.IntegerField(default=0)
@@ -4615,13 +4615,13 @@ class EPSachieve2021Q3(models.Model):
         return self.cStockID
     
 class EPSachieve2022Q1(models.Model):
-    cStockID = models.CharField(max_length=8,blank=True,null=True)
-    cStockName = models.CharField(max_length=10,blank=True,null=True)
-    cEPS1 = models.CharField(max_length=20,blank=True,null=True)  
-    cEPSQ1 = models.CharField(max_length=20,blank=True,null=True)
-    #cEPSQ2 = models.CharField(max_length=20,blank=True,null=True)
+    cStockID = models.CharField(max_length=8,blank=True)
+    cStockName = models.CharField(max_length=10,blank=True)
+    cEPS1 = models.CharField(max_length=20,blank=True)  
+    cEPSQ1 = models.CharField(max_length=20,blank=True)
+    #cEPSQ2 = models.CharField(max_length=20,blank=True)
     #cEPSQ3 = models.CharField(max_length=20)
-    cEPSAchieveRate = models.CharField(max_length=20,blank=True,null=True)
+    cEPSAchieveRate = models.CharField(max_length=20,blank=True)
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
     press = models.IntegerField(default=0)
@@ -4630,13 +4630,13 @@ class EPSachieve2022Q1(models.Model):
 
 
 class EPSachieve2022Q2(models.Model):
-    cStockID = models.CharField(max_length=8,blank=True,null=True)
-    cStockName = models.CharField(max_length=10,blank=True,null=True)
-    cEPS1 = models.CharField(max_length=20,blank=True,null=True)  
-    cEPSQ1 = models.CharField(max_length=20,blank=True,null=True)
-    cEPSQ2 = models.CharField(max_length=20,blank=True,null=True)
+    cStockID = models.CharField(max_length=8,blank=True)
+    cStockName = models.CharField(max_length=10,blank=True)
+    cEPS1 = models.CharField(max_length=20,blank=True)  
+    cEPSQ1 = models.CharField(max_length=20,blank=True)
+    cEPSQ2 = models.CharField(max_length=20,blank=True)
     #cEPSQ3 = models.CharField(max_length=20)
-    cEPSAchieveRate = models.CharField(max_length=20,blank=True,null=True)
+    cEPSAchieveRate = models.CharField(max_length=20,blank=True)
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
     press = models.IntegerField(default=0)
@@ -4645,13 +4645,13 @@ class EPSachieve2022Q2(models.Model):
 
 
 class EPSachieve2022Q3(models.Model):
-    cStockID = models.CharField(max_length=8,blank=True,null=True)
-    cStockName = models.CharField(max_length=10,blank=True,null=True)
-    cEPS1 = models.CharField(max_length=20,blank=True,null=True)  
-    cEPSQ1 = models.CharField(max_length=20,blank=True,null=True)
-    cEPSQ2 = models.CharField(max_length=20,blank=True,null=True)
-    cEPSQ3 = models.CharField(max_length=20,blank=True,null=True)
-    cEPSAchieveRate = models.CharField(max_length=20,blank=True,null=True)
+    cStockID = models.CharField(max_length=8,blank=True)
+    cStockName = models.CharField(max_length=10,blank=True)
+    cEPS1 = models.CharField(max_length=20,blank=True)  
+    cEPSQ1 = models.CharField(max_length=20,blank=True)
+    cEPSQ2 = models.CharField(max_length=20,blank=True)
+    cEPSQ3 = models.CharField(max_length=20,blank=True)
+    cEPSAchieveRate = models.CharField(max_length=20,blank=True)
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
     press = models.IntegerField(default=0)
@@ -4659,13 +4659,13 @@ class EPSachieve2022Q3(models.Model):
         return self.cStockID
     
 class EPSachieve2023Q1(models.Model):
-    cStockID = models.CharField(max_length=8,blank=True,null=True)
-    cStockName = models.CharField(max_length=10,blank=True,null=True)
-    cEPS1 = models.CharField(max_length=20,blank=True,null=True)  
-    cEPSQ1 = models.CharField(max_length=20,blank=True,null=True)
-    #cEPSQ2 = models.CharField(max_length=20,blank=True,null=True)
+    cStockID = models.CharField(max_length=8,blank=True)
+    cStockName = models.CharField(max_length=10,blank=True)
+    cEPS1 = models.CharField(max_length=20,blank=True)  
+    cEPSQ1 = models.CharField(max_length=20,blank=True)
+    #cEPSQ2 = models.CharField(max_length=20,blank=True)
     #cEPSQ3 = models.CharField(max_length=20)
-    cEPSAchieveRate = models.CharField(max_length=20,blank=True,null=True)
+    cEPSAchieveRate = models.CharField(max_length=20,blank=True)
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
     press = models.IntegerField(default=0)
@@ -4673,13 +4673,13 @@ class EPSachieve2023Q1(models.Model):
         return self.cStockID
     
 class EPSachieve2023Q2(models.Model):
-    cStockID = models.CharField(max_length=8,blank=True,null=True)
-    cStockName = models.CharField(max_length=10,blank=True,null=True)
-    cEPS1 = models.CharField(max_length=20,blank=True,null=True)  
-    cEPSQ1 = models.CharField(max_length=20,blank=True,null=True)
-    cEPSQ2 = models.CharField(max_length=20,blank=True,null=True)
+    cStockID = models.CharField(max_length=8,blank=True)
+    cStockName = models.CharField(max_length=10,blank=True)
+    cEPS1 = models.CharField(max_length=20,blank=True)  
+    cEPSQ1 = models.CharField(max_length=20,blank=True)
+    cEPSQ2 = models.CharField(max_length=20,blank=True)
     #cEPSQ3 = models.CharField(max_length=20)
-    cEPSAchieveRate = models.CharField(max_length=20,blank=True,null=True)
+    cEPSAchieveRate = models.CharField(max_length=20,blank=True)
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
     press = models.IntegerField(default=0)
@@ -4688,13 +4688,13 @@ class EPSachieve2023Q2(models.Model):
     
     
 class EPSachieve2023Q3(models.Model):
-    cStockID = models.CharField(max_length=8,blank=True,null=True)
-    cStockName = models.CharField(max_length=10,blank=True,null=True)
-    cEPS1 = models.CharField(max_length=20,blank=True,null=True)  
-    cEPSQ1 = models.CharField(max_length=20,blank=True,null=True)
-    cEPSQ2 = models.CharField(max_length=20,blank=True,null=True)
+    cStockID = models.CharField(max_length=8,blank=True)
+    cStockName = models.CharField(max_length=10,blank=True)
+    cEPS1 = models.CharField(max_length=20,blank=True)  
+    cEPSQ1 = models.CharField(max_length=20,blank=True)
+    cEPSQ2 = models.CharField(max_length=20,blank=True)
     cEPSQ3 = models.CharField(max_length=20)
-    cEPSAchieveRate = models.CharField(max_length=20,blank=True,null=True)
+    cEPSAchieveRate = models.CharField(max_length=20,blank=True)
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
     press = models.IntegerField(default=0)
@@ -4702,19 +4702,19 @@ class EPSachieve2023Q3(models.Model):
         return self.cStockID
 #####################################################################
 class StockCapVar(models.Model):
-    cStockID = models.CharField(max_length=8,blank=True,null=True)
-    cStockName = models.CharField(max_length=10,blank=True,null=True)
-    cCap1 = models.CharField(max_length=10,blank=True,null=True)  
-    cCap2 = models.CharField(max_length=10,blank=True,null=True)
-    cCap3 = models.CharField(max_length=10,blank=True,null=True)  
-    cCap4 = models.CharField(max_length=10,blank=True,null=True)
-    cCap5 = models.CharField(max_length=10,blank=True,null=True)  
-    cCap6 = models.CharField(max_length=10,blank=True,null=True)
-    cCap7 = models.CharField(max_length=10,blank=True,null=True)  
-    cCap8 = models.CharField(max_length=10,blank=True,null=True)    
+    cStockID = models.CharField(max_length=8,blank=True)
+    cStockName = models.CharField(max_length=10,blank=True)
+    cCap1 = models.CharField(max_length=10,blank=True)  
+    cCap2 = models.CharField(max_length=10,blank=True)
+    cCap3 = models.CharField(max_length=10,blank=True)  
+    cCap4 = models.CharField(max_length=10,blank=True)
+    cCap5 = models.CharField(max_length=10,blank=True)  
+    cCap6 = models.CharField(max_length=10,blank=True)
+    cCap7 = models.CharField(max_length=10,blank=True)  
+    cCap8 = models.CharField(max_length=10,blank=True)    
 
-    cLatestYoY = models.CharField(max_length=10,blank=True,null=True)
-    cLatestMoM = models.CharField(max_length=10,blank=True,null=True)
+    cLatestYoY = models.CharField(max_length=10,blank=True)
+    cLatestMoM = models.CharField(max_length=10,blank=True)
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
     press = models.IntegerField(default=0)
@@ -4723,19 +4723,19 @@ class StockCapVar(models.Model):
     
     
 class StockCapVar2020Q2(models.Model):
-    cStockID = models.CharField(max_length=8,blank=True,null=True)
-    cStockName = models.CharField(max_length=10,blank=True,null=True)
-    cCap1 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap2 = models.CharField(max_length=20,blank=True,null=True)
-    cCap3 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap4 = models.CharField(max_length=20,blank=True,null=True)
-    cCap5 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap6 = models.CharField(max_length=20,blank=True,null=True)
-    cCap7 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap8 = models.CharField(max_length=20,blank=True,null=True)    
+    cStockID = models.CharField(max_length=8,blank=True)
+    cStockName = models.CharField(max_length=10,blank=True)
+    cCap1 = models.CharField(max_length=20,blank=True)  
+    cCap2 = models.CharField(max_length=20,blank=True)
+    cCap3 = models.CharField(max_length=20,blank=True)  
+    cCap4 = models.CharField(max_length=20,blank=True)
+    cCap5 = models.CharField(max_length=20,blank=True)  
+    cCap6 = models.CharField(max_length=20,blank=True)
+    cCap7 = models.CharField(max_length=20,blank=True)  
+    cCap8 = models.CharField(max_length=20,blank=True)    
 
-    cLatestYoY = models.CharField(max_length=20,blank=True,null=True)
-    cLatestMoM = models.CharField(max_length=20,blank=True,null=True)
+    cLatestYoY = models.CharField(max_length=20,blank=True)
+    cLatestMoM = models.CharField(max_length=20,blank=True)
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
     press = models.IntegerField(default=0)
@@ -4744,19 +4744,19 @@ class StockCapVar2020Q2(models.Model):
     
     
 class StockCapVar2020Q3(models.Model):
-    cStockID = models.CharField(max_length=8,blank=True,null=True)
-    cStockName = models.CharField(max_length=10,blank=True,null=True)
-    cCap1 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap2 = models.CharField(max_length=20,blank=True,null=True)
-    cCap3 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap4 = models.CharField(max_length=20,blank=True,null=True)
-    cCap5 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap6 = models.CharField(max_length=20,blank=True,null=True)
-    cCap7 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap8 = models.CharField(max_length=20,blank=True,null=True)    
+    cStockID = models.CharField(max_length=8,blank=True)
+    cStockName = models.CharField(max_length=10,blank=True)
+    cCap1 = models.CharField(max_length=20,blank=True)  
+    cCap2 = models.CharField(max_length=20,blank=True)
+    cCap3 = models.CharField(max_length=20,blank=True)  
+    cCap4 = models.CharField(max_length=20,blank=True)
+    cCap5 = models.CharField(max_length=20,blank=True)  
+    cCap6 = models.CharField(max_length=20,blank=True)
+    cCap7 = models.CharField(max_length=20,blank=True)  
+    cCap8 = models.CharField(max_length=20,blank=True)    
 
-    cLatestYoY = models.CharField(max_length=20,blank=True,null=True)
-    cLatestMoM = models.CharField(max_length=20,blank=True,null=True)
+    cLatestYoY = models.CharField(max_length=20,blank=True)
+    cLatestMoM = models.CharField(max_length=20,blank=True)
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
     press = models.IntegerField(default=0)
@@ -4765,19 +4765,19 @@ class StockCapVar2020Q3(models.Model):
 
 
 class StockCapVar2020Q4(models.Model):
-    cStockID = models.CharField(max_length=8,blank=True,null=True)
-    cStockName = models.CharField(max_length=10,blank=True,null=True)
-    cCap1 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap2 = models.CharField(max_length=20,blank=True,null=True)
-    cCap3 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap4 = models.CharField(max_length=20,blank=True,null=True)
-    cCap5 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap6 = models.CharField(max_length=20,blank=True,null=True)
-    cCap7 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap8 = models.CharField(max_length=20,blank=True,null=True)    
+    cStockID = models.CharField(max_length=8,blank=True)
+    cStockName = models.CharField(max_length=10,blank=True)
+    cCap1 = models.CharField(max_length=20,blank=True)  
+    cCap2 = models.CharField(max_length=20,blank=True)
+    cCap3 = models.CharField(max_length=20,blank=True)  
+    cCap4 = models.CharField(max_length=20,blank=True)
+    cCap5 = models.CharField(max_length=20,blank=True)  
+    cCap6 = models.CharField(max_length=20,blank=True)
+    cCap7 = models.CharField(max_length=20,blank=True)  
+    cCap8 = models.CharField(max_length=20,blank=True)    
 
-    cLatestYoY = models.CharField(max_length=20,blank=True,null=True)
-    cLatestMoM = models.CharField(max_length=20,blank=True,null=True)
+    cLatestYoY = models.CharField(max_length=20,blank=True)
+    cLatestMoM = models.CharField(max_length=20,blank=True)
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
     press = models.IntegerField(default=0)
@@ -4786,19 +4786,19 @@ class StockCapVar2020Q4(models.Model):
 
 
 class StockCapVar2021Q1(models.Model):
-    cStockID = models.CharField(max_length=8,blank=True,null=True)
-    cStockName = models.CharField(max_length=10,blank=True,null=True)
-    cCap1 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap2 = models.CharField(max_length=20,blank=True,null=True)
-    cCap3 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap4 = models.CharField(max_length=20,blank=True,null=True)
-    cCap5 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap6 = models.CharField(max_length=20,blank=True,null=True)
-    cCap7 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap8 = models.CharField(max_length=20,blank=True,null=True)    
+    cStockID = models.CharField(max_length=8,blank=True)
+    cStockName = models.CharField(max_length=10,blank=True)
+    cCap1 = models.CharField(max_length=20,blank=True)  
+    cCap2 = models.CharField(max_length=20,blank=True)
+    cCap3 = models.CharField(max_length=20,blank=True)  
+    cCap4 = models.CharField(max_length=20,blank=True)
+    cCap5 = models.CharField(max_length=20,blank=True)  
+    cCap6 = models.CharField(max_length=20,blank=True)
+    cCap7 = models.CharField(max_length=20,blank=True)  
+    cCap8 = models.CharField(max_length=20,blank=True)    
 
-    cLatestYoY = models.CharField(max_length=20,blank=True,null=True)
-    cLatestMoM = models.CharField(max_length=20,blank=True,null=True)
+    cLatestYoY = models.CharField(max_length=20,blank=True)
+    cLatestMoM = models.CharField(max_length=20,blank=True)
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
     press = models.IntegerField(default=0)
@@ -4806,19 +4806,19 @@ class StockCapVar2021Q1(models.Model):
         return self.cStockID 
 
 class StockCapVar2021Q2(models.Model):
-    cStockID = models.CharField(max_length=8,blank=True,null=True)
-    cStockName = models.CharField(max_length=10,blank=True,null=True)
-    cCap1 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap2 = models.CharField(max_length=20,blank=True,null=True)
-    cCap3 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap4 = models.CharField(max_length=20,blank=True,null=True)
-    cCap5 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap6 = models.CharField(max_length=20,blank=True,null=True)
-    cCap7 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap8 = models.CharField(max_length=20,blank=True,null=True)    
+    cStockID = models.CharField(max_length=8,blank=True)
+    cStockName = models.CharField(max_length=10,blank=True)
+    cCap1 = models.CharField(max_length=20,blank=True)  
+    cCap2 = models.CharField(max_length=20,blank=True)
+    cCap3 = models.CharField(max_length=20,blank=True)  
+    cCap4 = models.CharField(max_length=20,blank=True)
+    cCap5 = models.CharField(max_length=20,blank=True)  
+    cCap6 = models.CharField(max_length=20,blank=True)
+    cCap7 = models.CharField(max_length=20,blank=True)  
+    cCap8 = models.CharField(max_length=20,blank=True)    
 
-    cLatestYoY = models.CharField(max_length=20,blank=True,null=True)
-    cLatestMoM = models.CharField(max_length=20,blank=True,null=True)
+    cLatestYoY = models.CharField(max_length=20,blank=True)
+    cLatestMoM = models.CharField(max_length=20,blank=True)
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
     press = models.IntegerField(default=0)
@@ -4826,19 +4826,19 @@ class StockCapVar2021Q2(models.Model):
         return self.cStockID     
     
 class StockCapVar2021Q3(models.Model):
-    cStockID = models.CharField(max_length=8,blank=True,null=True)
-    cStockName = models.CharField(max_length=10,blank=True,null=True)
-    cCap1 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap2 = models.CharField(max_length=20,blank=True,null=True)
-    cCap3 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap4 = models.CharField(max_length=20,blank=True,null=True)
-    cCap5 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap6 = models.CharField(max_length=20,blank=True,null=True)
-    cCap7 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap8 = models.CharField(max_length=20,blank=True,null=True)    
+    cStockID = models.CharField(max_length=8,blank=True)
+    cStockName = models.CharField(max_length=10,blank=True)
+    cCap1 = models.CharField(max_length=20,blank=True)  
+    cCap2 = models.CharField(max_length=20,blank=True)
+    cCap3 = models.CharField(max_length=20,blank=True)  
+    cCap4 = models.CharField(max_length=20,blank=True)
+    cCap5 = models.CharField(max_length=20,blank=True)  
+    cCap6 = models.CharField(max_length=20,blank=True)
+    cCap7 = models.CharField(max_length=20,blank=True)  
+    cCap8 = models.CharField(max_length=20,blank=True)    
 
-    cLatestYoY = models.CharField(max_length=20,blank=True,null=True)
-    cLatestMoM = models.CharField(max_length=20,blank=True,null=True)
+    cLatestYoY = models.CharField(max_length=20,blank=True)
+    cLatestMoM = models.CharField(max_length=20,blank=True)
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
     press = models.IntegerField(default=0)
@@ -4847,19 +4847,19 @@ class StockCapVar2021Q3(models.Model):
     
     
 class StockCapVar2021Q4(models.Model):
-    cStockID = models.CharField(max_length=8,blank=True,null=True)
-    cStockName = models.CharField(max_length=10,blank=True,null=True)
-    cCap1 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap2 = models.CharField(max_length=20,blank=True,null=True)
-    cCap3 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap4 = models.CharField(max_length=20,blank=True,null=True)
-    cCap5 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap6 = models.CharField(max_length=20,blank=True,null=True)
-    cCap7 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap8 = models.CharField(max_length=20,blank=True,null=True)    
+    cStockID = models.CharField(max_length=8,blank=True)
+    cStockName = models.CharField(max_length=10,blank=True)
+    cCap1 = models.CharField(max_length=20,blank=True)  
+    cCap2 = models.CharField(max_length=20,blank=True)
+    cCap3 = models.CharField(max_length=20,blank=True)  
+    cCap4 = models.CharField(max_length=20,blank=True)
+    cCap5 = models.CharField(max_length=20,blank=True)  
+    cCap6 = models.CharField(max_length=20,blank=True)
+    cCap7 = models.CharField(max_length=20,blank=True)  
+    cCap8 = models.CharField(max_length=20,blank=True)    
 
-    cLatestYoY = models.CharField(max_length=20,blank=True,null=True)
-    cLatestMoM = models.CharField(max_length=20,blank=True,null=True)
+    cLatestYoY = models.CharField(max_length=20,blank=True)
+    cLatestMoM = models.CharField(max_length=20,blank=True)
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
     press = models.IntegerField(default=0)
@@ -4869,19 +4869,19 @@ class StockCapVar2021Q4(models.Model):
     
 
 class StockCapVar2022Q1(models.Model):
-    cStockID = models.CharField(max_length=8,blank=True,null=True)
-    cStockName = models.CharField(max_length=10,blank=True,null=True)
-    cCap1 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap2 = models.CharField(max_length=20,blank=True,null=True)
-    cCap3 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap4 = models.CharField(max_length=20,blank=True,null=True)
-    cCap5 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap6 = models.CharField(max_length=20,blank=True,null=True)
-    cCap7 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap8 = models.CharField(max_length=20,blank=True,null=True)    
+    cStockID = models.CharField(max_length=8,blank=True)
+    cStockName = models.CharField(max_length=10,blank=True)
+    cCap1 = models.CharField(max_length=20,blank=True)  
+    cCap2 = models.CharField(max_length=20,blank=True)
+    cCap3 = models.CharField(max_length=20,blank=True)  
+    cCap4 = models.CharField(max_length=20,blank=True)
+    cCap5 = models.CharField(max_length=20,blank=True)  
+    cCap6 = models.CharField(max_length=20,blank=True)
+    cCap7 = models.CharField(max_length=20,blank=True)  
+    cCap8 = models.CharField(max_length=20,blank=True)    
 
-    cLatestYoY = models.CharField(max_length=20,blank=True,null=True)
-    cLatestMoM = models.CharField(max_length=20,blank=True,null=True)
+    cLatestYoY = models.CharField(max_length=20,blank=True)
+    cLatestMoM = models.CharField(max_length=20,blank=True)
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
     press = models.IntegerField(default=0)
@@ -4889,19 +4889,19 @@ class StockCapVar2022Q1(models.Model):
         return self.cStockID 
 
 class StockCapVar2022Q2(models.Model):
-    cStockID = models.CharField(max_length=8,blank=True,null=True)
-    cStockName = models.CharField(max_length=10,blank=True,null=True)
-    cCap1 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap2 = models.CharField(max_length=20,blank=True,null=True)
-    cCap3 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap4 = models.CharField(max_length=20,blank=True,null=True)
-    cCap5 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap6 = models.CharField(max_length=20,blank=True,null=True)
-    cCap7 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap8 = models.CharField(max_length=20,blank=True,null=True)    
+    cStockID = models.CharField(max_length=8,blank=True)
+    cStockName = models.CharField(max_length=10,blank=True)
+    cCap1 = models.CharField(max_length=20,blank=True)  
+    cCap2 = models.CharField(max_length=20,blank=True)
+    cCap3 = models.CharField(max_length=20,blank=True)  
+    cCap4 = models.CharField(max_length=20,blank=True)
+    cCap5 = models.CharField(max_length=20,blank=True)  
+    cCap6 = models.CharField(max_length=20,blank=True)
+    cCap7 = models.CharField(max_length=20,blank=True)  
+    cCap8 = models.CharField(max_length=20,blank=True)    
 
-    cLatestYoY = models.CharField(max_length=20,blank=True,null=True)
-    cLatestMoM = models.CharField(max_length=20,blank=True,null=True)
+    cLatestYoY = models.CharField(max_length=20,blank=True)
+    cLatestMoM = models.CharField(max_length=20,blank=True)
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
     press = models.IntegerField(default=0)
@@ -4909,19 +4909,19 @@ class StockCapVar2022Q2(models.Model):
         return self.cStockID     
     
 class StockCapVar2022Q3(models.Model):
-    cStockID = models.CharField(max_length=8,blank=True,null=True)
-    cStockName = models.CharField(max_length=10,blank=True,null=True)
-    cCap1 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap2 = models.CharField(max_length=20,blank=True,null=True)
-    cCap3 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap4 = models.CharField(max_length=20,blank=True,null=True)
-    cCap5 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap6 = models.CharField(max_length=20,blank=True,null=True)
-    cCap7 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap8 = models.CharField(max_length=20,blank=True,null=True)    
+    cStockID = models.CharField(max_length=8,blank=True)
+    cStockName = models.CharField(max_length=10,blank=True)
+    cCap1 = models.CharField(max_length=20,blank=True)  
+    cCap2 = models.CharField(max_length=20,blank=True)
+    cCap3 = models.CharField(max_length=20,blank=True)  
+    cCap4 = models.CharField(max_length=20,blank=True)
+    cCap5 = models.CharField(max_length=20,blank=True)  
+    cCap6 = models.CharField(max_length=20,blank=True)
+    cCap7 = models.CharField(max_length=20,blank=True)  
+    cCap8 = models.CharField(max_length=20,blank=True)    
 
-    cLatestYoY = models.CharField(max_length=20,blank=True,null=True)
-    cLatestMoM = models.CharField(max_length=20,blank=True,null=True)
+    cLatestYoY = models.CharField(max_length=20,blank=True)
+    cLatestMoM = models.CharField(max_length=20,blank=True)
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
     press = models.IntegerField(default=0)
@@ -4930,19 +4930,19 @@ class StockCapVar2022Q3(models.Model):
     
     
 class StockCapVar2022Q4(models.Model):
-    cStockID = models.CharField(max_length=8,blank=True,null=True)
-    cStockName = models.CharField(max_length=10,blank=True,null=True)
-    cCap1 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap2 = models.CharField(max_length=20,blank=True,null=True)
-    cCap3 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap4 = models.CharField(max_length=20,blank=True,null=True)
-    cCap5 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap6 = models.CharField(max_length=20,blank=True,null=True)
-    cCap7 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap8 = models.CharField(max_length=20,blank=True,null=True)    
+    cStockID = models.CharField(max_length=8,blank=True)
+    cStockName = models.CharField(max_length=10,blank=True)
+    cCap1 = models.CharField(max_length=20,blank=True)  
+    cCap2 = models.CharField(max_length=20,blank=True)
+    cCap3 = models.CharField(max_length=20,blank=True)  
+    cCap4 = models.CharField(max_length=20,blank=True)
+    cCap5 = models.CharField(max_length=20,blank=True)  
+    cCap6 = models.CharField(max_length=20,blank=True)
+    cCap7 = models.CharField(max_length=20,blank=True)  
+    cCap8 = models.CharField(max_length=20,blank=True)    
 
-    cLatestYoY = models.CharField(max_length=20,blank=True,null=True)
-    cLatestMoM = models.CharField(max_length=20,blank=True,null=True)
+    cLatestYoY = models.CharField(max_length=20,blank=True)
+    cLatestMoM = models.CharField(max_length=20,blank=True)
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
     press = models.IntegerField(default=0)
@@ -4950,19 +4950,19 @@ class StockCapVar2022Q4(models.Model):
         return self.cStockID  
     
 class StockCapVar2023Q1(models.Model):
-    cStockID = models.CharField(max_length=8,blank=True,null=True)
-    cStockName = models.CharField(max_length=10,blank=True,null=True)
-    cCap1 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap2 = models.CharField(max_length=20,blank=True,null=True)
-    cCap3 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap4 = models.CharField(max_length=20,blank=True,null=True)
-    cCap5 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap6 = models.CharField(max_length=20,blank=True,null=True)
-    cCap7 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap8 = models.CharField(max_length=20,blank=True,null=True)    
+    cStockID = models.CharField(max_length=8,blank=True)
+    cStockName = models.CharField(max_length=10,blank=True)
+    cCap1 = models.CharField(max_length=20,blank=True)  
+    cCap2 = models.CharField(max_length=20,blank=True)
+    cCap3 = models.CharField(max_length=20,blank=True)  
+    cCap4 = models.CharField(max_length=20,blank=True)
+    cCap5 = models.CharField(max_length=20,blank=True)  
+    cCap6 = models.CharField(max_length=20,blank=True)
+    cCap7 = models.CharField(max_length=20,blank=True)  
+    cCap8 = models.CharField(max_length=20,blank=True)    
 
-    cLatestYoY = models.CharField(max_length=20,blank=True,null=True)
-    cLatestMoM = models.CharField(max_length=20,blank=True,null=True)
+    cLatestYoY = models.CharField(max_length=20,blank=True)
+    cLatestMoM = models.CharField(max_length=20,blank=True)
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
     press = models.IntegerField(default=0)
@@ -4971,19 +4971,19 @@ class StockCapVar2023Q1(models.Model):
     
     
 class StockCapVar2023Q2(models.Model):
-    cStockID = models.CharField(max_length=8,blank=True,null=True)
-    cStockName = models.CharField(max_length=10,blank=True,null=True)
-    cCap1 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap2 = models.CharField(max_length=20,blank=True,null=True)
-    cCap3 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap4 = models.CharField(max_length=20,blank=True,null=True)
-    cCap5 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap6 = models.CharField(max_length=20,blank=True,null=True)
-    cCap7 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap8 = models.CharField(max_length=20,blank=True,null=True)    
+    cStockID = models.CharField(max_length=8,blank=True)
+    cStockName = models.CharField(max_length=10,blank=True)
+    cCap1 = models.CharField(max_length=20,blank=True)  
+    cCap2 = models.CharField(max_length=20,blank=True)
+    cCap3 = models.CharField(max_length=20,blank=True)  
+    cCap4 = models.CharField(max_length=20,blank=True)
+    cCap5 = models.CharField(max_length=20,blank=True)  
+    cCap6 = models.CharField(max_length=20,blank=True)
+    cCap7 = models.CharField(max_length=20,blank=True)  
+    cCap8 = models.CharField(max_length=20,blank=True)    
 
-    cLatestYoY = models.CharField(max_length=20,blank=True,null=True)
-    cLatestMoM = models.CharField(max_length=20,blank=True,null=True)
+    cLatestYoY = models.CharField(max_length=20,blank=True)
+    cLatestMoM = models.CharField(max_length=20,blank=True)
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
     press = models.IntegerField(default=0)
@@ -4991,19 +4991,19 @@ class StockCapVar2023Q2(models.Model):
         return self.cStockID
     
 class StockCapVar2023Q3(models.Model):
-    cStockID = models.CharField(max_length=8,blank=True,null=True)
-    cStockName = models.CharField(max_length=10,blank=True,null=True)
-    cCap1 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap2 = models.CharField(max_length=20,blank=True,null=True)
-    cCap3 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap4 = models.CharField(max_length=20,blank=True,null=True)
-    cCap5 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap6 = models.CharField(max_length=20,blank=True,null=True)
-    cCap7 = models.CharField(max_length=20,blank=True,null=True)  
-    cCap8 = models.CharField(max_length=20,blank=True,null=True)    
+    cStockID = models.CharField(max_length=8,blank=True)
+    cStockName = models.CharField(max_length=10,blank=True)
+    cCap1 = models.CharField(max_length=20,blank=True)  
+    cCap2 = models.CharField(max_length=20,blank=True)
+    cCap3 = models.CharField(max_length=20,blank=True)  
+    cCap4 = models.CharField(max_length=20,blank=True)
+    cCap5 = models.CharField(max_length=20,blank=True)  
+    cCap6 = models.CharField(max_length=20,blank=True)
+    cCap7 = models.CharField(max_length=20,blank=True)  
+    cCap8 = models.CharField(max_length=20,blank=True)    
 
-    cLatestYoY = models.CharField(max_length=20,blank=True,null=True)
-    cLatestMoM = models.CharField(max_length=20,blank=True,null=True)
+    cLatestYoY = models.CharField(max_length=20,blank=True)
+    cLatestMoM = models.CharField(max_length=20,blank=True)
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
     press = models.IntegerField(default=0)
@@ -5012,31 +5012,31 @@ class StockCapVar2023Q3(models.Model):
 ###########################################################    
 
 class EpsProfit2020Q1(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
-    cEPS1 = models.CharField(max_length=10,blank=True,null=True)  #以下為最近8季EPS
-    cEPS2 = models.CharField(max_length=10,blank=True,null=True)
-    cEPS3 = models.CharField(max_length=10,blank=True,null=True)
-    cEPS4 = models.CharField(max_length=10,blank=True,null=True)
-    cEPS5 = models.CharField(max_length=10,blank=True,null=True)
-    cEPS6 = models.CharField(max_length=10,blank=True,null=True) 
-    cEPS7 = models.CharField(max_length=10,blank=True,null=True)
-    cEPS8 = models.CharField(max_length=10,blank=True,null=True)
+    cEPS1 = models.CharField(max_length=10,blank=True)  #以下為最近8季EPS
+    cEPS2 = models.CharField(max_length=10,blank=True)
+    cEPS3 = models.CharField(max_length=10,blank=True)
+    cEPS4 = models.CharField(max_length=10,blank=True)
+    cEPS5 = models.CharField(max_length=10,blank=True)
+    cEPS6 = models.CharField(max_length=10,blank=True) 
+    cEPS7 = models.CharField(max_length=10,blank=True)
+    cEPS8 = models.CharField(max_length=10,blank=True)
 
-    #cEPS8MAX = models.CharField(max_length=10,blank=True,null=True)
+    #cEPS8MAX = models.CharField(max_length=10,blank=True)
     
     
-    cProf1 = models.CharField(max_length=10,blank=True,null=True)  #以下為最近8季EPS
-    cProf2 = models.CharField(max_length=10,blank=True,null=True)
-    cProf3 = models.CharField(max_length=10,blank=True,null=True)
-    cProf4 = models.CharField(max_length=10,blank=True,null=True)
-    cProf5 = models.CharField(max_length=10,blank=True,null=True)
-    cProf6 = models.CharField(max_length=10,blank=True,null=True) 
-    cProf7 = models.CharField(max_length=10,blank=True,null=True)
-    cProf8 = models.CharField(max_length=10,blank=True,null=True)
+    cProf1 = models.CharField(max_length=10,blank=True)  #以下為最近8季EPS
+    cProf2 = models.CharField(max_length=10,blank=True)
+    cProf3 = models.CharField(max_length=10,blank=True)
+    cProf4 = models.CharField(max_length=10,blank=True)
+    cProf5 = models.CharField(max_length=10,blank=True)
+    cProf6 = models.CharField(max_length=10,blank=True) 
+    cProf7 = models.CharField(max_length=10,blank=True)
+    cProf8 = models.CharField(max_length=10,blank=True)
 
-    #cProf8MAX = models.CharField(max_length=10,blank=True,null=True)
+    #cProf8MAX = models.CharField(max_length=10,blank=True)
     
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
@@ -5046,31 +5046,31 @@ class EpsProfit2020Q1(models.Model):
     
     
 class EpsProfit2020Q2(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
-    cEPS1 = models.CharField(max_length=20,blank=True,null=True)  #以下為最近8季EPS
-    cEPS2 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS3 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS4 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS5 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS6 = models.CharField(max_length=20,blank=True,null=True) 
-    cEPS7 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS8 = models.CharField(max_length=20,blank=True,null=True)
+    cEPS1 = models.CharField(max_length=20,blank=True)  #以下為最近8季EPS
+    cEPS2 = models.CharField(max_length=20,blank=True)
+    cEPS3 = models.CharField(max_length=20,blank=True)
+    cEPS4 = models.CharField(max_length=20,blank=True)
+    cEPS5 = models.CharField(max_length=20,blank=True)
+    cEPS6 = models.CharField(max_length=20,blank=True) 
+    cEPS7 = models.CharField(max_length=20,blank=True)
+    cEPS8 = models.CharField(max_length=20,blank=True)
 
-    #cEPS8MAX = models.CharField(max_length=10,blank=True,null=True)
+    #cEPS8MAX = models.CharField(max_length=10,blank=True)
     
     
-    cProf1 = models.CharField(max_length=20,blank=True,null=True)  #以下為最近8季EPS
-    cProf2 = models.CharField(max_length=20,blank=True,null=True)
-    cProf3 = models.CharField(max_length=20,blank=True,null=True)
-    cProf4 = models.CharField(max_length=20,blank=True,null=True)
-    cProf5 = models.CharField(max_length=20,blank=True,null=True)
-    cProf6 = models.CharField(max_length=20,blank=True,null=True) 
-    cProf7 = models.CharField(max_length=20,blank=True,null=True)
-    cProf8 = models.CharField(max_length=20,blank=True,null=True)
+    cProf1 = models.CharField(max_length=20,blank=True)  #以下為最近8季EPS
+    cProf2 = models.CharField(max_length=20,blank=True)
+    cProf3 = models.CharField(max_length=20,blank=True)
+    cProf4 = models.CharField(max_length=20,blank=True)
+    cProf5 = models.CharField(max_length=20,blank=True)
+    cProf6 = models.CharField(max_length=20,blank=True) 
+    cProf7 = models.CharField(max_length=20,blank=True)
+    cProf8 = models.CharField(max_length=20,blank=True)
 
-    #cProf8MAX = models.CharField(max_length=10,blank=True,null=True)
+    #cProf8MAX = models.CharField(max_length=10,blank=True)
     
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
@@ -5080,31 +5080,31 @@ class EpsProfit2020Q2(models.Model):
     
 
 class EpsProfit2020Q3(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
-    cEPS1 = models.CharField(max_length=20,blank=True,null=True)  #以下為最近8季EPS
-    cEPS2 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS3 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS4 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS5 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS6 = models.CharField(max_length=20,blank=True,null=True) 
-    cEPS7 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS8 = models.CharField(max_length=20,blank=True,null=True)
+    cEPS1 = models.CharField(max_length=20,blank=True)  #以下為最近8季EPS
+    cEPS2 = models.CharField(max_length=20,blank=True)
+    cEPS3 = models.CharField(max_length=20,blank=True)
+    cEPS4 = models.CharField(max_length=20,blank=True)
+    cEPS5 = models.CharField(max_length=20,blank=True)
+    cEPS6 = models.CharField(max_length=20,blank=True) 
+    cEPS7 = models.CharField(max_length=20,blank=True)
+    cEPS8 = models.CharField(max_length=20,blank=True)
 
-    #cEPS8MAX = models.CharField(max_length=10,blank=True,null=True)
+    #cEPS8MAX = models.CharField(max_length=10,blank=True)
     
     
-    cProf1 = models.CharField(max_length=20,blank=True,null=True)  #以下為最近8季EPS
-    cProf2 = models.CharField(max_length=20,blank=True,null=True)
-    cProf3 = models.CharField(max_length=20,blank=True,null=True)
-    cProf4 = models.CharField(max_length=20,blank=True,null=True)
-    cProf5 = models.CharField(max_length=20,blank=True,null=True)
-    cProf6 = models.CharField(max_length=20,blank=True,null=True) 
-    cProf7 = models.CharField(max_length=20,blank=True,null=True)
-    cProf8 = models.CharField(max_length=20,blank=True,null=True)
+    cProf1 = models.CharField(max_length=20,blank=True)  #以下為最近8季EPS
+    cProf2 = models.CharField(max_length=20,blank=True)
+    cProf3 = models.CharField(max_length=20,blank=True)
+    cProf4 = models.CharField(max_length=20,blank=True)
+    cProf5 = models.CharField(max_length=20,blank=True)
+    cProf6 = models.CharField(max_length=20,blank=True) 
+    cProf7 = models.CharField(max_length=20,blank=True)
+    cProf8 = models.CharField(max_length=20,blank=True)
 
-    #cProf8MAX = models.CharField(max_length=10,blank=True,null=True)
+    #cProf8MAX = models.CharField(max_length=10,blank=True)
     
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
@@ -5114,31 +5114,31 @@ class EpsProfit2020Q3(models.Model):
 
 
 class EpsProfit2020Q4(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
-    cEPS1 = models.CharField(max_length=20,blank=True,null=True)  #以下為最近8季EPS
-    cEPS2 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS3 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS4 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS5 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS6 = models.CharField(max_length=20,blank=True,null=True) 
-    cEPS7 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS8 = models.CharField(max_length=20,blank=True,null=True)
+    cEPS1 = models.CharField(max_length=20,blank=True)  #以下為最近8季EPS
+    cEPS2 = models.CharField(max_length=20,blank=True)
+    cEPS3 = models.CharField(max_length=20,blank=True)
+    cEPS4 = models.CharField(max_length=20,blank=True)
+    cEPS5 = models.CharField(max_length=20,blank=True)
+    cEPS6 = models.CharField(max_length=20,blank=True) 
+    cEPS7 = models.CharField(max_length=20,blank=True)
+    cEPS8 = models.CharField(max_length=20,blank=True)
 
-    #cEPS8MAX = models.CharField(max_length=10,blank=True,null=True)
+    #cEPS8MAX = models.CharField(max_length=10,blank=True)
     
     
-    cProf1 = models.CharField(max_length=20,blank=True,null=True)  #以下為最近8季EPS
-    cProf2 = models.CharField(max_length=20,blank=True,null=True)
-    cProf3 = models.CharField(max_length=20,blank=True,null=True)
-    cProf4 = models.CharField(max_length=20,blank=True,null=True)
-    cProf5 = models.CharField(max_length=20,blank=True,null=True)
-    cProf6 = models.CharField(max_length=20,blank=True,null=True) 
-    cProf7 = models.CharField(max_length=20,blank=True,null=True)
-    cProf8 = models.CharField(max_length=20,blank=True,null=True)
+    cProf1 = models.CharField(max_length=20,blank=True)  #以下為最近8季EPS
+    cProf2 = models.CharField(max_length=20,blank=True)
+    cProf3 = models.CharField(max_length=20,blank=True)
+    cProf4 = models.CharField(max_length=20,blank=True)
+    cProf5 = models.CharField(max_length=20,blank=True)
+    cProf6 = models.CharField(max_length=20,blank=True) 
+    cProf7 = models.CharField(max_length=20,blank=True)
+    cProf8 = models.CharField(max_length=20,blank=True)
 
-    #cProf8MAX = models.CharField(max_length=10,blank=True,null=True)
+    #cProf8MAX = models.CharField(max_length=10,blank=True)
     
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
@@ -5147,31 +5147,31 @@ class EpsProfit2020Q4(models.Model):
         return self.cStockID
 
 class EpsProfit2021Q1(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
-    cEPS1 = models.CharField(max_length=20,blank=True,null=True)  #以下為最近8季EPS
-    cEPS2 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS3 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS4 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS5 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS6 = models.CharField(max_length=20,blank=True,null=True) 
-    cEPS7 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS8 = models.CharField(max_length=20,blank=True,null=True)
+    cEPS1 = models.CharField(max_length=20,blank=True)  #以下為最近8季EPS
+    cEPS2 = models.CharField(max_length=20,blank=True)
+    cEPS3 = models.CharField(max_length=20,blank=True)
+    cEPS4 = models.CharField(max_length=20,blank=True)
+    cEPS5 = models.CharField(max_length=20,blank=True)
+    cEPS6 = models.CharField(max_length=20,blank=True) 
+    cEPS7 = models.CharField(max_length=20,blank=True)
+    cEPS8 = models.CharField(max_length=20,blank=True)
 
-    #cEPS8MAX = models.CharField(max_length=10,blank=True,null=True)
+    #cEPS8MAX = models.CharField(max_length=10,blank=True)
     
     
-    cProf1 = models.CharField(max_length=20,blank=True,null=True)  #以下為最近8季EPS
-    cProf2 = models.CharField(max_length=20,blank=True,null=True)
-    cProf3 = models.CharField(max_length=20,blank=True,null=True)
-    cProf4 = models.CharField(max_length=20,blank=True,null=True)
-    cProf5 = models.CharField(max_length=20,blank=True,null=True)
-    cProf6 = models.CharField(max_length=20,blank=True,null=True) 
-    cProf7 = models.CharField(max_length=20,blank=True,null=True)
-    cProf8 = models.CharField(max_length=20,blank=True,null=True)
+    cProf1 = models.CharField(max_length=20,blank=True)  #以下為最近8季EPS
+    cProf2 = models.CharField(max_length=20,blank=True)
+    cProf3 = models.CharField(max_length=20,blank=True)
+    cProf4 = models.CharField(max_length=20,blank=True)
+    cProf5 = models.CharField(max_length=20,blank=True)
+    cProf6 = models.CharField(max_length=20,blank=True) 
+    cProf7 = models.CharField(max_length=20,blank=True)
+    cProf8 = models.CharField(max_length=20,blank=True)
 
-    #cProf8MAX = models.CharField(max_length=10,blank=True,null=True)
+    #cProf8MAX = models.CharField(max_length=10,blank=True)
     
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
@@ -5180,31 +5180,31 @@ class EpsProfit2021Q1(models.Model):
         return self.cStockID
     
 class EpsProfit2021Q2(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
-    cEPS1 = models.CharField(max_length=20,blank=True,null=True)  #以下為最近8季EPS
-    cEPS2 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS3 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS4 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS5 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS6 = models.CharField(max_length=20,blank=True,null=True) 
-    cEPS7 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS8 = models.CharField(max_length=20,blank=True,null=True)
+    cEPS1 = models.CharField(max_length=20,blank=True)  #以下為最近8季EPS
+    cEPS2 = models.CharField(max_length=20,blank=True)
+    cEPS3 = models.CharField(max_length=20,blank=True)
+    cEPS4 = models.CharField(max_length=20,blank=True)
+    cEPS5 = models.CharField(max_length=20,blank=True)
+    cEPS6 = models.CharField(max_length=20,blank=True) 
+    cEPS7 = models.CharField(max_length=20,blank=True)
+    cEPS8 = models.CharField(max_length=20,blank=True)
 
-    #cEPS8MAX = models.CharField(max_length=10,blank=True,null=True)
+    #cEPS8MAX = models.CharField(max_length=10,blank=True)
     
     
-    cProf1 = models.CharField(max_length=20,blank=True,null=True)  #以下為最近8季EPS
-    cProf2 = models.CharField(max_length=20,blank=True,null=True)
-    cProf3 = models.CharField(max_length=20,blank=True,null=True)
-    cProf4 = models.CharField(max_length=20,blank=True,null=True)
-    cProf5 = models.CharField(max_length=20,blank=True,null=True)
-    cProf6 = models.CharField(max_length=20,blank=True,null=True) 
-    cProf7 = models.CharField(max_length=20,blank=True,null=True)
-    cProf8 = models.CharField(max_length=20,blank=True,null=True)
+    cProf1 = models.CharField(max_length=20,blank=True)  #以下為最近8季EPS
+    cProf2 = models.CharField(max_length=20,blank=True)
+    cProf3 = models.CharField(max_length=20,blank=True)
+    cProf4 = models.CharField(max_length=20,blank=True)
+    cProf5 = models.CharField(max_length=20,blank=True)
+    cProf6 = models.CharField(max_length=20,blank=True) 
+    cProf7 = models.CharField(max_length=20,blank=True)
+    cProf8 = models.CharField(max_length=20,blank=True)
 
-    #cProf8MAX = models.CharField(max_length=10,blank=True,null=True)
+    #cProf8MAX = models.CharField(max_length=10,blank=True)
     
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
@@ -5214,31 +5214,31 @@ class EpsProfit2021Q2(models.Model):
     
     
 class EpsProfit2021Q3(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
-    cEPS1 = models.CharField(max_length=20,blank=True,null=True)  #以下為最近8季EPS
-    cEPS2 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS3 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS4 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS5 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS6 = models.CharField(max_length=20,blank=True,null=True) 
-    cEPS7 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS8 = models.CharField(max_length=20,blank=True,null=True)
+    cEPS1 = models.CharField(max_length=20,blank=True)  #以下為最近8季EPS
+    cEPS2 = models.CharField(max_length=20,blank=True)
+    cEPS3 = models.CharField(max_length=20,blank=True)
+    cEPS4 = models.CharField(max_length=20,blank=True)
+    cEPS5 = models.CharField(max_length=20,blank=True)
+    cEPS6 = models.CharField(max_length=20,blank=True) 
+    cEPS7 = models.CharField(max_length=20,blank=True)
+    cEPS8 = models.CharField(max_length=20,blank=True)
 
-    #cEPS8MAX = models.CharField(max_length=10,blank=True,null=True)
+    #cEPS8MAX = models.CharField(max_length=10,blank=True)
     
     
-    cProf1 = models.CharField(max_length=20,blank=True,null=True)  #以下為最近8季EPS
-    cProf2 = models.CharField(max_length=20,blank=True,null=True)
-    cProf3 = models.CharField(max_length=20,blank=True,null=True)
-    cProf4 = models.CharField(max_length=20,blank=True,null=True)
-    cProf5 = models.CharField(max_length=20,blank=True,null=True)
-    cProf6 = models.CharField(max_length=20,blank=True,null=True) 
-    cProf7 = models.CharField(max_length=20,blank=True,null=True)
-    cProf8 = models.CharField(max_length=20,blank=True,null=True)
+    cProf1 = models.CharField(max_length=20,blank=True)  #以下為最近8季EPS
+    cProf2 = models.CharField(max_length=20,blank=True)
+    cProf3 = models.CharField(max_length=20,blank=True)
+    cProf4 = models.CharField(max_length=20,blank=True)
+    cProf5 = models.CharField(max_length=20,blank=True)
+    cProf6 = models.CharField(max_length=20,blank=True) 
+    cProf7 = models.CharField(max_length=20,blank=True)
+    cProf8 = models.CharField(max_length=20,blank=True)
 
-    #cProf8MAX = models.CharField(max_length=10,blank=True,null=True)
+    #cProf8MAX = models.CharField(max_length=10,blank=True)
     
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
@@ -5247,31 +5247,31 @@ class EpsProfit2021Q3(models.Model):
         return self.cStockID
     
 class EpsProfit2021Q4(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
-    cEPS1 = models.CharField(max_length=20,blank=True,null=True)  #以下為最近8季EPS
-    cEPS2 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS3 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS4 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS5 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS6 = models.CharField(max_length=20,blank=True,null=True) 
-    cEPS7 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS8 = models.CharField(max_length=20,blank=True,null=True)
+    cEPS1 = models.CharField(max_length=20,blank=True)  #以下為最近8季EPS
+    cEPS2 = models.CharField(max_length=20,blank=True)
+    cEPS3 = models.CharField(max_length=20,blank=True)
+    cEPS4 = models.CharField(max_length=20,blank=True)
+    cEPS5 = models.CharField(max_length=20,blank=True)
+    cEPS6 = models.CharField(max_length=20,blank=True) 
+    cEPS7 = models.CharField(max_length=20,blank=True)
+    cEPS8 = models.CharField(max_length=20,blank=True)
 
-    #cEPS8MAX = models.CharField(max_length=10,blank=True,null=True)
+    #cEPS8MAX = models.CharField(max_length=10,blank=True)
     
     
-    cProf1 = models.CharField(max_length=20,blank=True,null=True)  #以下為最近8季EPS
-    cProf2 = models.CharField(max_length=20,blank=True,null=True)
-    cProf3 = models.CharField(max_length=20,blank=True,null=True)
-    cProf4 = models.CharField(max_length=20,blank=True,null=True)
-    cProf5 = models.CharField(max_length=20,blank=True,null=True)
-    cProf6 = models.CharField(max_length=20,blank=True,null=True) 
-    cProf7 = models.CharField(max_length=20,blank=True,null=True)
-    cProf8 = models.CharField(max_length=20,blank=True,null=True)
+    cProf1 = models.CharField(max_length=20,blank=True)  #以下為最近8季EPS
+    cProf2 = models.CharField(max_length=20,blank=True)
+    cProf3 = models.CharField(max_length=20,blank=True)
+    cProf4 = models.CharField(max_length=20,blank=True)
+    cProf5 = models.CharField(max_length=20,blank=True)
+    cProf6 = models.CharField(max_length=20,blank=True) 
+    cProf7 = models.CharField(max_length=20,blank=True)
+    cProf8 = models.CharField(max_length=20,blank=True)
 
-    #cProf8MAX = models.CharField(max_length=10,blank=True,null=True)
+    #cProf8MAX = models.CharField(max_length=10,blank=True)
     
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
@@ -5280,31 +5280,31 @@ class EpsProfit2021Q4(models.Model):
         return self.cStockID
 
 class EpsProfit2022Q1(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
-    cEPS1 = models.CharField(max_length=20,blank=True,null=True)  #以下為最近8季EPS
-    cEPS2 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS3 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS4 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS5 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS6 = models.CharField(max_length=20,blank=True,null=True) 
-    cEPS7 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS8 = models.CharField(max_length=20,blank=True,null=True)
+    cEPS1 = models.CharField(max_length=20,blank=True)  #以下為最近8季EPS
+    cEPS2 = models.CharField(max_length=20,blank=True)
+    cEPS3 = models.CharField(max_length=20,blank=True)
+    cEPS4 = models.CharField(max_length=20,blank=True)
+    cEPS5 = models.CharField(max_length=20,blank=True)
+    cEPS6 = models.CharField(max_length=20,blank=True) 
+    cEPS7 = models.CharField(max_length=20,blank=True)
+    cEPS8 = models.CharField(max_length=20,blank=True)
 
-    #cEPS8MAX = models.CharField(max_length=10,blank=True,null=True)
+    #cEPS8MAX = models.CharField(max_length=10,blank=True)
     
     
-    cProf1 = models.CharField(max_length=20,blank=True,null=True)  #以下為最近8季EPS
-    cProf2 = models.CharField(max_length=20,blank=True,null=True)
-    cProf3 = models.CharField(max_length=20,blank=True,null=True)
-    cProf4 = models.CharField(max_length=20,blank=True,null=True)
-    cProf5 = models.CharField(max_length=20,blank=True,null=True)
-    cProf6 = models.CharField(max_length=20,blank=True,null=True) 
-    cProf7 = models.CharField(max_length=20,blank=True,null=True)
-    cProf8 = models.CharField(max_length=20,blank=True,null=True)
+    cProf1 = models.CharField(max_length=20,blank=True)  #以下為最近8季EPS
+    cProf2 = models.CharField(max_length=20,blank=True)
+    cProf3 = models.CharField(max_length=20,blank=True)
+    cProf4 = models.CharField(max_length=20,blank=True)
+    cProf5 = models.CharField(max_length=20,blank=True)
+    cProf6 = models.CharField(max_length=20,blank=True) 
+    cProf7 = models.CharField(max_length=20,blank=True)
+    cProf8 = models.CharField(max_length=20,blank=True)
 
-    #cProf8MAX = models.CharField(max_length=10,blank=True,null=True)
+    #cProf8MAX = models.CharField(max_length=10,blank=True)
     
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
@@ -5313,31 +5313,31 @@ class EpsProfit2022Q1(models.Model):
         return self.cStockID
     
 class EpsProfit2022Q2(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
-    cEPS1 = models.CharField(max_length=20,blank=True,null=True)  #以下為最近8季EPS
-    cEPS2 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS3 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS4 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS5 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS6 = models.CharField(max_length=20,blank=True,null=True) 
-    cEPS7 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS8 = models.CharField(max_length=20,blank=True,null=True)
+    cEPS1 = models.CharField(max_length=20,blank=True)  #以下為最近8季EPS
+    cEPS2 = models.CharField(max_length=20,blank=True)
+    cEPS3 = models.CharField(max_length=20,blank=True)
+    cEPS4 = models.CharField(max_length=20,blank=True)
+    cEPS5 = models.CharField(max_length=20,blank=True)
+    cEPS6 = models.CharField(max_length=20,blank=True) 
+    cEPS7 = models.CharField(max_length=20,blank=True)
+    cEPS8 = models.CharField(max_length=20,blank=True)
 
-    #cEPS8MAX = models.CharField(max_length=10,blank=True,null=True)
+    #cEPS8MAX = models.CharField(max_length=10,blank=True)
     
     
-    cProf1 = models.CharField(max_length=20,blank=True,null=True)  #以下為最近8季EPS
-    cProf2 = models.CharField(max_length=20,blank=True,null=True)
-    cProf3 = models.CharField(max_length=20,blank=True,null=True)
-    cProf4 = models.CharField(max_length=20,blank=True,null=True)
-    cProf5 = models.CharField(max_length=20,blank=True,null=True)
-    cProf6 = models.CharField(max_length=20,blank=True,null=True) 
-    cProf7 = models.CharField(max_length=20,blank=True,null=True)
-    cProf8 = models.CharField(max_length=20,blank=True,null=True)
+    cProf1 = models.CharField(max_length=20,blank=True)  #以下為最近8季EPS
+    cProf2 = models.CharField(max_length=20,blank=True)
+    cProf3 = models.CharField(max_length=20,blank=True)
+    cProf4 = models.CharField(max_length=20,blank=True)
+    cProf5 = models.CharField(max_length=20,blank=True)
+    cProf6 = models.CharField(max_length=20,blank=True) 
+    cProf7 = models.CharField(max_length=20,blank=True)
+    cProf8 = models.CharField(max_length=20,blank=True)
 
-    #cProf8MAX = models.CharField(max_length=10,blank=True,null=True)
+    #cProf8MAX = models.CharField(max_length=10,blank=True)
     
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
@@ -5347,31 +5347,31 @@ class EpsProfit2022Q2(models.Model):
     
     
 class EpsProfit2022Q3(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
-    cEPS1 = models.CharField(max_length=20,blank=True,null=True)  #以下為最近8季EPS
-    cEPS2 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS3 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS4 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS5 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS6 = models.CharField(max_length=20,blank=True,null=True) 
-    cEPS7 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS8 = models.CharField(max_length=20,blank=True,null=True)
+    cEPS1 = models.CharField(max_length=20,blank=True)  #以下為最近8季EPS
+    cEPS2 = models.CharField(max_length=20,blank=True)
+    cEPS3 = models.CharField(max_length=20,blank=True)
+    cEPS4 = models.CharField(max_length=20,blank=True)
+    cEPS5 = models.CharField(max_length=20,blank=True)
+    cEPS6 = models.CharField(max_length=20,blank=True) 
+    cEPS7 = models.CharField(max_length=20,blank=True)
+    cEPS8 = models.CharField(max_length=20,blank=True)
 
-    #cEPS8MAX = models.CharField(max_length=10,blank=True,null=True)
+    #cEPS8MAX = models.CharField(max_length=10,blank=True)
     
     
-    cProf1 = models.CharField(max_length=20,blank=True,null=True)  #以下為最近8季EPS
-    cProf2 = models.CharField(max_length=20,blank=True,null=True)
-    cProf3 = models.CharField(max_length=20,blank=True,null=True)
-    cProf4 = models.CharField(max_length=20,blank=True,null=True)
-    cProf5 = models.CharField(max_length=20,blank=True,null=True)
-    cProf6 = models.CharField(max_length=20,blank=True,null=True) 
-    cProf7 = models.CharField(max_length=20,blank=True,null=True)
-    cProf8 = models.CharField(max_length=20,blank=True,null=True)
+    cProf1 = models.CharField(max_length=20,blank=True)  #以下為最近8季EPS
+    cProf2 = models.CharField(max_length=20,blank=True)
+    cProf3 = models.CharField(max_length=20,blank=True)
+    cProf4 = models.CharField(max_length=20,blank=True)
+    cProf5 = models.CharField(max_length=20,blank=True)
+    cProf6 = models.CharField(max_length=20,blank=True) 
+    cProf7 = models.CharField(max_length=20,blank=True)
+    cProf8 = models.CharField(max_length=20,blank=True)
 
-    #cProf8MAX = models.CharField(max_length=10,blank=True,null=True)
+    #cProf8MAX = models.CharField(max_length=10,blank=True)
     
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
@@ -5380,31 +5380,31 @@ class EpsProfit2022Q3(models.Model):
         return self.cStockID
     
 class EpsProfit2022Q4(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
-    cEPS1 = models.CharField(max_length=20,blank=True,null=True)  #以下為最近8季EPS
-    cEPS2 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS3 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS4 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS5 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS6 = models.CharField(max_length=20,blank=True,null=True) 
-    cEPS7 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS8 = models.CharField(max_length=20,blank=True,null=True)
+    cEPS1 = models.CharField(max_length=20,blank=True)  #以下為最近8季EPS
+    cEPS2 = models.CharField(max_length=20,blank=True)
+    cEPS3 = models.CharField(max_length=20,blank=True)
+    cEPS4 = models.CharField(max_length=20,blank=True)
+    cEPS5 = models.CharField(max_length=20,blank=True)
+    cEPS6 = models.CharField(max_length=20,blank=True) 
+    cEPS7 = models.CharField(max_length=20,blank=True)
+    cEPS8 = models.CharField(max_length=20,blank=True)
 
-    #cEPS8MAX = models.CharField(max_length=10,blank=True,null=True)
+    #cEPS8MAX = models.CharField(max_length=10,blank=True)
     
     
-    cProf1 = models.CharField(max_length=20,blank=True,null=True)  #以下為最近8季EPS
-    cProf2 = models.CharField(max_length=20,blank=True,null=True)
-    cProf3 = models.CharField(max_length=20,blank=True,null=True)
-    cProf4 = models.CharField(max_length=20,blank=True,null=True)
-    cProf5 = models.CharField(max_length=20,blank=True,null=True)
-    cProf6 = models.CharField(max_length=20,blank=True,null=True) 
-    cProf7 = models.CharField(max_length=20,blank=True,null=True)
-    cProf8 = models.CharField(max_length=20,blank=True,null=True)
+    cProf1 = models.CharField(max_length=20,blank=True)  #以下為最近8季EPS
+    cProf2 = models.CharField(max_length=20,blank=True)
+    cProf3 = models.CharField(max_length=20,blank=True)
+    cProf4 = models.CharField(max_length=20,blank=True)
+    cProf5 = models.CharField(max_length=20,blank=True)
+    cProf6 = models.CharField(max_length=20,blank=True) 
+    cProf7 = models.CharField(max_length=20,blank=True)
+    cProf8 = models.CharField(max_length=20,blank=True)
 
-    #cProf8MAX = models.CharField(max_length=10,blank=True,null=True)
+    #cProf8MAX = models.CharField(max_length=10,blank=True)
     
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
@@ -5413,31 +5413,31 @@ class EpsProfit2022Q4(models.Model):
         return self.cStockID
     
 class EpsProfit2023Q1(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
-    cEPS1 = models.CharField(max_length=20,blank=True,null=True)  #以下為最近8季EPS
-    cEPS2 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS3 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS4 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS5 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS6 = models.CharField(max_length=20,blank=True,null=True) 
-    cEPS7 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS8 = models.CharField(max_length=20,blank=True,null=True)
+    cEPS1 = models.CharField(max_length=20,blank=True)  #以下為最近8季EPS
+    cEPS2 = models.CharField(max_length=20,blank=True)
+    cEPS3 = models.CharField(max_length=20,blank=True)
+    cEPS4 = models.CharField(max_length=20,blank=True)
+    cEPS5 = models.CharField(max_length=20,blank=True)
+    cEPS6 = models.CharField(max_length=20,blank=True) 
+    cEPS7 = models.CharField(max_length=20,blank=True)
+    cEPS8 = models.CharField(max_length=20,blank=True)
 
-    #cEPS8MAX = models.CharField(max_length=10,blank=True,null=True)
+    #cEPS8MAX = models.CharField(max_length=10,blank=True)
     
     
-    cProf1 = models.CharField(max_length=20,blank=True,null=True)  #以下為最近8季EPS
-    cProf2 = models.CharField(max_length=20,blank=True,null=True)
-    cProf3 = models.CharField(max_length=20,blank=True,null=True)
-    cProf4 = models.CharField(max_length=20,blank=True,null=True)
-    cProf5 = models.CharField(max_length=20,blank=True,null=True)
-    cProf6 = models.CharField(max_length=20,blank=True,null=True) 
-    cProf7 = models.CharField(max_length=20,blank=True,null=True)
-    cProf8 = models.CharField(max_length=20,blank=True,null=True)
+    cProf1 = models.CharField(max_length=20,blank=True)  #以下為最近8季EPS
+    cProf2 = models.CharField(max_length=20,blank=True)
+    cProf3 = models.CharField(max_length=20,blank=True)
+    cProf4 = models.CharField(max_length=20,blank=True)
+    cProf5 = models.CharField(max_length=20,blank=True)
+    cProf6 = models.CharField(max_length=20,blank=True) 
+    cProf7 = models.CharField(max_length=20,blank=True)
+    cProf8 = models.CharField(max_length=20,blank=True)
 
-    #cProf8MAX = models.CharField(max_length=10,blank=True,null=True)
+    #cProf8MAX = models.CharField(max_length=10,blank=True)
     
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
@@ -5446,31 +5446,31 @@ class EpsProfit2023Q1(models.Model):
         return self.cStockID
     
 class EpsProfit2023Q2(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
-    cEPS1 = models.CharField(max_length=20,blank=True,null=True)  #以下為最近8季EPS
-    cEPS2 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS3 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS4 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS5 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS6 = models.CharField(max_length=20,blank=True,null=True) 
-    cEPS7 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS8 = models.CharField(max_length=20,blank=True,null=True)
+    cEPS1 = models.CharField(max_length=20,blank=True)  #以下為最近8季EPS
+    cEPS2 = models.CharField(max_length=20,blank=True)
+    cEPS3 = models.CharField(max_length=20,blank=True)
+    cEPS4 = models.CharField(max_length=20,blank=True)
+    cEPS5 = models.CharField(max_length=20,blank=True)
+    cEPS6 = models.CharField(max_length=20,blank=True) 
+    cEPS7 = models.CharField(max_length=20,blank=True)
+    cEPS8 = models.CharField(max_length=20,blank=True)
 
-    #cEPS8MAX = models.CharField(max_length=10,blank=True,null=True)
+    #cEPS8MAX = models.CharField(max_length=10,blank=True)
     
     
-    cProf1 = models.CharField(max_length=20,blank=True,null=True)  #以下為最近8季EPS
-    cProf2 = models.CharField(max_length=20,blank=True,null=True)
-    cProf3 = models.CharField(max_length=20,blank=True,null=True)
-    cProf4 = models.CharField(max_length=20,blank=True,null=True)
-    cProf5 = models.CharField(max_length=20,blank=True,null=True)
-    cProf6 = models.CharField(max_length=20,blank=True,null=True) 
-    cProf7 = models.CharField(max_length=20,blank=True,null=True)
-    cProf8 = models.CharField(max_length=20,blank=True,null=True)
+    cProf1 = models.CharField(max_length=20,blank=True)  #以下為最近8季EPS
+    cProf2 = models.CharField(max_length=20,blank=True)
+    cProf3 = models.CharField(max_length=20,blank=True)
+    cProf4 = models.CharField(max_length=20,blank=True)
+    cProf5 = models.CharField(max_length=20,blank=True)
+    cProf6 = models.CharField(max_length=20,blank=True) 
+    cProf7 = models.CharField(max_length=20,blank=True)
+    cProf8 = models.CharField(max_length=20,blank=True)
 
-    #cProf8MAX = models.CharField(max_length=10,blank=True,null=True)
+    #cProf8MAX = models.CharField(max_length=10,blank=True)
     
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
@@ -5479,31 +5479,31 @@ class EpsProfit2023Q2(models.Model):
         return self.cStockID
     
 class EpsProfit2023Q3(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
 
-    cEPS1 = models.CharField(max_length=20,blank=True,null=True)  #以下為最近8季EPS
-    cEPS2 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS3 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS4 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS5 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS6 = models.CharField(max_length=20,blank=True,null=True) 
-    cEPS7 = models.CharField(max_length=20,blank=True,null=True)
-    cEPS8 = models.CharField(max_length=20,blank=True,null=True)
+    cEPS1 = models.CharField(max_length=20,blank=True)  #以下為最近8季EPS
+    cEPS2 = models.CharField(max_length=20,blank=True)
+    cEPS3 = models.CharField(max_length=20,blank=True)
+    cEPS4 = models.CharField(max_length=20,blank=True)
+    cEPS5 = models.CharField(max_length=20,blank=True)
+    cEPS6 = models.CharField(max_length=20,blank=True) 
+    cEPS7 = models.CharField(max_length=20,blank=True)
+    cEPS8 = models.CharField(max_length=20,blank=True)
 
-    #cEPS8MAX = models.CharField(max_length=10,blank=True,null=True)
+    #cEPS8MAX = models.CharField(max_length=10,blank=True)
     
     
-    cProf1 = models.CharField(max_length=20,blank=True,null=True)  #以下為最近8季EPS
-    cProf2 = models.CharField(max_length=20,blank=True,null=True)
-    cProf3 = models.CharField(max_length=20,blank=True,null=True)
-    cProf4 = models.CharField(max_length=20,blank=True,null=True)
-    cProf5 = models.CharField(max_length=20,blank=True,null=True)
-    cProf6 = models.CharField(max_length=20,blank=True,null=True) 
-    cProf7 = models.CharField(max_length=20,blank=True,null=True)
-    cProf8 = models.CharField(max_length=20,blank=True,null=True)
+    cProf1 = models.CharField(max_length=20,blank=True)  #以下為最近8季EPS
+    cProf2 = models.CharField(max_length=20,blank=True)
+    cProf3 = models.CharField(max_length=20,blank=True)
+    cProf4 = models.CharField(max_length=20,blank=True)
+    cProf5 = models.CharField(max_length=20,blank=True)
+    cProf6 = models.CharField(max_length=20,blank=True) 
+    cProf7 = models.CharField(max_length=20,blank=True)
+    cProf8 = models.CharField(max_length=20,blank=True)
 
-    #cProf8MAX = models.CharField(max_length=10,blank=True,null=True)
+    #cProf8MAX = models.CharField(max_length=10,blank=True)
     
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
@@ -5513,34 +5513,34 @@ class EpsProfit2023Q3(models.Model):
 #########################################################################
 
 class StockPERsegStable2020(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
     
-    cPER_H1 = models.CharField(max_length=15,blank=True,null=True)   #以下為最近五年最高和最低本益比區間
-    cPER_L1 = models.CharField(max_length=15,blank=True,null=True)
-    cPER_H2 = models.CharField(max_length=15,blank=True,null=True)
-    cPER_L2 = models.CharField(max_length=15,blank=True,null=True)
-    cPER_H3 = models.CharField(max_length=15,blank=True,null=True)
-    cPER_L3 = models.CharField(max_length=15,blank=True,null=True)
-    cPER_H4 = models.CharField(max_length=15,blank=True,null=True)
-    cPER_L4 = models.CharField(max_length=15,blank=True,null=True)
-    cPER_H5 = models.CharField(max_length=15,blank=True,null=True)
-    cPER_L5 = models.CharField(max_length=15,blank=True,null=True)
+    cPER_H1 = models.CharField(max_length=15,blank=True)   #以下為最近五年最高和最低本益比區間
+    cPER_L1 = models.CharField(max_length=15,blank=True)
+    cPER_H2 = models.CharField(max_length=15,blank=True)
+    cPER_L2 = models.CharField(max_length=15,blank=True)
+    cPER_H3 = models.CharField(max_length=15,blank=True)
+    cPER_L3 = models.CharField(max_length=15,blank=True)
+    cPER_H4 = models.CharField(max_length=15,blank=True)
+    cPER_L4 = models.CharField(max_length=15,blank=True)
+    cPER_H5 = models.CharField(max_length=15,blank=True)
+    cPER_L5 = models.CharField(max_length=15,blank=True)
     
-    cPER_H_average = models.CharField(max_length=15,blank=True,null=True)  #最近五年平均
-    cPER_L_average = models.CharField(max_length=15,blank=True,null=True)
+    cPER_H_average = models.CharField(max_length=15,blank=True)  #最近五年平均
+    cPER_L_average = models.CharField(max_length=15,blank=True)
     
-    cP_Hw1 = models.CharField(max_length=15,blank=True,null=True) 
-    cP_Hw2 = models.CharField(max_length=15,blank=True,null=True) 
-    cP_Hw3 = models.CharField(max_length=15,blank=True,null=True) 
-    cP_Hw4 = models.CharField(max_length=15,blank=True,null=True) 
-    cP_Hw5 = models.CharField(max_length=15,blank=True,null=True)
+    cP_Hw1 = models.CharField(max_length=15,blank=True) 
+    cP_Hw2 = models.CharField(max_length=15,blank=True) 
+    cP_Hw3 = models.CharField(max_length=15,blank=True) 
+    cP_Hw4 = models.CharField(max_length=15,blank=True) 
+    cP_Hw5 = models.CharField(max_length=15,blank=True)
     
-    cP_Lw1 = models.CharField(max_length=15,blank=True,null=True) 
-    cP_Lw2 = models.CharField(max_length=15,blank=True,null=True) 
-    cP_Lw3 = models.CharField(max_length=15,blank=True,null=True) 
-    cP_Lw4 = models.CharField(max_length=15,blank=True,null=True) 
-    cP_Lw5 = models.CharField(max_length=15,blank=True,null=True)    
+    cP_Lw1 = models.CharField(max_length=15,blank=True) 
+    cP_Lw2 = models.CharField(max_length=15,blank=True) 
+    cP_Lw3 = models.CharField(max_length=15,blank=True) 
+    cP_Lw4 = models.CharField(max_length=15,blank=True) 
+    cP_Lw5 = models.CharField(max_length=15,blank=True)    
    
     
 
@@ -5551,34 +5551,34 @@ class StockPERsegStable2020(models.Model):
         return self.cStockID
     
 class StockPERsegStable2020Q2(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
     
-    cPER_H1 = models.CharField(max_length=15,blank=True,null=True)   #以下為最近五年最高和最低本益比區間
-    cPER_L1 = models.CharField(max_length=15,blank=True,null=True)
-    cPER_H2 = models.CharField(max_length=15,blank=True,null=True)
-    cPER_L2 = models.CharField(max_length=15,blank=True,null=True)
-    cPER_H3 = models.CharField(max_length=15,blank=True,null=True)
-    cPER_L3 = models.CharField(max_length=15,blank=True,null=True)
-    cPER_H4 = models.CharField(max_length=15,blank=True,null=True)
-    cPER_L4 = models.CharField(max_length=15,blank=True,null=True)
-    cPER_H5 = models.CharField(max_length=15,blank=True,null=True)
-    cPER_L5 = models.CharField(max_length=15,blank=True,null=True)
+    cPER_H1 = models.CharField(max_length=15,blank=True)   #以下為最近五年最高和最低本益比區間
+    cPER_L1 = models.CharField(max_length=15,blank=True)
+    cPER_H2 = models.CharField(max_length=15,blank=True)
+    cPER_L2 = models.CharField(max_length=15,blank=True)
+    cPER_H3 = models.CharField(max_length=15,blank=True)
+    cPER_L3 = models.CharField(max_length=15,blank=True)
+    cPER_H4 = models.CharField(max_length=15,blank=True)
+    cPER_L4 = models.CharField(max_length=15,blank=True)
+    cPER_H5 = models.CharField(max_length=15,blank=True)
+    cPER_L5 = models.CharField(max_length=15,blank=True)
     
-    cPER_H_average = models.CharField(max_length=15,blank=True,null=True)  #最近五年平均
-    cPER_L_average = models.CharField(max_length=15,blank=True,null=True)
+    cPER_H_average = models.CharField(max_length=15,blank=True)  #最近五年平均
+    cPER_L_average = models.CharField(max_length=15,blank=True)
     
-    cP_Hw1 = models.CharField(max_length=15,blank=True,null=True) 
-    cP_Hw2 = models.CharField(max_length=15,blank=True,null=True) 
-    cP_Hw3 = models.CharField(max_length=15,blank=True,null=True) 
-    cP_Hw4 = models.CharField(max_length=15,blank=True,null=True) 
-    cP_Hw5 = models.CharField(max_length=15,blank=True,null=True)
+    cP_Hw1 = models.CharField(max_length=15,blank=True) 
+    cP_Hw2 = models.CharField(max_length=15,blank=True) 
+    cP_Hw3 = models.CharField(max_length=15,blank=True) 
+    cP_Hw4 = models.CharField(max_length=15,blank=True) 
+    cP_Hw5 = models.CharField(max_length=15,blank=True)
     
-    cP_Lw1 = models.CharField(max_length=15,blank=True,null=True) 
-    cP_Lw2 = models.CharField(max_length=15,blank=True,null=True) 
-    cP_Lw3 = models.CharField(max_length=15,blank=True,null=True) 
-    cP_Lw4 = models.CharField(max_length=15,blank=True,null=True) 
-    cP_Lw5 = models.CharField(max_length=15,blank=True,null=True)    
+    cP_Lw1 = models.CharField(max_length=15,blank=True) 
+    cP_Lw2 = models.CharField(max_length=15,blank=True) 
+    cP_Lw3 = models.CharField(max_length=15,blank=True) 
+    cP_Lw4 = models.CharField(max_length=15,blank=True) 
+    cP_Lw5 = models.CharField(max_length=15,blank=True)    
    
     
 
@@ -5590,8 +5590,8 @@ class StockPERsegStable2020Q2(models.Model):
 
 
 class StockPERsegStable2020Q3(models.Model):
-    cStockID = models.CharField(max_length=5,blank=True,null=True)
-    cStockName = models.CharField(max_length=5,blank=True,null=True)
+    cStockID = models.CharField(max_length=5,blank=True)
+    cStockName = models.CharField(max_length=5,blank=True)
     
     cPER_H1 = models.CharField(max_length=20)   #以下為最近五年最高和最低本益比區間
     cPER_L1 = models.CharField(max_length=20)
@@ -5628,8 +5628,8 @@ class StockPERsegStable2020Q3(models.Model):
         return self.cStockID
     
 class StockPERsegStable2020Q3x(models.Model):
-    cStockID = models.CharField(max_length=10,blank=True,null=True)
-    cStockName = models.CharField(max_length=10,blank=True,null=True)
+    cStockID = models.CharField(max_length=10,blank=True)
+    cStockName = models.CharField(max_length=10,blank=True)
     
     cPER_H1 = models.CharField(max_length=20)   #以下為最近五年最高和最低本益比區間
     cPER_L1 = models.CharField(max_length=20)
@@ -5656,8 +5656,8 @@ class StockPERsegStable2020Q3x(models.Model):
 
 
 class StockPERsegStable2020Q4(models.Model):
-    cStockID = models.CharField(max_length=10,blank=True,null=True)
-    cStockName = models.CharField(max_length=10,blank=True,null=True)
+    cStockID = models.CharField(max_length=10,blank=True)
+    cStockName = models.CharField(max_length=10,blank=True)
     
     cPER_H1 = models.CharField(max_length=20)   #以下為最近五年最高和最低本益比區間
     cPER_L1 = models.CharField(max_length=20)
@@ -5683,8 +5683,8 @@ class StockPERsegStable2020Q4(models.Model):
         return self.cStockID
 
 class StockPERsegStable2021Q1(models.Model):
-    cStockID = models.CharField(max_length=10,blank=True,null=True)
-    cStockName = models.CharField(max_length=10,blank=True,null=True)
+    cStockID = models.CharField(max_length=10,blank=True)
+    cStockName = models.CharField(max_length=10,blank=True)
     
     cPER_H1 = models.CharField(max_length=20)   #以下為最近五年最高和最低本益比區間
     cPER_L1 = models.CharField(max_length=20)
@@ -5710,8 +5710,8 @@ class StockPERsegStable2021Q1(models.Model):
         return self.cStockID
     
 class StockPERsegStable2021Q2(models.Model):
-    cStockID = models.CharField(max_length=10,blank=True,null=True)
-    cStockName = models.CharField(max_length=10,blank=True,null=True)
+    cStockID = models.CharField(max_length=10,blank=True)
+    cStockName = models.CharField(max_length=10,blank=True)
     
     cPER_H1 = models.CharField(max_length=20)   #以下為最近五年最高和最低本益比區間
     cPER_L1 = models.CharField(max_length=20)
@@ -5737,8 +5737,8 @@ class StockPERsegStable2021Q2(models.Model):
         return self.cStockID
     
 class StockPERsegStable2021Q3(models.Model):
-    cStockID = models.CharField(max_length=10,blank=True,null=True)
-    cStockName = models.CharField(max_length=10,blank=True,null=True)
+    cStockID = models.CharField(max_length=10,blank=True)
+    cStockName = models.CharField(max_length=10,blank=True)
     
     cPER_H1 = models.CharField(max_length=20)   #以下為最近五年最高和最低本益比區間
     cPER_L1 = models.CharField(max_length=20)
@@ -5764,8 +5764,8 @@ class StockPERsegStable2021Q3(models.Model):
         return self.cStockID
 
 class StockPERsegStable2021Q4(models.Model):
-    cStockID = models.CharField(max_length=10,blank=True,null=True)
-    cStockName = models.CharField(max_length=10,blank=True,null=True)
+    cStockID = models.CharField(max_length=10,blank=True)
+    cStockName = models.CharField(max_length=10,blank=True)
     
     cPER_H1 = models.CharField(max_length=20)   #以下為最近五年最高和最低本益比區間
     cPER_L1 = models.CharField(max_length=20)
@@ -5792,8 +5792,8 @@ class StockPERsegStable2021Q4(models.Model):
     
     
 class StockPERsegStable2022Q1(models.Model):
-    cStockID = models.CharField(max_length=10,blank=True,null=True)
-    cStockName = models.CharField(max_length=10,blank=True,null=True)
+    cStockID = models.CharField(max_length=10,blank=True)
+    cStockName = models.CharField(max_length=10,blank=True)
     
     cPER_H1 = models.CharField(max_length=20)   #以下為最近五年最高和最低本益比區間
     cPER_L1 = models.CharField(max_length=20)
@@ -5819,8 +5819,8 @@ class StockPERsegStable2022Q1(models.Model):
         return self.cStockID
     
 class StockPERsegStable2022Q2(models.Model):
-    cStockID = models.CharField(max_length=10,blank=True,null=True)
-    cStockName = models.CharField(max_length=10,blank=True,null=True)
+    cStockID = models.CharField(max_length=10,blank=True)
+    cStockName = models.CharField(max_length=10,blank=True)
     
     cPER_H1 = models.CharField(max_length=20)   #以下為最近五年最高和最低本益比區間
     cPER_L1 = models.CharField(max_length=20)
@@ -5846,8 +5846,8 @@ class StockPERsegStable2022Q2(models.Model):
         return self.cStockID
     
 class StockPERsegStable2022Q3(models.Model):
-    cStockID = models.CharField(max_length=10,blank=True,null=True)
-    cStockName = models.CharField(max_length=10,blank=True,null=True)
+    cStockID = models.CharField(max_length=10,blank=True)
+    cStockName = models.CharField(max_length=10,blank=True)
     
     cPER_H1 = models.CharField(max_length=20)   #以下為最近五年最高和最低本益比區間
     cPER_L1 = models.CharField(max_length=20)
@@ -5873,8 +5873,8 @@ class StockPERsegStable2022Q3(models.Model):
         return self.cStockID
 
 class StockPERsegStable2022Q4(models.Model):
-    cStockID = models.CharField(max_length=10,blank=True,null=True)
-    cStockName = models.CharField(max_length=10,blank=True,null=True)
+    cStockID = models.CharField(max_length=10,blank=True)
+    cStockName = models.CharField(max_length=10,blank=True)
     
     cPER_H1 = models.CharField(max_length=20)   #以下為最近五年最高和最低本益比區間
     cPER_L1 = models.CharField(max_length=20)
@@ -5900,8 +5900,8 @@ class StockPERsegStable2022Q4(models.Model):
         return self.cStockID
     
 class StockPERsegStable2023Q1(models.Model):
-    cStockID = models.CharField(max_length=10,blank=True,null=True)
-    cStockName = models.CharField(max_length=10,blank=True,null=True)
+    cStockID = models.CharField(max_length=10,blank=True)
+    cStockName = models.CharField(max_length=10,blank=True)
     
     cPER_H1 = models.CharField(max_length=20)   #以下為最近五年最高和最低本益比區間
     cPER_L1 = models.CharField(max_length=20)
@@ -5927,8 +5927,8 @@ class StockPERsegStable2023Q1(models.Model):
         return self.cStockID
     
 class StockPERsegStable2023Q2(models.Model):
-    cStockID = models.CharField(max_length=10,blank=True,null=True)
-    cStockName = models.CharField(max_length=10,blank=True,null=True)
+    cStockID = models.CharField(max_length=10,blank=True)
+    cStockName = models.CharField(max_length=10,blank=True)
     
     cPER_H1 = models.CharField(max_length=20)   #以下為最近五年最高和最低本益比區間
     cPER_L1 = models.CharField(max_length=20)
@@ -5954,8 +5954,8 @@ class StockPERsegStable2023Q2(models.Model):
         return self.cStockID
     
 class StockPERsegStable2023Q3(models.Model):
-    cStockID = models.CharField(max_length=10,blank=True,null=True)
-    cStockName = models.CharField(max_length=10,blank=True,null=True)
+    cStockID = models.CharField(max_length=10,blank=True)
+    cStockName = models.CharField(max_length=10,blank=True)
     
     cPER_H1 = models.CharField(max_length=20)   #以下為最近五年最高和最低本益比區間
     cPER_L1 = models.CharField(max_length=20)
@@ -5981,8 +5981,8 @@ class StockPERsegStable2023Q3(models.Model):
         return self.cStockID
 #####################    
 class SubCats202011(models.Model):
-    #cStockID = models.CharField(max_length=8,blank=True,null=True)
-    cSubCatName = models.CharField(max_length=15,blank=True,null=True)
+    #cStockID = models.CharField(max_length=8,blank=True)
+    cSubCatName = models.CharField(max_length=15,blank=True)
     cScore2011 = models.FloatField(max_length=15)  
     cScore20Q3 = models.FloatField(max_length=15)  
     cScore2009 = models.FloatField(max_length=15)
@@ -5997,8 +5997,8 @@ class SubCats202011(models.Model):
         return self.cSubCatName  
     
 class SubCats202102(models.Model):
-    #cStockID = models.CharField(max_length=8,blank=True,null=True)
-    cSubCatName = models.CharField(max_length=15,blank=True,null=True)
+    #cStockID = models.CharField(max_length=8,blank=True)
+    cSubCatName = models.CharField(max_length=15,blank=True)
     cScore2102 = models.FloatField(max_length=15) 
     cScore2101 = models.FloatField(max_length=15) 
     cScore2012 = models.FloatField(max_length=15) 
@@ -6016,8 +6016,8 @@ class SubCats202102(models.Model):
         return self.cSubCatName  
     
 class SubCats202103(models.Model):
-    #cStockID = models.CharField(max_length=8,blank=True,null=True)
-    cSubCatName = models.CharField(max_length=15,blank=True,null=True)
+    #cStockID = models.CharField(max_length=8,blank=True)
+    cSubCatName = models.CharField(max_length=15,blank=True)
     cScore2103 = models.FloatField(max_length=15) 
     cScore2102 = models.FloatField(max_length=15) 
     cScore2101 = models.FloatField(max_length=15) 
@@ -6037,8 +6037,8 @@ class SubCats202103(models.Model):
 
 
 class SubCats202104(models.Model):
-    #cStockID = models.CharField(max_length=8,blank=True,null=True)
-    cSubCatName = models.CharField(max_length=15,blank=True,null=True)
+    #cStockID = models.CharField(max_length=8,blank=True)
+    cSubCatName = models.CharField(max_length=15,blank=True)
     cScore2104 = models.FloatField(max_length=15) 
     cScore2103 = models.FloatField(max_length=15) 
     cScore2102 = models.FloatField(max_length=15) 
@@ -6058,20 +6058,20 @@ class SubCats202104(models.Model):
         return self.cSubCatName
     
 class SubCats202105(models.Model):  
-    #cStockID = models.CharField(max_length=8,blank=True,null=True)
-    cSubCatName = models.CharField(max_length=15,blank=True,null=True)
+    #cStockID = models.CharField(max_length=8,blank=True)
+    cSubCatName = models.CharField(max_length=15,blank=True)
     #cScore2105 = models.FloatField(max_length=15) 
-    cScore2104 = models.FloatField(max_length=15, blank=True, null=True)  #一定要設blank=True, null=True
-    cScore2103 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2102 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2101 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2012 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2011 = models.FloatField(max_length=15, blank=True, null=True)  
-    cScore20Q3 = models.FloatField(max_length=15, blank=True, null=True)  
-    cScore2009 = models.FloatField(max_length=15, blank=True, null=True)
-    cScore2008 = models.FloatField(max_length=15, blank=True, null=True)
-    cScore20Q2 = models.FloatField(max_length=15, blank=True, null=True)
-    cScore2006 = models.FloatField(max_length=15, blank=True, null=True) 
+    cScore2104 = models.FloatField(max_length=15,blank=True)  #一定要設blank=True, null=True
+    cScore2103 = models.FloatField(max_length=15,blank=True) 
+    cScore2102 = models.FloatField(max_length=15,blank=True) 
+    cScore2101 = models.FloatField(max_length=15,blank=True) 
+    cScore2012 = models.FloatField(max_length=15,blank=True) 
+    cScore2011 = models.FloatField(max_length=15,blank=True)  
+    cScore20Q3 = models.FloatField(max_length=15,blank=True)  
+    cScore2009 = models.FloatField(max_length=15,blank=True)
+    cScore2008 = models.FloatField(max_length=15,blank=True)
+    cScore20Q2 = models.FloatField(max_length=15,blank=True)
+    cScore2006 = models.FloatField(max_length=15,blank=True) 
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
@@ -6080,21 +6080,21 @@ class SubCats202105(models.Model):
         return self.cSubCatName
 
 class SubCats202106(models.Model):
-    #cStockID = models.CharField(max_length=8,blank=True,null=True)
-    cSubCatName = models.CharField(max_length=15,blank=True,null=True)
-    cScore2106 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2105 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2104 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2103 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2102 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2101 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2012 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2011 = models.FloatField(max_length=15, blank=True, null=True)  
-    cScore20Q3 = models.FloatField(max_length=15, blank=True, null=True)  
-    cScore2009 = models.FloatField(max_length=15, blank=True, null=True)
-    cScore2008 = models.FloatField(max_length=15, blank=True, null=True)
-    cScore20Q2 = models.FloatField(max_length=15, blank=True, null=True)
-    cScore2006 = models.FloatField(max_length=15, blank=True, null=True) 
+    #cStockID = models.CharField(max_length=8,blank=True)
+    cSubCatName = models.CharField(max_length=15,blank=True)
+    cScore2106 = models.FloatField(max_length=15,blank=True) 
+    cScore2105 = models.FloatField(max_length=15,blank=True) 
+    cScore2104 = models.FloatField(max_length=15,blank=True) 
+    cScore2103 = models.FloatField(max_length=15,blank=True) 
+    cScore2102 = models.FloatField(max_length=15,blank=True) 
+    cScore2101 = models.FloatField(max_length=15,blank=True) 
+    cScore2012 = models.FloatField(max_length=15,blank=True) 
+    cScore2011 = models.FloatField(max_length=15,blank=True)  
+    cScore20Q3 = models.FloatField(max_length=15,blank=True)  
+    cScore2009 = models.FloatField(max_length=15,blank=True)
+    cScore2008 = models.FloatField(max_length=15,blank=True)
+    cScore20Q2 = models.FloatField(max_length=15,blank=True)
+    cScore2006 = models.FloatField(max_length=15,blank=True) 
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
@@ -6104,22 +6104,22 @@ class SubCats202106(models.Model):
     
     
 class SubCats202107(models.Model):
-    #cStockID = models.CharField(max_length=8,blank=True,null=True)
-    cSubCatName = models.CharField(max_length=15,blank=True,null=True)
-    cScore2107 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2106 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2105 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2104 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2103 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2102 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2101 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2012 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2011 = models.FloatField(max_length=15, blank=True, null=True)  
-    cScore20Q3 = models.FloatField(max_length=15, blank=True, null=True)  
-    cScore2009 = models.FloatField(max_length=15, blank=True, null=True)
-    cScore2008 = models.FloatField(max_length=15, blank=True, null=True)
-    cScore20Q2 = models.FloatField(max_length=15, blank=True, null=True)
-    cScore2006 = models.FloatField(max_length=15, blank=True, null=True) 
+    #cStockID = models.CharField(max_length=8,blank=True)
+    cSubCatName = models.CharField(max_length=15,blank=True)
+    cScore2107 = models.FloatField(max_length=15,blank=True) 
+    cScore2106 = models.FloatField(max_length=15,blank=True) 
+    cScore2105 = models.FloatField(max_length=15,blank=True) 
+    cScore2104 = models.FloatField(max_length=15,blank=True) 
+    cScore2103 = models.FloatField(max_length=15,blank=True) 
+    cScore2102 = models.FloatField(max_length=15,blank=True) 
+    cScore2101 = models.FloatField(max_length=15,blank=True) 
+    cScore2012 = models.FloatField(max_length=15,blank=True) 
+    cScore2011 = models.FloatField(max_length=15,blank=True)  
+    cScore20Q3 = models.FloatField(max_length=15,blank=True)  
+    cScore2009 = models.FloatField(max_length=15,blank=True)
+    cScore2008 = models.FloatField(max_length=15,blank=True)
+    cScore20Q2 = models.FloatField(max_length=15,blank=True)
+    cScore2006 = models.FloatField(max_length=15,blank=True) 
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
@@ -6129,24 +6129,24 @@ class SubCats202107(models.Model):
     
     
 class SubCats202108(models.Model):
-    #cStockID = models.CharField(max_length=8,blank=True,null=True)
-    cSubCatName = models.CharField(max_length=15,blank=True,null=True)
+    #cStockID = models.CharField(max_length=8,blank=True)
+    cSubCatName = models.CharField(max_length=15,blank=True)
 
-    cScore2108 = models.FloatField(max_length=15, blank=True, null=True)     
-    cScore2107 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2106 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2105 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2104 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2103 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2102 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2101 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2012 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2011 = models.FloatField(max_length=15, blank=True, null=True)  
-    cScore20Q3 = models.FloatField(max_length=15, blank=True, null=True)  
-    cScore2009 = models.FloatField(max_length=15, blank=True, null=True)
-    cScore2008 = models.FloatField(max_length=15, blank=True, null=True)
-    cScore20Q2 = models.FloatField(max_length=15, blank=True, null=True)
-    cScore2006 = models.FloatField(max_length=15, blank=True, null=True) 
+    cScore2108 = models.FloatField(max_length=15,blank=True)     
+    cScore2107 = models.FloatField(max_length=15,blank=True) 
+    cScore2106 = models.FloatField(max_length=15,blank=True) 
+    cScore2105 = models.FloatField(max_length=15,blank=True) 
+    cScore2104 = models.FloatField(max_length=15,blank=True) 
+    cScore2103 = models.FloatField(max_length=15,blank=True) 
+    cScore2102 = models.FloatField(max_length=15,blank=True) 
+    cScore2101 = models.FloatField(max_length=15,blank=True) 
+    cScore2012 = models.FloatField(max_length=15,blank=True) 
+    cScore2011 = models.FloatField(max_length=15,blank=True)  
+    cScore20Q3 = models.FloatField(max_length=15,blank=True)  
+    cScore2009 = models.FloatField(max_length=15,blank=True)
+    cScore2008 = models.FloatField(max_length=15,blank=True)
+    cScore20Q2 = models.FloatField(max_length=15,blank=True)
+    cScore2006 = models.FloatField(max_length=15,blank=True) 
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
@@ -6155,25 +6155,25 @@ class SubCats202108(models.Model):
         return self.cSubCatName
     
 class SubCats202109(models.Model):
-    #cStockID = models.CharField(max_length=8,blank=True,null=True)
-    cSubCatName = models.CharField(max_length=15,blank=True,null=True)
+    #cStockID = models.CharField(max_length=8,blank=True)
+    cSubCatName = models.CharField(max_length=15,blank=True)
     
-    cScore2109 = models.FloatField(max_length=15, blank=True, null=True)
-    cScore2108 = models.FloatField(max_length=15, blank=True, null=True)     
-    cScore2107 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2106 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2105 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2104 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2103 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2102 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2101 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2012 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2011 = models.FloatField(max_length=15, blank=True, null=True)  
-    cScore20Q3 = models.FloatField(max_length=15, blank=True, null=True)  
-    cScore2009 = models.FloatField(max_length=15, blank=True, null=True)
-    cScore2008 = models.FloatField(max_length=15, blank=True, null=True)
-    cScore20Q2 = models.FloatField(max_length=15, blank=True, null=True)
-    cScore2006 = models.FloatField(max_length=15, blank=True, null=True) 
+    cScore2109 = models.FloatField(max_length=15,blank=True)
+    cScore2108 = models.FloatField(max_length=15,blank=True)     
+    cScore2107 = models.FloatField(max_length=15,blank=True) 
+    cScore2106 = models.FloatField(max_length=15,blank=True) 
+    cScore2105 = models.FloatField(max_length=15,blank=True) 
+    cScore2104 = models.FloatField(max_length=15,blank=True) 
+    cScore2103 = models.FloatField(max_length=15,blank=True) 
+    cScore2102 = models.FloatField(max_length=15,blank=True) 
+    cScore2101 = models.FloatField(max_length=15,blank=True) 
+    cScore2012 = models.FloatField(max_length=15,blank=True) 
+    cScore2011 = models.FloatField(max_length=15,blank=True)  
+    cScore20Q3 = models.FloatField(max_length=15,blank=True)  
+    cScore2009 = models.FloatField(max_length=15,blank=True)
+    cScore2008 = models.FloatField(max_length=15,blank=True)
+    cScore20Q2 = models.FloatField(max_length=15,blank=True)
+    cScore2006 = models.FloatField(max_length=15,blank=True) 
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
@@ -6182,26 +6182,26 @@ class SubCats202109(models.Model):
         return self.cSubCatName
     
 class SubCats202110(models.Model):
-    #cStockID = models.CharField(max_length=8,blank=True,null=True)
-    cSubCatName = models.CharField(max_length=15,blank=True,null=True)
+    #cStockID = models.CharField(max_length=8,blank=True)
+    cSubCatName = models.CharField(max_length=15,blank=True)
     
-    cScore2110 = models.FloatField(max_length=15, blank=True, null=True)    
-    cScore2109 = models.FloatField(max_length=15, blank=True, null=True)
-    cScore2108 = models.FloatField(max_length=15, blank=True, null=True)     
-    cScore2107 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2106 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2105 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2104 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2103 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2102 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2101 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2012 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2011 = models.FloatField(max_length=15, blank=True, null=True)  
-    cScore20Q3 = models.FloatField(max_length=15, blank=True, null=True)  
-    cScore2009 = models.FloatField(max_length=15, blank=True, null=True)
-    cScore2008 = models.FloatField(max_length=15, blank=True, null=True)
-    cScore20Q2 = models.FloatField(max_length=15, blank=True, null=True)
-    cScore2006 = models.FloatField(max_length=15, blank=True, null=True) 
+    cScore2110 = models.FloatField(max_length=15,blank=True)    
+    cScore2109 = models.FloatField(max_length=15,blank=True)
+    cScore2108 = models.FloatField(max_length=15,blank=True)     
+    cScore2107 = models.FloatField(max_length=15,blank=True) 
+    cScore2106 = models.FloatField(max_length=15,blank=True) 
+    cScore2105 = models.FloatField(max_length=15,blank=True) 
+    cScore2104 = models.FloatField(max_length=15,blank=True) 
+    cScore2103 = models.FloatField(max_length=15,blank=True) 
+    cScore2102 = models.FloatField(max_length=15,blank=True) 
+    cScore2101 = models.FloatField(max_length=15,blank=True) 
+    cScore2012 = models.FloatField(max_length=15,blank=True) 
+    cScore2011 = models.FloatField(max_length=15,blank=True)  
+    cScore20Q3 = models.FloatField(max_length=15,blank=True)  
+    cScore2009 = models.FloatField(max_length=15,blank=True)
+    cScore2008 = models.FloatField(max_length=15,blank=True)
+    cScore20Q2 = models.FloatField(max_length=15,blank=True)
+    cScore2006 = models.FloatField(max_length=15,blank=True) 
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
@@ -6211,27 +6211,27 @@ class SubCats202110(models.Model):
     
     
 class SubCats202111(models.Model):
-    #cStockID = models.CharField(max_length=8,blank=True,null=True)
-    cSubCatName = models.CharField(max_length=15,blank=True,null=True)
+    #cStockID = models.CharField(max_length=8,blank=True)
+    cSubCatName = models.CharField(max_length=15,blank=True)
     
-    cScore2111 = models.FloatField(max_length=15, blank=True, null=True)     
-    cScore2110 = models.FloatField(max_length=15, blank=True, null=True)    
-    cScore2109 = models.FloatField(max_length=15, blank=True, null=True)
-    cScore2108 = models.FloatField(max_length=15, blank=True, null=True)     
-    cScore2107 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2106 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2105 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2104 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2103 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2102 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2101 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2012 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2011 = models.FloatField(max_length=15, blank=True, null=True)  
-    cScore20Q3 = models.FloatField(max_length=15, blank=True, null=True)  
-    cScore2009 = models.FloatField(max_length=15, blank=True, null=True)
-    cScore2008 = models.FloatField(max_length=15, blank=True, null=True)
-    cScore20Q2 = models.FloatField(max_length=15, blank=True, null=True)
-    cScore2006 = models.FloatField(max_length=15, blank=True, null=True) 
+    cScore2111 = models.FloatField(max_length=15,blank=True)     
+    cScore2110 = models.FloatField(max_length=15,blank=True)    
+    cScore2109 = models.FloatField(max_length=15,blank=True)
+    cScore2108 = models.FloatField(max_length=15,blank=True)     
+    cScore2107 = models.FloatField(max_length=15,blank=True) 
+    cScore2106 = models.FloatField(max_length=15,blank=True) 
+    cScore2105 = models.FloatField(max_length=15,blank=True) 
+    cScore2104 = models.FloatField(max_length=15,blank=True) 
+    cScore2103 = models.FloatField(max_length=15,blank=True) 
+    cScore2102 = models.FloatField(max_length=15,blank=True) 
+    cScore2101 = models.FloatField(max_length=15,blank=True) 
+    cScore2012 = models.FloatField(max_length=15,blank=True) 
+    cScore2011 = models.FloatField(max_length=15,blank=True)  
+    cScore20Q3 = models.FloatField(max_length=15,blank=True)  
+    cScore2009 = models.FloatField(max_length=15,blank=True)
+    cScore2008 = models.FloatField(max_length=15,blank=True)
+    cScore20Q2 = models.FloatField(max_length=15,blank=True)
+    cScore2006 = models.FloatField(max_length=15,blank=True) 
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
@@ -6241,28 +6241,28 @@ class SubCats202111(models.Model):
     
     
 class SubCats202112(models.Model):
-    #cStockID = models.CharField(max_length=8,blank=True,null=True)
-    cSubCatName = models.CharField(max_length=15,blank=True,null=True)
+    #cStockID = models.CharField(max_length=8,blank=True)
+    cSubCatName = models.CharField(max_length=15,blank=True)
 
-    cScore2112 = models.FloatField(max_length=15, blank=True, null=True)     
-    cScore2111 = models.FloatField(max_length=15, blank=True, null=True)     
-    cScore2110 = models.FloatField(max_length=15, blank=True, null=True)    
-    cScore2109 = models.FloatField(max_length=15, blank=True, null=True)
-    cScore2108 = models.FloatField(max_length=15, blank=True, null=True)     
-    cScore2107 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2106 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2105 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2104 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2103 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2102 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2101 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2012 = models.FloatField(max_length=15, blank=True, null=True) 
-    cScore2011 = models.FloatField(max_length=15, blank=True, null=True)  
-    cScore20Q3 = models.FloatField(max_length=15, blank=True, null=True)  
-    cScore2009 = models.FloatField(max_length=15, blank=True, null=True)
-    cScore2008 = models.FloatField(max_length=15, blank=True, null=True)
-    cScore20Q2 = models.FloatField(max_length=15, blank=True, null=True)
-    cScore2006 = models.FloatField(max_length=15, blank=True, null=True) 
+    cScore2112 = models.FloatField(max_length=15,blank=True)     
+    cScore2111 = models.FloatField(max_length=15,blank=True)     
+    cScore2110 = models.FloatField(max_length=15,blank=True)    
+    cScore2109 = models.FloatField(max_length=15,blank=True)
+    cScore2108 = models.FloatField(max_length=15,blank=True)     
+    cScore2107 = models.FloatField(max_length=15,blank=True) 
+    cScore2106 = models.FloatField(max_length=15,blank=True) 
+    cScore2105 = models.FloatField(max_length=15,blank=True) 
+    cScore2104 = models.FloatField(max_length=15,blank=True) 
+    cScore2103 = models.FloatField(max_length=15,blank=True) 
+    cScore2102 = models.FloatField(max_length=15,blank=True) 
+    cScore2101 = models.FloatField(max_length=15,blank=True) 
+    cScore2012 = models.FloatField(max_length=15,blank=True) 
+    cScore2011 = models.FloatField(max_length=15,blank=True)  
+    cScore20Q3 = models.FloatField(max_length=15,blank=True)  
+    cScore2009 = models.FloatField(max_length=15,blank=True)
+    cScore2008 = models.FloatField(max_length=15,blank=True)
+    cScore20Q2 = models.FloatField(max_length=15,blank=True)
+    cScore2006 = models.FloatField(max_length=15,blank=True) 
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
@@ -6279,13 +6279,13 @@ class Favorites_jonyi729(models.Model):
     cNewestRev = models.CharField(max_length=15, default='')
     
 
-    sCoreThisM= models.CharField(max_length=10, null=True, blank=True)
-    sCoreLastM= models.CharField(max_length=10, null=True, blank=True)
-    sCoreLast2M= models.CharField(max_length=10, null=True, blank=True)
-    sCoreLast3M= models.CharField(max_length=10, null=True, blank=True)
-    sCoreLast4M= models.CharField(max_length=10, null=True, blank=True)
-    sCoreLast5M= models.CharField(max_length=10, null=True, blank=True)
-    sCoreLast6M= models.CharField(max_length=10, null=True, blank=True)
+    sCoreThisM= models.CharField(max_length=10, blank=True)
+    sCoreLastM= models.CharField(max_length=10, blank=True)
+    sCoreLast2M= models.CharField(max_length=10, blank=True)
+    sCoreLast3M= models.CharField(max_length=10, blank=True)
+    sCoreLast4M= models.CharField(max_length=10, blank=True)
+    sCoreLast5M= models.CharField(max_length=10, blank=True)
+    sCoreLast6M= models.CharField(max_length=10, blank=True)
     
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
@@ -6297,21 +6297,21 @@ class Favorites_jonyi729(models.Model):
 
     
 class StockFavDB(models.Model):
-    cStockID = models.CharField(max_length=5, null=True, blank=True)
-    cStockName = models.CharField(max_length=5, null=True, blank=True)
+    cStockID = models.CharField(max_length=5, blank=True)
+    cStockName = models.CharField(max_length=5, blank=True)
 
-    cYearDate = models.CharField(max_length=15, null=True, blank=True)
+    cYearDate = models.CharField(max_length=15, blank=True)
 
-    cPredict_EPS = models.CharField(max_length=15, null=True, blank=True) #預估未來EPS
-    cPredict_high_price = models.CharField(max_length=15, null=True, blank=True) #預估未來最高價
-    cPredict_low_price = models.CharField(max_length=15, null=True, blank=True) #預估未來最低價  
+    cPredict_EPS = models.CharField(max_length=15, blank=True) #預估未來EPS
+    cPredict_high_price = models.CharField(max_length=15, blank=True) #預估未來最高價
+    cPredict_low_price = models.CharField(max_length=15, blank=True) #預估未來最低價  
     
-    cNew_up_profit = models.CharField(max_length=25, null=True, blank=True) #預估未來往上空間
-    cNew_down_loss = models.CharField(max_length=25, null=True, blank=True) #預估未來往下空間    
+    cNew_up_profit = models.CharField(max_length=25, blank=True) #預估未來往上空間
+    cNew_down_loss = models.CharField(max_length=25, blank=True) #預估未來往下空間    
 
-    cTodayClose = models.FloatField(max_length=20, null=True, blank=True) #今日收盤價
+    cTodayClose = models.FloatField(max_length=20, blank=True) #今日收盤價
     
-    cRisk_reward = models.FloatField(max_length=20, null=True, blank=True) #預估風險報酬比率  #20201202 可以使用Float
+    cRisk_reward = models.FloatField(max_length=20, blank=True) #預估風險報酬比率  #20201202 可以使用Float
     
     pubtime = models.DateTimeField(auto_now=True)
 
@@ -6320,40 +6320,40 @@ class StockFavDB(models.Model):
         return self.cStockID
     
 class StockFavs_test168(models.Model):
-    cStockID = models.CharField(max_length=5, null=True, blank=True)
-    cStockName = models.CharField(max_length=5, null=True, blank=True)
+    cStockID = models.CharField(max_length=5, blank=True)
+    cStockName = models.CharField(max_length=5, blank=True)
 
-    cScore1st = models.CharField(max_length=5, null=True, blank=True) #最近一個月評分
-    cScore2nd = models.CharField(max_length=5, null=True, blank=True) #
-    cScore3rd = models.CharField(max_length=5, null=True, blank=True)
+    cScore1st = models.CharField(max_length=5, blank=True) #最近一個月評分
+    cScore2nd = models.CharField(max_length=5, blank=True) #
+    cScore3rd = models.CharField(max_length=5, blank=True)
 
-    cTodayClose = models.FloatField(max_length=20, null=True, blank=True) #今日收盤價
+    cTodayClose = models.FloatField(max_length=20, blank=True) #今日收盤價
    
 
-    cPredict_EPS = models.CharField(max_length=15, null=True, blank=True) #預估未來EPS
-    cPredict_high_price = models.CharField(max_length=15, null=True, blank=True) #預估未來最高價
-    cPredict_low_price = models.CharField(max_length=15, null=True, blank=True) #預估未來最低價  
+    cPredict_EPS = models.CharField(max_length=15, blank=True) #預估未來EPS
+    cPredict_high_price = models.CharField(max_length=15, blank=True) #預估未來最高價
+    cPredict_low_price = models.CharField(max_length=15, blank=True) #預估未來最低價  
     
-    cNew_up_profit = models.CharField(max_length=25, null=True, blank=True) #預估未來往上空間
-    cNew_down_loss = models.CharField(max_length=25, null=True, blank=True) #預估未來往下空間    
+    cNew_up_profit = models.CharField(max_length=25, blank=True) #預估未來往上空間
+    cNew_down_loss = models.CharField(max_length=25, blank=True) #預估未來往下空間    
 
-    cPredict_high_price_down30 = models.CharField(max_length=15, null=True, blank=True) #預估未來最高價
-    cPredict_low_price_down30 = models.CharField(max_length=15, null=True, blank=True) #預估未來最低價  
+    cPredict_high_price_down30 = models.CharField(max_length=15, blank=True) #預估未來最高價
+    cPredict_low_price_down30 = models.CharField(max_length=15, blank=True) #預估未來最低價  
     
-    cNew_up_profit_down30 = models.CharField(max_length=25, null=True, blank=True) #預估未來往上空間
-    cNew_down_loss_down30 = models.CharField(max_length=25, null=True, blank=True) #預估未來往下空間
+    cNew_up_profit_down30 = models.CharField(max_length=25, blank=True) #預估未來往上空間
+    cNew_down_loss_down30 = models.CharField(max_length=25, blank=True) #預估未來往下空間
 
 
-    cDBURL = models.CharField(max_length=40, null=True, blank=True) #  
-    cRisk_reward = models.FloatField(max_length=20, null=True, blank=True) #預估風險報酬比率  #20201202 可以使用Float
-    cRisk_reward_down30 = models.FloatField(max_length=20, null=True, blank=True) #預估風險報酬比率  #20201202 可以使用Float
+    cDBURL = models.CharField(max_length=40, blank=True) #  
+    cRisk_reward = models.FloatField(max_length=20, blank=True) #預估風險報酬比率  #20201202 可以使用Float
+    cRisk_reward_down30 = models.FloatField(max_length=20, blank=True) #預估風險報酬比率  #20201202 可以使用Float
 
 
 
-    cEPSach = models.CharField(max_length=20, null=True, blank=True)
-    cStCap = models.CharField(max_length=20, null=True, blank=True)
-    cEPSnPrf = models.CharField(max_length=20, null=True, blank=True)
-    cPERstab = models.CharField(max_length=20, null=True, blank=True)
+    cEPSach = models.CharField(max_length=20, blank=True)
+    cStCap = models.CharField(max_length=20, blank=True)
+    cEPSnPrf = models.CharField(max_length=20, blank=True)
+    cPERstab = models.CharField(max_length=20, blank=True)
 
 
     pubtime = models.DateTimeField(auto_now=True)
@@ -6362,30 +6362,30 @@ class StockFavs_test168(models.Model):
     def __str__(self):
         return self.cStockID
 class StockFavs_bobmax(models.Model):
-    cStockID = models.CharField(max_length=5, null=True, blank=True)
-    cStockName = models.CharField(max_length=5, null=True, blank=True)
+    cStockID = models.CharField(max_length=5, blank=True)
+    cStockName = models.CharField(max_length=5, blank=True)
 
-    cScore1st = models.CharField(max_length=5, null=True, blank=True) #最近一個月評分
-    cScore2nd = models.CharField(max_length=5, null=True, blank=True) #
-    cScore3rd = models.CharField(max_length=5, null=True, blank=True)
+    cScore1st = models.CharField(max_length=5, blank=True) #最近一個月評分
+    cScore2nd = models.CharField(max_length=5, blank=True) #
+    cScore3rd = models.CharField(max_length=5, blank=True)
 
-    cTodayClose = models.FloatField(max_length=20, null=True, blank=True) #今日收盤價
+    cTodayClose = models.FloatField(max_length=20, blank=True) #今日收盤價
    
 
-    cPredict_EPS = models.CharField(max_length=15, null=True, blank=True) #預估未來EPS
-    cPredict_high_price = models.CharField(max_length=15, null=True, blank=True) #預估未來最高價
-    cPredict_low_price = models.CharField(max_length=15, null=True, blank=True) #預估未來最低價  
+    cPredict_EPS = models.CharField(max_length=15, blank=True) #預估未來EPS
+    cPredict_high_price = models.CharField(max_length=15, blank=True) #預估未來最高價
+    cPredict_low_price = models.CharField(max_length=15, blank=True) #預估未來最低價  
     
-    cNew_up_profit = models.CharField(max_length=25, null=True, blank=True) #預估未來往上空間
-    cNew_down_loss = models.CharField(max_length=25, null=True, blank=True) #預估未來往下空間    
+    cNew_up_profit = models.CharField(max_length=25, blank=True) #預估未來往上空間
+    cNew_down_loss = models.CharField(max_length=25, blank=True) #預估未來往下空間    
 
-    cDBURL = models.CharField(max_length=40, null=True, blank=True) #  
-    cRisk_reward = models.FloatField(max_length=20, null=True, blank=True) #預估風險報酬比率  #20201202 可以使用Float
+    cDBURL = models.CharField(max_length=40, blank=True) #  
+    cRisk_reward = models.FloatField(max_length=20, blank=True) #預估風險報酬比率  #20201202 可以使用Float
 
-    cEPSach = models.CharField(max_length=20, null=True, blank=True)
-    cStCap = models.CharField(max_length=20, null=True, blank=True)
-    cEPSnPrf = models.CharField(max_length=20, null=True, blank=True)
-    cPERstab = models.CharField(max_length=20, null=True, blank=True)
+    cEPSach = models.CharField(max_length=20, blank=True)
+    cStCap = models.CharField(max_length=20, blank=True)
+    cEPSnPrf = models.CharField(max_length=20, blank=True)
+    cPERstab = models.CharField(max_length=20, blank=True)
 
     pubtime = models.DateTimeField(auto_now=True)
 
@@ -6394,30 +6394,30 @@ class StockFavs_bobmax(models.Model):
         return self.cStockID
     
 class StockFavs_deno36(models.Model):
-    cStockID = models.CharField(max_length=5, null=True, blank=True)
-    cStockName = models.CharField(max_length=5, null=True, blank=True)
+    cStockID = models.CharField(max_length=5, blank=True)
+    cStockName = models.CharField(max_length=5, blank=True)
 
-    cScore1st = models.CharField(max_length=5, null=True, blank=True) #最近一個月評分
-    cScore2nd = models.CharField(max_length=5, null=True, blank=True) #
-    cScore3rd = models.CharField(max_length=5, null=True, blank=True)
+    cScore1st = models.CharField(max_length=5, blank=True) #最近一個月評分
+    cScore2nd = models.CharField(max_length=5, blank=True) #
+    cScore3rd = models.CharField(max_length=5, blank=True)
 
-    cTodayClose = models.FloatField(max_length=20, null=True, blank=True) #今日收盤價
+    cTodayClose = models.FloatField(max_length=20, blank=True) #今日收盤價
    
 
-    cPredict_EPS = models.CharField(max_length=15, null=True, blank=True) #預估未來EPS
-    cPredict_high_price = models.CharField(max_length=15, null=True, blank=True) #預估未來最高價
-    cPredict_low_price = models.CharField(max_length=15, null=True, blank=True) #預估未來最低價  
+    cPredict_EPS = models.CharField(max_length=15, blank=True) #預估未來EPS
+    cPredict_high_price = models.CharField(max_length=15, blank=True) #預估未來最高價
+    cPredict_low_price = models.CharField(max_length=15, blank=True) #預估未來最低價  
     
-    cNew_up_profit = models.CharField(max_length=25, null=True, blank=True) #預估未來往上空間
-    cNew_down_loss = models.CharField(max_length=25, null=True, blank=True) #預估未來往下空間    
+    cNew_up_profit = models.CharField(max_length=25, blank=True) #預估未來往上空間
+    cNew_down_loss = models.CharField(max_length=25, blank=True) #預估未來往下空間    
 
-    cDBURL = models.CharField(max_length=40, null=True, blank=True) #  
-    cRisk_reward = models.FloatField(max_length=20, null=True, blank=True) #預估風險報酬比率  #20201202 可以使用Float
+    cDBURL = models.CharField(max_length=40, blank=True) #  
+    cRisk_reward = models.FloatField(max_length=20, blank=True) #預估風險報酬比率  #20201202 可以使用Float
 
-    cEPSach = models.CharField(max_length=20, null=True, blank=True)
-    cStCap = models.CharField(max_length=20, null=True, blank=True)
-    cEPSnPrf = models.CharField(max_length=20, null=True, blank=True)
-    cPERstab = models.CharField(max_length=20, null=True, blank=True)
+    cEPSach = models.CharField(max_length=20, blank=True)
+    cStCap = models.CharField(max_length=20, blank=True)
+    cEPSnPrf = models.CharField(max_length=20, blank=True)
+    cPERstab = models.CharField(max_length=20, blank=True)
 
     pubtime = models.DateTimeField(auto_now=True)
 
@@ -6426,30 +6426,30 @@ class StockFavs_deno36(models.Model):
         return self.cStockID
     
 class StockFavs_donhonlin(models.Model):
-    cStockID = models.CharField(max_length=5, null=True, blank=True)
-    cStockName = models.CharField(max_length=5, null=True, blank=True)
+    cStockID = models.CharField(max_length=5, blank=True)
+    cStockName = models.CharField(max_length=5, blank=True)
 
-    cScore1st = models.CharField(max_length=5, null=True, blank=True) #最近一個月評分
-    cScore2nd = models.CharField(max_length=5, null=True, blank=True) #
-    cScore3rd = models.CharField(max_length=5, null=True, blank=True)
+    cScore1st = models.CharField(max_length=5, blank=True) #最近一個月評分
+    cScore2nd = models.CharField(max_length=5, blank=True) #
+    cScore3rd = models.CharField(max_length=5, blank=True)
 
-    cTodayClose = models.FloatField(max_length=20, null=True, blank=True) #今日收盤價
+    cTodayClose = models.FloatField(max_length=20, blank=True) #今日收盤價
    
 
-    cPredict_EPS = models.CharField(max_length=15, null=True, blank=True) #預估未來EPS
-    cPredict_high_price = models.CharField(max_length=15, null=True, blank=True) #預估未來最高價
-    cPredict_low_price = models.CharField(max_length=15, null=True, blank=True) #預估未來最低價  
+    cPredict_EPS = models.CharField(max_length=15, blank=True) #預估未來EPS
+    cPredict_high_price = models.CharField(max_length=15, blank=True) #預估未來最高價
+    cPredict_low_price = models.CharField(max_length=15, blank=True) #預估未來最低價  
     
-    cNew_up_profit = models.CharField(max_length=25, null=True, blank=True) #預估未來往上空間
-    cNew_down_loss = models.CharField(max_length=25, null=True, blank=True) #預估未來往下空間    
+    cNew_up_profit = models.CharField(max_length=25, blank=True) #預估未來往上空間
+    cNew_down_loss = models.CharField(max_length=25, blank=True) #預估未來往下空間    
 
-    cDBURL = models.CharField(max_length=40, null=True, blank=True) #  
-    cRisk_reward = models.FloatField(max_length=20, null=True, blank=True) #預估風險報酬比率  #20201202 可以使用Float
+    cDBURL = models.CharField(max_length=40, blank=True) #  
+    cRisk_reward = models.FloatField(max_length=20, blank=True) #預估風險報酬比率  #20201202 可以使用Float
 
-    cEPSach = models.CharField(max_length=20, null=True, blank=True)
-    cStCap = models.CharField(max_length=20, null=True, blank=True)
-    cEPSnPrf = models.CharField(max_length=20, null=True, blank=True)
-    cPERstab = models.CharField(max_length=20, null=True, blank=True)
+    cEPSach = models.CharField(max_length=20, blank=True)
+    cStCap = models.CharField(max_length=20, blank=True)
+    cEPSnPrf = models.CharField(max_length=20, blank=True)
+    cPERstab = models.CharField(max_length=20, blank=True)
 
     pubtime = models.DateTimeField(auto_now=True)
 
@@ -6458,60 +6458,60 @@ class StockFavs_donhonlin(models.Model):
         return self.cStockID
 
 class StockFavs_goldsilver(models.Model):
-    cStockID = models.CharField(max_length=5, null=True, blank=True)
-    cStockName = models.CharField(max_length=5, null=True, blank=True)
+    cStockID = models.CharField(max_length=5, blank=True)
+    cStockName = models.CharField(max_length=5, blank=True)
 
-    cScore1st = models.CharField(max_length=5, null=True, blank=True) #最近一個月評分
-    cScore2nd = models.CharField(max_length=5, null=True, blank=True) #
-    cScore3rd = models.CharField(max_length=5, null=True, blank=True)
+    cScore1st = models.CharField(max_length=5, blank=True) #最近一個月評分
+    cScore2nd = models.CharField(max_length=5, blank=True) #
+    cScore3rd = models.CharField(max_length=5, blank=True)
 
-    cTodayClose = models.FloatField(max_length=20, null=True, blank=True) #今日收盤價
+    cTodayClose = models.FloatField(max_length=20, blank=True) #今日收盤價
    
 
-    cPredict_EPS = models.CharField(max_length=15, null=True, blank=True) #預估未來EPS
-    cPredict_high_price = models.CharField(max_length=15, null=True, blank=True) #預估未來最高價
-    cPredict_low_price = models.CharField(max_length=15, null=True, blank=True) #預估未來最低價  
+    cPredict_EPS = models.CharField(max_length=15, blank=True) #預估未來EPS
+    cPredict_high_price = models.CharField(max_length=15, blank=True) #預估未來最高價
+    cPredict_low_price = models.CharField(max_length=15, blank=True) #預估未來最低價  
     
-    cNew_up_profit = models.CharField(max_length=25, null=True, blank=True) #預估未來往上空間
-    cNew_down_loss = models.CharField(max_length=25, null=True, blank=True) #預估未來往下空間    
+    cNew_up_profit = models.CharField(max_length=25, blank=True) #預估未來往上空間
+    cNew_down_loss = models.CharField(max_length=25, blank=True) #預估未來往下空間    
 
-    cDBURL = models.CharField(max_length=40, null=True, blank=True) #  
-    cRisk_reward = models.FloatField(max_length=20, null=True, blank=True) #預估風險報酬比率  #20201202 可以使用Float
+    cDBURL = models.CharField(max_length=40, blank=True) #  
+    cRisk_reward = models.FloatField(max_length=20, blank=True) #預估風險報酬比率  #20201202 可以使用Float
     pubtime = models.DateTimeField(auto_now=True)
 
-    cEPSach = models.CharField(max_length=20, null=True, blank=True)
-    cStCap = models.CharField(max_length=20, null=True, blank=True)
-    cEPSnPrf = models.CharField(max_length=20, null=True, blank=True)
-    cPERstab = models.CharField(max_length=20, null=True, blank=True)
+    cEPSach = models.CharField(max_length=20, blank=True)
+    cStCap = models.CharField(max_length=20, blank=True)
+    cEPSnPrf = models.CharField(max_length=20, blank=True)
+    cPERstab = models.CharField(max_length=20, blank=True)
 
     def __str__(self):
         return self.cStockID
     
 class StockFavs_hyeth(models.Model):
-    cStockID = models.CharField(max_length=5, null=True, blank=True)
-    cStockName = models.CharField(max_length=5, null=True, blank=True)
+    cStockID = models.CharField(max_length=5, blank=True)
+    cStockName = models.CharField(max_length=5, blank=True)
 
-    cScore1st = models.CharField(max_length=5, null=True, blank=True) #最近一個月評分
-    cScore2nd = models.CharField(max_length=5, null=True, blank=True) #
-    cScore3rd = models.CharField(max_length=5, null=True, blank=True)
+    cScore1st = models.CharField(max_length=5, blank=True) #最近一個月評分
+    cScore2nd = models.CharField(max_length=5, blank=True) #
+    cScore3rd = models.CharField(max_length=5, blank=True)
 
-    cTodayClose = models.FloatField(max_length=20, null=True, blank=True) #今日收盤價
+    cTodayClose = models.FloatField(max_length=20, blank=True) #今日收盤價
    
 
-    cPredict_EPS = models.CharField(max_length=15, null=True, blank=True) #預估未來EPS
-    cPredict_high_price = models.CharField(max_length=15, null=True, blank=True) #預估未來最高價
-    cPredict_low_price = models.CharField(max_length=15, null=True, blank=True) #預估未來最低價  
+    cPredict_EPS = models.CharField(max_length=15, blank=True) #預估未來EPS
+    cPredict_high_price = models.CharField(max_length=15, blank=True) #預估未來最高價
+    cPredict_low_price = models.CharField(max_length=15, blank=True) #預估未來最低價  
     
-    cNew_up_profit = models.CharField(max_length=25, null=True, blank=True) #預估未來往上空間
-    cNew_down_loss = models.CharField(max_length=25, null=True, blank=True) #預估未來往下空間    
+    cNew_up_profit = models.CharField(max_length=25, blank=True) #預估未來往上空間
+    cNew_down_loss = models.CharField(max_length=25, blank=True) #預估未來往下空間    
 
-    cDBURL = models.CharField(max_length=40, null=True, blank=True) #  
-    cRisk_reward = models.FloatField(max_length=20, null=True, blank=True) #預估風險報酬比率  #20201202 可以使用Float
+    cDBURL = models.CharField(max_length=40, blank=True) #  
+    cRisk_reward = models.FloatField(max_length=20, blank=True) #預估風險報酬比率  #20201202 可以使用Float
 
-    cEPSach = models.CharField(max_length=20, null=True, blank=True)
-    cStCap = models.CharField(max_length=20, null=True, blank=True)
-    cEPSnPrf = models.CharField(max_length=20, null=True, blank=True)
-    cPERstab = models.CharField(max_length=20, null=True, blank=True)
+    cEPSach = models.CharField(max_length=20, blank=True)
+    cStCap = models.CharField(max_length=20, blank=True)
+    cEPSnPrf = models.CharField(max_length=20, blank=True)
+    cPERstab = models.CharField(max_length=20, blank=True)
 
     pubtime = models.DateTimeField(auto_now=True)
 
@@ -6520,99 +6520,99 @@ class StockFavs_hyeth(models.Model):
         return self.cStockID
     
 class StockFavs_magicjohn(models.Model):
-    cStockID = models.CharField(max_length=5, null=True, blank=True)
-    cStockName = models.CharField(max_length=5, null=True, blank=True)
+    cStockID = models.CharField(max_length=5, blank=True)
+    cStockName = models.CharField(max_length=5, blank=True)
 
-    cScore1st = models.CharField(max_length=5, null=True, blank=True) #最近一個月評分
-    cScore2nd = models.CharField(max_length=5, null=True, blank=True) #
-    cScore3rd = models.CharField(max_length=5, null=True, blank=True)
+    cScore1st = models.CharField(max_length=5, blank=True) #最近一個月評分
+    cScore2nd = models.CharField(max_length=5, blank=True) #
+    cScore3rd = models.CharField(max_length=5, blank=True)
 
-    cTodayClose = models.FloatField(max_length=20, null=True, blank=True) #今日收盤價
+    cTodayClose = models.FloatField(max_length=20, blank=True) #今日收盤價
    
 
-    cPredict_EPS = models.CharField(max_length=15, null=True, blank=True) #預估未來EPS
-    cPredict_high_price = models.CharField(max_length=15, null=True, blank=True) #預估未來最高價
-    cPredict_low_price = models.CharField(max_length=15, null=True, blank=True) #預估未來最低價  
+    cPredict_EPS = models.CharField(max_length=15, blank=True) #預估未來EPS
+    cPredict_high_price = models.CharField(max_length=15, blank=True) #預估未來最高價
+    cPredict_low_price = models.CharField(max_length=15, blank=True) #預估未來最低價  
     
-    cNew_up_profit = models.CharField(max_length=25, null=True, blank=True) #預估未來往上空間
-    cNew_down_loss = models.CharField(max_length=25, null=True, blank=True) #預估未來往下空間    
+    cNew_up_profit = models.CharField(max_length=25, blank=True) #預估未來往上空間
+    cNew_down_loss = models.CharField(max_length=25, blank=True) #預估未來往下空間    
 
-    cDBURL = models.CharField(max_length=40, null=True, blank=True) #  
-    cRisk_reward = models.FloatField(max_length=20, null=True, blank=True) #預估風險報酬比率  #20201202 可以使用Float
+    cDBURL = models.CharField(max_length=40, blank=True) #  
+    cRisk_reward = models.FloatField(max_length=20, blank=True) #預估風險報酬比率  #20201202 可以使用Float
     pubtime = models.DateTimeField(auto_now=True)
 
-    cEPSach = models.CharField(max_length=20, null=True, blank=True)
-    cStCap = models.CharField(max_length=20, null=True, blank=True)
-    cEPSnPrf = models.CharField(max_length=20, null=True, blank=True)
-    cPERstab = models.CharField(max_length=20, null=True, blank=True)
+    cEPSach = models.CharField(max_length=20, blank=True)
+    cStCap = models.CharField(max_length=20, blank=True)
+    cEPSnPrf = models.CharField(max_length=20, blank=True)
+    cPERstab = models.CharField(max_length=20, blank=True)
 
     def __str__(self):
         return self.cStockID
     
 class StockFavs_jonyi(models.Model):
-    cStockID = models.CharField(max_length=5, null=True, blank=True)
-    cStockName = models.CharField(max_length=5, null=True, blank=True)
+    cStockID = models.CharField(max_length=5, blank=True)
+    cStockName = models.CharField(max_length=5, blank=True)
 
-    cScore1st = models.CharField(max_length=5, null=True, blank=True) #最近一個月評分
-    cScore2nd = models.CharField(max_length=5, null=True, blank=True) #
-    cScore3rd = models.CharField(max_length=5, null=True, blank=True)
+    cScore1st = models.CharField(max_length=5, blank=True) #最近一個月評分
+    cScore2nd = models.CharField(max_length=5, blank=True) #
+    cScore3rd = models.CharField(max_length=5, blank=True)
 
-    cTodayClose = models.FloatField(max_length=20, null=True, blank=True) #今日收盤價
+    cTodayClose = models.FloatField(max_length=20, blank=True) #今日收盤價
    
 
-    cPredict_EPS = models.CharField(max_length=15, null=True, blank=True) #預估未來EPS
-    cPredict_high_price = models.CharField(max_length=15, null=True, blank=True) #預估未來最高價
-    cPredict_low_price = models.CharField(max_length=15, null=True, blank=True) #預估未來最低價  
+    cPredict_EPS = models.CharField(max_length=15, blank=True) #預估未來EPS
+    cPredict_high_price = models.CharField(max_length=15, blank=True) #預估未來最高價
+    cPredict_low_price = models.CharField(max_length=15, blank=True) #預估未來最低價  
     
-    cNew_up_profit = models.CharField(max_length=25, null=True, blank=True) #預估未來往上空間
-    cNew_down_loss = models.CharField(max_length=25, null=True, blank=True) #預估未來往下空間    
+    cNew_up_profit = models.CharField(max_length=25, blank=True) #預估未來往上空間
+    cNew_down_loss = models.CharField(max_length=25, blank=True) #預估未來往下空間    
 
-    cPredict_high_price_down30 = models.CharField(max_length=15, null=True, blank=True) #預估未來最高價
-    cPredict_low_price_down30 = models.CharField(max_length=15, null=True, blank=True) #預估未來最低價  
+    cPredict_high_price_down30 = models.CharField(max_length=15, blank=True) #預估未來最高價
+    cPredict_low_price_down30 = models.CharField(max_length=15, blank=True) #預估未來最低價  
     
-    cNew_up_profit_down30 = models.CharField(max_length=25, null=True, blank=True) #預估未來往上空間
-    cNew_down_loss_down30 = models.CharField(max_length=25, null=True, blank=True) #預估未來往下空間
+    cNew_up_profit_down30 = models.CharField(max_length=25, blank=True) #預估未來往上空間
+    cNew_down_loss_down30 = models.CharField(max_length=25, blank=True) #預估未來往下空間
 
 
-    cDBURL = models.CharField(max_length=40, null=True, blank=True) #  
-    cRisk_reward = models.FloatField(max_length=20, null=True, blank=True) #預估風險報酬比率  #20201202 可以使用Float
-    cRisk_reward_down30 = models.FloatField(max_length=20, null=True, blank=True) #預估風險報酬比率  #20201202 可以使用Float
+    cDBURL = models.CharField(max_length=40, blank=True) #  
+    cRisk_reward = models.FloatField(max_length=20, blank=True) #預估風險報酬比率  #20201202 可以使用Float
+    cRisk_reward_down30 = models.FloatField(max_length=20, blank=True) #預估風險報酬比率  #20201202 可以使用Float
 
     pubtime = models.DateTimeField(auto_now=True)
 
-    cEPSach = models.CharField(max_length=20, null=True, blank=True)
-    cStCap = models.CharField(max_length=20, null=True, blank=True)
-    cEPSnPrf = models.CharField(max_length=20, null=True, blank=True)
-    cPERstab = models.CharField(max_length=20, null=True, blank=True)
+    cEPSach = models.CharField(max_length=20, blank=True)
+    cStCap = models.CharField(max_length=20, blank=True)
+    cEPSnPrf = models.CharField(max_length=20, blank=True)
+    cPERstab = models.CharField(max_length=20, blank=True)
 
     def __str__(self):
         return self.cStockID
     
 class StockFavs_hakkai(models.Model):
-    cStockID = models.CharField(max_length=5, null=True, blank=True)
-    cStockName = models.CharField(max_length=5, null=True, blank=True)
+    cStockID = models.CharField(max_length=5, blank=True)
+    cStockName = models.CharField(max_length=5, blank=True)
 
-    cScore1st = models.CharField(max_length=5, null=True, blank=True) #最近一個月評分
-    cScore2nd = models.CharField(max_length=5, null=True, blank=True) #
-    cScore3rd = models.CharField(max_length=5, null=True, blank=True)
+    cScore1st = models.CharField(max_length=5, blank=True) #最近一個月評分
+    cScore2nd = models.CharField(max_length=5, blank=True) #
+    cScore3rd = models.CharField(max_length=5, blank=True)
 
-    cTodayClose = models.FloatField(max_length=20, null=True, blank=True) #今日收盤價
+    cTodayClose = models.FloatField(max_length=20, blank=True) #今日收盤價
    
 
-    cPredict_EPS = models.CharField(max_length=15, null=True, blank=True) #預估未來EPS
-    cPredict_high_price = models.CharField(max_length=15, null=True, blank=True) #預估未來最高價
-    cPredict_low_price = models.CharField(max_length=15, null=True, blank=True) #預估未來最低價  
+    cPredict_EPS = models.CharField(max_length=15, blank=True) #預估未來EPS
+    cPredict_high_price = models.CharField(max_length=15, blank=True) #預估未來最高價
+    cPredict_low_price = models.CharField(max_length=15, blank=True) #預估未來最低價  
     
-    cNew_up_profit = models.CharField(max_length=25, null=True, blank=True) #預估未來往上空間
-    cNew_down_loss = models.CharField(max_length=25, null=True, blank=True) #預估未來往下空間    
+    cNew_up_profit = models.CharField(max_length=25, blank=True) #預估未來往上空間
+    cNew_down_loss = models.CharField(max_length=25, blank=True) #預估未來往下空間    
 
-    cDBURL = models.CharField(max_length=40, null=True, blank=True) #  
-    cRisk_reward = models.FloatField(max_length=20, null=True, blank=True) #預估風險報酬比率  #20201202 可以使用Float
+    cDBURL = models.CharField(max_length=40, blank=True) #  
+    cRisk_reward = models.FloatField(max_length=20, blank=True) #預估風險報酬比率  #20201202 可以使用Float
 
-    cEPSach = models.CharField(max_length=20, null=True, blank=True)
-    cStCap = models.CharField(max_length=20, null=True, blank=True)
-    cEPSnPrf = models.CharField(max_length=20, null=True, blank=True)
-    cPERstab = models.CharField(max_length=20, null=True, blank=True)
+    cEPSach = models.CharField(max_length=20, blank=True)
+    cStCap = models.CharField(max_length=20, blank=True)
+    cEPSnPrf = models.CharField(max_length=20, blank=True)
+    cPERstab = models.CharField(max_length=20, blank=True)
 
     pubtime = models.DateTimeField(auto_now=True)
 
@@ -6623,30 +6623,30 @@ class StockFavs_hakkai(models.Model):
 
 
 class StockFavs_bakylews(models.Model):
-    cStockID = models.CharField(max_length=5, null=True, blank=True)
-    cStockName = models.CharField(max_length=5, null=True, blank=True)
+    cStockID = models.CharField(max_length=5, blank=True)
+    cStockName = models.CharField(max_length=5, blank=True)
 
-    cScore1st = models.CharField(max_length=5, null=True, blank=True) #最近一個月評分
-    cScore2nd = models.CharField(max_length=5, null=True, blank=True) #
-    cScore3rd = models.CharField(max_length=5, null=True, blank=True)
+    cScore1st = models.CharField(max_length=5, blank=True) #最近一個月評分
+    cScore2nd = models.CharField(max_length=5, blank=True) #
+    cScore3rd = models.CharField(max_length=5, blank=True)
 
-    cTodayClose = models.FloatField(max_length=20, null=True, blank=True) #今日收盤價
+    cTodayClose = models.FloatField(max_length=20, blank=True) #今日收盤價
    
 
-    cPredict_EPS = models.CharField(max_length=15, null=True, blank=True) #預估未來EPS
-    cPredict_high_price = models.CharField(max_length=15, null=True, blank=True) #預估未來最高價
-    cPredict_low_price = models.CharField(max_length=15, null=True, blank=True) #預估未來最低價  
+    cPredict_EPS = models.CharField(max_length=15, blank=True) #預估未來EPS
+    cPredict_high_price = models.CharField(max_length=15, blank=True) #預估未來最高價
+    cPredict_low_price = models.CharField(max_length=15, blank=True) #預估未來最低價  
     
-    cNew_up_profit = models.CharField(max_length=25, null=True, blank=True) #預估未來往上空間
-    cNew_down_loss = models.CharField(max_length=25, null=True, blank=True) #預估未來往下空間    
+    cNew_up_profit = models.CharField(max_length=25, blank=True) #預估未來往上空間
+    cNew_down_loss = models.CharField(max_length=25, blank=True) #預估未來往下空間    
 
-    cDBURL = models.CharField(max_length=40, null=True, blank=True) #  
-    cRisk_reward = models.FloatField(max_length=20, null=True, blank=True) #預估風險報酬比率  #20201202 可以使用Float
+    cDBURL = models.CharField(max_length=40, blank=True) #  
+    cRisk_reward = models.FloatField(max_length=20, blank=True) #預估風險報酬比率  #20201202 可以使用Float
 
-    cEPSach = models.CharField(max_length=20, null=True, blank=True)
-    cStCap = models.CharField(max_length=20, null=True, blank=True)
-    cEPSnPrf = models.CharField(max_length=20, null=True, blank=True)
-    cPERstab = models.CharField(max_length=20, null=True, blank=True)
+    cEPSach = models.CharField(max_length=20, blank=True)
+    cStCap = models.CharField(max_length=20, blank=True)
+    cEPSnPrf = models.CharField(max_length=20, blank=True)
+    cPERstab = models.CharField(max_length=20, blank=True)
 
     pubtime = models.DateTimeField(auto_now=True)
 
@@ -6659,39 +6659,39 @@ class StockFavs_bakylews(models.Model):
 
 
 class StockFavs_chenchi(models.Model):
-    cStockID = models.CharField(max_length=5, null=True, blank=True)
-    cStockName = models.CharField(max_length=5, null=True, blank=True)
+    cStockID = models.CharField(max_length=5, blank=True)
+    cStockName = models.CharField(max_length=5, blank=True)
 
-    cScore1st = models.CharField(max_length=5, null=True, blank=True) #最近一個月評分
-    cScore2nd = models.CharField(max_length=5, null=True, blank=True) #
-    cScore3rd = models.CharField(max_length=5, null=True, blank=True)
+    cScore1st = models.CharField(max_length=5, blank=True) #最近一個月評分
+    cScore2nd = models.CharField(max_length=5, blank=True) #
+    cScore3rd = models.CharField(max_length=5, blank=True)
 
-    cTodayClose = models.FloatField(max_length=20, null=True, blank=True) #今日收盤價
+    cTodayClose = models.FloatField(max_length=20, blank=True) #今日收盤價
    
 
-    cPredict_EPS = models.CharField(max_length=15, null=True, blank=True) #預估未來EPS
-    cPredict_high_price = models.CharField(max_length=15, null=True, blank=True) #預估未來最高價
-    cPredict_low_price = models.CharField(max_length=15, null=True, blank=True) #預估未來最低價  
+    cPredict_EPS = models.CharField(max_length=15, blank=True) #預估未來EPS
+    cPredict_high_price = models.CharField(max_length=15, blank=True) #預估未來最高價
+    cPredict_low_price = models.CharField(max_length=15, blank=True) #預估未來最低價  
     
-    cNew_up_profit = models.CharField(max_length=25, null=True, blank=True) #預估未來往上空間
-    cNew_down_loss = models.CharField(max_length=25, null=True, blank=True) #預估未來往下空間    
+    cNew_up_profit = models.CharField(max_length=25, blank=True) #預估未來往上空間
+    cNew_down_loss = models.CharField(max_length=25, blank=True) #預估未來往下空間    
 
-    cPredict_high_price_down30 = models.CharField(max_length=15, null=True, blank=True) #預估未來最高價
-    cPredict_low_price_down30 = models.CharField(max_length=15, null=True, blank=True) #預估未來最低價  
+    cPredict_high_price_down30 = models.CharField(max_length=15, blank=True) #預估未來最高價
+    cPredict_low_price_down30 = models.CharField(max_length=15, blank=True) #預估未來最低價  
     
-    cNew_up_profit_down30 = models.CharField(max_length=25, null=True, blank=True) #預估未來往上空間
-    cNew_down_loss_down30 = models.CharField(max_length=25, null=True, blank=True) #預估未來往下空間
+    cNew_up_profit_down30 = models.CharField(max_length=25, blank=True) #預估未來往上空間
+    cNew_down_loss_down30 = models.CharField(max_length=25, blank=True) #預估未來往下空間
 
 
-    cDBURL = models.CharField(max_length=40, null=True, blank=True) #  
-    cRisk_reward = models.FloatField(max_length=20, null=True, blank=True) #預估風險報酬比率  #20201202 可以使用Float
-    cRisk_reward_down30 = models.FloatField(max_length=20, null=True, blank=True) #預估風險報酬比率  #20201202 可以使用Float
+    cDBURL = models.CharField(max_length=40, blank=True) #  
+    cRisk_reward = models.FloatField(max_length=20, blank=True) #預估風險報酬比率  #20201202 可以使用Float
+    cRisk_reward_down30 = models.FloatField(max_length=20, blank=True) #預估風險報酬比率  #20201202 可以使用Float
 
 
-    cEPSach = models.CharField(max_length=20, null=True, blank=True)
-    cStCap = models.CharField(max_length=20, null=True, blank=True)
-    cEPSnPrf = models.CharField(max_length=20, null=True, blank=True)
-    cPERstab = models.CharField(max_length=20, null=True, blank=True)
+    cEPSach = models.CharField(max_length=20, blank=True)
+    cStCap = models.CharField(max_length=20, blank=True)
+    cEPSnPrf = models.CharField(max_length=20, blank=True)
+    cPERstab = models.CharField(max_length=20, blank=True)
 
     pubtime = models.DateTimeField(auto_now=True)
 
@@ -6703,30 +6703,30 @@ class StockFavs_chenchi(models.Model):
 
 
 class StockFavs_yuhuahsiao(models.Model):
-    cStockID = models.CharField(max_length=5, null=True, blank=True)
-    cStockName = models.CharField(max_length=5, null=True, blank=True)
+    cStockID = models.CharField(max_length=5, blank=True)
+    cStockName = models.CharField(max_length=5, blank=True)
 
-    cScore1st = models.CharField(max_length=5, null=True, blank=True) #最近一個月評分
-    cScore2nd = models.CharField(max_length=5, null=True, blank=True) #
-    cScore3rd = models.CharField(max_length=5, null=True, blank=True)
+    cScore1st = models.CharField(max_length=5, blank=True) #最近一個月評分
+    cScore2nd = models.CharField(max_length=5, blank=True) #
+    cScore3rd = models.CharField(max_length=5, blank=True)
 
-    cTodayClose = models.FloatField(max_length=20, null=True, blank=True) #今日收盤價
+    cTodayClose = models.FloatField(max_length=20, blank=True) #今日收盤價
    
 
-    cPredict_EPS = models.CharField(max_length=15, null=True, blank=True) #預估未來EPS
-    cPredict_high_price = models.CharField(max_length=15, null=True, blank=True) #預估未來最高價
-    cPredict_low_price = models.CharField(max_length=15, null=True, blank=True) #預估未來最低價  
+    cPredict_EPS = models.CharField(max_length=15, blank=True) #預估未來EPS
+    cPredict_high_price = models.CharField(max_length=15, blank=True) #預估未來最高價
+    cPredict_low_price = models.CharField(max_length=15, blank=True) #預估未來最低價  
     
-    cNew_up_profit = models.CharField(max_length=25, null=True, blank=True) #預估未來往上空間
-    cNew_down_loss = models.CharField(max_length=25, null=True, blank=True) #預估未來往下空間    
+    cNew_up_profit = models.CharField(max_length=25, blank=True) #預估未來往上空間
+    cNew_down_loss = models.CharField(max_length=25, blank=True) #預估未來往下空間    
 
-    cDBURL = models.CharField(max_length=40, null=True, blank=True) #  
-    cRisk_reward = models.FloatField(max_length=20, null=True, blank=True) #預估風險報酬比率  #20201202 可以使用Float
+    cDBURL = models.CharField(max_length=40, blank=True) #  
+    cRisk_reward = models.FloatField(max_length=20, blank=True) #預估風險報酬比率  #20201202 可以使用Float
 
-    cEPSach = models.CharField(max_length=20, null=True, blank=True)
-    cStCap = models.CharField(max_length=20, null=True, blank=True)
-    cEPSnPrf = models.CharField(max_length=20, null=True, blank=True)
-    cPERstab = models.CharField(max_length=20, null=True, blank=True)    
+    cEPSach = models.CharField(max_length=20, blank=True)
+    cStCap = models.CharField(max_length=20, blank=True)
+    cEPSnPrf = models.CharField(max_length=20, blank=True)
+    cPERstab = models.CharField(max_length=20, blank=True)    
 
     pubtime = models.DateTimeField(auto_now=True)
 
@@ -6735,30 +6735,30 @@ class StockFavs_yuhuahsiao(models.Model):
         return self.cStockID
     
 class StockFavs_liusnow(models.Model):
-    cStockID = models.CharField(max_length=5, null=True, blank=True)
-    cStockName = models.CharField(max_length=5, null=True, blank=True)
+    cStockID = models.CharField(max_length=5, blank=True)
+    cStockName = models.CharField(max_length=5, blank=True)
 
-    cScore1st = models.CharField(max_length=5, null=True, blank=True) #最近一個月評分
-    cScore2nd = models.CharField(max_length=5, null=True, blank=True) #
-    cScore3rd = models.CharField(max_length=5, null=True, blank=True)
+    cScore1st = models.CharField(max_length=5, blank=True) #最近一個月評分
+    cScore2nd = models.CharField(max_length=5, blank=True) #
+    cScore3rd = models.CharField(max_length=5, blank=True)
 
-    cTodayClose = models.FloatField(max_length=20, null=True, blank=True) #今日收盤價
+    cTodayClose = models.FloatField(max_length=20, blank=True) #今日收盤價
    
 
-    cPredict_EPS = models.CharField(max_length=15, null=True, blank=True) #預估未來EPS
-    cPredict_high_price = models.CharField(max_length=15, null=True, blank=True) #預估未來最高價
-    cPredict_low_price = models.CharField(max_length=15, null=True, blank=True) #預估未來最低價  
+    cPredict_EPS = models.CharField(max_length=15, blank=True) #預估未來EPS
+    cPredict_high_price = models.CharField(max_length=15, blank=True) #預估未來最高價
+    cPredict_low_price = models.CharField(max_length=15, blank=True) #預估未來最低價  
     
-    cNew_up_profit = models.CharField(max_length=25, null=True, blank=True) #預估未來往上空間
-    cNew_down_loss = models.CharField(max_length=25, null=True, blank=True) #預估未來往下空間    
+    cNew_up_profit = models.CharField(max_length=25, blank=True) #預估未來往上空間
+    cNew_down_loss = models.CharField(max_length=25, blank=True) #預估未來往下空間    
 
-    cDBURL = models.CharField(max_length=40, null=True, blank=True) #  
-    cRisk_reward = models.FloatField(max_length=20, null=True, blank=True) #預估風險報酬比率  #20201202 可以使用Float
+    cDBURL = models.CharField(max_length=40, blank=True) #  
+    cRisk_reward = models.FloatField(max_length=20, blank=True) #預估風險報酬比率  #20201202 可以使用Float
 
-    cEPSach = models.CharField(max_length=20, null=True, blank=True)
-    cStCap = models.CharField(max_length=20, null=True, blank=True)
-    cEPSnPrf = models.CharField(max_length=20, null=True, blank=True)
-    cPERstab = models.CharField(max_length=20, null=True, blank=True)
+    cEPSach = models.CharField(max_length=20, blank=True)
+    cStCap = models.CharField(max_length=20, blank=True)
+    cEPSnPrf = models.CharField(max_length=20, blank=True)
+    cPERstab = models.CharField(max_length=20, blank=True)
 
     pubtime = models.DateTimeField(auto_now=True)
 
@@ -6768,30 +6768,30 @@ class StockFavs_liusnow(models.Model):
     
 
 class StockFavs_kevinlee(models.Model):
-    cStockID = models.CharField(max_length=5, null=True, blank=True)
-    cStockName = models.CharField(max_length=5, null=True, blank=True)
+    cStockID = models.CharField(max_length=5, blank=True)
+    cStockName = models.CharField(max_length=5, blank=True)
 
-    cScore1st = models.CharField(max_length=5, null=True, blank=True) #最近一個月評分
-    cScore2nd = models.CharField(max_length=5, null=True, blank=True) #
-    cScore3rd = models.CharField(max_length=5, null=True, blank=True)
+    cScore1st = models.CharField(max_length=5, blank=True) #最近一個月評分
+    cScore2nd = models.CharField(max_length=5, blank=True) #
+    cScore3rd = models.CharField(max_length=5, blank=True)
 
-    cTodayClose = models.FloatField(max_length=20, null=True, blank=True) #今日收盤價
+    cTodayClose = models.FloatField(max_length=20, blank=True) #今日收盤價
    
 
-    cPredict_EPS = models.CharField(max_length=15, null=True, blank=True) #預估未來EPS
-    cPredict_high_price = models.CharField(max_length=15, null=True, blank=True) #預估未來最高價
-    cPredict_low_price = models.CharField(max_length=15, null=True, blank=True) #預估未來最低價  
+    cPredict_EPS = models.CharField(max_length=15, blank=True) #預估未來EPS
+    cPredict_high_price = models.CharField(max_length=15, blank=True) #預估未來最高價
+    cPredict_low_price = models.CharField(max_length=15, blank=True) #預估未來最低價  
     
-    cNew_up_profit = models.CharField(max_length=25, null=True, blank=True) #預估未來往上空間
-    cNew_down_loss = models.CharField(max_length=25, null=True, blank=True) #預估未來往下空間    
+    cNew_up_profit = models.CharField(max_length=25, blank=True) #預估未來往上空間
+    cNew_down_loss = models.CharField(max_length=25, blank=True) #預估未來往下空間    
 
-    cDBURL = models.CharField(max_length=40, null=True, blank=True) #  
-    cRisk_reward = models.FloatField(max_length=20, null=True, blank=True) #預估風險報酬比率  #20201202 可以使用Float
+    cDBURL = models.CharField(max_length=40, blank=True) #  
+    cRisk_reward = models.FloatField(max_length=20, blank=True) #預估風險報酬比率  #20201202 可以使用Float
 
-    cEPSach = models.CharField(max_length=20, null=True, blank=True)
-    cStCap = models.CharField(max_length=20, null=True, blank=True)
-    cEPSnPrf = models.CharField(max_length=20, null=True, blank=True)
-    cPERstab = models.CharField(max_length=20, null=True, blank=True)
+    cEPSach = models.CharField(max_length=20, blank=True)
+    cStCap = models.CharField(max_length=20, blank=True)
+    cEPSnPrf = models.CharField(max_length=20, blank=True)
+    cPERstab = models.CharField(max_length=20, blank=True)
 
     pubtime = models.DateTimeField(auto_now=True)
 
@@ -6802,72 +6802,72 @@ class StockFavs_kevinlee(models.Model):
         return self.cStockID
 #####################################################################################    
 class PriEPSPER_DB(models.Model):
-    cStockID = models.CharField(max_length=8,blank=True,null=True)
-    cStockName = models.CharField(max_length=8,blank=True,null=True)
+    cStockID = models.CharField(max_length=8,blank=True)
+    cStockName = models.CharField(max_length=8,blank=True)
 
-    cH2025 = models.FloatField(max_length=20, null=True, blank=True)
-    cL2025 = models.FloatField(max_length=20, null=True, blank=True)
+    cH2025 = models.FloatField(max_length=20, blank=True)
+    cL2025 = models.FloatField(max_length=20, blank=True)
 
-    cH2024 = models.FloatField(max_length=20, null=True, blank=True)
-    cL2024 = models.FloatField(max_length=20, null=True, blank=True)
+    cH2024 = models.FloatField(max_length=20, blank=True)
+    cL2024 = models.FloatField(max_length=20, blank=True)
 
-    cH2023 = models.FloatField(max_length=20, null=True, blank=True)
-    cL2023 = models.FloatField(max_length=20, null=True, blank=True)
+    cH2023 = models.FloatField(max_length=20, blank=True)
+    cL2023 = models.FloatField(max_length=20, blank=True)
 
-    cH2022 = models.FloatField(max_length=20, null=True, blank=True)
-    cL2022 = models.FloatField(max_length=20, null=True, blank=True)
+    cH2022 = models.FloatField(max_length=20, blank=True)
+    cL2022 = models.FloatField(max_length=20, blank=True)
 
-    cH2021 = models.FloatField(max_length=20, null=True, blank=True)
-    cL2021 = models.FloatField(max_length=20, null=True, blank=True)
+    cH2021 = models.FloatField(max_length=20, blank=True)
+    cL2021 = models.FloatField(max_length=20, blank=True)
 
-    cH2020 = models.FloatField(max_length=20, null=True, blank=True)  #以下為最近五年最高價和最低價
-    cL2020 = models.FloatField(max_length=20, null=True, blank=True)
-    cH2019 = models.FloatField(max_length=20, null=True, blank=True)
-    cL2019 = models.FloatField(max_length=20, null=True, blank=True)
-    cH2018 = models.FloatField(max_length=20, null=True, blank=True)
-    cL2018 = models.FloatField(max_length=20, null=True, blank=True)
-    cH2017 = models.FloatField(max_length=20, null=True, blank=True)
-    cL2017 = models.FloatField(max_length=20, null=True, blank=True)
-    cH2016 = models.FloatField(max_length=20, null=True, blank=True)
-    cL2016 = models.FloatField(max_length=20, null=True, blank=True)
+    cH2020 = models.FloatField(max_length=20, blank=True)  #以下為最近五年最高價和最低價
+    cL2020 = models.FloatField(max_length=20, blank=True)
+    cH2019 = models.FloatField(max_length=20, blank=True)
+    cL2019 = models.FloatField(max_length=20, blank=True)
+    cH2018 = models.FloatField(max_length=20, blank=True)
+    cL2018 = models.FloatField(max_length=20, blank=True)
+    cH2017 = models.FloatField(max_length=20, blank=True)
+    cL2017 = models.FloatField(max_length=20, blank=True)
+    cH2016 = models.FloatField(max_length=20, blank=True)
+    cL2016 = models.FloatField(max_length=20, blank=True)
 
-    cEPS2025 = models.FloatField(max_length=20, null=True, blank=True) 
-    cEPS2024 = models.FloatField(max_length=20, null=True, blank=True)
-    cEPS2023 = models.FloatField(max_length=20, null=True, blank=True)
-    cEPS2022 = models.FloatField(max_length=20, null=True, blank=True)
-    cEPS2021 = models.FloatField(max_length=20, null=True, blank=True)
+    cEPS2025 = models.FloatField(max_length=20, blank=True) 
+    cEPS2024 = models.FloatField(max_length=20, blank=True)
+    cEPS2023 = models.FloatField(max_length=20, blank=True)
+    cEPS2022 = models.FloatField(max_length=20, blank=True)
+    cEPS2021 = models.FloatField(max_length=20, blank=True)
 
 
-    cEPS2020 = models.FloatField(max_length=20, null=True, blank=True)  #以下為最近五年EPS
-    cEPS2019 = models.FloatField(max_length=20, null=True, blank=True)
-    cEPS2018 = models.FloatField(max_length=20, null=True, blank=True)
-    cEPS2017 = models.FloatField(max_length=20, null=True, blank=True)
-    cEPS2016 = models.FloatField(max_length=20, null=True, blank=True)
+    cEPS2020 = models.FloatField(max_length=20, blank=True)  #以下為最近五年EPS
+    cEPS2019 = models.FloatField(max_length=20, blank=True)
+    cEPS2018 = models.FloatField(max_length=20, blank=True)
+    cEPS2017 = models.FloatField(max_length=20, blank=True)
+    cEPS2016 = models.FloatField(max_length=20, blank=True)
 
-    cPER_H2025 = models.FloatField(max_length=20, null=True, blank=True)   
-    cPER_L2025 = models.FloatField(max_length=20, null=True, blank=True)
-    cPER_H2024 = models.FloatField(max_length=20, null=True, blank=True)
-    cPER_L2024 = models.FloatField(max_length=20, null=True, blank=True)
-    cPER_H2023 = models.FloatField(max_length=20, null=True, blank=True)
-    cPER_L2023 = models.FloatField(max_length=20, null=True, blank=True)
-    cPER_H2022 = models.FloatField(max_length=20, null=True, blank=True)
-    cPER_L2022 = models.FloatField(max_length=20, null=True, blank=True)
-    cPER_H2021 = models.FloatField(max_length=20, null=True, blank=True)
-    cPER_L2021 = models.FloatField(max_length=20, null=True, blank=True)
+    cPER_H2025 = models.FloatField(max_length=20, blank=True)   
+    cPER_L2025 = models.FloatField(max_length=20, blank=True)
+    cPER_H2024 = models.FloatField(max_length=20, blank=True)
+    cPER_L2024 = models.FloatField(max_length=20, blank=True)
+    cPER_H2023 = models.FloatField(max_length=20, blank=True)
+    cPER_L2023 = models.FloatField(max_length=20, blank=True)
+    cPER_H2022 = models.FloatField(max_length=20, blank=True)
+    cPER_L2022 = models.FloatField(max_length=20, blank=True)
+    cPER_H2021 = models.FloatField(max_length=20, blank=True)
+    cPER_L2021 = models.FloatField(max_length=20, blank=True)
 
 
 
     
-    cPER_H2020 = models.FloatField(max_length=20, null=True, blank=True)   #以下為最近五年最高和最低本益比區間
-    cPER_L2020 = models.FloatField(max_length=20, null=True, blank=True)
-    cPER_H2019 = models.FloatField(max_length=20, null=True, blank=True)
-    cPER_L2019 = models.FloatField(max_length=20, null=True, blank=True)
-    cPER_H2018 = models.FloatField(max_length=20, null=True, blank=True)
-    cPER_L2018 = models.FloatField(max_length=20, null=True, blank=True)
-    cPER_H2017 = models.FloatField(max_length=20, null=True, blank=True)
-    cPER_L2017 = models.FloatField(max_length=20, null=True, blank=True)
-    cPER_H2016 = models.FloatField(max_length=20, null=True, blank=True)
-    cPER_L2016 = models.FloatField(max_length=20, null=True, blank=True)
+    cPER_H2020 = models.FloatField(max_length=20, blank=True)   #以下為最近五年最高和最低本益比區間
+    cPER_L2020 = models.FloatField(max_length=20, blank=True)
+    cPER_H2019 = models.FloatField(max_length=20, blank=True)
+    cPER_L2019 = models.FloatField(max_length=20, blank=True)
+    cPER_H2018 = models.FloatField(max_length=20, blank=True)
+    cPER_L2018 = models.FloatField(max_length=20, blank=True)
+    cPER_H2017 = models.FloatField(max_length=20, blank=True)
+    cPER_L2017 = models.FloatField(max_length=20, blank=True)
+    cPER_H2016 = models.FloatField(max_length=20, blank=True)
+    cPER_L2016 = models.FloatField(max_length=20, blank=True)
 
 
     pubtime = models.DateTimeField(auto_now=True)    
@@ -6875,28 +6875,28 @@ class PriEPSPER_DB(models.Model):
         return self.cStockID
 
 class NetCap_DB(models.Model):
-    cStockID = models.CharField(max_length=8,blank=True,null=True)
-    cStockName = models.CharField(max_length=8,blank=True,null=True)
+    cStockID = models.CharField(max_length=8,blank=True)
+    cStockName = models.CharField(max_length=8,blank=True)
 
-    cNet22Q2 = models.FloatField(max_length=20, null=True, blank=True)
-    cNet22Q1 = models.FloatField(max_length=20, null=True, blank=True)
-    cNet21Q4 = models.FloatField(max_length=20, null=True, blank=True)
-    cNet21Q3 = models.FloatField(max_length=20, null=True, blank=True)
+    cNet22Q2 = models.FloatField(max_length=20, blank=True)
+    cNet22Q1 = models.FloatField(max_length=20, blank=True)
+    cNet21Q4 = models.FloatField(max_length=20, blank=True)
+    cNet21Q3 = models.FloatField(max_length=20, blank=True)
 
-    cNet21Q2 = models.FloatField(max_length=20, null=True, blank=True)
-    cNet21Q1 = models.FloatField(max_length=20, null=True, blank=True)
-    cNet20Q4 = models.FloatField(max_length=20, null=True, blank=True)
-    cNet20Q3 = models.FloatField(max_length=20, null=True, blank=True)
+    cNet21Q2 = models.FloatField(max_length=20, blank=True)
+    cNet21Q1 = models.FloatField(max_length=20, blank=True)
+    cNet20Q4 = models.FloatField(max_length=20, blank=True)
+    cNet20Q3 = models.FloatField(max_length=20, blank=True)
 
-    cCap22Q2 = models.FloatField(max_length=20, null=True, blank=True)     
-    cCap22Q1 = models.FloatField(max_length=20, null=True, blank=True)     
-    cCap21Q4 = models.FloatField(max_length=20, null=True, blank=True) 
-    cCap21Q3 = models.FloatField(max_length=20, null=True, blank=True) 
+    cCap22Q2 = models.FloatField(max_length=20, blank=True)     
+    cCap22Q1 = models.FloatField(max_length=20, blank=True)     
+    cCap21Q4 = models.FloatField(max_length=20, blank=True) 
+    cCap21Q3 = models.FloatField(max_length=20, blank=True) 
 
-    cCap21Q2 = models.FloatField(max_length=20, null=True, blank=True)     
-    cCap21Q1 = models.FloatField(max_length=20, null=True, blank=True)     
-    cCap20Q4 = models.FloatField(max_length=20, null=True, blank=True) 
-    cCap20Q3 = models.FloatField(max_length=20, null=True, blank=True)
+    cCap21Q2 = models.FloatField(max_length=20, blank=True)     
+    cCap21Q1 = models.FloatField(max_length=20, blank=True)     
+    cCap20Q4 = models.FloatField(max_length=20, blank=True) 
+    cCap20Q3 = models.FloatField(max_length=20, blank=True)
 
     pubtime = models.DateTimeField(auto_now=True)     
     def __str__(self):
