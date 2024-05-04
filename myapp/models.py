@@ -6297,21 +6297,21 @@ class Favorites_jonyi729(models.Model):
 
     
 class StockFavDB(models.Model):
-    cStockID = models.CharField(max_length=5)
-    cStockName = models.CharField(max_length=5)
+    cStockID = models.CharField(max_length=5,blank=True,null=True)
+    cStockName = models.CharField(max_length=5,blank=True,null=True)
 
-    cYearDate = models.CharField(max_length=15)
+    cYearDate = models.CharField(max_length=15,blank=True,null=True)
 
-    cPredict_EPS = models.CharField(max_length=15) #預估未來EPS
-    cPredict_high_price = models.CharField(max_length=15) #預估未來最高價
-    cPredict_low_price = models.CharField(max_length=15) #預估未來最低價  
+    cPredict_EPS = models.CharField(max_length=15,blank=True,null=True) #預估未來EPS
+    cPredict_high_price = models.CharField(max_length=15,blank=True,null=True) #預估未來最高價
+    cPredict_low_price = models.CharField(max_length=15,blank=True,null=True) #預估未來最低價  
     
-    cNew_up_profit = models.CharField(max_length=25) #預估未來往上空間
-    cNew_down_loss = models.CharField(max_length=25) #預估未來往下空間    
+    cNew_up_profit = models.CharField(max_length=25,blank=True,null=True) #預估未來往上空間
+    cNew_down_loss = models.CharField(max_length=25,blank=True,null=True) #預估未來往下空間    
 
-    cTodayClose = models.FloatField(max_length=20) #今日收盤價
+    cTodayClose = models.FloatField(max_length=20,blank=True,null=True) #今日收盤價
     
-    cRisk_reward = models.FloatField(max_length=20) #預估風險報酬比率  #20201202 可以使用Float
+    cRisk_reward = models.FloatField(max_length=20,blank=True,null=True) #預估風險報酬比率  #20201202 可以使用Float
     
     pubtime = models.DateTimeField(auto_now=True)
 
