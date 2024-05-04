@@ -6659,7 +6659,7 @@ class StockFavs_bakylews(models.Model):
 
 
 class StockFavs_chenchi(models.Model):
-    cStockID = models.CharField(max_length=5)
+    cStockID = models.CharField(max_length=5,default='')
     cStockName = models.CharField(max_length=5)
 
     cScore1st = models.CharField(max_length=5) #最近一個月評分
