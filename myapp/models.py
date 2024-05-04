@@ -6802,72 +6802,72 @@ class StockFavs_kevinlee(models.Model):
         return self.cStockID
 #####################################################################################    
 class PriEPSPER_DB(models.Model):
-    cStockID = models.CharField(max_length=8)
-    cStockName = models.CharField(max_length=8)
+    cStockID = models.CharField(max_length=8,blank=True,null=True)
+    cStockName = models.CharField(max_length=8,blank=True,null=True)
 
-    cH2025 = models.FloatField(max_length=20)
-    cL2025 = models.FloatField(max_length=20)
+    cH2025 = models.FloatField(max_length=20,blank=True,null=True)
+    cL2025 = models.FloatField(max_length=20,blank=True,null=True)
 
-    cH2024 = models.FloatField(max_length=20)
-    cL2024 = models.FloatField(max_length=20)
+    cH2024 = models.FloatField(max_length=20,blank=True,null=True)
+    cL2024 = models.FloatField(max_length=20,blank=True,null=True)
 
-    cH2023 = models.FloatField(max_length=20)
-    cL2023 = models.FloatField(max_length=20)
+    cH2023 = models.FloatField(max_length=20,blank=True,null=True)
+    cL2023 = models.FloatField(max_length=20,blank=True,null=True)
 
-    cH2022 = models.FloatField(max_length=20)
-    cL2022 = models.FloatField(max_length=20)
+    cH2022 = models.FloatField(max_length=20,blank=True,null=True)
+    cL2022 = models.FloatField(max_length=20,blank=True,null=True)
 
-    cH2021 = models.FloatField(max_length=20)
-    cL2021 = models.FloatField(max_length=20)
+    cH2021 = models.FloatField(max_length=20,blank=True,null=True)
+    cL2021 = models.FloatField(max_length=20,blank=True,null=True)
 
-    cH2020 = models.FloatField(max_length=20)  #以下為最近五年最高價和最低價
-    cL2020 = models.FloatField(max_length=20)
-    cH2019 = models.FloatField(max_length=20)
-    cL2019 = models.FloatField(max_length=20)
-    cH2018 = models.FloatField(max_length=20)
-    cL2018 = models.FloatField(max_length=20)
-    cH2017 = models.FloatField(max_length=20)
-    cL2017 = models.FloatField(max_length=20)
-    cH2016 = models.FloatField(max_length=20)
-    cL2016 = models.FloatField(max_length=20)
+    cH2020 = models.FloatField(max_length=20,blank=True,null=True)  #以下為最近五年最高價和最低價
+    cL2020 = models.FloatField(max_length=20,blank=True,null=True)
+    cH2019 = models.FloatField(max_length=20,blank=True,null=True)
+    cL2019 = models.FloatField(max_length=20,blank=True,null=True)
+    cH2018 = models.FloatField(max_length=20,blank=True,null=True)
+    cL2018 = models.FloatField(max_length=20,blank=True,null=True)
+    cH2017 = models.FloatField(max_length=20,blank=True,null=True)
+    cL2017 = models.FloatField(max_length=20,blank=True,null=True)
+    cH2016 = models.FloatField(max_length=20,blank=True,null=True)
+    cL2016 = models.FloatField(max_length=20,blank=True,null=True)
 
-    cEPS2025 = models.FloatField(max_length=20) 
-    cEPS2024 = models.FloatField(max_length=20)
-    cEPS2023 = models.FloatField(max_length=20)
-    cEPS2022 = models.FloatField(max_length=20)
-    cEPS2021 = models.FloatField(max_length=20)
+    cEPS2025 = models.FloatField(max_length=20,blank=True,null=True) 
+    cEPS2024 = models.FloatField(max_length=20,blank=True,null=True)
+    cEPS2023 = models.FloatField(max_length=20,blank=True,null=True)
+    cEPS2022 = models.FloatField(max_length=20,blank=True,null=True)
+    cEPS2021 = models.FloatField(max_length=20,blank=True,null=True)
 
 
-    cEPS2020 = models.FloatField(max_length=20)  #以下為最近五年EPS
-    cEPS2019 = models.FloatField(max_length=20)
-    cEPS2018 = models.FloatField(max_length=20)
-    cEPS2017 = models.FloatField(max_length=20)
-    cEPS2016 = models.FloatField(max_length=20)
+    cEPS2020 = models.FloatField(max_length=20,blank=True,null=True)  #以下為最近五年EPS
+    cEPS2019 = models.FloatField(max_length=20,blank=True,null=True)
+    cEPS2018 = models.FloatField(max_length=20,blank=True,null=True)
+    cEPS2017 = models.FloatField(max_length=20,blank=True,null=True)
+    cEPS2016 = models.FloatField(max_length=20,blank=True,null=True)
 
-    cPER_H2025 = models.FloatField(max_length=20)   
-    cPER_L2025 = models.FloatField(max_length=20)
-    cPER_H2024 = models.FloatField(max_length=20)
-    cPER_L2024 = models.FloatField(max_length=20)
-    cPER_H2023 = models.FloatField(max_length=20)
-    cPER_L2023 = models.FloatField(max_length=20)
-    cPER_H2022 = models.FloatField(max_length=20)
-    cPER_L2022 = models.FloatField(max_length=20)
-    cPER_H2021 = models.FloatField(max_length=20)
-    cPER_L2021 = models.FloatField(max_length=20)
+    cPER_H2025 = models.FloatField(max_length=20,blank=True,null=True)   
+    cPER_L2025 = models.FloatField(max_length=20,blank=True,null=True)
+    cPER_H2024 = models.FloatField(max_length=20,blank=True,null=True)
+    cPER_L2024 = models.FloatField(max_length=20,blank=True,null=True)
+    cPER_H2023 = models.FloatField(max_length=20,blank=True,null=True)
+    cPER_L2023 = models.FloatField(max_length=20,blank=True,null=True)
+    cPER_H2022 = models.FloatField(max_length=20,blank=True,null=True)
+    cPER_L2022 = models.FloatField(max_length=20,blank=True,null=True)
+    cPER_H2021 = models.FloatField(max_length=20,blank=True,null=True)
+    cPER_L2021 = models.FloatField(max_length=20,blank=True,null=True)
 
 
 
     
-    cPER_H2020 = models.FloatField(max_length=20)   #以下為最近五年最高和最低本益比區間
-    cPER_L2020 = models.FloatField(max_length=20)
-    cPER_H2019 = models.FloatField(max_length=20)
-    cPER_L2019 = models.FloatField(max_length=20)
-    cPER_H2018 = models.FloatField(max_length=20)
-    cPER_L2018 = models.FloatField(max_length=20)
-    cPER_H2017 = models.FloatField(max_length=20)
-    cPER_L2017 = models.FloatField(max_length=20)
-    cPER_H2016 = models.FloatField(max_length=20)
-    cPER_L2016 = models.FloatField(max_length=20)
+    cPER_H2020 = models.FloatField(max_length=20,blank=True,null=True)   #以下為最近五年最高和最低本益比區間
+    cPER_L2020 = models.FloatField(max_length=20,blank=True,null=True)
+    cPER_H2019 = models.FloatField(max_length=20,blank=True,null=True)
+    cPER_L2019 = models.FloatField(max_length=20,blank=True,null=True)
+    cPER_H2018 = models.FloatField(max_length=20,blank=True,null=True)
+    cPER_L2018 = models.FloatField(max_length=20,blank=True,null=True)
+    cPER_H2017 = models.FloatField(max_length=20,blank=True,null=True)
+    cPER_L2017 = models.FloatField(max_length=20,blank=True,null=True)
+    cPER_H2016 = models.FloatField(max_length=20,blank=True,null=True)
+    cPER_L2016 = models.FloatField(max_length=20,blank=True,null=True)
 
 
     pubtime = models.DateTimeField(auto_now=True)    
