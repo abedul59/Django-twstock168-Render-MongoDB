@@ -6437,7 +6437,7 @@ class StockFavs_donhonlin(models.Model):
    
 
     cPredict_EPS = models.CharField(max_length=15,blank=True,null=True) #預估未來EPS
-    cPredict_high_price = models.CharField(max_length=15,blank=True,null=True #預估未來最高價
+    cPredict_high_price = models.CharField(max_length=15,blank=True,null=True) #預估未來最高價
     cPredict_low_price = models.CharField(max_length=15,blank=True,null=True) #預估未來最低價  
     
     cNew_up_profit = models.CharField(max_length=25,blank=True,null=True) #預估未來往上空間
