@@ -38,4 +38,4 @@ lxml
 djongo
 sqlparse
 pymongo==3.12.1
-
+dnspython
