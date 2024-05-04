@@ -29,7 +29,7 @@ class NewsUnit(models.Model):
     message = models.TextField(max_length=100, default='')
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.title
     
@@ -145,7 +145,7 @@ class Stock6Sign(models.Model):
     cAverageScore = models.CharField(max_length=5, default='')
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -163,7 +163,7 @@ class Stock6Sign202005(models.Model):
     #cLossGain  = models.CharField(max_length=10, default='')
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
 
@@ -181,7 +181,7 @@ class Stock6Sign202006(models.Model):
     cLossGain  = models.CharField(max_length=10, default='')
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -207,7 +207,7 @@ class Stock6Sign2020Q2(models.Model):
     cLossGain  = models.CharField(max_length=10, default='')
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID 
     
@@ -229,7 +229,7 @@ class Stock6Sign202007(models.Model):
     cLossGain  = models.CharField(max_length=10, default='')
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID   
 
@@ -251,7 +251,7 @@ class Stock6Sign202008(models.Model):
     cLossGain  = models.CharField(max_length=10, default='')
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID  
 
@@ -273,7 +273,7 @@ class Stock6Sign202009(models.Model):
     cLossGain  = models.CharField(max_length=10, default='')
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID 
 
@@ -300,7 +300,7 @@ class Stock6Sign2020Q3(models.Model):
     sCore2006= models.CharField(max_length=10, default='')
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID   
     
@@ -328,7 +328,7 @@ class Stock6Sign202011(models.Model):
     sCore2006= models.CharField(max_length=10, default='')
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
 
@@ -358,7 +358,7 @@ class Stock6Sign2020Q4(models.Model):
     sCore2006= models.CharField(max_length=10, default='')
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
 
@@ -389,7 +389,7 @@ class Stock6Sign202101(models.Model):
     sCore2006= models.CharField(max_length=10, default='')
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
 
@@ -420,7 +420,7 @@ class Stock6Sign202102(models.Model):
     sCore2006= models.CharField(max_length=10, default='')
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
 
@@ -452,7 +452,7 @@ class Stock6Sign202103(models.Model):
     sCore2006= models.CharField(max_length=10, default='')
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -486,7 +486,7 @@ class Stock6Sign202104(models.Model):
     sCore2006= models.CharField(max_length=10, default='')
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID    
 
@@ -520,7 +520,7 @@ class Stock6Sign202105(models.Model):
     sCore2006= models.CharField(max_length=10, default='')
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
 
@@ -550,7 +550,7 @@ class Stock6Sign202106(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
 
@@ -580,7 +580,7 @@ class Stock6Sign202107(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
 
@@ -611,7 +611,7 @@ class Stock6Sign202108(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -644,7 +644,7 @@ class Stock6Sign202109(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -677,7 +677,7 @@ class Stock6Sign202110(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
 
@@ -711,7 +711,7 @@ class Stock6Sign202111(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -746,7 +746,7 @@ class Stock6Sign202112(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
 
@@ -782,7 +782,7 @@ class Stock6Sign202201(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID    
     
@@ -819,7 +819,7 @@ class Stock6Sign202202(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID    
     
@@ -857,7 +857,7 @@ class Stock6Sign202203(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID      
     
@@ -893,7 +893,7 @@ class Stock6Sign202204(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID  
     
@@ -930,7 +930,7 @@ class Stock6Sign202205(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID 
 
@@ -967,7 +967,7 @@ class Stock6Sign202206(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID 
     
@@ -1006,7 +1006,7 @@ class Stock6Sign202207(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID 
     
@@ -1044,7 +1044,7 @@ class Stock6Sign202208(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID 
     
@@ -1084,7 +1084,7 @@ class Stock6Sign202209(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID 
     
@@ -1120,7 +1120,7 @@ class Stock6Sign202210(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID 
     
@@ -1157,7 +1157,7 @@ class Stock6Sign202211(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -1195,7 +1195,7 @@ class Stock6Sign202212(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
 #############2023##
@@ -1231,7 +1231,7 @@ class Stock6Sign202301(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID    
     
@@ -1268,7 +1268,7 @@ class Stock6Sign202302(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID    
     
@@ -1304,7 +1304,7 @@ class Stock6Sign202303(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID      
     
@@ -1340,7 +1340,7 @@ class Stock6Sign202304(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID  
     
@@ -1377,7 +1377,7 @@ class Stock6Sign202305(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID 
 
@@ -1414,7 +1414,7 @@ class Stock6Sign202306(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID 
     
@@ -1453,7 +1453,7 @@ class Stock6Sign202307(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID 
     
@@ -1491,7 +1491,7 @@ class Stock6Sign202308(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID 
     
@@ -1531,7 +1531,7 @@ class Stock6Sign202309(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID 
     
@@ -1567,7 +1567,7 @@ class Stock6Sign202310(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID 
     
@@ -1604,7 +1604,7 @@ class Stock6Sign202311(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -1642,7 +1642,7 @@ class Stock6Sign202312(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
 
@@ -1682,7 +1682,7 @@ class Stock6Sign202401(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID    
 
@@ -1724,7 +1724,7 @@ class Stock6Sign202402(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID    
 
@@ -1765,7 +1765,7 @@ class Stock6Sign202403(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
 
     class Meta:
         # managed = False
@@ -1813,7 +1813,7 @@ class Stock6Sign202404(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID 
     
@@ -1852,7 +1852,7 @@ class Stock6Sign202405(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID 
     
@@ -1892,7 +1892,7 @@ class Stock6Sign202406(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID 
 ####################################################################################
@@ -1972,7 +1972,7 @@ class DCStock6Sign202011(models.Model):
     
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     
     def __str__(self):
         return self.cStockID 
@@ -2053,7 +2053,7 @@ class DCStock6Sign2020Q4(models.Model):
     
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     
     def __str__(self):
         return self.cStockID 
@@ -2132,7 +2132,7 @@ class DCStock6Sign202101(models.Model):
     
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     
     def __str__(self):
         return self.cStockID     
@@ -2212,7 +2212,7 @@ class DCStock6Sign202102(models.Model):
     
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     
     def __str__(self):
         return self.cStockID    
@@ -2292,7 +2292,7 @@ class DCStock6Sign202103(models.Model):
     
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     
     def __str__(self):
         return self.cStockID  
@@ -2373,7 +2373,7 @@ class DCStock6Sign202104(models.Model):
     
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     
     def __str__(self):
         return self.cStockID  
@@ -2452,7 +2452,7 @@ class DCStock6Sign202105(models.Model):
     
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     
     def __str__(self):
         return self.cStockID  
@@ -2532,7 +2532,7 @@ class DCStock6Sign202106(models.Model):
     
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     
     def __str__(self):
         return self.cStockID 
@@ -2612,7 +2612,7 @@ class DCStock6Sign202107(models.Model):
     
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     
     def __str__(self):
         return self.cStockID 
@@ -2691,7 +2691,7 @@ class DCStock6Sign202108(models.Model):
     
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     
     def __str__(self):
         return self.cStockID  
@@ -2771,7 +2771,7 @@ class DCStock6Sign202109(models.Model):
     
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     
     def __str__(self):
         return self.cStockID
@@ -2850,7 +2850,7 @@ class DCStock6Sign202110(models.Model):
     
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     
     def __str__(self):
         return self.cStockID
@@ -2929,7 +2929,7 @@ class DCStock6Sign202111(models.Model):
     
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     
     def __str__(self):
         return self.cStockID
@@ -3009,7 +3009,7 @@ class DCStock6Sign202112(models.Model):
     
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     
     def __str__(self):
         return self.cStockID
@@ -3073,7 +3073,7 @@ class StockPERseg(models.Model):
     cRisk_reward = models.CharField(max_length=10, default='') #預估風險報酬比率
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
    
@@ -3137,7 +3137,7 @@ class StockPERseg202005(models.Model):
     cRisk_reward = models.CharField(max_length=10, default='') #預估風險報酬比率
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
 
@@ -3201,7 +3201,7 @@ class StockPERseg202006(models.Model):
     cRisk_reward = models.CharField(max_length=10, default='') #預估風險報酬比率
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
 
@@ -3225,7 +3225,7 @@ class StockPERseg2020Q2(models.Model):
     cRisk_reward = models.CharField(max_length=10, default='') #預估風險報酬比率
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
 
@@ -3250,7 +3250,7 @@ class StockPERseg202007(models.Model):
     cRisk_reward = models.CharField(max_length=10, default='') #預估風險報酬比率
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
 
@@ -3273,7 +3273,7 @@ class StockPERseg202008(models.Model):
     cRisk_reward = models.CharField(max_length=10, default='') #預估風險報酬比率
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
 
@@ -3296,7 +3296,7 @@ class StockPERseg202009(models.Model):
     cRisk_reward = models.CharField(max_length=10, default='') #預估風險報酬比率
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
 
@@ -3319,7 +3319,7 @@ class StockPERseg2020Q3(models.Model):
     cRisk_reward = models.FloatField(max_length=20, default='') #預估風險報酬比率
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
 
@@ -3342,7 +3342,7 @@ class StockPERseg202011(models.Model):
     cRisk_reward = models.FloatField(max_length=20, default='') #預估風險報酬比率  #20201202 可以使用Float
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -3365,7 +3365,7 @@ class StockPERseg2020Q4(models.Model):
     cRisk_reward = models.FloatField(max_length=20, default='') #預估風險報酬比率  #20201202 可以使用Float
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID   
 
@@ -3388,7 +3388,7 @@ class StockPERseg202101(models.Model):
     cRisk_reward = models.FloatField(max_length=20, default='') #預估風險報酬比率  #20201202 可以使用Float
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID  
 
@@ -3412,7 +3412,7 @@ class StockPERseg202102(models.Model):
     cRisk_reward = models.FloatField(max_length=20, default='') #預估風險報酬比率  #20201202 可以使用Float
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID  
 
@@ -3435,7 +3435,7 @@ class StockPERseg202103(models.Model):
     cRisk_reward = models.FloatField(max_length=20, default='') #預估風險報酬比率  #20201202 可以使用Float
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID 
 
@@ -3458,7 +3458,7 @@ class StockPERseg202104(models.Model):
     cRisk_reward = models.FloatField(max_length=20, default='') #預估風險報酬比率  #20201202 可以使用Float
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID  
     
@@ -3481,7 +3481,7 @@ class StockPERseg202105(models.Model):
     cRisk_reward = models.FloatField(max_length=20, default='') #預估風險報酬比率  #20201202 可以使用Float
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID      
 
@@ -3505,7 +3505,7 @@ class StockPERseg202106(models.Model):
     cRisk_reward = models.FloatField(max_length=20, default='') #預估風險報酬比率  #20201202 可以使用Float
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID 
     
@@ -3528,7 +3528,7 @@ class StockPERseg202107(models.Model):
     cRisk_reward = models.FloatField(max_length=20, default='') #預估風險報酬比率  #20201202 可以使用Float
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
 
@@ -3552,7 +3552,7 @@ class StockPERseg202108(models.Model):
     cRisk_reward = models.FloatField(max_length=20, default='') #預估風險報酬比率  #20201202 可以使用Float
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID 
     
@@ -3575,7 +3575,7 @@ class StockPERseg202109(models.Model):
     cRisk_reward = models.FloatField(max_length=20, default='') #預估風險報酬比率  #20201202 可以使用Float
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID 
 
@@ -3599,7 +3599,7 @@ class StockPERseg202110(models.Model):
     cRisk_reward = models.FloatField(max_length=20, default='') #預估風險報酬比率  #20201202 可以使用Float
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID 
 
@@ -3622,7 +3622,7 @@ class StockPERseg202111(models.Model):
     cRisk_reward = models.FloatField(max_length=20, default='') #預估風險報酬比率  #20201202 可以使用Float
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID 
 
@@ -3645,7 +3645,7 @@ class StockPERseg202112(models.Model):
     cRisk_reward = models.FloatField(max_length=20, default='') #預估風險報酬比率  #20201202 可以使用Float
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID 
 
@@ -3668,7 +3668,7 @@ class StockPERseg202201(models.Model):
     cRisk_reward = models.FloatField(max_length=20, default='') #預估風險報酬比率  #20201202 可以使用Float
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID 
     
@@ -3691,7 +3691,7 @@ class StockPERseg202202(models.Model):
     cRisk_reward = models.FloatField(max_length=20, default='') #預估風險報酬比率  #20201202 可以使用Float
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID 
     
@@ -3714,7 +3714,7 @@ class StockPERseg202203(models.Model):
     cRisk_reward = models.FloatField(max_length=20, default='') #預估風險報酬比率  #20201202 可以使用Float
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID 
     
@@ -3737,7 +3737,7 @@ class StockPERseg202204(models.Model):
     cRisk_reward = models.FloatField(max_length=20, default='') #預估風險報酬比率  #20201202 可以使用Float
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID 
     
@@ -3760,7 +3760,7 @@ class StockPERseg202205(models.Model):
     cRisk_reward = models.FloatField(max_length=20, default='') #預估風險報酬比率  #20201202 可以使用Float
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID 
     
@@ -3784,7 +3784,7 @@ class StockPERseg202206(models.Model):
     cRisk_reward = models.FloatField(max_length=20, default='') #預估風險報酬比率  #20201202 可以使用Float
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID 
     
@@ -3807,7 +3807,7 @@ class StockPERseg202207(models.Model):
     cRisk_reward = models.FloatField(max_length=20, default='') #預估風險報酬比率  #20201202 可以使用Float
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID 
     
@@ -3830,7 +3830,7 @@ class StockPERseg202208(models.Model):
     cRisk_reward = models.FloatField(max_length=20, default='') #預估風險報酬比率  #20201202 可以使用Float
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID 
     
@@ -3853,7 +3853,7 @@ class StockPERseg202209(models.Model):
     cRisk_reward = models.FloatField(max_length=20, default='') #預估風險報酬比率  #20201202 可以使用Float
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID 
     
@@ -3876,7 +3876,7 @@ class StockPERseg202210(models.Model):
     cRisk_reward = models.FloatField(max_length=20, default='') #預估風險報酬比率  #20201202 可以使用Float
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID 
     
@@ -3899,7 +3899,7 @@ class StockPERseg202211(models.Model):
     cRisk_reward = models.FloatField(max_length=20, default='') #預估風險報酬比率  #20201202 可以使用Float
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID 
     
@@ -3922,7 +3922,7 @@ class StockPERseg202212(models.Model):
     cRisk_reward = models.FloatField(max_length=20, default='') #預估風險報酬比率  #20201202 可以使用Float
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID 
 #####
@@ -3955,7 +3955,7 @@ class StockPERseg202301(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -3988,7 +3988,7 @@ class StockPERseg202302(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -4021,7 +4021,7 @@ class StockPERseg202303(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -4054,7 +4054,7 @@ class StockPERseg202304(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -4087,7 +4087,7 @@ class StockPERseg202305(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -4120,7 +4120,7 @@ class StockPERseg202306(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -4154,7 +4154,7 @@ class StockPERseg202307(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -4187,7 +4187,7 @@ class StockPERseg202308(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -4220,7 +4220,7 @@ class StockPERseg202309(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -4253,7 +4253,7 @@ class StockPERseg202310(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -4286,7 +4286,7 @@ class StockPERseg202311(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -4320,7 +4320,7 @@ class StockPERseg202312(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -4354,7 +4354,7 @@ class StockPERseg202401(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -4387,7 +4387,7 @@ class StockPERseg202402(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -4420,7 +4420,7 @@ class StockPERseg202403(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -4453,7 +4453,7 @@ class StockPERseg202404(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -4486,7 +4486,7 @@ class StockPERseg202405(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -4519,7 +4519,7 @@ class StockPERseg202406(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -4537,7 +4537,7 @@ class EPSachieve(models.Model):
     cEPSAchieveRate = models.CharField(max_length=10, default='')
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -4551,7 +4551,7 @@ class EPSachieve2020Q2(models.Model):
     cEPSAchieveRate = models.CharField(max_length=20, default='')
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
 
@@ -4566,7 +4566,7 @@ class EPSachieve2020Q3(models.Model):
     cEPSAchieveRate = models.CharField(max_length=20, default='')
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
 
@@ -4580,7 +4580,7 @@ class EPSachieve2021Q1(models.Model):
     cEPSAchieveRate = models.CharField(max_length=20, default='')
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
 
@@ -4595,7 +4595,7 @@ class EPSachieve2021Q2(models.Model):
     cEPSAchieveRate = models.CharField(max_length=20, default='')
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
 
@@ -4610,7 +4610,7 @@ class EPSachieve2021Q3(models.Model):
     cEPSAchieveRate = models.CharField(max_length=20, default='')
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -4624,7 +4624,7 @@ class EPSachieve2022Q1(models.Model):
     cEPSAchieveRate = models.CharField(max_length=20, default='')
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
 
@@ -4639,7 +4639,7 @@ class EPSachieve2022Q2(models.Model):
     cEPSAchieveRate = models.CharField(max_length=20, default='')
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
 
@@ -4654,7 +4654,7 @@ class EPSachieve2022Q3(models.Model):
     cEPSAchieveRate = models.CharField(max_length=20, default='')
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -4668,7 +4668,7 @@ class EPSachieve2023Q1(models.Model):
     cEPSAchieveRate = models.CharField(max_length=20, default='')
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -4682,7 +4682,7 @@ class EPSachieve2023Q2(models.Model):
     cEPSAchieveRate = models.CharField(max_length=20, default='')
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -4697,7 +4697,7 @@ class EPSachieve2023Q3(models.Model):
     cEPSAchieveRate = models.CharField(max_length=20, default='')
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
 #####################################################################
@@ -4717,7 +4717,7 @@ class StockCapVar(models.Model):
     cLatestMoM = models.CharField(max_length=10, default='')
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -4738,7 +4738,7 @@ class StockCapVar2020Q2(models.Model):
     cLatestMoM = models.CharField(max_length=20, default='')
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -4759,7 +4759,7 @@ class StockCapVar2020Q3(models.Model):
     cLatestMoM = models.CharField(max_length=20, default='')
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID    
 
@@ -4780,7 +4780,7 @@ class StockCapVar2020Q4(models.Model):
     cLatestMoM = models.CharField(max_length=20, default='')
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID  
 
@@ -4801,7 +4801,7 @@ class StockCapVar2021Q1(models.Model):
     cLatestMoM = models.CharField(max_length=20, default='')
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID 
 
@@ -4821,7 +4821,7 @@ class StockCapVar2021Q2(models.Model):
     cLatestMoM = models.CharField(max_length=20, default='')
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID     
     
@@ -4841,7 +4841,7 @@ class StockCapVar2021Q3(models.Model):
     cLatestMoM = models.CharField(max_length=20, default='')
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID  
     
@@ -4862,7 +4862,7 @@ class StockCapVar2021Q4(models.Model):
     cLatestMoM = models.CharField(max_length=20, default='')
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID  
     
@@ -4884,7 +4884,7 @@ class StockCapVar2022Q1(models.Model):
     cLatestMoM = models.CharField(max_length=20, default='')
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID 
 
@@ -4904,7 +4904,7 @@ class StockCapVar2022Q2(models.Model):
     cLatestMoM = models.CharField(max_length=20, default='')
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID     
     
@@ -4924,7 +4924,7 @@ class StockCapVar2022Q3(models.Model):
     cLatestMoM = models.CharField(max_length=20, default='')
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID  
     
@@ -4945,7 +4945,7 @@ class StockCapVar2022Q4(models.Model):
     cLatestMoM = models.CharField(max_length=20, default='')
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID  
     
@@ -4965,7 +4965,7 @@ class StockCapVar2023Q1(models.Model):
     cLatestMoM = models.CharField(max_length=20, default='')
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -4986,7 +4986,7 @@ class StockCapVar2023Q2(models.Model):
     cLatestMoM = models.CharField(max_length=20, default='')
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -5006,7 +5006,7 @@ class StockCapVar2023Q3(models.Model):
     cLatestMoM = models.CharField(max_length=20, default='')
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
 ###########################################################    
@@ -5040,7 +5040,7 @@ class EpsProfit2020Q1(models.Model):
     
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -5074,7 +5074,7 @@ class EpsProfit2020Q2(models.Model):
     
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -5108,7 +5108,7 @@ class EpsProfit2020Q3(models.Model):
     
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
 
@@ -5142,7 +5142,7 @@ class EpsProfit2020Q4(models.Model):
     
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
 
@@ -5175,7 +5175,7 @@ class EpsProfit2021Q1(models.Model):
     
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -5208,7 +5208,7 @@ class EpsProfit2021Q2(models.Model):
     
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -5242,7 +5242,7 @@ class EpsProfit2021Q3(models.Model):
     
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -5275,7 +5275,7 @@ class EpsProfit2021Q4(models.Model):
     
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
 
@@ -5308,7 +5308,7 @@ class EpsProfit2022Q1(models.Model):
     
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -5341,7 +5341,7 @@ class EpsProfit2022Q2(models.Model):
     
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -5375,7 +5375,7 @@ class EpsProfit2022Q3(models.Model):
     
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -5408,7 +5408,7 @@ class EpsProfit2022Q4(models.Model):
     
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -5441,7 +5441,7 @@ class EpsProfit2023Q1(models.Model):
     
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -5474,7 +5474,7 @@ class EpsProfit2023Q2(models.Model):
     
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -5507,7 +5507,7 @@ class EpsProfit2023Q3(models.Model):
     
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
 #########################################################################
@@ -5546,7 +5546,7 @@ class StockPERsegStable2020(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -5584,7 +5584,7 @@ class StockPERsegStable2020Q2(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
 
@@ -5623,7 +5623,7 @@ class StockPERsegStable2020Q3(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -5650,7 +5650,7 @@ class StockPERsegStable2020Q3x(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
 
@@ -5678,7 +5678,7 @@ class StockPERsegStable2020Q4(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
 
@@ -5705,7 +5705,7 @@ class StockPERsegStable2021Q1(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -5732,7 +5732,7 @@ class StockPERsegStable2021Q2(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -5759,7 +5759,7 @@ class StockPERsegStable2021Q3(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
 
@@ -5786,7 +5786,7 @@ class StockPERsegStable2021Q4(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -5814,7 +5814,7 @@ class StockPERsegStable2022Q1(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -5841,7 +5841,7 @@ class StockPERsegStable2022Q2(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -5868,7 +5868,7 @@ class StockPERsegStable2022Q3(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
 
@@ -5895,7 +5895,7 @@ class StockPERsegStable2022Q4(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -5922,7 +5922,7 @@ class StockPERsegStable2023Q1(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -5949,7 +5949,7 @@ class StockPERsegStable2023Q2(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
     
@@ -5976,7 +5976,7 @@ class StockPERsegStable2023Q3(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
 #####################    
@@ -5992,7 +5992,7 @@ class SubCats202011(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cSubCatName  
     
@@ -6011,7 +6011,7 @@ class SubCats202102(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cSubCatName  
     
@@ -6031,7 +6031,7 @@ class SubCats202103(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cSubCatName
 
@@ -6053,7 +6053,7 @@ class SubCats202104(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cSubCatName
     
@@ -6075,7 +6075,7 @@ class SubCats202105(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cSubCatName
 
@@ -6098,7 +6098,7 @@ class SubCats202106(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cSubCatName
     
@@ -6123,7 +6123,7 @@ class SubCats202107(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cSubCatName
     
@@ -6150,7 +6150,7 @@ class SubCats202108(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cSubCatName
     
@@ -6177,7 +6177,7 @@ class SubCats202109(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cSubCatName
     
@@ -6205,7 +6205,7 @@ class SubCats202110(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cSubCatName
     
@@ -6235,7 +6235,7 @@ class SubCats202111(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cSubCatName
     
@@ -6266,7 +6266,7 @@ class SubCats202112(models.Model):
 
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cSubCatName
 #########################
@@ -6289,7 +6289,7 @@ class Favorites_jonyi729(models.Model):
     
     pubtime = models.DateTimeField(auto_now=True)
     enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0, default='')
+    press = models.IntegerField(default=0)
     def __str__(self):
         return self.cStockID
         '''
