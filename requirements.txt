@@ -36,6 +36,6 @@ asgiref
 html5lib
 lxml
 djongo
-sqlparse
 pymongo==3.12.1
 dnspython
+sqlparse==0.2.4
