@@ -6875,28 +6875,28 @@ class PriEPSPER_DB(models.Model):
         return self.cStockID
 
 class NetCap_DB(models.Model):
-    cStockID = models.CharField(max_length=8)
-    cStockName = models.CharField(max_length=8)
+    cStockID = models.CharField(max_length=8,blank=True,null=True)
+    cStockName = models.CharField(max_length=8,blank=True,null=True)
 
-    cNet22Q2 = models.FloatField(max_length=20)
-    cNet22Q1 = models.FloatField(max_length=20)
-    cNet21Q4 = models.FloatField(max_length=20)
-    cNet21Q3 = models.FloatField(max_length=20)
+    cNet22Q2 = models.FloatField(max_length=20,blank=True,null=True)
+    cNet22Q1 = models.FloatField(max_length=20,blank=True,null=True)
+    cNet21Q4 = models.FloatField(max_length=20,blank=True,null=True)
+    cNet21Q3 = models.FloatField(max_length=20,blank=True,null=True)
 
-    cNet21Q2 = models.FloatField(max_length=20)
-    cNet21Q1 = models.FloatField(max_length=20)
-    cNet20Q4 = models.FloatField(max_length=20)
-    cNet20Q3 = models.FloatField(max_length=20)
+    cNet21Q2 = models.FloatField(max_length=20,blank=True,null=True)
+    cNet21Q1 = models.FloatField(max_length=20,blank=True,null=True)
+    cNet20Q4 = models.FloatField(max_length=20,blank=True,null=True)
+    cNet20Q3 = models.FloatField(max_length=20,blank=True,null=True)
 
-    cCap22Q2 = models.FloatField(max_length=20)     
-    cCap22Q1 = models.FloatField(max_length=20)     
-    cCap21Q4 = models.FloatField(max_length=20) 
-    cCap21Q3 = models.FloatField(max_length=20) 
+    cCap22Q2 = models.FloatField(max_length=20,blank=True,null=True)     
+    cCap22Q1 = models.FloatField(max_length=20,blank=True,null=True)     
+    cCap21Q4 = models.FloatField(max_length=20,blank=True,null=True) 
+    cCap21Q3 = models.FloatField(max_length=20,blank=True,null=True) 
 
-    cCap21Q2 = models.FloatField(max_length=20)     
-    cCap21Q1 = models.FloatField(max_length=20)     
-    cCap20Q4 = models.FloatField(max_length=20) 
-    cCap20Q3 = models.FloatField(max_length=20)
+    cCap21Q2 = models.FloatField(max_length=20,blank=True,null=True)     
+    cCap21Q1 = models.FloatField(max_length=20,blank=True,null=True)     
+    cCap20Q4 = models.FloatField(max_length=20,blank=True,null=True) 
+    cCap20Q3 = models.FloatField(max_length=20,blank=True,null=True)
 
     pubtime = models.DateTimeField(auto_now=True)     
     def __str__(self):
