@@ -6426,30 +6426,30 @@ class StockFavs_deno36(models.Model):
         return self.cStockID
     
 class StockFavs_donhonlin(models.Model):
-    cStockID = models.CharField(max_length=5)
-    cStockName = models.CharField(max_length=5)
+    cStockID = models.CharField(max_length=5,blank=True,null=True)
+    cStockName = models.CharField(max_length=5,blank=True,null=True)
 
-    cScore1st = models.CharField(max_length=5) #最近一個月評分
-    cScore2nd = models.CharField(max_length=5) #
-    cScore3rd = models.CharField(max_length=5)
+    cScore1st = models.CharField(max_length=5,blank=True,null=True) #最近一個月評分
+    cScore2nd = models.CharField(max_length=5,blank=True,null=True) #
+    cScore3rd = models.CharField(max_length=5,blank=True,null=True)
 
-    cTodayClose = models.FloatField(max_length=20) #今日收盤價
+    cTodayClose = models.FloatField(max_length=20,blank=True,null=True) #今日收盤價
    
 
-    cPredict_EPS = models.CharField(max_length=15) #預估未來EPS
-    cPredict_high_price = models.CharField(max_length=15) #預估未來最高價
-    cPredict_low_price = models.CharField(max_length=15) #預估未來最低價  
+    cPredict_EPS = models.CharField(max_length=15,blank=True,null=True) #預估未來EPS
+    cPredict_high_price = models.CharField(max_length=15,blank=True,null=True #預估未來最高價
+    cPredict_low_price = models.CharField(max_length=15,blank=True,null=True) #預估未來最低價  
     
-    cNew_up_profit = models.CharField(max_length=25) #預估未來往上空間
-    cNew_down_loss = models.CharField(max_length=25) #預估未來往下空間    
+    cNew_up_profit = models.CharField(max_length=25,blank=True,null=True) #預估未來往上空間
+    cNew_down_loss = models.CharField(max_length=25,blank=True,null=True) #預估未來往下空間    
 
-    cDBURL = models.CharField(max_length=40) #  
-    cRisk_reward = models.FloatField(max_length=20) #預估風險報酬比率  #20201202 可以使用Float
+    cDBURL = models.CharField(max_length=40,blank=True,null=True) #  
+    cRisk_reward = models.FloatField(max_length=20,blank=True,null=True) #預估風險報酬比率  #20201202 可以使用Float
 
-    cEPSach = models.CharField(max_length=20)
-    cStCap = models.CharField(max_length=20)
-    cEPSnPrf = models.CharField(max_length=20)
-    cPERstab = models.CharField(max_length=20)
+    cEPSach = models.CharField(max_length=20,blank=True,null=True)
+    cStCap = models.CharField(max_length=20,blank=True,null=True)
+    cEPSnPrf = models.CharField(max_length=20,blank=True,null=True)
+    cPERstab = models.CharField(max_length=20,blank=True,null=True)
 
     pubtime = models.DateTimeField(auto_now=True)
 
@@ -6458,60 +6458,60 @@ class StockFavs_donhonlin(models.Model):
         return self.cStockID
 
 class StockFavs_goldsilver(models.Model):
-    cStockID = models.CharField(max_length=5)
-    cStockName = models.CharField(max_length=5)
+    cStockID = models.CharField(max_length=5,blank=True,null=True)
+    cStockName = models.CharField(max_length=5,blank=True,null=True)
 
-    cScore1st = models.CharField(max_length=5) #最近一個月評分
-    cScore2nd = models.CharField(max_length=5) #
-    cScore3rd = models.CharField(max_length=5)
+    cScore1st = models.CharField(max_length=5,blank=True,null=True) #最近一個月評分
+    cScore2nd = models.CharField(max_length=5,blank=True,null=True) #
+    cScore3rd = models.CharField(max_length=5,blank=True,null=True)
 
-    cTodayClose = models.FloatField(max_length=20) #今日收盤價
+    cTodayClose = models.FloatField(max_length=20,blank=True,null=True) #今日收盤價
    
 
-    cPredict_EPS = models.CharField(max_length=15) #預估未來EPS
-    cPredict_high_price = models.CharField(max_length=15) #預估未來最高價
-    cPredict_low_price = models.CharField(max_length=15) #預估未來最低價  
+    cPredict_EPS = models.CharField(max_length=15,blank=True,null=True) #預估未來EPS
+    cPredict_high_price = models.CharField(max_length=15,blank=True,null=True) #預估未來最高價
+    cPredict_low_price = models.CharField(max_length=15,blank=True,null=True) #預估未來最低價  
     
-    cNew_up_profit = models.CharField(max_length=25) #預估未來往上空間
-    cNew_down_loss = models.CharField(max_length=25) #預估未來往下空間    
+    cNew_up_profit = models.CharField(max_length=25,blank=True,null=True) #預估未來往上空間
+    cNew_down_loss = models.CharField(max_length=25,blank=True,null=True) #預估未來往下空間    
 
-    cDBURL = models.CharField(max_length=40) #  
-    cRisk_reward = models.FloatField(max_length=20) #預估風險報酬比率  #20201202 可以使用Float
+    cDBURL = models.CharField(max_length=40,blank=True,null=True) #  
+    cRisk_reward = models.FloatField(max_length=20,blank=True,null=True) #預估風險報酬比率  #20201202 可以使用Float
     pubtime = models.DateTimeField(auto_now=True)
 
-    cEPSach = models.CharField(max_length=20)
-    cStCap = models.CharField(max_length=20)
-    cEPSnPrf = models.CharField(max_length=20)
-    cPERstab = models.CharField(max_length=20)
+    cEPSach = models.CharField(max_length=20,blank=True,null=True)
+    cStCap = models.CharField(max_length=20,blank=True,null=True)
+    cEPSnPrf = models.CharField(max_length=20,blank=True,null=True)
+    cPERstab = models.CharField(max_length=20,blank=True,null=True)
 
     def __str__(self):
         return self.cStockID
     
 class StockFavs_hyeth(models.Model):
-    cStockID = models.CharField(max_length=5)
-    cStockName = models.CharField(max_length=5)
+    cStockID = models.CharField(max_length=5,blank=True,null=True)
+    cStockName = models.CharField(max_length=5,blank=True,null=True)
 
-    cScore1st = models.CharField(max_length=5) #最近一個月評分
-    cScore2nd = models.CharField(max_length=5) #
-    cScore3rd = models.CharField(max_length=5)
+    cScore1st = models.CharField(max_length=5,blank=True,null=True) #最近一個月評分
+    cScore2nd = models.CharField(max_length=5,blank=True,null=True) #
+    cScore3rd = models.CharField(max_length=5,blank=True,null=True)
 
-    cTodayClose = models.FloatField(max_length=20) #今日收盤價
+    cTodayClose = models.FloatField(max_length=20,blank=True,null=True) #今日收盤價
    
 
-    cPredict_EPS = models.CharField(max_length=15) #預估未來EPS
-    cPredict_high_price = models.CharField(max_length=15) #預估未來最高價
-    cPredict_low_price = models.CharField(max_length=15) #預估未來最低價  
+    cPredict_EPS = models.CharField(max_length=15,blank=True,null=True) #預估未來EPS
+    cPredict_high_price = models.CharField(max_length=15,blank=True,null=True) #預估未來最高價
+    cPredict_low_price = models.CharField(max_length=15,blank=True,null=True) #預估未來最低價  
     
-    cNew_up_profit = models.CharField(max_length=25) #預估未來往上空間
-    cNew_down_loss = models.CharField(max_length=25) #預估未來往下空間    
+    cNew_up_profit = models.CharField(max_length=25,blank=True,null=True) #預估未來往上空間
+    cNew_down_loss = models.CharField(max_length=25,blank=True,null=True) #預估未來往下空間    
 
-    cDBURL = models.CharField(max_length=40) #  
-    cRisk_reward = models.FloatField(max_length=20) #預估風險報酬比率  #20201202 可以使用Float
+    cDBURL = models.CharField(max_length=40,blank=True,null=True) #  
+    cRisk_reward = models.FloatField(max_length=20,blank=True,null=True) #預估風險報酬比率  #20201202 可以使用Float
 
-    cEPSach = models.CharField(max_length=20)
-    cStCap = models.CharField(max_length=20)
-    cEPSnPrf = models.CharField(max_length=20)
-    cPERstab = models.CharField(max_length=20)
+    cEPSach = models.CharField(max_length=20,blank=True,null=True)
+    cStCap = models.CharField(max_length=20,blank=True,null=True)
+    cEPSnPrf = models.CharField(max_length=20,blank=True,null=True)
+    cPERstab = models.CharField(max_length=20,blank=True,null=True)
 
     pubtime = models.DateTimeField(auto_now=True)
 
@@ -6520,31 +6520,31 @@ class StockFavs_hyeth(models.Model):
         return self.cStockID
     
 class StockFavs_magicjohn(models.Model):
-    cStockID = models.CharField(max_length=5)
-    cStockName = models.CharField(max_length=5)
+    cStockID = models.CharField(max_length=5,blank=True,null=True)
+    cStockName = models.CharField(max_length=5,blank=True,null=True)
 
-    cScore1st = models.CharField(max_length=5) #最近一個月評分
-    cScore2nd = models.CharField(max_length=5) #
-    cScore3rd = models.CharField(max_length=5)
+    cScore1st = models.CharField(max_length=5,blank=True,null=True) #最近一個月評分
+    cScore2nd = models.CharField(max_length=5,blank=True,null=True) #
+    cScore3rd = models.CharField(max_length=5,blank=True,null=True)
 
-    cTodayClose = models.FloatField(max_length=20) #今日收盤價
+    cTodayClose = models.FloatField(max_length=20,blank=True,null=True) #今日收盤價
    
 
-    cPredict_EPS = models.CharField(max_length=15) #預估未來EPS
-    cPredict_high_price = models.CharField(max_length=15) #預估未來最高價
-    cPredict_low_price = models.CharField(max_length=15) #預估未來最低價  
+    cPredict_EPS = models.CharField(max_length=15,blank=True,null=True) #預估未來EPS
+    cPredict_high_price = models.CharField(max_length=15,blank=True,null=True) #預估未來最高價
+    cPredict_low_price = models.CharField(max_length=15,blank=True,null=True) #預估未來最低價  
     
-    cNew_up_profit = models.CharField(max_length=25) #預估未來往上空間
-    cNew_down_loss = models.CharField(max_length=25) #預估未來往下空間    
+    cNew_up_profit = models.CharField(max_length=25,blank=True,null=True) #預估未來往上空間
+    cNew_down_loss = models.CharField(max_length=25,blank=True,null=True) #預估未來往下空間    
 
-    cDBURL = models.CharField(max_length=40) #  
-    cRisk_reward = models.FloatField(max_length=20) #預估風險報酬比率  #20201202 可以使用Float
+    cDBURL = models.CharField(max_length=40,blank=True,null=True) #  
+    cRisk_reward = models.FloatField(max_length=20,blank=True,null=True) #預估風險報酬比率  #20201202 可以使用Float
     pubtime = models.DateTimeField(auto_now=True)
 
-    cEPSach = models.CharField(max_length=20)
-    cStCap = models.CharField(max_length=20)
-    cEPSnPrf = models.CharField(max_length=20)
-    cPERstab = models.CharField(max_length=20)
+    cEPSach = models.CharField(max_length=20,blank=True,null=True)
+    cStCap = models.CharField(max_length=20,blank=True,null=True)
+    cEPSnPrf = models.CharField(max_length=20,blank=True,null=True)
+    cPERstab = models.CharField(max_length=20,blank=True,null=True)
 
     def __str__(self):
         return self.cStockID
@@ -6589,30 +6589,30 @@ class StockFavs_jonyi(models.Model):
         return self.cStockID
     
 class StockFavs_hakkai(models.Model):
-    cStockID = models.CharField(max_length=5)
-    cStockName = models.CharField(max_length=5)
+    cStockID = models.CharField(max_length=5,blank=True,null=True)
+    cStockName = models.CharField(max_length=5,blank=True,null=True)
 
-    cScore1st = models.CharField(max_length=5) #最近一個月評分
-    cScore2nd = models.CharField(max_length=5) #
-    cScore3rd = models.CharField(max_length=5)
+    cScore1st = models.CharField(max_length=5,blank=True,null=True) #最近一個月評分
+    cScore2nd = models.CharField(max_length=5,blank=True,null=True) #
+    cScore3rd = models.CharField(max_length=5,blank=True,null=True)
 
-    cTodayClose = models.FloatField(max_length=20) #今日收盤價
+    cTodayClose = models.FloatField(max_length=20,blank=True,null=True) #今日收盤價
    
 
-    cPredict_EPS = models.CharField(max_length=15) #預估未來EPS
-    cPredict_high_price = models.CharField(max_length=15) #預估未來最高價
-    cPredict_low_price = models.CharField(max_length=15) #預估未來最低價  
+    cPredict_EPS = models.CharField(max_length=15,blank=True,null=True) #預估未來EPS
+    cPredict_high_price = models.CharField(max_length=15,blank=True,null=True) #預估未來最高價
+    cPredict_low_price = models.CharField(max_length=15,blank=True,null=True) #預估未來最低價  
     
-    cNew_up_profit = models.CharField(max_length=25) #預估未來往上空間
-    cNew_down_loss = models.CharField(max_length=25) #預估未來往下空間    
+    cNew_up_profit = models.CharField(max_length=25,blank=True,null=True) #預估未來往上空間
+    cNew_down_loss = models.CharField(max_length=25,blank=True,null=True) #預估未來往下空間    
 
-    cDBURL = models.CharField(max_length=40) #  
-    cRisk_reward = models.FloatField(max_length=20) #預估風險報酬比率  #20201202 可以使用Float
+    cDBURL = models.CharField(max_length=40,blank=True,null=True) #  
+    cRisk_reward = models.FloatField(max_length=20,blank=True,null=True) #預估風險報酬比率  #20201202 可以使用Float
 
-    cEPSach = models.CharField(max_length=20)
-    cStCap = models.CharField(max_length=20)
-    cEPSnPrf = models.CharField(max_length=20)
-    cPERstab = models.CharField(max_length=20)
+    cEPSach = models.CharField(max_length=20,blank=True,null=True)
+    cStCap = models.CharField(max_length=20,blank=True,null=True)
+    cEPSnPrf = models.CharField(max_length=20,blank=True,null=True)
+    cPERstab = models.CharField(max_length=20,blank=True,null=True)
 
     pubtime = models.DateTimeField(auto_now=True)
 
@@ -6623,30 +6623,30 @@ class StockFavs_hakkai(models.Model):
 
 
 class StockFavs_bakylews(models.Model):
-    cStockID = models.CharField(max_length=5)
-    cStockName = models.CharField(max_length=5)
+    cStockID = models.CharField(max_length=5,blank=True,null=True)
+    cStockName = models.CharField(max_length=5,blank=True,null=True)
 
-    cScore1st = models.CharField(max_length=5) #最近一個月評分
-    cScore2nd = models.CharField(max_length=5) #
-    cScore3rd = models.CharField(max_length=5)
+    cScore1st = models.CharField(max_length=5,blank=True,null=True) #最近一個月評分
+    cScore2nd = models.CharField(max_length=5,blank=True,null=True) #
+    cScore3rd = models.CharField(max_length=5,blank=True,null=True)
 
-    cTodayClose = models.FloatField(max_length=20) #今日收盤價
+    cTodayClose = models.FloatField(max_length=20,blank=True,null=True) #今日收盤價
    
 
-    cPredict_EPS = models.CharField(max_length=15) #預估未來EPS
-    cPredict_high_price = models.CharField(max_length=15) #預估未來最高價
-    cPredict_low_price = models.CharField(max_length=15) #預估未來最低價  
+    cPredict_EPS = models.CharField(max_length=15,blank=True,null=True) #預估未來EPS
+    cPredict_high_price = models.CharField(max_length=15,blank=True,null=True) #預估未來最高價
+    cPredict_low_price = models.CharField(max_length=15,blank=True,null=True) #預估未來最低價  
     
-    cNew_up_profit = models.CharField(max_length=25) #預估未來往上空間
-    cNew_down_loss = models.CharField(max_length=25) #預估未來往下空間    
+    cNew_up_profit = models.CharField(max_length=25,blank=True,null=True) #預估未來往上空間
+    cNew_down_loss = models.CharField(max_length=25,blank=True,null=True) #預估未來往下空間    
 
-    cDBURL = models.CharField(max_length=40) #  
-    cRisk_reward = models.FloatField(max_length=20) #預估風險報酬比率  #20201202 可以使用Float
+    cDBURL = models.CharField(max_length=40,blank=True,null=True) #  
+    cRisk_reward = models.FloatField(max_length=20,blank=True,null=True) #預估風險報酬比率  #20201202 可以使用Float
 
-    cEPSach = models.CharField(max_length=20)
-    cStCap = models.CharField(max_length=20)
-    cEPSnPrf = models.CharField(max_length=20)
-    cPERstab = models.CharField(max_length=20)
+    cEPSach = models.CharField(max_length=20,blank=True,null=True)
+    cStCap = models.CharField(max_length=20,blank=True,null=True)
+    cEPSnPrf = models.CharField(max_length=20,blank=True,null=True)
+    cPERstab = models.CharField(max_length=20,blank=True,null=True)
 
     pubtime = models.DateTimeField(auto_now=True)
 
@@ -6703,30 +6703,30 @@ class StockFavs_chenchi(models.Model):
 
 
 class StockFavs_yuhuahsiao(models.Model):
-    cStockID = models.CharField(max_length=5)
-    cStockName = models.CharField(max_length=5)
+    cStockID = models.CharField(max_length=5,blank=True,null=True)
+    cStockName = models.CharField(max_length=5,blank=True,null=True)
 
-    cScore1st = models.CharField(max_length=5) #最近一個月評分
-    cScore2nd = models.CharField(max_length=5) #
-    cScore3rd = models.CharField(max_length=5)
+    cScore1st = models.CharField(max_length=5,blank=True,null=True) #最近一個月評分
+    cScore2nd = models.CharField(max_length=5,blank=True,null=True) #
+    cScore3rd = models.CharField(max_length=5,blank=True,null=True)
 
-    cTodayClose = models.FloatField(max_length=20) #今日收盤價
+    cTodayClose = models.FloatField(max_length=20,blank=True,null=True) #今日收盤價
    
 
-    cPredict_EPS = models.CharField(max_length=15) #預估未來EPS
-    cPredict_high_price = models.CharField(max_length=15) #預估未來最高價
-    cPredict_low_price = models.CharField(max_length=15) #預估未來最低價  
+    cPredict_EPS = models.CharField(max_length=15,blank=True,null=True) #預估未來EPS
+    cPredict_high_price = models.CharField(max_length=15,blank=True,null=True) #預估未來最高價
+    cPredict_low_price = models.CharField(max_length=15,blank=True,null=True) #預估未來最低價  
     
-    cNew_up_profit = models.CharField(max_length=25) #預估未來往上空間
-    cNew_down_loss = models.CharField(max_length=25) #預估未來往下空間    
+    cNew_up_profit = models.CharField(max_length=25,blank=True,null=True) #預估未來往上空間
+    cNew_down_loss = models.CharField(max_length=25,blank=True,null=True) #預估未來往下空間    
 
-    cDBURL = models.CharField(max_length=40) #  
-    cRisk_reward = models.FloatField(max_length=20) #預估風險報酬比率  #20201202 可以使用Float
+    cDBURL = models.CharField(max_length=40,blank=True,null=True) #  
+    cRisk_reward = models.FloatField(max_length=20,blank=True,null=True) #預估風險報酬比率  #20201202 可以使用Float
 
-    cEPSach = models.CharField(max_length=20)
-    cStCap = models.CharField(max_length=20)
-    cEPSnPrf = models.CharField(max_length=20)
-    cPERstab = models.CharField(max_length=20)    
+    cEPSach = models.CharField(max_length=20,blank=True,null=True)
+    cStCap = models.CharField(max_length=20,blank=True,null=True)
+    cEPSnPrf = models.CharField(max_length=20,blank=True,null=True)
+    cPERstab = models.CharField(max_length=20,blank=True,null=True)    
 
     pubtime = models.DateTimeField(auto_now=True)
 
@@ -6735,30 +6735,30 @@ class StockFavs_yuhuahsiao(models.Model):
         return self.cStockID
     
 class StockFavs_liusnow(models.Model):
-    cStockID = models.CharField(max_length=5)
-    cStockName = models.CharField(max_length=5)
+    cStockID = models.CharField(max_length=5,blank=True,null=True)
+    cStockName = models.CharField(max_length=5,blank=True,null=True)
 
-    cScore1st = models.CharField(max_length=5) #最近一個月評分
-    cScore2nd = models.CharField(max_length=5) #
-    cScore3rd = models.CharField(max_length=5)
+    cScore1st = models.CharField(max_length=5,blank=True,null=True) #最近一個月評分
+    cScore2nd = models.CharField(max_length=5,blank=True,null=True) #
+    cScore3rd = models.CharField(max_length=5,blank=True,null=True)
 
-    cTodayClose = models.FloatField(max_length=20) #今日收盤價
+    cTodayClose = models.FloatField(max_length=20,blank=True,null=True) #今日收盤價
    
 
-    cPredict_EPS = models.CharField(max_length=15) #預估未來EPS
-    cPredict_high_price = models.CharField(max_length=15) #預估未來最高價
-    cPredict_low_price = models.CharField(max_length=15) #預估未來最低價  
+    cPredict_EPS = models.CharField(max_length=15,blank=True,null=True) #預估未來EPS
+    cPredict_high_price = models.CharField(max_length=15,blank=True,null=True) #預估未來最高價
+    cPredict_low_price = models.CharField(max_length=15,blank=True,null=True) #預估未來最低價  
     
-    cNew_up_profit = models.CharField(max_length=25) #預估未來往上空間
-    cNew_down_loss = models.CharField(max_length=25) #預估未來往下空間    
+    cNew_up_profit = models.CharField(max_length=25,blank=True,null=True) #預估未來往上空間
+    cNew_down_loss = models.CharField(max_length=25,blank=True,null=True) #預估未來往下空間    
 
-    cDBURL = models.CharField(max_length=40) #  
-    cRisk_reward = models.FloatField(max_length=20) #預估風險報酬比率  #20201202 可以使用Float
+    cDBURL = models.CharField(max_length=40,blank=True,null=True) #  
+    cRisk_reward = models.FloatField(max_length=20,blank=True,null=True) #預估風險報酬比率  #20201202 可以使用Float
 
-    cEPSach = models.CharField(max_length=20)
-    cStCap = models.CharField(max_length=20)
-    cEPSnPrf = models.CharField(max_length=20)
-    cPERstab = models.CharField(max_length=20)
+    cEPSach = models.CharField(max_length=20,blank=True,null=True)
+    cStCap = models.CharField(max_length=20,blank=True,null=True)
+    cEPSnPrf = models.CharField(max_length=20,blank=True,null=True)
+    cPERstab = models.CharField(max_length=20,blank=True,null=True)
 
     pubtime = models.DateTimeField(auto_now=True)
 
@@ -6768,30 +6768,30 @@ class StockFavs_liusnow(models.Model):
     
 
 class StockFavs_kevinlee(models.Model):
-    cStockID = models.CharField(max_length=5)
-    cStockName = models.CharField(max_length=5)
+    cStockID = models.CharField(max_length=5,blank=True,null=True)
+    cStockName = models.CharField(max_length=5,blank=True,null=True)
 
-    cScore1st = models.CharField(max_length=5) #最近一個月評分
-    cScore2nd = models.CharField(max_length=5) #
-    cScore3rd = models.CharField(max_length=5)
+    cScore1st = models.CharField(max_length=5,blank=True,null=True) #最近一個月評分
+    cScore2nd = models.CharField(max_length=5,blank=True,null=True) #
+    cScore3rd = models.CharField(max_length=5,blank=True,null=True)
 
-    cTodayClose = models.FloatField(max_length=20) #今日收盤價
+    cTodayClose = models.FloatField(max_length=20,blank=True,null=True) #今日收盤價
    
 
-    cPredict_EPS = models.CharField(max_length=15) #預估未來EPS
-    cPredict_high_price = models.CharField(max_length=15) #預估未來最高價
-    cPredict_low_price = models.CharField(max_length=15) #預估未來最低價  
+    cPredict_EPS = models.CharField(max_length=15,blank=True,null=True) #預估未來EPS
+    cPredict_high_price = models.CharField(max_length=15,blank=True,null=True) #預估未來最高價
+    cPredict_low_price = models.CharField(max_length=15,blank=True,null=True) #預估未來最低價  
     
-    cNew_up_profit = models.CharField(max_length=25) #預估未來往上空間
-    cNew_down_loss = models.CharField(max_length=25) #預估未來往下空間    
+    cNew_up_profit = models.CharField(max_length=25,blank=True,null=True) #預估未來往上空間
+    cNew_down_loss = models.CharField(max_length=25,blank=True,null=True) #預估未來往下空間    
 
-    cDBURL = models.CharField(max_length=40) #  
-    cRisk_reward = models.FloatField(max_length=20) #預估風險報酬比率  #20201202 可以使用Float
+    cDBURL = models.CharField(max_length=40,blank=True,null=True) #  
+    cRisk_reward = models.FloatField(max_length=20,blank=True,null=True) #預估風險報酬比率  #20201202 可以使用Float
 
-    cEPSach = models.CharField(max_length=20)
-    cStCap = models.CharField(max_length=20)
-    cEPSnPrf = models.CharField(max_length=20)
-    cPERstab = models.CharField(max_length=20)
+    cEPSach = models.CharField(max_length=20,blank=True,null=True)
+    cStCap = models.CharField(max_length=20,blank=True,null=True)
+    cEPSnPrf = models.CharField(max_length=20,blank=True,null=True)
+    cPERstab = models.CharField(max_length=20,blank=True,null=True)
 
     pubtime = models.DateTimeField(auto_now=True)
 
