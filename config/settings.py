@@ -93,7 +93,7 @@ DATABASES = {
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',  #must be 'djongo'
-        'ENFORCE_SCHEMA': True, # true will be stricter
+        'ENFORCE_SCHEMA': False, # true will be stricter
         'NAME': 'test3', #collection name
         'CLIENT': {
             'host': 'mongodb+srv://pyfbsdk59:NHd4ZEVmHONPZiYD@mongodb-restful.5xgpkpw.mongodb.net/?retryWrites=true&w=majority',
