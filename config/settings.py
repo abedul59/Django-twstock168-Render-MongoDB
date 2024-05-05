@@ -78,12 +78,23 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
-
+'''
+DATABASES = {
+    'default': {
+        'ENGINE': 'mysql.connector.django',
+        'NAME': 'django',
+        'USER': 'root',
+        'PASSWORD': 'password',
+        'HOST': 'mysql',
+        'PORT': 3306,
+    }
+}
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',  #must be 'djongo'
         'ENFORCE_SCHEMA': False, # true will be stricter
-        'NAME': 'twstock168-mongoDB', #collection name
+        'NAME': 'test3', #collection name
         'CLIENT': {
             'host': 'mongodb+srv://pyfbsdk59:NHd4ZEVmHONPZiYD@mongodb-restful.5xgpkpw.mongodb.net/?retryWrites=true&w=majority',
         }

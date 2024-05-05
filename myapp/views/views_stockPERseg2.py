@@ -1,62 +1,14 @@
-from django.shortcuts import render, redirect
-from django.http import HttpResponse
-#from django.conf import settings
-#from django.http import HttpResponseBadRequest, HttpResponseForbidden
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Apr 18 11:53:09 2022
+
+@author: PCUSER
+"""
+
+from django.contrib.auth.decorators import permission_required
 from django.views.decorators.csrf import csrf_exempt
-from module import func0
-from module import func
-from module import func2
-from module import func2x
-from module import func2t
-from module import func3
-from module import func3x
-from module import func4
-from module import func4x
-from module import func5
-from module import func5x2
-from module import func6
-from module import func7
-from module import func8, func_usbond
-##################函式位置改寫，一個函式一個檔案，棄用func
-from module_PERseg import Price5yDB, Price5y, PERseg, PERsegPEG, PERsegPEGxDB, PERsegStable, PERsegx, PERsegxDB, NetCapDB, PERseg3
-from module_Kn import KnQuery, Kn8yPrice
+from django.shortcuts import render
 
-#################
-from django.contrib.auth import authenticate
-from django.contrib import auth
-from django.contrib.auth.models import User
-
-from myapp.models import Stock6Sign
-from myapp.models import StockPERseg
-
-from myapp.models import DCStock6Sign202011
-from myapp.models import DCStock6Sign2020Q4
-from myapp.models import DCStock6Sign202101
-from myapp.models import DCStock6Sign202102
-from myapp.models import DCStock6Sign202103
-from myapp.models import DCStock6Sign202104
-from myapp.models import DCStock6Sign202105
-from myapp.models import DCStock6Sign202106
-from myapp.models import DCStock6Sign202107
-from myapp.models import DCStock6Sign202108
-from myapp.models import DCStock6Sign202109
-from myapp.models import DCStock6Sign202110
-from myapp.models import DCStock6Sign202111
-from myapp.models import DCStock6Sign202112
-
-
-from myapp.models import Stock6Sign202005
-from myapp.models import Stock6Sign202006
-
-from myapp.models import Stock6Sign2020Q2
-from myapp.models import Stock6Sign202008
-from myapp.models import Stock6Sign202009
-from myapp.models import Stock6Sign2020Q3
-from myapp.models import Stock6Sign202011
-from myapp.models import Stock6Sign2020Q4
-from myapp.models import Stock6Sign202101
-from myapp.models import Stock6Sign202102
-from myapp.models import Stock6Sign202103
 from myapp.models import Stock6Sign202104
 from myapp.models import Stock6Sign202105
 from myapp.models import Stock6Sign202106
@@ -69,397 +21,14 @@ from myapp.models import Stock6Sign202112
 from myapp.models import Stock6Sign202201
 from myapp.models import Stock6Sign202202
 from myapp.models import Stock6Sign202203
-from myapp.models import Stock6Sign202204
-from myapp.models import Stock6Sign202205
-from myapp.models import Stock6Sign202206
-from myapp.models import Stock6Sign202207
-from myapp.models import Stock6Sign202208
-from myapp.models import Stock6Sign202209
-from myapp.models import Stock6Sign202210
-from myapp.models import Stock6Sign202211
-from myapp.models import Stock6Sign202212
 
-from myapp.models import Stock6Sign202301
-from myapp.models import Stock6Sign202302
-from myapp.models import Stock6Sign202303
-from myapp.models import Stock6Sign202304
-from myapp.models import Stock6Sign202305
-from myapp.models import Stock6Sign202306
-from myapp.models import Stock6Sign202307
-from myapp.models import Stock6Sign202308
-from myapp.models import Stock6Sign202309
-from myapp.models import Stock6Sign202310
-from myapp.models import Stock6Sign202311
-from myapp.models import Stock6Sign202312
-
-from myapp.models import Stock6Sign202401
-from myapp.models import Stock6Sign202402
-from myapp.models import Stock6Sign202403
-from myapp.models import Stock6Sign202404
-from myapp.models import Stock6Sign202405
-from myapp.models import Stock6Sign202406
-#from myapp.models import Stock6sta2021
-#from myapp.models import Stock6Sign202109
-#from myapp.models import Stock6Sign202110
-#from myapp.models import Stock6Sign202111
-#from myapp.models import Stock6Sign202112
-
-
-
-from myapp.models import StockPERseg202005
-from myapp.models import StockPERseg202006
-from myapp.models import StockPERseg2020Q2
-from myapp.models import StockPERseg202008
-from myapp.models import StockPERseg202009
-from myapp.models import StockPERseg2020Q3
-from myapp.models import StockPERseg202011
-from myapp.models import StockPERseg2020Q4
-from myapp.models import StockPERseg202101
-from myapp.models import StockPERseg202102
-from myapp.models import StockPERseg202103
-from myapp.models import StockPERseg202104
-from myapp.models import StockPERseg202105
-from myapp.models import StockPERseg202106
-from myapp.models import StockPERseg202107
-from myapp.models import StockPERseg202108
-from myapp.models import StockPERseg202109
-from myapp.models import StockPERseg202110
-from myapp.models import StockPERseg202111
-from myapp.models import StockPERseg202112
-from myapp.models import StockPERseg202201
-from myapp.models import StockPERseg202202
 from myapp.models import StockPERseg202203
-from myapp.models import StockPERseg202204
-from myapp.models import StockPERseg202205
-from myapp.models import StockPERseg202206
-from myapp.models import StockPERseg202207
-from myapp.models import StockPERseg202208
-from myapp.models import StockPERseg202209
-from myapp.models import StockPERseg202210
-from myapp.models import StockPERseg202211
-from myapp.models import StockPERseg202212
 
-from myapp.models import StockPERseg202301
-from myapp.models import StockPERseg202302
-from myapp.models import StockPERseg202303
-from myapp.models import StockPERseg202304
-from myapp.models import StockPERseg202305
-from myapp.models import StockPERseg202306
-from myapp.models import StockPERseg202307
-from myapp.models import StockPERseg202308
-from myapp.models import StockPERseg202309
-from myapp.models import StockPERseg202310
-from myapp.models import StockPERseg202311
-from myapp.models import StockPERseg202312
-
-from myapp.models import StockPERseg202401
-from myapp.models import StockPERseg202402
-from myapp.models import StockPERseg202403
-from myapp.models import StockPERseg202404
-from myapp.models import StockPERseg202405
-from myapp.models import StockPERseg202406
-
-from myapp.models import EpsProfit2020Q1
-from myapp.models import EpsProfit2020Q2
-from myapp.models import EpsProfit2020Q3
-from myapp.models import EpsProfit2020Q4
-from myapp.models import EpsProfit2021Q1
-from myapp.models import EpsProfit2021Q2
-from myapp.models import EpsProfit2021Q3
-from myapp.models import EpsProfit2021Q4
-from myapp.models import EpsProfit2022Q1
-from myapp.models import EpsProfit2022Q3
-
-from myapp.models import StockPERsegStable2020
-from myapp.models import StockPERsegStable2020Q2
-from myapp.models import StockPERsegStable2020Q3
-from myapp.models import StockPERsegStable2020Q3x
-from myapp.models import StockPERsegStable2020Q4
-from myapp.models import StockPERsegStable2021Q1
-from myapp.models import StockPERsegStable2021Q2
-from myapp.models import StockPERsegStable2021Q3
-from myapp.models import StockPERsegStable2021Q4
-from myapp.models import StockPERsegStable2022Q1
-from myapp.models import StockPERsegStable2022Q3
-
-
-
-from myapp.models import EPSachieve
-from myapp.models import EPSachieve2020Q2
-from myapp.models import EPSachieve2020Q3
-from myapp.models import EPSachieve2021Q1
-from myapp.models import EPSachieve2021Q2
-from myapp.models import EPSachieve2021Q3
-from myapp.models import EPSachieve2022Q1
-from myapp.models import EPSachieve2022Q3
-
-from myapp.models import StockCapVar
-from myapp.models import StockCapVar2020Q2
-from myapp.models import StockCapVar2020Q3
-from myapp.models import StockCapVar2020Q4
-from myapp.models import StockCapVar2021Q1
-from myapp.models import StockCapVar2021Q2
-from myapp.models import StockCapVar2021Q3
-from myapp.models import StockCapVar2021Q4
-from myapp.models import StockCapVar2022Q1
-from myapp.models import StockCapVar2022Q3
-
-from myapp.models import SubCats202011
-from myapp.models import SubCats202102
-from myapp.models import SubCats202103
-from myapp.models import SubCats202104
-from myapp.models import SubCats202105
-from myapp.models import SubCats202106
-from myapp.models import SubCats202107
-from myapp.models import SubCats202108
-from myapp.models import SubCats202109
-from myapp.models import SubCats202110
-from myapp.models import SubCats202111
-from myapp.models import SubCats202112
-
-from myapp.models import StockFavs_test168
-from myapp.models import StockFavDB
-
-from myapp.models import PriEPSPER_DB
-
-#from django.contrib.auth.decorators import login_required
-from django.contrib.auth.decorators import permission_required
-
-
-from django.shortcuts import render
-from django.db.models import Sum
-from django.http import JsonResponse
-
-from myapp.models import City
-
-
-@permission_required('myapp.Can_enter_AdminOnly', login_url='/login/')
-def adminmain(request, pageindex=None):  #管理頁面
-
-    #個別績效串列 
-    #一週 一個月 六個月一年
-    try:
-        Lists3m = func_usbond.getUSBondYield3m()
-    except:
-        Lists3m = func_usbond.getUSBondYield3m()
-        
-    try:
-        Lists6m = func_usbond.getUSBondYield6m()
-    except:
-        Lists6m = func_usbond.getUSBondYield6m()
-    
-    try:
-        Lists2y = func_usbond.getUSBondYield2y()
-    except:
-        Lists2y = func_usbond.getUSBondYield2y()
-    
-    
-    try:
-        Lists3y = func_usbond.getUSBondYield3y()
-    except:
-        Lists3y = func_usbond.getUSBondYield3y()
-        
-    try:
-        Lists5y = func_usbond.getUSBondYield5y()
-    except:
-        Lists5y = func_usbond.getUSBondYield5y()
-
-    try:
-        Lists7y = func_usbond.getUSBondYield7y()
-    except:
-        Lists7y = func_usbond.getUSBondYield7y()
-
-    try:
-        Lists10y = func_usbond.getUSBondYield10y()
-    except:
-        Lists10y = func_usbond.getUSBondYield10y()
-    
-    
-    try:
-        Lists30y = func_usbond.getUSBondYield30y()
-    except:
-        Lists30y = func_usbond.getUSBondYield30y()
-
-    
-    global page1u
-    pagesize = 20  #8
-    newsall = models.NewsUnit.objects.all().order_by('-id')
-    datasize = len(newsall)
-    totpage = math.ceil(datasize / pagesize)
-    if pageindex==None:
-        page1u = 1
-        newsunits0 = models.NewsUnit.objects.order_by('-id')[:pagesize]
-    elif pageindex=='1':
-        start = (page1u-2)*pagesize
-        if start >= 0:
-            newsunits0 = models.NewsUnit.objects.order_by('-id')[start:(start+pagesize)]
-            page1u -= 1
-    elif pageindex=='2':
-        start = page1u*pagesize
-        if start < datasize:
-            newsunits0 = models.NewsUnit.objects.order_by('-id')[start:(start+pagesize)]
-            page1u += 1
-    elif pageindex=='3':
-        start = (page1u-1)*pagesize
-        newsunits0 = models.NewsUnit.objects.order_by('-id')[start:(start+pagesize)]
-        currentpage = page1u
-    
-    global page1
-    pagesize = 20 #8
-    newsall = models.NewsUnit.objects.all().order_by('-id')
-    datasize = len(newsall)
-    totpage = math.ceil(datasize / pagesize)
-    if pageindex==None:
-        page1 = 1
-        newsunits = models.StockFavs_test168.objects.order_by('-id')[:pagesize]
-    elif pageindex=='1':
-        start = (page1-2)*pagesize
-        if start >= 0:
-            newsunits = models.StockFavs_test168.objects.order_by('-id')[start:(start+pagesize)]
-            page1 -= 1
-    elif pageindex=='2':
-        start = page1*pagesize
-        if start < datasize:
-            newsunits = models.StockFavs_test168.objects.order_by('-id')[start:(start+pagesize)]
-            page1 += 1
-    elif pageindex=='3':
-        start = (page1-1)*pagesize
-        newsunits = models.StockFavs_test168.objects.order_by('-id')[start:(start+pagesize)]
-    currentpage = page1
-    
-    
-    
-    global page1m #MacroWaveA
-    pagesize = 3 #8
-    newsall = models.MacroWaveA.objects.all().order_by('-id')
-    datasize = len(newsall)
-    totpage = math.ceil(datasize / pagesize)
-    if pageindex==None:
-        page1m = 1
-        newsunitsm = models.MacroWaveA.objects.order_by('-id')[:pagesize]
-    elif pageindex=='1':
-        start = (page1-2)*pagesize
-        if start >= 0:
-            newsunitsm = models.MacroWaveA.objects.order_by('-id')[start:(start+pagesize)]
-            page1m -= 1
-    elif pageindex=='2':
-        start = page1m*pagesize
-        if start < datasize:
-            newsunitsm = models.MacroWaveA.objects.order_by('-id')[start:(start+pagesize)]
-            page1m += 1
-    elif pageindex=='3':
-        start = (page1m-1)*pagesize
-        newsunitsm = models.MacroWaveA.objects.order_by('-id')[start:(start+pagesize)]
-    currentpage = page1m
-    
-    
-    
-    global page1m2 #MacroWaveB
-    pagesize = 5 #8
-    newsall = models.MacroWaveB.objects.all().order_by('-id')
-    datasize = len(newsall)
-    totpage = math.ceil(datasize / pagesize)
-    if pageindex==None:
-        page1m2 = 1
-        newsunitsm2 = models.MacroWaveB.objects.order_by('-id')[:pagesize]
-    elif pageindex=='1':
-        start = (page1-2)*pagesize
-        if start >= 0:
-            newsunitsm2 = models.MacroWaveB.objects.order_by('-id')[start:(start+pagesize)]
-            page1m2 -= 1
-    elif pageindex=='2':
-        start = page1m2*pagesize
-        if start < datasize:
-            newsunitsm2 = models.MacroWaveB.objects.order_by('-id')[start:(start+pagesize)]
-            page1m2 += 1
-    elif pageindex=='3':
-        start = (page1m2-1)*pagesize
-        newsunitsm2 = models.MacroWaveB.objects.order_by('-id')[start:(start+pagesize)]
-    currentpage = page1m2
-    
-    
-    global page1m3 #MacroWaveC
-    pagesize = 5 #8
-    newsall = models.MacroWaveC.objects.all().order_by('-id')
-    datasize = len(newsall)
-    totpage = math.ceil(datasize / pagesize)
-    if pageindex==None:
-        page1m3 = 1
-        newsunitsm3 = models.MacroWaveC.objects.order_by('-id')[:pagesize]
-    elif pageindex=='1':
-        start = (page1-2)*pagesize
-        if start >= 0:
-            newsunitsm3 = models.MacroWaveC.objects.order_by('-id')[start:(start+pagesize)]
-            page1m3 -= 1
-    elif pageindex=='2':
-        start = page1m3*pagesize
-        if start < datasize:
-            newsunitsm3 = models.MacroWavec.objects.order_by('-id')[start:(start+pagesize)]
-            page1m3 += 1
-    elif pageindex=='3':
-        start = (page1m3-1)*pagesize
-        newsunitsm3 = models.MacroWaveC.objects.order_by('-id')[start:(start+pagesize)]
-    currentpage = page1m3
-    
-    return render(request, "adminmain.html", locals())
-
-def home(request):
-    return render(request, 'home.html')
-
-
-
-
-def stock6x_chart(request):
-    labels = []
-    data = []
-
-    queryset = Stock6Sign202205.objects.get(cStockID = "3034")
-
-    #queryset = City.objects.order_by('-population')[:5]
-    #for city in queryset:
-    labels = ["2022/4", "2022/3", "2022/2", "2022/1", "2021/12", "2021/11", "2021/10", "2021/9"]
-    data = [float(queryset.sCore2204),float(queryset.sCore2203), float(queryset.sCore2202), float(queryset.sCore2201), float(queryset.sCore2112), float(queryset.sCore2111), float(queryset.sCore2110), float(queryset.sCore2109)]
-
-
-    return render(request, 'stock6x_chart.html', {
-        'labels': labels,
-        'data': data,
-    })
-
-
-
-def population_chart(request):
-    labels = []
-    data = []
-
-    queryset = City.objects.values('country__name').annotate(country_population=Sum('population')).order_by('-country_population')
-    for entry in queryset:
-        labels.append(entry['country__name'])
-        data.append(entry['country_population'])
-    
-    return JsonResponse(data={
-        'labels': labels,
-        'data': data,
-    })
-
-
-def pie_chart(request):
-    labels = []
-    data = []
-
-    queryset = City.objects.order_by('-population')[:5]
-    for city in queryset:
-        labels.append(city.name)
-        data.append(city.population)
-
-    return render(request, 'pie_chart.html', {
-        'labels': labels,
-        'data': data,
-    })
-####################
-
-
-# Create your views here.
+from myapp import models
+from module_PERseg import PERsegx
+from module_PERseg import PERsegxDB
+from module import func2
+###################################################################
 #################################判斷是否為數字的自創函數
 def is_number(s):
     try:
@@ -482,550 +51,62 @@ tseotc_dict = {'台泥': '1101', '亞泥': '1102', '嘉泥': '1103', '環泥': '
 
 
 
-
-@permission_required('myapp.Can_enter_AdminOnly', login_url='/login/')
-def stockNetCapAdmin(request):   #查詢本益比區間，給付費使用者使用。
+@permission_required('myapp.Can_enter_VIPsOnly', login_url='/login2/')
+def stockPERseg2(request):   #查詢本益比區間，自設參數
     if request.method == "POST":  #假如是以POST方式才處理
         #mess = request.POST['stockid']  #取得表單輸入內容
-
         mess0 = request.POST['stockid']  #取得表單輸入內容
         
         if is_number(mess0) == True:  #是數字
             mess = mess0
         else:
             mess = tseotc_dict[mess0]
-        #mess2 = request.POST['monthid']
 
-        import datetime
-        wholetime = str(datetime.datetime.now()) 
-        realtime = wholetime[:10]  #取得獲取資料時間
+
+        mess2 = request.POST['monthid']
+        #mess3 = request.POST['epsid']
+        #mess4 = request.POST['pehighid']
+        #mess5 = request.POST['pelowid']
+        #mess6 = request.POST['monthid']
+        #import datetime
+        #wholetime = str(datetime.datetime.now()) 
+        #realtime = wholetime[:16]  #取得獲取資料時間
         #取得股票名稱
-        stock_name = func2.GetStockName(mess)
         #stock_description, latest_trade_date, open, close, high, low, thisYearGain, newest_Rev_month, stock_id_name, yahoo_latest_tradePrice, stock_name = func2.stockdef(mess)
+        stock_name = func2.GetStockName(mess)
 
-
-        Net1, Net2, Net3, Net4, pNet1, pNet2, pNet3, pNet4, cap1, cap2, cap3, cap4, capital_stock, Net4Average, pNet4Average = NetCapDB.NetCapDB(mess)
-        #, rYoY1N, rYoY2N, rYoY3N, rYoY4N, rYoY5N, rYoY6N, rYoY1, rYoY2, rYoY3, rYoY4, rYoY5, rYoY6, RevYoY, rYoY6Average, r1N, r2N, r3N, r4N, r5N, r6N, r7N, r8N, r9N, r10N, r11N, r12N, r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, Rev_Predict, Net1N, Net2N, Net3N, Net4N, Net1, Net2, Net3, Net4, Net4Average, Net_Predict, capital_stock, Predict_EPS, Predict_high_price, Predict_low_price, yahoo_latest_tradePrice, New_up_profit, New_down_loss, risk_reward, pYoY1, pYoY2, pYoY3, pYoY4, pYoY5, pYoY6, pRevYoY, pYoY6Average, pNet1, pNet2, pNet3, pNet4, pNet4Average, H0, thisYear_Sum, theRest_Predict =func3.PERseg(mess)
+        H1, H2, H3, H4, H5, L1, L2, L3, L4, L5, eps1, eps2, eps3, eps4, eps5, PER_H1, PER_H2, PER_H3, PER_H4, PER_H5, PER_L1, PER_L2, PER_L3, PER_L4, PER_L5, PER_H_average, PER_L_average, PER_H, PER_L, rYoY1N, rYoY2N, rYoY3N, rYoY4N, rYoY5N, rYoY6N, rYoY1, rYoY2, rYoY3, rYoY4, rYoY5, rYoY6, RevYoY, rYoY6Average, r1N, r2N, r3N, r4N, r5N, r6N, r7N, r8N, r9N, r10N, r11N, r12N, r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, Rev_Predict, Net1N, Net2N, Net3N, Net4N, Net1, Net2, Net3, Net4, Net4Average, Net_Predict, capital_stock, Predict_EPS, Predict_high_price, Predict_low_price, yahoo_latest_tradePrice, New_up_profit, New_down_loss, risk_reward, pYoY1, pYoY2, pYoY3, pYoY4, pYoY5, pYoY6, pRevYoY, pYoY6Average, pNet1, pNet2, pNet3, pNet4, pNet4Average, H0, thisYear_Sum, theRest_Predict, H6, L6, Predict_EPS0, eps1N  =PERsegx.PERsegx(mess, mess2)
         #, pNet1, pNet2, pNet3, pNet4, pNet4Average
         #, pYoY1, pYoY2, pYoY3, pYoY4, pYoY5, pYoY6, pRevYoY, pYoY6Average
-           
-
-            #每次都必須更改
-        try:  #先試著看料庫有沒有這個股票，若沒有 跳到except處理
-            seg = models.NetCap_DB.objects.get(cStockID=mess)
-
-            seg.cNet21Q4 = Net1            
-            seg.cNet21Q3 = Net2
-            seg.cNet21Q2 = Net3
-            seg.cNet21Q1 = Net4
-            seg.cNet20Q4 = Net5
-            seg.cCap21Q3 = cap6
-            seg.cCap21Q2 = cap7
-            seg.cCap21Q1 = cap8
-            seg.cCap20Q4 = cap9
-            seg.pubtime=realtime
-            seg.save()
-
-        except:  #針對沒有的股票，抓取資料存入資料庫
-            #每次都必須更改
-            seg = models.NetCap_DB.objects.create(cStockID=mess, cStockName=stock_name, cNet21Q3 = Net1,cNet21Q2 = Net2,cNet21Q1 = Net3,cNet20Q4 = Net4,cCap21Q3 = cap1,cCap21Q2 = cap2,cCap21Q1 = cap3,cCap20Q4 = cap4,pubtime=realtime)
-            seg.save()
-            
-            
-    else:
-        mess = "台股代號尚未送出！"
-        #mess2 = "營收月份代號尚未送出！"
-
-        #mess2 = "該表單尚未送出！2"
-    return render(request, "stockNetCapAdmin.html", locals())
-
-
-####################
-
-
-@permission_required('myapp.Can_enter_All', login_url='/login2/')
-def listallscore(request):
-    signs = Stock6Sign.objects.all().order_by('-cAverageScore')
-    return render(request, "listallscore.html", locals())
-
-@permission_required('myapp.Can_enter_All', login_url='/login2/')
-def listallseg(request):
-    segs = StockPERseg.objects.all().order_by('cStockID')
-    return render(request, "listallseg.html", locals())
-
-
-@permission_required('myapp.Can_enter_All', login_url='/login2/')
-def listallsegscore(request):
-    segs = StockPERseg.objects.all().order_by('-cRisk_reward')
-    return render(request, "listallsegscore.html", locals())
-
-#########################################
-
-@permission_required('myapp.Can_enter_All', login_url='/login2/')
-def listallEPS(request):
-    alleps = EPSachieve.objects.all().order_by('-cEPSAchieveRate')
-    return render(request, "listallEPS.html", locals())
-
-
-@permission_required('myapp.Can_enter_All', login_url='/login2/')
-def listallCAP(request):
-    caps = StockCapVar.objects.all().order_by('id')
-    return render(request, "listallCAP.html", locals())
-
-
-
-
-
-
-################
-def index2(request):
-	if request.user.is_authenticated:
-	   name=request.user.username
-	return render(request, "index2.html", locals())
-
-def login2(request):  #付費使用者專專用
-	if request.method == 'POST':
-		name = request.POST['username']
-		password = request.POST['password']
-		user = auth.authenticate(username=name, password=password)
-		if user is not None:
-
-
-			if user.username == "jonyi729":
-				auth.login(request,user)
-				return redirect('/usersmain_common/jonyi729/')
-				#return redirect('/usersmain_jonyi/')
-
-                #return redirect('/index/')
-				message = '登入成功！'
-
-			elif user.username == "bobson808":
-				auth.login(request,user)
-				#return redirect('/usersmain_chenchi/')
-				return redirect('/usersmain_common/chenchi/')
-                #return redirect('/index/')
-				message = '登入成功！'
-                
-			elif user.username == "chenchi":
-				auth.login(request,user)
-				#return redirect('/usersmain_chenchi/')
-				return redirect('/usersmain_common/chenchi/')
-                #return redirect('/index/')
-				message = '登入成功！'
-                
-			elif user.username == "test268":
-				auth.login(request,user)
-				#return redirect('/usersmain_chenchi/')
-				return redirect('/usersmain_common/chenchi/')
-                #return redirect('/index/')
-				message = '登入成功！'
-
-                
-                
-			elif user.username == "test168":
-				auth.login(request,user)
-				return redirect('/usersmain_common/test168/')
-                #return redirect('/index/')
-				message = '登入成功！'
-			elif user.is_active:
-				auth.login(request,user)
-				return redirect('/usersmain/')
-                #return redirect('/index/')
-				message = '登入成功！'
-			else:
-				message = '帳號尚未啟用！'
-		else:
-			message = '登入失敗！'
-	return render(request, "login2.html", locals())
-
-
-def login3(request):  #付費使用者專專用
-	if request.method == 'POST':
-		name = request.POST['username']
-		password = request.POST['password']
-		user = auth.authenticate(username=name, password=password)
-		if user is not None:
-
-
-
-                
-
-			if user.is_active:
-				auth.login(request,user)
-				return redirect('/usersmain_app/')
-                #return redirect('/index/')
-				message = '登入成功！'
-			else:
-				message = '帳號尚未啟用！'
-		else:
-			message = '登入失敗！'
-	return render(request, "login3.html", locals())
-
-	
-def logout2(request):  #付費使用者專專用
-	auth.logout(request)
-	return redirect('/index/')	
-
-
-def logout3(request):  #app試用者專專用
-	auth.logout(request)
-	return redirect('/index/')	
-
-
-def adduser(request):	
-	try:
-		user=User.objects.get(username="test")
-	except:
-		user=None
-	if user!=None:
-		message = user.username + " 帳號已建立!"
-		return HttpResponse(message)
-	else:	# 建立 test 帳號			
-		user=User.objects.create_user("test","test@test.com.tw","aa123456")
-		user.first_name="wen" # 姓名
-		user.last_name="lin"  # 姓氏
-		user.is_staff=True	# 工作人員狀態
-		user.save()
-		return redirect('/admin/')
-
-
-def signup(request):
-
-    if request.method == 'POST':
-        username=request.POST['username']
-        password=request.POST['password']
-        email=request.POST['email']
-        first_name = request.POST['first_name']
-        last_name = request.POST['last_name']
-        #cellphone = request.POST['cellphone']
-                		
-        user=User.objects.create_user(username,email,password)
-        user.first_name = first_name # 名
-        user.last_name = last_name  # 姓氏
-        #user.cCellphone = cellphone #手機
-        user.is_staff = False	# 工作人員狀態
-        user.save()
-        #message = user.username + " 帳號已建立!，請登入"
-        #return HttpResponse(message)
-        return redirect('/index/')
-    
-    return render(request, "signup.html", locals()) 
-
-
-
-    
-#https://docs.djangoproject.com/en/3.0/topics/auth/default/
-
+        #Predict_high_price = str(round(float(mess3)*float(mess4),2))
+        #Predict_low_price = str(round(float(mess3)*float(mess4),2))
         
-        
-  
-######################
-#from django.shortcuts import render, redirect
-from myapp import models
-#from myapp.models import NewsUnit
-#from django.contrib.auth import authenticate
-#from django.contrib import auth
-#from django.contrib import messages
-#from django.contrib.auth.models import User
-#from django.views.decorators.csrf import ensure_csrf_cookie
-#from django import template
-import math
+        #H0為今年最高價，Satisf算出距離多少
+        #Satisf = str(round((float(H0) - Predict_high_price)*100/Predict_high_price,2)) + '%'  #今年高點是否出現？滿足比率
+        #if (float(H0) > Predict_high_price*0.95):
+            #highif = 'Yes'
+        #else:
+            #highif = 'No'
 
-page1 = 1
+        #try:  #先試著看料庫有沒有這個股票，若沒有 跳到except處理
+            #seg = models.StockPERseg.objects.get(cStockID=mess)
 
-def index(request, pageindex=None):  #首頁
-    
-	global page1
-	pagesize = 20  #8
-	newsall = models.NewsUnit.objects.all().order_by('-id')
-	datasize = len(newsall)
-	totpage = math.ceil(datasize / pagesize)
-	if pageindex==None:
-		page1 = 1
-		newsunits = models.NewsUnit.objects.filter(enabled=True).order_by('-id')[:pagesize]
-	elif pageindex=='1':
-		start = (page1-2)*pagesize
-		if start >= 0:
-			newsunits = models.NewsUnit.objects.filter(enabled=True).order_by('-id')[start:(start+pagesize)]
-			page1 -= 1
-	elif pageindex=='2':
-		start = page1*pagesize
-		if start < datasize:
-			newsunits = models.NewsUnit.objects.filter(enabled=True).order_by('-id')[start:(start+pagesize)]
-			page1 += 1
-	elif pageindex=='3':
-		start = (page1-1)*pagesize
-		newsunits = models.NewsUnit.objects.filter(enabled=True).order_by('-id')[start:(start+pagesize)]
-	currentpage = page1
-	return render(request, "index.html", locals())
+        #except:  #針對沒有的股票，抓取資料存入資料庫
+            #seg = models.StockPERseg.objects.create(cStockID=mess, cStockName=stock_name, cPredict_high_price=Predict_high_price, cPredict_low_price=Predict_low_price, cLatest_price=yahoo_latest_tradePrice, cNew_up_profit=New_up_profit, cNew_down_loss=New_down_loss, cRisk_reward=risk_reward, pubtime=realtime)
+            #seg = models.StockPERseg.objects.create(cStockID=mess, cStockName=stock_name, cH1=H1, cL1=L1, cH2=H2, cL2=L2, cH3=H3, cL3=L3, cH4=H4, cL4=L4, cH5=H5, cL5=L5, cEPS1=eps1, cEPS2=eps2, cEPS3=eps3, cEPS4=eps4, cEPS5=eps5, cPER_H1=PER_H1, cPER_L1=PER_L1, cPER_H2=PER_H2, cPER_L2=PER_L2, cPER_H3=PER_H3, cPER_L3=PER_L3, cPER_H4=PER_H4, cPER_L4=PER_L4, cPER_H5=PER_H5, cPER_L5=PER_L5, cPER_H_average=PER_H_average, cPER_L_average=PER_L_average, cPER_H=PER_H, cPER_L=PER_L, cYoY6Average=rYoY6Average, cRevYoY=RevYoY, cNet1=Net1, cNet2=Net2, cNet3=Net3, cNet4=Net4, cNet4Average=Net4Average, cRev_Predict=Rev_Predict, cNet_Predict=Net_Predict, cCapital_stock=capital_stock, cPredict_EPS=Predict_EPS, cPredict_high_price=Predict_high_price, cPredict_low_price=Predict_low_price, cLatest_price=yahoo_latest_tradePrice, cNew_up_profit=New_up_profit, cNew_down_loss=New_down_loss, cRisk_reward=risk_reward, pubtime=realtime)
+            #seg.save()
 
-def detail(request, detailid=None):  #詳細頁面
-	unit = models.NewsUnit.objects.get(id=detailid)
-	category = unit.catego
-	title = unit.title
-	pubtime = unit.pubtime
-	nickname = unit.nickname
-	message = unit.message
-	unit.press += 1
-	unit.save()
-	return render(request, "detail.html", locals())
-
-
-#@permission_required('myapp.Can_enter_AdminOnly', login_url='/login/')
-def login(request):  #登入   #管理人專用
-	messages = ''  #初始時清除訊息
-	if request.method == 'POST':  #如果是以POST方式才處理
-		name = request.POST['username'].strip()  #取得輸入帳號
-		password = request.POST['password']  #取得輸入密碼
-		user1 = authenticate(username=name, password=password)  #驗證
-		if user1 is not None:  #驗證通過
-			if user1.is_active:  #帳號有效
-				auth.login(request, user1)  #登入
-				return redirect('/adminmain/')  #開啟管理頁面
-			else:  #帳號無效
-				messages = '帳號尚未啟用！'
-		else:  #驗證未通過
-			messages = '登入失敗！'
-	return render(request, "login.html", locals())
-
-def logout(request):  #登出  #管理人專用
-	auth.logout(request)
-	return redirect('/index/')
-
-
-
-
-@permission_required('myapp.Can_enter_AdminOnly', login_url='/login/')
-def newsadd(request):  #新增資料
-	message = ''  #清除訊息
-	category = request.POST.get('news_type', '')  #取得輸入的類別
-	subject = request.POST.get('news_subject', '')
-	editor = request.POST.get('news_editor', '')
-	content = request.POST.get('news_content', '')
-	ok = request.POST.get('news_ok', '')
-	if subject=='' or editor=='' or content=='':  #若有欄位未填就顯示訊息
-		message = '每一個欄位都要填寫...'
-	else:
-		if ok=='yes':  #根據ok值設定enabled欄位
-			enabled = True
-		else:
-			enabled = False
-		unit = models.NewsUnit.objects.create(catego=category, nickname=editor, title=subject, message=content, enabled=enabled, press=0)
-		unit.save()
-		return redirect('/adminmain/')
-	return render(request, "newsadd.html", locals())
-
-@permission_required('myapp.Can_enter_AdminOnly', login_url='/login/')
-def newsedit(request, newsid=None, edittype=None):  #修改資料
-	unit = models.NewsUnit.objects.get(id=newsid)  #讀取指定資料
-	categories = ["公告", "更新", "活動", "其他"]
-	if edittype == None:  #進入修改頁面,顯示原有資料
-		type = unit.catego
-		subject = unit.title
-		editor = unit.nickname
-		content = unit.message
-		ok = unit.enabled
-	elif edittype == '1':  #修改完畢,存檔
-		category = request.POST.get('news_type', '')
-		subject = request.POST.get('news_subject', '')
-		editor = request.POST.get('news_editor', '')
-		content = request.POST.get('news_content', '')
-		ok = request.POST.get('news_ok', '')
-		if ok=='yes':
-			enabled = True
-		else:
-			enabled = False
-		unit.catego=category
-		unit.nickname=editor
-		unit.title=subject
-		unit.message=content
-		unit.enabled=enabled
-		unit.save()
-		return redirect('/adminmain/')
-	return render(request, "newsedit.html", locals())
-
-@permission_required('myapp.Can_enter_AdminOnly', login_url='/login/')
-def newsdelete(request, newsid=None, deletetype=None):  #刪除資料
-	unit = models.NewsUnit.objects.get(id=newsid)  #讀取指定資料
-	if deletetype == None:  #進入刪除頁面,顯示原有資料
-		type = str(unit.catego.strip())
-		subject = unit.title
-		editor = unit.nickname
-		content = unit.message
-		date = unit.pubtime
-	elif deletetype == '1':  #按刪除鈕
-		unit.delete()
-		return redirect('/adminmain/')
-	return render(request, "newsdelete.html", locals())
-
-'''
-def listone(request):
-    try:
-        sign = Stock6Sign.objects.get(cStockID="2330")
-    except:
-        eroormessage = " (讀取錯誤！)"
-    return render(request, "listone.html", locals())
-
-@permission_required('myapp.Can_enter_PaidUsersOnly', login_url='/listall/')
-def listall(request):
-    signs = Stock6Sign.objects.all().order_by('id')
-    return render(request, "listall.html", locals())
-'''
-
-
-
-@permission_required('myapp.Can_enter_AdminOnly', login_url='/login2/')
-def UsersListAll(request):
-    users = User.objects.all().order_by('-last_login')
-    return render(request, "UsersListAll.html", locals())
-
-
-
-
-def usersmain(request, pageindex=None):  #使用者功能首頁
-	global page1u
-	pagesize = 20  #8
-	newsall = models.NewsUnit.objects.all().order_by('-id')
-	datasize = len(newsall)
-	totpage = math.ceil(datasize / pagesize)
-	if pageindex==None:
-		page1u = 1
-		newsunits0 = models.NewsUnit.objects.order_by('-id')[:pagesize]
-	elif pageindex=='1':
-		start = (page1u-2)*pagesize
-		if start >= 0:
-			newsunits0 = models.NewsUnit.objects.order_by('-id')[start:(start+pagesize)]
-			page1u -= 1
-	elif pageindex=='2':
-		start = page1u*pagesize
-		if start < datasize:
-			newsunits0 = models.NewsUnit.objects.order_by('-id')[start:(start+pagesize)]
-			page1u += 1
-	elif pageindex=='3':
-		start = (page1u-1)*pagesize
-		newsunits0 = models.NewsUnit.objects.order_by('-id')[start:(start+pagesize)]
-	currentpage = page1u
-	return render(request, "usersmain.html", locals())
-####################################################################
-
-
-
-       
-
-
-
-@permission_required('myapp.Can_enter_stock6', login_url='/login2/')
-def viewsISQuery(request):  #查詢六大指標，給付費使用者使用
-
-        
-    if request.method == "POST":  #假如是以POST方式才處理
-        mess0 = request.POST['stockid']  #取得表單輸入內容
-        
-        if is_number(mess0) == True:  #是數字
-            mess = mess0
-        else:
-            mess = tseotc_dict[mess0]
-        
-        IS_Time, ISitem = func0.ISQuery(mess)
-        
-
-
-        stock_name = func2x.GetStockName(mess)
-        
-    else:
-        mess = "台股代號尚未送出！"
-        stock_name = "台股名稱尚未查到！"
-
-    return render(request, "viewsISQuery.html", locals())
-
-
-@permission_required('myapp.Can_enter_stock6', login_url='/login2/')
-def viewsBSQuery(request):  #查詢六大指標，給付費使用者使用
-
-        
-    if request.method == "POST":  #假如是以POST方式才處理
-        mess0 = request.POST['stockid']  #取得表單輸入內容
-        
-        if is_number(mess0) == True:  #是數字
-            mess = mess0
-        else:
-            mess = tseotc_dict[mess0]
-        
-        BS_Time, BSitem = func0.BSQuery(mess)
-        
-
-
-        stock_name = func2x.GetStockName(mess)
-        
-    else:
-        mess = "台股代號尚未送出！"
-        stock_name = "台股名稱尚未查到！"
-
-    return render(request, "viewsBSQuery.html", locals())
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-def stockprice(request):    #查詢股價
-    if request.method == "POST":  #假如是以POST方式才處理
-        mess = request.POST['stockid']  #取得表單輸入內容
-
-        stock_description, latest_trade_date, open, close, high, low, thisYearGain, newest_Rev_month, stock_id_name, yahoo_latest_tradePrice =func2.stockdef(mess)
         
         #mess2 = request.POST['xdays']  #取得表單輸入內容
     else:
         mess = "台股代號尚未送出！"
-        
+        mess2 = "營收月份代號尚未送出！"
 
         #mess2 = "該表單尚未送出！2"
-    return render(request, "stockprice.html", locals())
+    return render(request, "stockPERseg2.html", locals())
 
-
-
-
-
-
-###############
-
-##################下載區#############################################################    
-@permission_required('myapp.Can_enter_PaidUsersOnly', login_url='/login2/')
-def AREAdownloads(request):
-    return render(request,"AREAdownloads.html")
-
-
-   
-@permission_required('myapp.Can_enter_stock6', login_url='/login2/')
-def stock6downloads(request):
-    return render(request,"stock6downloads.html")
-
-
-@permission_required('myapp.Can_enter_stockPERseg', login_url='/login2/')
-def stockPERsegdownloads(request):
-    return render(request,"stockPERsegdownloads.html")
-
-
-
-@permission_required('myapp.Can_enter_All', login_url='/login2/')
-def stockEnterAlldownloads(request):
-    return render(request,"stockEnterAlldownloads.html")
-
-
-
-
-@permission_required('myapp.Can_enter_All', login_url='/login2/')
-def BigMoney(request):  #查詢大戶持股比率，給付費使用者使用
-
+@permission_required('myapp.Can_enter_VIPsOnly', login_url='/login2/')
+def stockPERseg2xDB(request):   #查詢本益比區間，自設參數
     if request.method == "POST":  #假如是以POST方式才處理
         #mess = request.POST['stockid']  #取得表單輸入內容
         mess0 = request.POST['stockid']  #取得表單輸入內容
@@ -1036,85 +117,158 @@ def BigMoney(request):  #查詢大戶持股比率，給付費使用者使用
             mess = tseotc_dict[mess0]
 
 
-        import datetime
-        wholetime = str(datetime.datetime.now()) 
-        realtime = wholetime[:16]  #取得獲取資料時間
-        stock_name, pBoard, pForeign, pInvest, pSecurity, pBig, pIndiv =func4.InstituRate(mess) #取得六大指標平均
+        mess2 = request.POST['monthid']
+        #mess3 = request.POST['epsid']
+        #mess4 = request.POST['pehighid']
+        #mess5 = request.POST['pelowid']
+        #mess6 = request.POST['monthid']
+        #import datetime
+        #wholetime = str(datetime.datetime.now()) 
+        #realtime = wholetime[:16]  #取得獲取資料時間
         #取得股票名稱
+        #stock_description, latest_trade_date, open, close, high, low, thisYearGain, newest_Rev_month, stock_id_name, yahoo_latest_tradePrice, stock_name = func2.stockdef(mess)
+        stock_name = func2.GetStockName(mess)
+
+        H1, H2, H3, H4, H5, L1, L2, L3, L4, L5, eps1, eps2, eps3, eps4, eps5, PER_H1, PER_H2, PER_H3, PER_H4, PER_H5, PER_L1, PER_L2, PER_L3, PER_L4, PER_L5, PER_H_average, PER_L_average, PER_H, PER_L, rYoY1N, rYoY2N, rYoY3N, rYoY4N, rYoY5N, rYoY6N, rYoY1, rYoY2, rYoY3, rYoY4, rYoY5, rYoY6, RevYoY, rYoY6Average, r1N, r2N, r3N, r4N, r5N, r6N, r7N, r8N, r9N, r10N, r11N, r12N, r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, Rev_Predict, Net1N, Net2N, Net3N, Net4N, Net1, Net2, Net3, Net4, Net4Average, Net_Predict, capital_stock, Predict_EPS, Predict_high_price, Predict_low_price, yahoo_latest_tradePrice, New_up_profit, New_down_loss, risk_reward, pYoY1, pYoY2, pYoY3, pYoY4, pYoY5, pYoY6, pRevYoY, pYoY6Average, pNet1, pNet2, pNet3, pNet4, pNet4Average, H0, thisYear_Sum, theRest_Predict, H6, L6, eps1N = PERsegxDB.PERsegxDB(mess, mess2)  #, Predict_EPS0
+
+        #H1, H2, H3, H4, H5, L1, L2, L3, L4, L5, eps1, eps2, eps3, eps4, eps5, PER_H1, PER_H2, PER_H3, PER_H4, PER_H5, PER_L1, PER_L2, PER_L3, PER_L4, PER_L5, PER_H_average, PER_L_average, PER_H, PER_L, rYoY1N, rYoY2N, rYoY3N, rYoY4N, rYoY5N, rYoY6N, rYoY1, rYoY2, rYoY3, rYoY4, rYoY5, rYoY6, RevYoY, rYoY6Average, r1N, r2N, r3N, r4N, r5N, r6N, r7N, r8N, r9N, r10N, r11N, r12N, r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, Rev_Predict, Net1N, Net2N, Net3N, Net4N, Net1, Net2, Net3, Net4, Net4Average, Net_Predict, capital_stock, Predict_EPS, Predict_high_price, Predict_low_price, yahoo_latest_tradePrice, New_up_profit, New_down_loss, risk_reward, pYoY1, pYoY2, pYoY3, pYoY4, pYoY5, pYoY6, pRevYoY, pYoY6Average, pNet1, pNet2, pNet3, pNet4, pNet4Average, H0, thisYear_Sum, theRest_Predict, H6, L6, Predict_EPS0, eps1N  =PERsegx.PERsegx(mess, mess2)
+        #, pNet1, pNet2, pNet3, pNet4, pNet4Average
+        #, pYoY1, pYoY2, pYoY3, pYoY4, pYoY5, pYoY6, pRevYoY, pYoY6Average
+        #Predict_high_price = str(round(float(mess3)*float(mess4),2))
+        #Predict_low_price = str(round(float(mess3)*float(mess4),2))
         
-        
+        #H0為今年最高價，Satisf算出距離多少
+        #Satisf = str(round((float(H0) - Predict_high_price)*100/Predict_high_price,2)) + '%'  #今年高點是否出現？滿足比率
+        #if (float(H0) > Predict_high_price*0.95):
+            #highif = 'Yes'
+        #else:
+            #highif = 'No'
+
         #try:  #先試著看料庫有沒有這個股票，若沒有 跳到except處理
-            #sign = models.Stock6Sign.objects.get(cStockID=mess)
+            #seg = models.StockPERseg.objects.get(cStockID=mess)
 
         #except:  #針對沒有的股票，抓取資料存入資料庫
-            #sign = models.Stock6Sign.objects.create(cStockID=mess, cStockName=stock_name, cSign1=result1, cSign2=result2, cSign3=result3, cSign4=result4, cSign5=result5, cSign6=result6, cAverageScore=average6stock, pubtime=realtime)
-            #sign.save()
-               
-       
+            #seg = models.StockPERseg.objects.create(cStockID=mess, cStockName=stock_name, cPredict_high_price=Predict_high_price, cPredict_low_price=Predict_low_price, cLatest_price=yahoo_latest_tradePrice, cNew_up_profit=New_up_profit, cNew_down_loss=New_down_loss, cRisk_reward=risk_reward, pubtime=realtime)
+            #seg = models.StockPERseg.objects.create(cStockID=mess, cStockName=stock_name, cH1=H1, cL1=L1, cH2=H2, cL2=L2, cH3=H3, cL3=L3, cH4=H4, cL4=L4, cH5=H5, cL5=L5, cEPS1=eps1, cEPS2=eps2, cEPS3=eps3, cEPS4=eps4, cEPS5=eps5, cPER_H1=PER_H1, cPER_L1=PER_L1, cPER_H2=PER_H2, cPER_L2=PER_L2, cPER_H3=PER_H3, cPER_L3=PER_L3, cPER_H4=PER_H4, cPER_L4=PER_L4, cPER_H5=PER_H5, cPER_L5=PER_L5, cPER_H_average=PER_H_average, cPER_L_average=PER_L_average, cPER_H=PER_H, cPER_L=PER_L, cYoY6Average=rYoY6Average, cRevYoY=RevYoY, cNet1=Net1, cNet2=Net2, cNet3=Net3, cNet4=Net4, cNet4Average=Net4Average, cRev_Predict=Rev_Predict, cNet_Predict=Net_Predict, cCapital_stock=capital_stock, cPredict_EPS=Predict_EPS, cPredict_high_price=Predict_high_price, cPredict_low_price=Predict_low_price, cLatest_price=yahoo_latest_tradePrice, cNew_up_profit=New_up_profit, cNew_down_loss=New_down_loss, cRisk_reward=risk_reward, pubtime=realtime)
+            #seg.save()
+
+        
         #mess2 = request.POST['xdays']  #取得表單輸入內容
     else:
         mess = "台股代號尚未送出！"
-
+        mess2 = "營收月份代號尚未送出！"
 
         #mess2 = "該表單尚未送出！2"
-    return render(request, "BigMoney.html", locals())
-
-###########各資料庫分頁########################################################
-def DB_stock6sign(request):
-    return render(request,"DB_stock6sign.html")
+    return render(request, "stockPERseg2xDB.html", locals())
 
 
-def DB_stockPERseg(request):
-    return render(request,"DB_stockPERseg.html")
-
-
-def DB_DCstock6sign(request):
-    return render(request,"DB_DCstock6sign.html")
-
-def DB_stockPERsegStable(request):
-    return render(request,"DB_stockPERsegStable.html")
-
-def DB_EPSachiever(request):
-    return render(request,"DB_EPSachiever.html")
-
-
-def DB_StockCapGetter(request):
-    return render(request,"DB_StockCapGetter.html")
-
-def DB_EPSnProfitGetter(request):
-    return render(request,"DB_EPSnProfitGetter.html")
-###########################
-
-@permission_required('myapp.Can_enter_stockKn', login_url='/login2/')
-def stockKn(request):  #查詢六大指標，給付費使用者使用
-
-        
+@permission_required('myapp.Can_enter_VIPsOnly', login_url='/login2/')
+def stockPERseg2b(request):   #查詢本益比區間，自設參數
     if request.method == "POST":  #假如是以POST方式才處理
-        mess0 = request.POST['stockid']  #取得表單輸入內容
+        #mess = request.POST['stockid2']  #取得表單輸入內容
+        mess0 = request.POST['stockid2']  #取得表單輸入內容
         
         if is_number(mess0) == True:  #是數字
             mess = mess0
         else:
             mess = tseotc_dict[mess0]
-    
-        bt1q, sh1q, bt_roe1_4sum, bt_roe1_4sump, b1q, yahoo_latest_tradePrice, pb1q, kn1_4sum, kn1_4sump, bt1qN, bt2qN, bt3qN, bt4qN, bt_roe1qp, bt_roe2qp, bt_roe3qp, bt_roe4qp = KnQuery.KnQuery(mess) 
 
-        #bt1, sh1, bt_roe1, bt_roe1p, b1, yahoo_latest_tradePrice, pb1, kn1, kn1p = KnQuery.KnQuery(mess) 
-        H0, H1, H2, H3, H4, H5, H6, H7, H8, H9, L0, L1, L2, L3, L4, L5, L6, L7, L8, L9, bt1N, bt2N, bt3N, bt4N, bt5N, bt6N, bt7N, bt8N, bt1, bt2, bt3, bt4, bt5, bt6, bt7, bt8, sh1, sh2, sh3, sh4, sh5, sh6, sh7, sh8, bt_roe1p, bt_roe2p, bt_roe3p, bt_roe4p, bt_roe5p, bt_roe6p, bt_roe7p, bt_roe8p, b1, b2, b3, b4, b5, b6, b7, b8, kn1_Hp, kn1_Lp, kn2_Hp, kn2_Lp, kn3_Hp, kn3_Lp, kn4_Hp, kn4_Lp, kn5_Hp, kn5_Lp, kn6_Hp, kn6_Lp, kn7_Hp, kn7_Lp, kn8_Hp, kn8_Lp, pb1_H, pb1_L, pb2_H, pb2_L, pb3_H, pb3_L, pb4_H, pb4_L, pb5_H, pb5_L, pb6_H, pb6_L, pb7_H, pb7_L, pb8_H, pb8_L, bt_roe1_8avep, pb1_8_Have, pb1_8_Lave, kn1_8_Havep, kn1_8_Lavep, buyin_price, notbuyin_price  = Kn8yPrice.Kn8yPrice(mess) 
 
-        stock_name = func2x.GetStockName(mess)
+        mess2 = request.POST['monthid2']
+        mess3 = request.POST['epsid']
+        mess4 = request.POST['pehighid']
+        mess5 = request.POST['pelowid']
+        #mess6 = request.POST['monthid']
+        #import datetime
+        #wholetime = str(datetime.datetime.now()) 
+        #realtime = wholetime[:16]  #取得獲取資料時間
+        #取得股票名稱
+        #stock_description, latest_trade_date, openx, close, high, low, thisYearGain, newest_Rev_month, stock_id_name, yahoo_latest_tradePrice, stock_name = func2.stockdef(mess)
+
+        stock_name = func2.GetStockName(mess)
         
+        #H1, H2, H3, H4, H5, L1, L2, L3, L4, L5, eps1, eps2, eps3, eps4, eps5, PER_H1, PER_H2, PER_H3, PER_H4, PER_H5, PER_L1, PER_L2, PER_L3, PER_L4, PER_L5, PER_H_average, PER_L_average, PER_H, PER_L, rYoY1N, rYoY2N, rYoY3N, rYoY4N, rYoY5N, rYoY6N, rYoY1, rYoY2, rYoY3, rYoY4, rYoY5, rYoY6, RevYoY, rYoY6Average, r1N, r2N, r3N, r4N, r5N, r6N, r7N, r8N, r9N, r10N, r11N, r12N, r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, Rev_Predict, Net1N, Net2N, Net3N, Net4N, Net1, Net2, Net3, Net4, Net4Average, Net_Predict, capital_stock, Predict_EPS, Predict_high_price, Predict_low_price, yahoo_latest_tradePrice, New_up_profit, New_down_loss, risk_reward, pYoY1, pYoY2, pYoY3, pYoY4, pYoY5, pYoY6, pRevYoY, pYoY6Average, pNet1, pNet2, pNet3, pNet4, pNet4Average, H0, thisYear_Sum, theRest_Predict, H6, L6, Predict_EPS0, eps1N  =func3.PERseg(mess, mess2)
+        H1, H2, H3, H4, H5, L1, L2, L3, L4, L5, eps1, eps2, eps3, eps4, eps5, PER_H1, PER_H2, PER_H3, PER_H4, PER_H5, PER_L1, PER_L2, PER_L3, PER_L4, PER_L5, PER_H_average, PER_L_average, PER_H, PER_L, rYoY1N, rYoY2N, rYoY3N, rYoY4N, rYoY5N, rYoY6N, rYoY1, rYoY2, rYoY3, rYoY4, rYoY5, rYoY6, RevYoY, rYoY6Average, r1N, r2N, r3N, r4N, r5N, r6N, r7N, r8N, r9N, r10N, r11N, r12N, r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, Rev_Predict, Net1N, Net2N, Net3N, Net4N, Net1, Net2, Net3, Net4, Net4Average, Net_Predict, capital_stock, Predict_EPS, Predict_high_price, Predict_low_price, yahoo_latest_tradePrice, New_up_profit, New_down_loss, risk_reward, pYoY1, pYoY2, pYoY3, pYoY4, pYoY5, pYoY6, pRevYoY, pYoY6Average, pNet1, pNet2, pNet3, pNet4, pNet4Average, H0, thisYear_Sum, theRest_Predict, H6, L6, Predict_EPS0, eps1N  =PERsegx.PERsegx(mess, mess2)
+
+        #H1, H2, H3, H4, H5, L1, L2, L3, L4, L5, eps1, eps2, eps3, eps4, eps5, PER_H1, PER_H2, PER_H3, PER_H4, PER_H5, PER_L1, PER_L2, PER_L3, PER_L4, PER_L5, PER_H_average, PER_L_average, PER_H, PER_L, rYoY1N, rYoY2N, rYoY3N, rYoY4N, rYoY5N, rYoY6N, rYoY1, rYoY2, rYoY3, rYoY4, rYoY5, rYoY6, RevYoY, rYoY6Average, r1N, r2N, r3N, r4N, r5N, r6N, r7N, r8N, r9N, r10N, r11N, r12N, r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, Rev_Predict, Net1N, Net2N, Net3N, Net4N, Net1, Net2, Net3, Net4, Net4Average, Net_Predict, capital_stock, Predict_EPS, Predict_high_price, Predict_low_price, yahoo_latest_tradePrice, New_up_profit, New_down_loss, risk_reward, pYoY1, pYoY2, pYoY3, pYoY4, pYoY5, pYoY6, pRevYoY, pYoY6Average, pNet1, pNet2, pNet3, pNet4, pNet4Average, H0, thisYear_Sum, theRest_Predict, H6, L6, Predict_EPS0, eps1N  = PERsegx.PERsegx(mess, mess2)
+        #, pNet1, pNet2, pNet3, pNet4, pNet4Average
+        #, pYoY1, pYoY2, pYoY3, pYoY4, pYoY5, pYoY6, pRevYoY, pYoY6Average
+        Predict_high_price2 = round(float(mess3)*float(mess4),2)
+        Predict_low_price2 = round(float(mess3)*float(mess5),2)
+        
+        New_Predict_high_price2 = str(Predict_high_price2)        
+        New_Predict_low_price2 = str(Predict_low_price2)
+        
+        New_yahoo_latest_tradePrice = float(yahoo_latest_tradePrice)
+
+        up_profit2 = round((Predict_high_price2 - New_yahoo_latest_tradePrice)/New_yahoo_latest_tradePrice,2)
+        down_loss2 = round((Predict_low_price2 - New_yahoo_latest_tradePrice)/New_yahoo_latest_tradePrice,2)                      
+        New_up_profit2 = str(up_profit2*100) + '%'
+        New_down_loss2 = str(down_loss2*100) + '%'
+
+        risk_reward2 = str(round(abs(up_profit2/down_loss2),2))
+
     else:
-        mess = "台股代號尚未送出！"
-        stock_name = "台股名稱尚未查到！"
-
+        mess3 = "尚未送出！"
+        mess4 = "尚未送出！"
+        mess5 = "尚未送出！"
         #mess2 = "該表單尚未送出！2"
-    return render(request, "stockKn.html", locals())
+        
+    return render(request, "stockPERseg2b.html", locals())        
+@permission_required('myapp.Can_enter_VIPsOnly', login_url='/login2/')
+def stockPERseg2bxDB(request):   #查詢本益比區間，自設參數
+    if request.method == "POST":  #假如是以POST方式才處理
+        #mess = request.POST['stockid2']  #取得表單輸入內容
+        mess0 = request.POST['stockid2']  #取得表單輸入內容
+        
+        if is_number(mess0) == True:  #是數字
+            mess = mess0
+        else:
+            mess = tseotc_dict[mess0]
 
 
-###############################################################################
+        mess2 = request.POST['monthid2']
+        mess3 = request.POST['epsid']
+        mess4 = request.POST['pehighid']
+        mess5 = request.POST['pelowid']
+        #mess6 = request.POST['monthid']
+        #import datetime
+        #wholetime = str(datetime.datetime.now()) 
+        #realtime = wholetime[:16]  #取得獲取資料時間
+        #取得股票名稱
+        #stock_description, latest_trade_date, openx, close, high, low, thisYearGain, newest_Rev_month, stock_id_name, yahoo_latest_tradePrice, stock_name = func2.stockdef(mess)
 
-################
-def index_sns(request):
+        stock_name = func2.GetStockName(mess)
 
-	return render(request, "index_sns.html", locals())
+        H1, H2, H3, H4, H5, L1, L2, L3, L4, L5, eps1, eps2, eps3, eps4, eps5, PER_H1, PER_H2, PER_H3, PER_H4, PER_H5, PER_L1, PER_L2, PER_L3, PER_L4, PER_L5, PER_H_average, PER_L_average, PER_H, PER_L, rYoY1N, rYoY2N, rYoY3N, rYoY4N, rYoY5N, rYoY6N, rYoY1, rYoY2, rYoY3, rYoY4, rYoY5, rYoY6, RevYoY, rYoY6Average, r1N, r2N, r3N, r4N, r5N, r6N, r7N, r8N, r9N, r10N, r11N, r12N, r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, Rev_Predict, Net1N, Net2N, Net3N, Net4N, Net1, Net2, Net3, Net4, Net4Average, Net_Predict, capital_stock, Predict_EPS, Predict_high_price, Predict_low_price, yahoo_latest_tradePrice, New_up_profit, New_down_loss, risk_reward, pYoY1, pYoY2, pYoY3, pYoY4, pYoY5, pYoY6, pRevYoY, pYoY6Average, pNet1, pNet2, pNet3, pNet4, pNet4Average, H0, thisYear_Sum, theRest_Predict, H6, L6, eps1N = PERsegxDB.PERsegxDB(mess, mess2)  #, Predict_EPS0
+
+        
+        #H1, H2, H3, H4, H5, L1, L2, L3, L4, L5, eps1, eps2, eps3, eps4, eps5, PER_H1, PER_H2, PER_H3, PER_H4, PER_H5, PER_L1, PER_L2, PER_L3, PER_L4, PER_L5, PER_H_average, PER_L_average, PER_H, PER_L, rYoY1N, rYoY2N, rYoY3N, rYoY4N, rYoY5N, rYoY6N, rYoY1, rYoY2, rYoY3, rYoY4, rYoY5, rYoY6, RevYoY, rYoY6Average, r1N, r2N, r3N, r4N, r5N, r6N, r7N, r8N, r9N, r10N, r11N, r12N, r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, Rev_Predict, Net1N, Net2N, Net3N, Net4N, Net1, Net2, Net3, Net4, Net4Average, Net_Predict, capital_stock, Predict_EPS, Predict_high_price, Predict_low_price, yahoo_latest_tradePrice, New_up_profit, New_down_loss, risk_reward, pYoY1, pYoY2, pYoY3, pYoY4, pYoY5, pYoY6, pRevYoY, pYoY6Average, pNet1, pNet2, pNet3, pNet4, pNet4Average, H0, thisYear_Sum, theRest_Predict, H6, L6, Predict_EPS0, eps1N  =func3.PERseg(mess, mess2)
+
+        #H1, H2, H3, H4, H5, L1, L2, L3, L4, L5, eps1, eps2, eps3, eps4, eps5, PER_H1, PER_H2, PER_H3, PER_H4, PER_H5, PER_L1, PER_L2, PER_L3, PER_L4, PER_L5, PER_H_average, PER_L_average, PER_H, PER_L, rYoY1N, rYoY2N, rYoY3N, rYoY4N, rYoY5N, rYoY6N, rYoY1, rYoY2, rYoY3, rYoY4, rYoY5, rYoY6, RevYoY, rYoY6Average, r1N, r2N, r3N, r4N, r5N, r6N, r7N, r8N, r9N, r10N, r11N, r12N, r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, Rev_Predict, Net1N, Net2N, Net3N, Net4N, Net1, Net2, Net3, Net4, Net4Average, Net_Predict, capital_stock, Predict_EPS, Predict_high_price, Predict_low_price, yahoo_latest_tradePrice, New_up_profit, New_down_loss, risk_reward, pYoY1, pYoY2, pYoY3, pYoY4, pYoY5, pYoY6, pRevYoY, pYoY6Average, pNet1, pNet2, pNet3, pNet4, pNet4Average, H0, thisYear_Sum, theRest_Predict, H6, L6, Predict_EPS0, eps1N  = PERsegx.PERsegx(mess, mess2)
+        #, pNet1, pNet2, pNet3, pNet4, pNet4Average
+        #, pYoY1, pYoY2, pYoY3, pYoY4, pYoY5, pYoY6, pRevYoY, pYoY6Average
+        Predict_high_price2 = round(float(mess3)*float(mess4),2)
+        Predict_low_price2 = round(float(mess3)*float(mess5),2)
+        
+        New_Predict_high_price2 = str(Predict_high_price2)        
+        New_Predict_low_price2 = str(Predict_low_price2)
+        
+        New_yahoo_latest_tradePrice = float(yahoo_latest_tradePrice)
+
+        up_profit2 = round((Predict_high_price2 - New_yahoo_latest_tradePrice)/New_yahoo_latest_tradePrice,2)
+        down_loss2 = round((Predict_low_price2 - New_yahoo_latest_tradePrice)/New_yahoo_latest_tradePrice,2)                      
+        New_up_profit2 = str(up_profit2*100) + '%'
+        New_down_loss2 = str(down_loss2*100) + '%'
+
+        risk_reward2 = str(round(abs(up_profit2/down_loss2),2))
+        
+
+
+
+    else:
+        mess3 = "尚未送出！"
+        mess4 = "尚未送出！"
+        mess5 = "尚未送出！"
+        #mess2 = "該表單尚未送出！2"
+    return render(request, "stockPERseg2bxDB.html", locals())

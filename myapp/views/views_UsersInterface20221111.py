@@ -70,8 +70,9 @@ from myapp.models import Stock6Sign202201
 from myapp import models
 
 from myapp.models import StockFavs_test168
-from myapp.models import StockFavs_jonyi
-from myapp.models import StockFavs_chenchi
+
+
+
 from myapp.models import StockFavDB
 
 from myapp.models import PriEPSPER_DB
@@ -142,8 +143,9 @@ DBPERz = DBv.PERz  #每個月的主要資料庫  #y= 上個月 x = 上上個月
 DBPERy = DBv.PERy
 DBPERx = DBv.PERx
 ##################################
-def usersmain_common(request, username=None, pageindex=None):  #使用者功能首頁
-	global page1u
+def usersmain_common(request, username=None, pageindex=None):  #共通使用者功能首頁
+
+    global page1u
 	pagesize = 20  #8
 	newsall = models.NewsUnit.objects.all().order_by('-id')
 	datasize = len(newsall)
@@ -167,128 +169,46 @@ def usersmain_common(request, username=None, pageindex=None):  #使用者功能�
 	currentpage = page1u
 
 ######################################################
-    #if username=='test168':
-        #DB = StockFavs_test168
-	if username==None: #注意分行和空格 不要複製
-		
-		DB = StockFavs_test168
-	elif username=='test168':
-		DB = StockFavs_test168    
-	elif username=='jonyi729':
-		DB = StockFavs_jonyi    
-	elif username=='chenchi':
-		DB = StockFavs_chenchi
+    if username == "test168":
+        privateStockFavDB = StockFavs_test168
+    else:
+        pass
+
 	global page1
 	pagesize = 20  #8
-	newsall = DB.objects.all().order_by('-id')
+	newsall = privateStockFavDB.objects.all().order_by('-id')
 	datasize = len(newsall)
 	totpage = math.ceil(datasize / pagesize)
 	if pageindex==None:
 		page1 = 1
-		newsunits = DB.objects.order_by('-id')[:pagesize]
+		newsunits = privateStockFavDB.objects.order_by('-id')[:pagesize]
 	elif pageindex=='1':
 		start = (page1-2)*pagesize
 		if start >= 0:
-			newsunits = DB.objects.order_by('-id')[start:(start+pagesize)]
+			newsunits = privateStockFavDB.objects.order_by('-id')[start:(start+pagesize)]
 			page1 -= 1
 	elif pageindex=='2':
 		start = page1*pagesize
 		if start < datasize:
-			newsunits = DB.objects.order_by('-id')[start:(start+pagesize)]
+			newsunits = privateStockFavDB.objects.order_by('-id')[start:(start+pagesize)]
 			page1 += 1
 	elif pageindex=='3':
 		start = (page1-1)*pagesize
-		newsunits = DB.objects.order_by('-id')[start:(start+pagesize)]
+		newsunits = privateStockFavDB.objects.order_by('-id')[start:(start+pagesize)]
 	currentpage = page1
-    
-    
-    #MacroWaveA
-    
-	global page1m
-	pagesize = 5 #8
-	newsall = models.MacroWaveA.objects.all().order_by('-id')
-	datasize = len(newsall)
-	totpage = math.ceil(datasize / pagesize)
-	if pageindex==None:
-		page1m = 1
-		newsunitsm = models.MacroWaveA.objects.order_by('-id')[:pagesize]
-	elif pageindex=='1':
-		start = (page1-2)*pagesize
-		if start >= 0:
-			newsunitsm = models.MacroWaveA.objects.order_by('-id')[start:(start+pagesize)]
-			page1m -= 1
-	elif pageindex=='2':
-		start = page1m*pagesize
-		if start < datasize:
-			newsunitsm = models.MacroWaveA.objects.order_by('-id')[start:(start+pagesize)]
-			page1m += 1
-	elif pageindex=='3':
-		start = (page1m-1)*pagesize
-		newsunitsm = models.MacroWaveA.objects.order_by('-id')[start:(start+pagesize)]
-	currentpage = page1m    
-    
-    #MacroWaveB
-	global page1m2
-	pagesize = 5 #8
-	newsall = models.MacroWaveB.objects.all().order_by('-id')
-	datasize = len(newsall)
-	totpage = math.ceil(datasize / pagesize)
-	if pageindex==None:
-		page1m2 = 1
-		newsunitsm2 = models.MacroWaveB.objects.order_by('-id')[:pagesize]
-	elif pageindex=='1':
-		start = (page1-2)*pagesize
-		if start >= 0:
-			newsunitsm2 = models.MacroWaveB.objects.order_by('-id')[start:(start+pagesize)]
-			page1m2 -= 1
-	elif pageindex=='2':
-		start = page1m2*pagesize
-		if start < datasize:
-			newsunitsm2 = models.MacroWaveB.objects.order_by('-id')[start:(start+pagesize)]
-			page1m2 += 1
-	elif pageindex=='3':
-		start = (page1m2-1)*pagesize
-		newsunitsm2 = models.MacroWaveB.objects.order_by('-id')[start:(start+pagesize)]
-	currentpage = page1m2
 
-
-    #MacroWaveC
-	global page1m3
-	pagesize = 5 #8
-	newsall = models.MacroWaveC.objects.all().order_by('-id')
-	datasize = len(newsall)
-	totpage = math.ceil(datasize / pagesize)
-	if pageindex==None:
-		page1m3 = 1
-		newsunitsm3 = models.MacroWaveC.objects.order_by('-id')[:pagesize]
-	elif pageindex=='1':
-		start = (page1-2)*pagesize
-		if start >= 0:
-			newsunitsm3 = models.MacroWaveC.objects.order_by('-id')[start:(start+pagesize)]
-			page1m3 -= 1
-	elif pageindex=='2':
-		start = page1m3*pagesize
-		if start < datasize:
-			newsunitsm3 = models.MacroWavec.objects.order_by('-id')[start:(start+pagesize)]
-			page1m3 += 1
-	elif pageindex=='3':
-		start = (page1m3-1)*pagesize
-		newsunitsm3 = models.MacroWaveC.objects.order_by('-id')[start:(start+pagesize)]
-	currentpage = page1m3   
-    
 	return render(request, "usersmain_common.html", locals())
 
+#@permission_required('myapp.Can_enter_AdminOnly', login_url='/login/')
 def newsdelete_common(request, username=None, newsid=None, deletetype=None):  #刪除資料
-	if username==None: #注意分行和空格 不要複製
-		
-		DB = StockFavs_test168
-	elif username=='test168':
-		DB = StockFavs_test168    
-	elif username=='jonyi729':
-		DB = StockFavs_jonyi    
-	elif username=='chenchi':
-		DB = StockFavs_chenchi        
-	unit = DB.objects.get(id=newsid)  #讀取指定資料
+    if username == "test168":
+        privateStockFavDB = StockFavs_test168
+    else:
+        pass
+
+
+
+	unit = privateStockFavDB.objects.get(id=newsid)  #讀取指定資料
 	if deletetype == None:  #進入刪除頁面,顯示原有資料
 		type = str(unit.cStockID.strip())
 		#subject = unit.title
@@ -300,31 +220,27 @@ def newsdelete_common(request, username=None, newsid=None, deletetype=None):  #�
 		return redirect('/usersmain_common/' + username + '/')
 	return render(request, "newsdelete_common.html", locals())
 
-def common_StoFavlistall(request, username=None):
-    if username == None: #注意分行和空格 不要複製
-        DB = StockFavs_test168
-    elif username == 'test168':
-        DB = StockFavs_test168
-    elif username == 'jonyi729':
-        DB = StockFavs_jonyi
-    elif username == 'chenchi':
-        DB = StockFavs_chenchi
 
-    segs = DB.objects.all().order_by('-cStockID')
+def common_StoFavlistall(request, username=None):
+    if username == "test168":
+        privateStockFavDB = StockFavs_test168
+    else:
+        pass
+
+
+    segs = privateStockFavDB.objects.all().order_by('-cStockID')
     return render(request, "common_StoFavlistall.html", locals())
 
 
 
-def common_enterStockFavAdmin(request, username=None):  
-    if username == None: #注意分行和空格 不要複製
-        DB = StockFavs_test168
-    elif username == 'test168':
-        DB = StockFavs_test168
-    elif username == 'jonyi729':
-        DB = StockFavs_jonyi
-    elif username == 'chenchi':
-        DB = StockFavs_chenchi
 
+def common_enterStockFavAdmin(request, username=None):  
+    if username == "test168":
+        privateStockFavDB = StockFavs_test168
+    else:
+        pass
+    
+    
         
     if request.method == "POST":  #假如是以POST方式才處理
         mess = request.POST['stockid']  #取得表單輸入內容
@@ -445,7 +361,7 @@ def common_enterStockFavAdmin(request, username=None):
         #以下寫入資料庫
         try:  #先試著看料庫有沒有這個股票，若沒有 跳到except處理
             #不存在，發生錯誤，跳到except            
-            cOld = DB.objects.get(cStockID = mess)
+            cOld = privateStockFavDB.objects.get(cStockID = mess)
 
         #cOld.cItemName = Product_name
             cOld.cStockID = mess
@@ -485,9 +401,6 @@ def common_enterStockFavAdmin(request, username=None):
             
             except:
                 cOld.cEPSach = "No"
-                
-            print("EPS達成率：")
-            print(str(cOld.cEPSach))
             ########################################
             try:
                 #stacap = StockCapVar2021Q4.objects.get(cStockID = mess)
@@ -497,10 +410,6 @@ def common_enterStockFavAdmin(request, username=None):
             
             except:
                 cOld.cStCap = "No"
-                
-            print("股本變動率：")
-            print(str(cOld.cStCap))
-
             ###########################################                
             try:
                 #epsprf = EpsProfit2021Q4.objects.get(cStockID = mess)
@@ -511,8 +420,6 @@ def common_enterStockFavAdmin(request, username=None):
             except:
                 cOld.cEPSnPrf = "No"                
                 
-            print("EPS或營益率創八季新高：")
-            print(str(cOld.cEPSnPrf))
             
             try:
                 #stab = StockPERsegStable2021Q4.objects.get(cStockID = mess)
@@ -520,10 +427,7 @@ def common_enterStockFavAdmin(request, username=None):
             
                 cOld.cPERstab = "Yes"
             except:
-                cOld.cPERstab = "No"
-
-            print("本益比區間變動率在30%內：")
-            print(str(cOld.cPERstab))               
+                cOld.cPERstab = "No"                
             
             
             
@@ -536,11 +440,11 @@ def common_enterStockFavAdmin(request, username=None):
             ###################
         except:  #針對沒有的，抓取資料存入資料庫
 
-            cOld2 = DB.objects.create(cStockID = mess,cStockName = stock_name,cDBURL = xUrl,cScore1st = ScoreAve1,cScore2nd = ScoreAve2,cScore3rd = ScoreAve3,cPredict_EPS = Predict_EPS,cPredict_high_price = Predict_high_price,cPredict_low_price = Predict_low_price,cNew_up_profit = New_up_profit,cNew_down_loss = New_down_loss,cRisk_reward = risk_reward,cTodayClose = float(yahoo_latest_tradePrice), cPredict_high_price_down30 = Predict_high_price_30percentDown, cPredict_low_price_down30 = Predict_low_price_30percentDown, cNew_up_profit_down30 = New_up_profit2, cNew_down_loss_down30 = New_down_loss2, cRisk_reward_down30 = New_risk_reward, pubtime =realtime)              
+            cOld2 = privateStockFavDB.objects.create(cStockID = mess,cStockName = stock_name,cDBURL = xUrl,cScore1st = ScoreAve1,cScore2nd = ScoreAve2,cScore3rd = ScoreAve3,cPredict_EPS = Predict_EPS,cPredict_high_price = Predict_high_price,cPredict_low_price = Predict_low_price,cNew_up_profit = New_up_profit,cNew_down_loss = New_down_loss,cRisk_reward = risk_reward,cTodayClose = float(yahoo_latest_tradePrice),pubtime =realtime)              
 
             cOld2.save()
 
-            cOld = DB.objects.get(cStockID = mess)
+            cOld = StockFavs_test168.objects.get(cStockID = mess)
 
             try:
                 epsach = EPSachieve2021Q3.objects.get(cStockID = mess)
@@ -594,6 +498,7 @@ def common_enterStockFavAdmin(request, username=None):
 
     return render(request, "common_enterStockFavAdmin.html", locals())
 
+###############
 def usersmain_app(request, pageindex=None):  #app試用功能首頁
 	global page1u
 	pagesize = 20  #8

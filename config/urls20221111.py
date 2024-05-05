@@ -101,47 +101,47 @@ from myapp.views import StockCapGetterAdmin
 from myapp.views import listallCAP
 from myapp.views import StockCapVar2020Q2listall
 
-#from myapp.views import stock6listall202005
-#from myapp.views import stock6listall202005score
+from myapp.views import stock6listall202005
+from myapp.views import stock6listall202005score
 
-#from myapp.views import stock6listall202006
-#from myapp.views import stock6listall202006score
+from myapp.views import stock6listall202006
+from myapp.views import stock6listall202006score
 
-#from myapp.views import stock6listall2020Q2
-#from myapp.views import stock6listall2020Q2score
+from myapp.views import stock6listall2020Q2
+from myapp.views import stock6listall2020Q2score
 
-#from myapp.views import stock6listall202008
-#from myapp.views import stock6listall202008score
+from myapp.views import stock6listall202008
+from myapp.views import stock6listall202008score
 
-#from myapp.views import stock6listall202009
-#from myapp.views import stock6listall202009score
+from myapp.views import stock6listall202009
+from myapp.views import stock6listall202009score
 
-##from myapp.views import stock6listall2020Q3
-#from myapp.views import stock6listall2020Q3score
+from myapp.views import stock6listall2020Q3
+from myapp.views import stock6listall2020Q3score
 
 
-#from myapp.views import stock6listall202009test
+from myapp.views import stock6listall202009test
 #from myapp.views import stock6listall202009tse
 #from myapp.views import stock6listall202009otc
 
 #from myapp.views import stock6listall2020Q3tse
 #from myapp.views import stock6listall2020Q3otc
 
-#from myapp.views import stockPERseglistall202005
-#from myapp.views import stockPERseglistall202005score
+from myapp.views import stockPERseglistall202005
+from myapp.views import stockPERseglistall202005score
 
-#from myapp.views import stockPERseglistall202006
-#from myapp.views import stockPERseglistall202006score
+from myapp.views import stockPERseglistall202006
+from myapp.views import stockPERseglistall202006score
 
 
-#from myapp.views import stockPERseglistall2020Q2
-#from myapp.views import stockPERseglistall2020Q2score
+from myapp.views import stockPERseglistall2020Q2
+from myapp.views import stockPERseglistall2020Q2score
 
-#from myapp.views import stockPERseglistall202009
-#from myapp.views import stockPERseglistall202009score
+from myapp.views import stockPERseglistall202009
+from myapp.views import stockPERseglistall202009score
 
-#from myapp.views import stockPERseglistall2020Q3
-#from myapp.views import stockPERseglistall2020Q3score
+from myapp.views import stockPERseglistall2020Q3
+from myapp.views import stockPERseglistall2020Q3score
 
 
 from myapp.views import EPSnProfitGetter
@@ -150,8 +150,8 @@ from myapp.views import EPSnProfitGetterAdmin
 from myapp.views import EPSnProfitlistall2020Q1
 from myapp.views import EPSnProfit2020Q2listall
 
-#from myapp.views import stockPERsegStablelistall2020
-#from myapp.views import stockPERsegStablelistall2020Q2
+from myapp.views import stockPERsegStablelistall2020
+from myapp.views import stockPERsegStablelistall2020Q2
 
 from myapp.views import AREAdownloads
 
@@ -179,12 +179,9 @@ urlpatterns = [
     #path('home/', home),
     path('', index),
 
-    path('viewsGetUSBondYield/', views.viewsGetUSBondYield),
-    path('viewsGetUSBondYieldAdmin/', views.viewsGetUSBondYieldAdmin),
 
-    path('viewsGetMacroWaveAdmin/', views.viewsGetMacroWaveAdmin),
-    path('viewsGetMacroWaveBdmin/', views.viewsGetMacroWaveBdmin),
-    path('viewsGetMacroWaveCdmin/', views.viewsGetMacroWaveCdmin),
+
+
 
     path('UsersListAll/', UsersListAll),
 
@@ -277,7 +274,6 @@ urlpatterns = [
     path('listallseg/', listallseg), 
     path('listallsegscore/', listallsegscore), 
    
-    path('index_sns/', views.index_sns),
     
     path('index/', index),
     path('login/', login),
@@ -297,33 +293,41 @@ urlpatterns = [
     re_path(r'^usersmain/$', views.usersmain),
 	re_path(r'^usersmain/(\d+)/$', views.usersmain),
 
+##############################
+    path('usersmain_common/', views.usersmain_common),  
+    path('usersmain_common/<str:username>/', views.usersmain_common), 
+    path('usersmain_common/<str:username>/<int:pageindex>/', views.usersmain_common),
+
+	path('newsdelete_common/<str:username>/', views.newsdelete_common),
+	path('newsdelete_common/<str:username>/<int:newsid>/', views.newsdelete_common),    
+	path('newsdelete_common/<str:username>/<int:newsid>/<int:deletetype>/', views.newsdelete_common),    
+	#path('newsdelete_common/(\d+)/(\d+)/$', views.newsdelete_common),        
+
+    path('common_enterStockFavAdmin/', views.common_enterStockFavAdmin),  
+    path('common_enterStockFavAdmin/<str:username>/', views.common_enterStockFavAdmin),      
+    
+    
+    path('common_StoFavlistall/', views.common_StoFavlistall),
+    path('common_StoFavlistall/<str:username>/', views.common_StoFavlistall),
+####################################
+
+
+
+    #re_path(r'^usersmain_common/$', views.usersmain_common),
+	#re_path(r'^usersmain_common/(\d+)/$', views.usersmain_common),
+
+
     re_path(r'^usersmain_app/$', views.usersmain_app),
 	re_path(r'^usersmain_app/(\d+)/$', views.usersmain_app),
 
 
-    #re_path(r'^usersmain_test168/$', views.usersmain_test168),
-	#re_path(r'^usersmain_test168/(\d+)/$', views.usersmain_test168),
-    
-    path('usersmain_test168/', views.usersmain_test168),
-	path('usersmain_test168/<str:pageindex>/', views.usersmain_test168),    
-
-    path('usersmain_common/', views.usersmain_common),
-    path('usersmain_common/<str:username>/', views.usersmain_common),
-	path('usersmain_common/<str:username>/<str:pageindex>/', views.usersmain_common),
-
-	#re_path(r'^newsdelete_test168/(\d+)/$', views.newsdelete_test168),
-	#re_path(r'^newsdelete_test168/(\d+)/(\d+)/$', views.newsdelete_test168),    
-    
-	path('newsdelete_common/<str:username>/', views.newsdelete_common),
-	path('newsdelete_common/<str:username>/<str:newsid>/', views.newsdelete_common),        
-	path('newsdelete_common/<str:username>/<str:newsid>/<str:deletetype>/', views.newsdelete_common),
-    #path('test168_enterStockFav/', views.test168_enterStockFav),
-    path('common_enterStockFavAdmin/<str:username>/', views.common_enterStockFavAdmin),  
- 
-    path('common_StoFavlistall/', views.common_StoFavlistall),
-    path('common_StoFavlistall/<str:username>/', views.common_StoFavlistall),    
-    #path('test168_enterStockFavAdmin/', views.test168_enterStockFavAdmin),  
-    #path('test168_StoFavlistall/', views.test168_StoFavlistall),
+    re_path(r'^usersmain_test168/$', views.usersmain_test168),
+	re_path(r'^usersmain_test168/(\d+)/$', views.usersmain_test168),
+	re_path(r'^newsdelete_test168/(\d+)/$', views.newsdelete_test168),
+	re_path(r'^newsdelete_test168/(\d+)/(\d+)/$', views.newsdelete_test168),        
+    #path('test168_enterStockFav/', views.test168_enterStockFav),    
+    path('test168_enterStockFavAdmin/', views.test168_enterStockFavAdmin),  
+    path('test168_StoFavlistall/', views.test168_StoFavlistall),
 
     path('ListallStockFavDB/<str:mess>/', views.ListallStockFavDB),
     path('ListallStockFavDB/', views.ListallStockFavDB),
@@ -429,23 +433,23 @@ urlpatterns = [
     path('EPSnProfitGetterAdmin/', EPSnProfitGetterAdmin),
 
     ####六大指標    
-    path('stock6listall202005/', views.stock6listall202005),
-    path('stock6listall202006/', views.stock6listall202006),    
-    path('stock6listall2020Q2/', views.stock6listall2020Q2),      
+    path('stock6listall202005/', stock6listall202005),
+    path('stock6listall202006/', stock6listall202006),    
+    path('stock6listall2020Q2/', stock6listall2020Q2),      
     
-    path('stock6listall202005score/', views.stock6listall202005score),    
-    path('stock6listall202006score/', views.stock6listall202006score),    
-    path('stock6listall2020Q2score/', views.stock6listall2020Q2score), 
+    path('stock6listall202005score/', stock6listall202005score),    
+    path('stock6listall202006score/', stock6listall202006score),    
+    path('stock6listall2020Q2score/', stock6listall2020Q2score), 
     
-    path('stock6listall202008/', views.stock6listall202008),
-    path('stock6listall202008score/', views.stock6listall202008score),  
+    path('stock6listall202008/', stock6listall202008),
+    path('stock6listall202008score/', stock6listall202008score),  
     
-    path('stock6listall202009/', views.stock6listall202009),
-    path('stock6listall202009score/', views.stock6listall202009score),  
+    path('stock6listall202009/', stock6listall202009),
+    path('stock6listall202009score/', stock6listall202009score),  
     
     
-    path('stock6listall2020Q3/', views.stock6listall2020Q3),
-    path('stock6listall2020Q3score/', views.stock6listall2020Q3score),  
+    path('stock6listall2020Q3/', stock6listall2020Q3),
+    path('stock6listall2020Q3score/', stock6listall2020Q3score),  
     
     path('stock6listall202011/', views.stock6listall202011),
     path('stock6listall202011score/', views.stock6listall202011score),
@@ -517,45 +521,7 @@ urlpatterns = [
     path('stock6listall202209score/', views.stock6listall202209score),
     path('stock6listall202210/', views.stock6listall202210),
     path('stock6listall202210score/', views.stock6listall202210score),
-    path('stock6listall202211/', views.stock6listall202211),
-    path('stock6listall202211score/', views.stock6listall202211score),
-    path('stock6listall202212/', views.stock6listall202212),
-    path('stock6listall202212score/', views.stock6listall202212score),
-    path('stock6listall202301/', views.stock6listall202301),
-    path('stock6listall202301score/', views.stock6listall202301score),
-    path('stock6listall202302/', views.stock6listall202302),
-    path('stock6listall202302score/', views.stock6listall202302score),
-    path('stock6listall202303/', views.stock6listall202303),
-    path('stock6listall202303score/', views.stock6listall202303score),
-    path('stock6listall202304/', views.stock6listall202304),
-    path('stock6listall202304score/', views.stock6listall202304score),
-    path('stock6listall202305/', views.stock6listall202305),
-    path('stock6listall202305score/', views.stock6listall202305score),
-    path('stock6listall202306/', views.stock6listall202306),
-    path('stock6listall202306score/', views.stock6listall202306score),
-    path('stock6listall202307/', views.stock6listall202307),
-    path('stock6listall202307score/', views.stock6listall202307score),
-    path('stock6listall202308/', views.stock6listall202308),
-    path('stock6listall202308score/', views.stock6listall202308score),
-    path('stock6listall202309/', views.stock6listall202309),
-    path('stock6listall202309score/', views.stock6listall202309score),
-    path('stock6listall202310/', views.stock6listall202310),
-    path('stock6listall202310score/', views.stock6listall202310score),
-    path('stock6listall202311/', views.stock6listall202311),
-    path('stock6listall202311score/', views.stock6listall202311score),
-    path('stock6listall202312/', views.stock6listall202312),
-    path('stock6listall202312score/', views.stock6listall202312score),
 
-    path('stock6listall202401/', views.stock6listall202401),
-    path('stock6listall202401score/', views.stock6listall202401score),
-    path('stock6listall202402/', views.stock6listall202402),
-    path('stock6listall202402score/', views.stock6listall202402score),   
-    path('stock6listall202403/', views.stock6listall202403),
-    path('stock6listall202403score/', views.stock6listall202403score),   
-     path('stock6listall202404/', views.stock6listall202404),
-    path('stock6listall202404score/', views.stock6listall202404score),        
-    
-    
 
 
     path('stock6listall202208v/', views.stock6listall202208v),
@@ -578,7 +544,7 @@ urlpatterns = [
     
     
     
-    path('stock6listall202009test/', views.stock6listall202009test),
+    path('stock6listall202009test/', stock6listall202009test),
   
     
     #path('stock6listall202102tse/<str:mess>/', views.stock6listall202102tse),
@@ -601,23 +567,23 @@ urlpatterns = [
     
     
     ####本益比區間
-    path('stockPERseglistall202005/', views.stockPERseglistall202005),
-    path('stockPERseglistall202005score/', views.stockPERseglistall202005score),
+    path('stockPERseglistall202005/', stockPERseglistall202005),
+    path('stockPERseglistall202005score/', stockPERseglistall202005score),
 
-    path('stockPERseglistall202006/', views.stockPERseglistall202006),
-    path('stockPERseglistall202006score/', views.stockPERseglistall202006score),    
+    path('stockPERseglistall202006/', stockPERseglistall202006),
+    path('stockPERseglistall202006score/', stockPERseglistall202006score),    
 
-    path('stockPERseglistall2020Q2/', views.stockPERseglistall2020Q2),
-    path('stockPERseglistall2020Q2score/', views.stockPERseglistall2020Q2score), 
+    path('stockPERseglistall2020Q2/', stockPERseglistall2020Q2),
+    path('stockPERseglistall2020Q2score/', stockPERseglistall2020Q2score), 
 
     path('stockPERseglistall202008/', views.stockPERseglistall202008),
     path('stockPERseglistall202008score/', views.stockPERseglistall202008score),  
 
-    path('stockPERseglistall202009/', views.stockPERseglistall202009),
-    path('stockPERseglistall202009score/', views.stockPERseglistall202009score),  
+    path('stockPERseglistall202009/', stockPERseglistall202009),
+    path('stockPERseglistall202009score/', stockPERseglistall202009score),  
 
-    path('stockPERseglistall2020Q3/', views.stockPERseglistall2020Q3),
-    path('stockPERseglistall2020Q3score/', views.stockPERseglistall2020Q3score),
+    path('stockPERseglistall2020Q3/', stockPERseglistall2020Q3),
+    path('stockPERseglistall2020Q3score/', stockPERseglistall2020Q3score),
     
     path('stockPERseglistall202011/', views.stockPERseglistall202011),
     path('stockPERseglistall202011score/', views.stockPERseglistall202011score),    
@@ -693,61 +659,10 @@ urlpatterns = [
     path('stockPERseglistall202210/', views.stockPERseglistall202210),
     path('stockPERseglistall202210score/', views.stockPERseglistall202210score),
 
-    path('stockPERseglistall202211/', views.stockPERseglistall202211),
-    path('stockPERseglistall202211score/', views.stockPERseglistall202211score),
-
-    path('stockPERseglistall202212/', views.stockPERseglistall202212),
-    path('stockPERseglistall202212score/', views.stockPERseglistall202212score),
-
-    path('stockPERseglistall202301/', views.stockPERseglistall202301),
-    path('stockPERseglistall202301score/', views.stockPERseglistall202301score),
-
-    path('stockPERseglistall202302/', views.stockPERseglistall202302),
-    path('stockPERseglistall202302score/', views.stockPERseglistall202302score),
-
-    path('stockPERseglistall202303/', views.stockPERseglistall202303),
-    path('stockPERseglistall202303score/', views.stockPERseglistall202303score),
-
-
-    path('stockPERseglistall202304/', views.stockPERseglistall202304),
-    path('stockPERseglistall202304score/', views.stockPERseglistall202304score),
-
-    path('stockPERseglistall202305/', views.stockPERseglistall202305),
-    path('stockPERseglistall202305score/', views.stockPERseglistall202305score),
-    path('stockPERseglistall202306/', views.stockPERseglistall202306),
-    path('stockPERseglistall202306score/', views.stockPERseglistall202306score),
-
-    path('stockPERseglistall202307/', views.stockPERseglistall202307),
-    path('stockPERseglistall202307score/', views.stockPERseglistall202307score),
-
-
-    path('stockPERseglistall202308/', views.stockPERseglistall202308),
-    path('stockPERseglistall202308score/', views.stockPERseglistall202308score),
-    path('stockPERseglistall202309/', views.stockPERseglistall202309),
-    path('stockPERseglistall202309score/', views.stockPERseglistall202309score),
-    path('stockPERseglistall202310/', views.stockPERseglistall202310),
-    path('stockPERseglistall202310score/', views.stockPERseglistall202310score),
-    path('stockPERseglistall202311/', views.stockPERseglistall202311),
-    path('stockPERseglistall202311score/', views.stockPERseglistall202311score),
-    path('stockPERseglistall202312/', views.stockPERseglistall202312),
-    path('stockPERseglistall202312score/', views.stockPERseglistall202312score),
-
-
-    path('stockPERseglistall202401/', views.stockPERseglistall202401),
-    path('stockPERseglistall202401score/', views.stockPERseglistall202401score),
-    path('stockPERseglistall202402/', views.stockPERseglistall202402),
-    path('stockPERseglistall202402score/', views.stockPERseglistall202402score),
-    path('stockPERseglistall202403/', views.stockPERseglistall202403),
-    path('stockPERseglistall202403score/', views.stockPERseglistall202403score),
-
-    path('stockPERseglistall202404/', views.stockPERseglistall202404),
-    path('stockPERseglistall202404score/', views.stockPERseglistall202404score),
-
-
 ###############################################
         
-    path('EPSnProfitlistall2020Q1/', views.EPSnProfitlistall2020Q1),
-    path('EPSnProfit2020Q2listall/', views.EPSnProfit2020Q2listall),    
+    path('EPSnProfitlistall2020Q1/', EPSnProfitlistall2020Q1),
+    path('EPSnProfit2020Q2listall/', EPSnProfit2020Q2listall),    
     path('EPSnProfit2020Q3listall/', views.EPSnProfit2020Q3listall),  
     path('EPSnProfit2020Q4listall/', views.EPSnProfit2020Q4listall), 
     path('EPSnProfit2021Q1listall/', views.EPSnProfit2021Q1listall), 
@@ -755,13 +670,9 @@ urlpatterns = [
     path('EPSnProfit2021Q3listall/', views.EPSnProfit2021Q3listall), 
     path('EPSnProfit2021Q4listall/', views.EPSnProfit2021Q4listall),
     path('EPSnProfit2022Q1listall/', views.EPSnProfit2022Q1listall),
-    path('EPSnProfit2022Q3listall/', views.EPSnProfit2022Q3listall),
-    path('EPSnProfit2023Q1listall/', views.EPSnProfit2023Q1listall),
-    path('EPSnProfit2023Q2listall/', views.EPSnProfit2023Q2listall),
-    path('EPSnProfit2023Q3listall/', views.EPSnProfit2023Q3listall),
 
-    path('stockPERsegStablelistall2020/', views.stockPERsegStablelistall2020), 
-    path('stockPERsegStablelistall2020Q2/', views.stockPERsegStablelistall2020Q2), 
+    path('stockPERsegStablelistall2020/', stockPERsegStablelistall2020), 
+    path('stockPERsegStablelistall2020Q2/', stockPERsegStablelistall2020Q2), 
     path('stockPERsegStablelistall2020Q3/', views.stockPERsegStablelistall2020Q3), 
     path('stockPERsegStablelistall2020Q4/', views.stockPERsegStablelistall2020Q4), 
     path('stockPERsegStablelistall2021Q1/', views.stockPERsegStablelistall2021Q1), 
@@ -770,34 +681,23 @@ urlpatterns = [
     path('stockPERsegStablelistall2021Q4/', views.stockPERsegStablelistall2021Q4),
     path('stockPERsegStablelistall2022Q1/', views.stockPERsegStablelistall2022Q1),
 
-    path('stockPERsegStablelistall2022Q3/', views.stockPERsegStablelistall2022Q3),
-    path('stockPERsegStablelistall2023Q1/', views.stockPERsegStablelistall2023Q1),
-    path('stockPERsegStablelistall2023Q2/', views.stockPERsegStablelistall2023Q2),
-    path('stockPERsegStablelistall2023Q3/', views.stockPERsegStablelistall2023Q3),
 
-    path('StockCapVar2020Q2listall/', views.StockCapVar2020Q2listall),
+    path('StockCapVar2020Q2listall/', StockCapVar2020Q2listall),
     path('StockCapVar2020Q3listall/', views.StockCapVar2020Q3listall),
     path('StockCapVar2020Q4listall/', views.StockCapVar2020Q4listall),
     path('StockCapVar2021Q1listall/', views.StockCapVar2021Q1listall),
     path('StockCapVar2021Q2listall/', views.StockCapVar2021Q2listall),
     path('StockCapVar2021Q3listall/', views.StockCapVar2021Q3listall),
     path('StockCapVar2021Q4listall/', views.StockCapVar2021Q4listall),
-    path('StockCapVar2022Q1listall/', views.StockCapVar2022Q1listall),
-    path('StockCapVar2022Q3listall/', views.StockCapVar2022Q3listall),
-    path('StockCapVar2023Q1listall/', views.StockCapVar2023Q1listall),
-    path('StockCapVar2023Q2listall/', views.StockCapVar2023Q2listall),    
-    path('StockCapVar2023Q3listall/', views.StockCapVar2023Q3listall),     
+    path('StockCapVar2022Q1listall/', views.StockCapVar2021Q1listall),
             
-    path('EPSachieve2020Q2listall/', views.EPSachieve2020Q2listall),    
+    path('EPSachieve2020Q2listall/', EPSachieve2020Q2listall),    
     path('EPSachieve2020Q3listall/', views.EPSachieve2020Q3listall),     
     path('EPSachieve2021Q1listall/', views.EPSachieve2021Q1listall),     
     path('EPSachieve2021Q2listall/', views.EPSachieve2021Q2listall),  
     path('EPSachieve2021Q3listall/', views.EPSachieve2021Q3listall),
     path('EPSachieve2022Q1listall/', views.EPSachieve2022Q1listall),     
-    path('EPSachieve2022Q3listall/', views.EPSachieve2022Q3listall),  
-    path('EPSachieve2023Q1listall/', views.EPSachieve2023Q1listall), 
-    path('EPSachieve2023Q2listall/', views.EPSachieve2023Q2listall),
-    path('EPSachieve2023Q3listall/', views.EPSachieve2023Q3listall),
+
 
     path('SubCatslistall202102/', views.SubCatslistall202102), 
     path('SubCatslistall202103/', views.SubCatslistall202103), 
@@ -819,14 +719,14 @@ urlpatterns = [
     path('DC_Cashflow/', views.DC_Cashflow),
     path('DC_Stock6Admin/', views.DC_Stock6Admin),
     
-    path('AREAdownloads/', views.AREAdownloads), 
+    path('AREAdownloads/', AREAdownloads), 
 
-    path('stock6downloads/', views.stock6downloads), 
-    path('stockPERsegdownloads/', views.stockPERsegdownloads), 
-    path('stockEnterAlldownloads/', views.stockEnterAlldownloads),     
+    path('stock6downloads/', stock6downloads), 
+    path('stockPERsegdownloads/', stockPERsegdownloads), 
+    path('stockEnterAlldownloads/', stockEnterAlldownloads),     
 
-    path('BigMoney/', views.BigMoney),
-    path('stockPERsegDiv/', views.stockPERsegDiv),
+    path('BigMoney/', BigMoney),
+    path('stockPERsegDiv/', stockPERsegDiv),
     
     
     path('DB_stock6sign/', views.DB_stock6sign),

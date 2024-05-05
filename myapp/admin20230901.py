@@ -47,12 +47,7 @@ from myapp.models import Stock6Sign202310
 from myapp.models import Stock6Sign202311
 from myapp.models import Stock6Sign202312
 #from myapp.models import Stock6sta2021
-from myapp.models import Stock6Sign202401
-from myapp.models import Stock6Sign202402
-from myapp.models import Stock6Sign202403
-from myapp.models import Stock6Sign202404
-from myapp.models import Stock6Sign202405
-from myapp.models import Stock6Sign202406
+
 
 from myapp.models import DCStock6Sign202011
 from myapp.models import DCStock6Sign2020Q4
@@ -121,12 +116,7 @@ from myapp.models import StockPERseg202310
 from myapp.models import StockPERseg202311
 from myapp.models import StockPERseg202312
 
-from myapp.models import StockPERseg202401
-from myapp.models import StockPERseg202402
-from myapp.models import StockPERseg202403
-from myapp.models import StockPERseg202404
-from myapp.models import StockPERseg202405
-from myapp.models import StockPERseg202406
+
 
 from myapp.models import EpsProfit2020Q1
 from myapp.models import EpsProfit2020Q2
@@ -141,8 +131,6 @@ from myapp.models import EpsProfit2022Q2
 from myapp.models import EpsProfit2022Q3
 from myapp.models import EpsProfit2022Q4
 from myapp.models import EpsProfit2023Q1
-from myapp.models import EpsProfit2023Q2
-from myapp.models import EpsProfit2023Q3
 
 
 from myapp.models import EPSachieve
@@ -155,8 +143,6 @@ from myapp.models import EPSachieve2022Q1
 from myapp.models import EPSachieve2022Q2
 from myapp.models import EPSachieve2022Q3
 from myapp.models import EPSachieve2023Q1
-from myapp.models import EPSachieve2023Q2
-from myapp.models import EPSachieve2023Q3
 
 from myapp.models import StockCapVar
 from myapp.models import StockCapVar2020Q2
@@ -171,8 +157,6 @@ from myapp.models import StockCapVar2022Q2
 from myapp.models import StockCapVar2022Q3
 from myapp.models import StockCapVar2022Q4
 from myapp.models import StockCapVar2023Q1
-from myapp.models import StockCapVar2023Q2
-from myapp.models import StockCapVar2023Q3
 
 from myapp.models import StockPERsegStable2020
 from myapp.models import StockPERsegStable2020Q2
@@ -188,8 +172,6 @@ from myapp.models import StockPERsegStable2022Q2
 from myapp.models import StockPERsegStable2022Q3
 from myapp.models import StockPERsegStable2022Q4
 from myapp.models import StockPERsegStable2023Q1
-from myapp.models import StockPERsegStable2023Q2
-from myapp.models import StockPERsegStable2023Q3
 
 
 from myapp.models import SubCats202011
@@ -518,35 +500,6 @@ class Stock6Sign202312Admin(admin.ModelAdmin):
     list_display=('id','cStockID','cStockName','cNewestSeason','cNewestRev','cSign1','cSign2','cSign3','cSign4','cSign5','cSign6','cAverageScore','cLossGain','pubtime')
 admin.site.register(Stock6Sign202312,Stock6Sign202312Admin)
 
-
-
-class Stock6Sign202401Admin(admin.ModelAdmin):
-    list_display=('id','cStockID','cStockName','cNewestSeason','cNewestRev','cSign1','cSign2','cSign3','cSign4','cSign5','cSign6','cAverageScore','cLossGain','pubtime')
-admin.site.register(Stock6Sign202401,Stock6Sign202401Admin)
-
-class Stock6Sign202402Admin(admin.ModelAdmin):
-    list_display=('id','cStockID','cStockName','cNewestSeason','cNewestRev','cSign1','cSign2','cSign3','cSign4','cSign5','cSign6','cAverageScore','cLossGain','pubtime')
-admin.site.register(Stock6Sign202402,Stock6Sign202402Admin)
-
-class Stock6Sign202403Admin(admin.ModelAdmin):
-    list_display=('id','cStockID','cStockName','cNewestSeason','cNewestRev','cSign1','cSign2','cSign3','cSign4','cSign5','cSign6','cAverageScore','cLossGain','pubtime')
-admin.site.register(Stock6Sign202403,Stock6Sign202403Admin)
-
-class Stock6Sign202404Admin(admin.ModelAdmin):
-    list_display=('id','cStockID','cStockName','cNewestSeason','cNewestRev','cSign1','cSign2','cSign3','cSign4','cSign5','cSign6','cAverageScore','cLossGain','pubtime')
-admin.site.register(Stock6Sign202404,Stock6Sign202404Admin)
-
-class Stock6Sign202405Admin(admin.ModelAdmin):
-    list_display=('id','cStockID','cStockName','cNewestSeason','cNewestRev','cSign1','cSign2','cSign3','cSign4','cSign5','cSign6','cAverageScore','cLossGain','pubtime')
-admin.site.register(Stock6Sign202405,Stock6Sign202405Admin)
-
-
-class Stock6Sign202406Admin(admin.ModelAdmin):
-    list_display=('id','cStockID','cStockName','cNewestSeason','cNewestRev','cSign1','cSign2','cSign3','cSign4','cSign5','cSign6','cAverageScore','cLossGain','pubtime')
-admin.site.register(Stock6Sign202406,Stock6Sign202406Admin)
-
-
-
 ############################################################
 
 #class Stock6sta2021Admin(admin.ModelAdmin):
@@ -854,35 +807,7 @@ class StockPERseg202312Admin(admin.ModelAdmin):
     list_display=('id','cStockID','cStockName','cPredict_EPS','cPredict_high_price','cPredict_low_price','cLatest_price','cNew_up_profit','cNew_down_loss','cRisk_reward','pubtime')
 admin.site.register(StockPERseg202312,StockPERseg202312Admin)
 
-class StockPERseg202401Admin(admin.ModelAdmin):
-    #list_display=('id','cStockID','cStockName','cH1','cL1','cH2','cL2','cH3','cL3','cH4','cL4','cH5','cL5','cEPS1','cEPS2','cEPS3','cEPS4','cEPS5','cPER_H1','cPER_L1','cPER_H2','cPER_L2','cPER_H3','cPER_L3','cPER_H4','cPER_L4','cPER_H5','cPER_L5','cPER_H_average','cPER_L_average','cPER_H','cPER_L','cYoY6Average','cRevYoY','cNet1','cNet2','cNet3','cNet4','cNet4Average','cRev_Predict','cNet_Predict','cCapital_stock','cPredict_EPS','cPredict_high_price','cPredict_low_price','cLatest_price','cNew_up_profit','cNew_down_loss','cRisk_reward','pubtime')
-    list_display=('id','cStockID','cStockName','cPredict_EPS','cPredict_high_price','cPredict_low_price','cLatest_price','cNew_up_profit','cNew_down_loss','cRisk_reward','pubtime')
-admin.site.register(StockPERseg202401,StockPERseg202401Admin)
 
-class StockPERseg202402Admin(admin.ModelAdmin):
-    #list_display=('id','cStockID','cStockName','cH1','cL1','cH2','cL2','cH3','cL3','cH4','cL4','cH5','cL5','cEPS1','cEPS2','cEPS3','cEPS4','cEPS5','cPER_H1','cPER_L1','cPER_H2','cPER_L2','cPER_H3','cPER_L3','cPER_H4','cPER_L4','cPER_H5','cPER_L5','cPER_H_average','cPER_L_average','cPER_H','cPER_L','cYoY6Average','cRevYoY','cNet1','cNet2','cNet3','cNet4','cNet4Average','cRev_Predict','cNet_Predict','cCapital_stock','cPredict_EPS','cPredict_high_price','cPredict_low_price','cLatest_price','cNew_up_profit','cNew_down_loss','cRisk_reward','pubtime')
-    list_display=('id','cStockID','cStockName','cPredict_EPS','cPredict_high_price','cPredict_low_price','cLatest_price','cNew_up_profit','cNew_down_loss','cRisk_reward','pubtime')
-admin.site.register(StockPERseg202402,StockPERseg202402Admin)
-
-class StockPERseg202403Admin(admin.ModelAdmin):
-    #list_display=('id','cStockID','cStockName','cH1','cL1','cH2','cL2','cH3','cL3','cH4','cL4','cH5','cL5','cEPS1','cEPS2','cEPS3','cEPS4','cEPS5','cPER_H1','cPER_L1','cPER_H2','cPER_L2','cPER_H3','cPER_L3','cPER_H4','cPER_L4','cPER_H5','cPER_L5','cPER_H_average','cPER_L_average','cPER_H','cPER_L','cYoY6Average','cRevYoY','cNet1','cNet2','cNet3','cNet4','cNet4Average','cRev_Predict','cNet_Predict','cCapital_stock','cPredict_EPS','cPredict_high_price','cPredict_low_price','cLatest_price','cNew_up_profit','cNew_down_loss','cRisk_reward','pubtime')
-    list_display=('id','cStockID','cStockName','cPredict_EPS','cPredict_high_price','cPredict_low_price','cLatest_price','cNew_up_profit','cNew_down_loss','cRisk_reward','pubtime')
-admin.site.register(StockPERseg202403,StockPERseg202403Admin)
-
-class StockPERseg202404Admin(admin.ModelAdmin):
-    #list_display=('id','cStockID','cStockName','cH1','cL1','cH2','cL2','cH3','cL3','cH4','cL4','cH5','cL5','cEPS1','cEPS2','cEPS3','cEPS4','cEPS5','cPER_H1','cPER_L1','cPER_H2','cPER_L2','cPER_H3','cPER_L3','cPER_H4','cPER_L4','cPER_H5','cPER_L5','cPER_H_average','cPER_L_average','cPER_H','cPER_L','cYoY6Average','cRevYoY','cNet1','cNet2','cNet3','cNet4','cNet4Average','cRev_Predict','cNet_Predict','cCapital_stock','cPredict_EPS','cPredict_high_price','cPredict_low_price','cLatest_price','cNew_up_profit','cNew_down_loss','cRisk_reward','pubtime')
-    list_display=('id','cStockID','cStockName','cPredict_EPS','cPredict_high_price','cPredict_low_price','cLatest_price','cNew_up_profit','cNew_down_loss','cRisk_reward','pubtime')
-admin.site.register(StockPERseg202404,StockPERseg202404Admin)
-
-class StockPERseg202405Admin(admin.ModelAdmin):
-    #list_display=('id','cStockID','cStockName','cH1','cL1','cH2','cL2','cH3','cL3','cH4','cL4','cH5','cL5','cEPS1','cEPS2','cEPS3','cEPS4','cEPS5','cPER_H1','cPER_L1','cPER_H2','cPER_L2','cPER_H3','cPER_L3','cPER_H4','cPER_L4','cPER_H5','cPER_L5','cPER_H_average','cPER_L_average','cPER_H','cPER_L','cYoY6Average','cRevYoY','cNet1','cNet2','cNet3','cNet4','cNet4Average','cRev_Predict','cNet_Predict','cCapital_stock','cPredict_EPS','cPredict_high_price','cPredict_low_price','cLatest_price','cNew_up_profit','cNew_down_loss','cRisk_reward','pubtime')
-    list_display=('id','cStockID','cStockName','cPredict_EPS','cPredict_high_price','cPredict_low_price','cLatest_price','cNew_up_profit','cNew_down_loss','cRisk_reward','pubtime')
-admin.site.register(StockPERseg202405,StockPERseg202405Admin)
-
-class StockPERseg202406Admin(admin.ModelAdmin):
-    #list_display=('id','cStockID','cStockName','cH1','cL1','cH2','cL2','cH3','cL3','cH4','cL4','cH5','cL5','cEPS1','cEPS2','cEPS3','cEPS4','cEPS5','cPER_H1','cPER_L1','cPER_H2','cPER_L2','cPER_H3','cPER_L3','cPER_H4','cPER_L4','cPER_H5','cPER_L5','cPER_H_average','cPER_L_average','cPER_H','cPER_L','cYoY6Average','cRevYoY','cNet1','cNet2','cNet3','cNet4','cNet4Average','cRev_Predict','cNet_Predict','cCapital_stock','cPredict_EPS','cPredict_high_price','cPredict_low_price','cLatest_price','cNew_up_profit','cNew_down_loss','cRisk_reward','pubtime')
-    list_display=('id','cStockID','cStockName','cPredict_EPS','cPredict_high_price','cPredict_low_price','cLatest_price','cNew_up_profit','cNew_down_loss','cRisk_reward','pubtime')
-admin.site.register(StockPERseg202406,StockPERseg202406Admin)
 ########################################################################################################
 ########################################################################################################
 
@@ -926,15 +851,6 @@ admin.site.register(EPSachieve2022Q2,EPSachieve2022Q2Admin)
 class EPSachieve2022Q3Admin(admin.ModelAdmin):
     list_display=('id','cStockID','cStockName','cEPS1','cEPSQ1','cEPSQ2','cEPSQ3','cEPSAchieveRate','pubtime')
 admin.site.register(EPSachieve2022Q3,EPSachieve2022Q3Admin)
-
-
-class EPSachieve2023Q2Admin(admin.ModelAdmin):
-    list_display=('id','cStockID','cStockName','cEPS1','cEPSQ1','cEPSQ2','cEPSAchieveRate','pubtime')
-admin.site.register(EPSachieve2023Q2,EPSachieve2023Q2Admin)
-
-class EPSachieve2023Q3Admin(admin.ModelAdmin):
-    list_display=('id','cStockID','cStockName','cEPS1','cEPSQ1','cEPSQ2','cEPSQ3','cEPSAchieveRate','pubtime')
-admin.site.register(EPSachieve2023Q3,EPSachieve2023Q3Admin)
 #########################################################
 
 class StockCapVarAdmin(admin.ModelAdmin):
@@ -990,16 +906,6 @@ admin.site.register(StockCapVar2022Q3,StockCapVar2022Q3Admin)
 class StockCapVar2022Q4Admin(admin.ModelAdmin):
     list_display=('id','cStockID','cStockName','cCap1','cCap2','cCap3','cCap4','cCap5','cCap6','cCap7','cCap8','cLatestYoY','cLatestMoM','pubtime')
 admin.site.register(StockCapVar2022Q4,StockCapVar2022Q4Admin)
-
-
-class StockCapVar2023Q2Admin(admin.ModelAdmin):
-    list_display=('id','cStockID','cStockName','cCap1','cCap2','cCap3','cCap4','cCap5','cCap6','cCap7','cCap8','cLatestYoY','cLatestMoM','pubtime')
-admin.site.register(StockCapVar2023Q2,StockCapVar2023Q2Admin)
-
-
-class StockCapVar2023Q3Admin(admin.ModelAdmin):
-    list_display=('id','cStockID','cStockName','cCap1','cCap2','cCap3','cCap4','cCap5','cCap6','cCap7','cCap8','cLatestYoY','cLatestMoM','pubtime')
-admin.site.register(StockCapVar2023Q3,StockCapVar2023Q3Admin)
 ###############################################################
 
 class EpsProfit2020Q1Admin(admin.ModelAdmin):
@@ -1051,15 +957,6 @@ admin.site.register(EpsProfit2022Q3,EpsProfit2022Q3Admin)
 class EpsProfit2022Q4Admin(admin.ModelAdmin):
     list_display=('id','cStockID','cStockName','cEPS1','cEPS2','cEPS3','cEPS4','cEPS5','cEPS6','cEPS7','cEPS8','cProf1','cProf2','cProf3','cProf4','cProf5','cProf6','cProf7','cProf8','pubtime')
 admin.site.register(EpsProfit2022Q4,EpsProfit2022Q4Admin)
-
-
-class EpsProfit2023Q2Admin(admin.ModelAdmin):
-    list_display=('id','cStockID','cStockName','cEPS1','cEPS2','cEPS3','cEPS4','cEPS5','cEPS6','cEPS7','cEPS8','cProf1','cProf2','cProf3','cProf4','cProf5','cProf6','cProf7','cProf8','pubtime')
-admin.site.register(EpsProfit2023Q2,EpsProfit2023Q2Admin)
-
-class EpsProfit2023Q3Admin(admin.ModelAdmin):
-    list_display=('id','cStockID','cStockName','cEPS1','cEPS2','cEPS3','cEPS4','cEPS5','cEPS6','cEPS7','cEPS8','cProf1','cProf2','cProf3','cProf4','cProf5','cProf6','cProf7','cProf8','pubtime')
-admin.site.register(EpsProfit2023Q3,EpsProfit2023Q3Admin)
 #############################################################
 
 class StockPERsegStable2020Admin(admin.ModelAdmin):
@@ -1130,18 +1027,6 @@ class StockPERsegStable2022Q4Admin(admin.ModelAdmin):
     #list_display=('id','cStockID','cStockName','cPER_H1','cPER_H2','cPER_H3','cPER_H4','cPER_H5','cPER_L1','cPER_L2','cPER_L3','cPER_L4','cPER_L5','cPER_H_average','cPER_L_average','cP_Hw1','cP_Hw2','cP_Hw3','cP_Hw4','cP_Hw5','cP_Lw1','cP_Lw2','cP_Lw3','cP_Lw4','cP_Lw5','pubtime')
     list_display=('id','cStockID','cStockName','cPER_H1','cPER_H2','cPER_H3','cPER_H4','cPER_H5','cPER_L1','cPER_L2','cPER_L3','cPER_L4','cPER_L5','cPER_H_average','cPER_L_average','pubtime')
 admin.site.register(StockPERsegStable2022Q4,StockPERsegStable2022Q4Admin)
-
-
-class StockPERsegStable2023Q2Admin(admin.ModelAdmin):
-    #list_display=('id','cStockID','cStockName','cPER_H1','cPER_H2','cPER_H3','cPER_H4','cPER_H5','cPER_L1','cPER_L2','cPER_L3','cPER_L4','cPER_L5','cPER_H_average','cPER_L_average','cP_Hw1','cP_Hw2','cP_Hw3','cP_Hw4','cP_Hw5','cP_Lw1','cP_Lw2','cP_Lw3','cP_Lw4','cP_Lw5','pubtime')
-    list_display=('id','cStockID','cStockName','cPER_H1','cPER_H2','cPER_H3','cPER_H4','cPER_H5','cPER_L1','cPER_L2','cPER_L3','cPER_L4','cPER_L5','cPER_H_average','cPER_L_average','pubtime')
-admin.site.register(StockPERsegStable2023Q2,StockPERsegStable2023Q2Admin)
-
-
-class StockPERsegStable2023Q3Admin(admin.ModelAdmin):
-    #list_display=('id','cStockID','cStockName','cPER_H1','cPER_H2','cPER_H3','cPER_H4','cPER_H5','cPER_L1','cPER_L2','cPER_L3','cPER_L4','cPER_L5','cPER_H_average','cPER_L_average','cP_Hw1','cP_Hw2','cP_Hw3','cP_Hw4','cP_Hw5','cP_Lw1','cP_Lw2','cP_Lw3','cP_Lw4','cP_Lw5','pubtime')
-    list_display=('id','cStockID','cStockName','cPER_H1','cPER_H2','cPER_H3','cPER_H4','cPER_H5','cPER_L1','cPER_L2','cPER_L3','cPER_L4','cPER_L5','cPER_H_average','cPER_L_average','pubtime')
-admin.site.register(StockPERsegStable2023Q3,StockPERsegStable2023Q3Admin)
 ########################################################################
 class SubCats202011Admin(admin.ModelAdmin):
     list_display=('cSubCatName','cScore2011','cScore20Q3','cScore2009','cScore2008','cScore20Q2','cScore2006','pubtime')
