@@ -8,14 +8,14 @@ from myapp.models import Stock6Sign202405
 from myapp.models import Stock6Sign202406
 
 
-
+'''
 from myapp.models import StockPERseg202401
 from myapp.models import StockPERseg202402
 from myapp.models import StockPERseg202403
 from myapp.models import StockPERseg202404
 from myapp.models import StockPERseg202405
 from myapp.models import StockPERseg202406
-
+'''
 
 from myapp.models import EpsProfit2024Q1
 from myapp.models import EpsProfit2024Q2
@@ -34,10 +34,7 @@ from myapp.models import StockCapVar2024Q4
 
 
 
-from myapp.models import StockPERsegStable2024Q1
-from myapp.models import StockPERsegStable2024Q2
-from myapp.models import StockPERsegStable2024Q3
-from myapp.models import StockPERsegStable2024Q4
+
 
 
 from myapp.models import StockFavs_test168
