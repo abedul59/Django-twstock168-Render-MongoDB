@@ -223,8 +223,8 @@ urlpatterns = [
 
     path('stock6TSE/', stock6TSE),
     path('stock6OTC/', stock6OTC),
-    path('stock6SubCats/', views.stock6SubCats),
-    path('stock6SubCatsAdmin/', views.stock6SubCatsAdmin),
+    #path('stock6SubCats/', views.stock6SubCats),
+    #path('stock6SubCatsAdmin/', views.stock6SubCatsAdmin),
     path('stock6Concepts/', views.stock6Concepts),
     
 
@@ -591,11 +591,11 @@ urlpatterns = [
     #path('stock6listall202102Concepts/<str:mess>/', views.stock6listall202102Concepts)
     path('stock6listallConcepts/<str:mess>/', views.stock6listallConcepts),
     #path('stock6listall202102SubCats/<str:mess>/', views.stock6listall202102SubCats),     
-    path('stock6listallSubCats/<str:mess>/', views.stock6listallSubCats),     
+    #path('stock6listallSubCats/<str:mess>/', views.stock6listallSubCats),     
 
 
     #path('stock6listall202102SubCatsAdmin/<str:mess>/', views.stock6listall202102SubCatsAdmin),
-    path('stock6listallSubCatsAdmin/<str:mess>/<str:mess_db1>/<str:mess_db2>/', views.stock6listallSubCatsAdmin),
+    #path('stock6listallSubCatsAdmin/<str:mess>/<str:mess_db1>/<str:mess_db2>/', views.stock6listallSubCatsAdmin),
  
 ###############################################################################################    
     
@@ -799,17 +799,7 @@ urlpatterns = [
     path('EPSachieve2023Q2listall/', views.EPSachieve2023Q2listall),
     path('EPSachieve2023Q3listall/', views.EPSachieve2023Q3listall),
 
-    path('SubCatslistall202102/', views.SubCatslistall202102), 
-    path('SubCatslistall202103/', views.SubCatslistall202103), 
-    path('SubCatslistall202104/', views.SubCatslistall202104), 
-    path('SubCatslistall202105/', views.SubCatslistall202105), 
-    path('SubCatslistall202106/', views.SubCatslistall202106), 
-    path('SubCatslistall202107/', views.SubCatslistall202107), 
-    path('SubCatslistall202108/', views.SubCatslistall202108), 
-    path('SubCatslistall202109/', views.SubCatslistall202109), 
-    path('SubCatslistall202110/', views.SubCatslistall202110), 
-    path('SubCatslistall202111/', views.SubCatslistall202111), 
-    path('SubCatslistall202112/', views.SubCatslistall202112), 
+
 
     path('DC_Prof/', views.DC_Prof),
     path('DC_Rev/', views.DC_Rev),

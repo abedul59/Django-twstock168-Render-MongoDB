@@ -1077,57 +1077,7 @@ class StockPERsegStable2023Q3Admin(admin.ModelAdmin):
     list_display=('id','cStockID','cStockName','cPER_H1','cPER_H2','cPER_H3','cPER_H4','cPER_H5','cPER_L1','cPER_L2','cPER_L3','cPER_L4','cPER_L5','cPER_H_average','cPER_L_average','pubtime')
 admin.site.register(StockPERsegStable2023Q3,StockPERsegStable2023Q3Admin)
 ########################################################################
-class SubCats202011Admin(admin.ModelAdmin):
-    list_display=('cSubCatName','cScore2011','cScore20Q3','cScore2009','cScore2008','cScore20Q2','cScore2006','pubtime')
-admin.site.register(SubCats202011,SubCats202011Admin)
 
-
-class SubCats202102Admin(admin.ModelAdmin):
-    list_display=('cSubCatName','cScore2102','cScore2101','cScore2012','cScore2011','cScore20Q3','cScore2009','cScore2008','cScore20Q2','cScore2006','pubtime')
-admin.site.register(SubCats202102,SubCats202102Admin)
-
-
-class SubCats202103Admin(admin.ModelAdmin):
-    list_display=('cSubCatName','cScore2103','cScore2102','cScore2101','cScore2012','cScore2011','cScore20Q3','cScore2009','cScore2008','cScore20Q2','cScore2006','pubtime')
-admin.site.register(SubCats202103,SubCats202103Admin)
-
-
-class SubCats202104Admin(admin.ModelAdmin):
-    list_display=('cSubCatName','cScore2104','cScore2103','cScore2102','cScore2101','cScore2012','cScore2011','cScore20Q3','cScore2009','cScore2008','cScore20Q2','cScore2006','pubtime')
-admin.site.register(SubCats202104,SubCats202104Admin)
-
-class SubCats202105Admin(admin.ModelAdmin):
-    list_display=('cSubCatName','cScore2104','cScore2103','cScore2102','cScore2101','cScore2012','cScore2011','cScore20Q3','cScore2009','cScore2008','cScore20Q2','cScore2006','pubtime')
-admin.site.register(SubCats202105,SubCats202105Admin)
-
-
-class SubCats202106Admin(admin.ModelAdmin):
-    list_display=('cSubCatName','cScore2106','cScore2105','cScore2104','cScore2103','cScore2102','cScore2101','cScore2012','cScore2011','cScore20Q3','cScore2009','cScore2008','cScore20Q2','cScore2006','pubtime')
-admin.site.register(SubCats202106,SubCats202106Admin)
-
-class SubCats202107Admin(admin.ModelAdmin):
-    list_display=('cSubCatName','cScore2107','cScore2106','cScore2105','cScore2104','cScore2103','cScore2102','cScore2101','cScore2012','cScore2011','cScore20Q3','cScore2009','cScore2008','cScore20Q2','cScore2006','pubtime')
-admin.site.register(SubCats202107,SubCats202107Admin)
-
-class SubCats202108Admin(admin.ModelAdmin):
-    list_display=('cSubCatName','cScore2108','cScore2107','cScore2106','cScore2105','cScore2104','cScore2103','cScore2102','cScore2101','cScore2012','cScore2011','cScore20Q3','cScore2009','cScore2008','cScore20Q2','cScore2006','pubtime')
-admin.site.register(SubCats202108,SubCats202108Admin)
-
-class SubCats202109Admin(admin.ModelAdmin):
-    list_display=('cSubCatName','cScore2109','cScore2108','cScore2107','cScore2106','cScore2105','cScore2104','cScore2103','cScore2102','cScore2101','cScore2012','cScore2011','cScore20Q3','cScore2009','cScore2008','cScore20Q2','cScore2006','pubtime')
-admin.site.register(SubCats202109,SubCats202109Admin)
-
-class SubCats202110Admin(admin.ModelAdmin):
-    list_display=('cSubCatName','cScore2110','cScore2109','cScore2108','cScore2107','cScore2106','cScore2105','cScore2104','cScore2103','cScore2102','cScore2101','cScore2012','cScore2011','cScore20Q3','cScore2009','cScore2008','cScore20Q2','cScore2006','pubtime')
-admin.site.register(SubCats202110,SubCats202110Admin)
-
-class SubCats202111Admin(admin.ModelAdmin):
-    list_display=('cSubCatName','cScore2111','cScore2110','cScore2109','cScore2108','cScore2107','cScore2106','cScore2105','cScore2104','cScore2103','cScore2102','cScore2101','cScore2012','cScore2011','cScore20Q3','cScore2009','cScore2008','cScore20Q2','cScore2006','pubtime')
-admin.site.register(SubCats202111,SubCats202111Admin)
-
-class SubCats202112Admin(admin.ModelAdmin):
-    list_display=('cSubCatName','cScore2112','cScore2111','cScore2110','cScore2109','cScore2108','cScore2107','cScore2106','cScore2105','cScore2104','cScore2103','cScore2102','cScore2101','cScore2012','cScore2011','cScore20Q3','cScore2009','cScore2008','cScore20Q2','cScore2006','pubtime')
-admin.site.register(SubCats202112,SubCats202112Admin)
 
 
 class NetCap_DBAdmin(admin.ModelAdmin):
