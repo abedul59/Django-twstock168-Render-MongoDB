@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 
 class Person(User):
     cName = models.CharField(max_length=20, default='')
-    cCellphone = models.CharField(max_length=10, default=False)
+    cCellphone = models.CharField(max_length=10, default='')
 
     class Meta:
         permissions = (
@@ -44,25 +44,7 @@ class City(models.Model):
     country = models.ForeignKey(Country, on_delete=models.CASCADE)
     population = models.PositiveIntegerField()
 
-'''
-class Stock6sta2021(models.Model):
 
-    cTime = models.CharField(max_length=10, default='')
-    cOver3p = models.IntegerField(null=True, blank=True)
-    cOver2p = models.IntegerField(null=True, blank=True)
-    cOver1p = models.IntegerField(null=True, blank=True)
-    cOver0p = models.IntegerField(null=True, blank=True)
-
-    cMorep = models.IntegerField(null=True, blank=True)
-    cSamep = models.IntegerField(null=True, blank=True)
-    cLessp = models.IntegerField(null=True, blank=True)
-    
-
-    pubtime = models.DateTimeField(auto_now=True)
-
-    def __str__(self):
-        return self.cTime
-    '''
 class MacroWaveA(models.Model):  
     cDate = models.CharField(max_length=15, default='')        
     cInvertedYieldCurve30y = models.CharField(max_length=15, default='')
@@ -6270,29 +6252,7 @@ class SubCats202112(models.Model):
     def __str__(self):
         return self.cSubCatName
 #########################
-'''
-class Favorites_jonyi729(models.Model):  
-    cStockID = models.CharField(max_length=5, default='')
-    cStockName = models.CharField(max_length=5, default='')
-        
-    cNewestSeason = models.CharField(max_length=15, default='')
-    cNewestRev = models.CharField(max_length=15, default='')
-    
 
-    sCoreThisM= models.CharField(max_length=10, default='')
-    sCoreLastM= models.CharField(max_length=10, default='')
-    sCoreLast2M= models.CharField(max_length=10, default='')
-    sCoreLast3M= models.CharField(max_length=10, default='')
-    sCoreLast4M= models.CharField(max_length=10, default='')
-    sCoreLast5M= models.CharField(max_length=10, default='')
-    sCoreLast6M= models.CharField(max_length=10, default='')
-    
-    pubtime = models.DateTimeField(auto_now=True)
-    enabled = models.BooleanField(default=False)
-    press = models.IntegerField(default=0)
-    def __str__(self):
-        return self.cStockID
-        '''
         
 
     
@@ -6364,8 +6324,8 @@ class StockFavs_test168(models.Model):
 
 #####################################################################################    
 class PriEPSPER_DB(models.Model):
-    cStockID = models.CharField(max_length=8)
-    cStockName = models.CharField(max_length=8)
+    cStockID = models.CharField(max_length=8, default='')
+    cStockName = models.CharField(max_length=8, default='')
 
     cH2025 = models.FloatField(max_length=20, default='')
     cL2025 = models.FloatField(max_length=20, default='')
@@ -6437,8 +6397,8 @@ class PriEPSPER_DB(models.Model):
         return self.cStockID
 
 class NetCap_DB(models.Model):
-    cStockID = models.CharField(max_length=8)
-    cStockName = models.CharField(max_length=8)
+    cStockID = models.CharField(max_length=8, default='')
+    cStockName = models.CharField(max_length=8, default='')
 
     cNet22Q2 = models.FloatField(max_length=20, default='')
     cNet22Q1 = models.FloatField(max_length=20, default='')
