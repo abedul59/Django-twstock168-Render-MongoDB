@@ -17,7 +17,7 @@ from .views_stock6 import *  #要有「點」
 from .views_stock6DB import *  #要有「點」
 
 from .views_stock6Concepts import *  #要有「點」
-from .views_stock6SubCats import *  #要有「點」
+#from .views_stock6SubCats import *  #要有「點」
 from .views_DCstock6 import *  #要有「點」
 from .views_stock6TB import *  #要有「點」
 
