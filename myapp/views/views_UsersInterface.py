@@ -13,69 +13,16 @@ from django.http import HttpResponse
 #from django.http import HttpResponseBadRequest, HttpResponseForbidden
 from django.views.decorators.csrf import csrf_exempt
 #########################iii##################
-from myapp.models import StockPERsegStable2021Q2
-from myapp.models import EpsProfit2021Q2
-from myapp.models import StockCapVar2021Q2
-from myapp.models import EPSachieve2021Q2
 
-from myapp.models import StockPERsegStable2021Q3
-from myapp.models import EpsProfit2021Q3
-from myapp.models import StockCapVar2021Q3
-from myapp.models import EPSachieve2021Q3
-
-from myapp.models import StockPERsegStable2021Q4
-from myapp.models import EpsProfit2021Q4
-from myapp.models import StockCapVar2021Q4
-from myapp.models import EPSachieve2021Q3
-
-
-
-from myapp.models import Stock6Sign202112
-from myapp.models import Stock6Sign202201
-from myapp.models import Stock6Sign202202
-from myapp.models import Stock6Sign202203
-from myapp.models import Stock6Sign202204
-from myapp.models import Stock6Sign202205
-from myapp.models import Stock6Sign202206
-from myapp.models import Stock6Sign202207
-from myapp.models import Stock6Sign202208
-from myapp.models import Stock6Sign202209
-from myapp.models import Stock6Sign202210
-from myapp.models import Stock6Sign202211
-from myapp.models import Stock6Sign202212
-
-from myapp.models import StockPERseg202112
-from myapp.models import StockPERseg202201
-from myapp.models import StockPERseg202202
-from myapp.models import StockPERseg202203
-from myapp.models import StockPERseg202204
-from myapp.models import StockPERseg202205
-from myapp.models import StockPERseg202206
-from myapp.models import StockPERseg202207
-from myapp.models import StockPERseg202208
-from myapp.models import StockPERseg202209
-from myapp.models import StockPERseg202210
-from myapp.models import StockPERseg202211
-from myapp.models import StockPERseg202212
-
-
-
-
-
-
-
-from myapp.models import Stock6Sign202203
-from myapp.models import Stock6Sign202202
-from myapp.models import Stock6Sign202201
 from myapp import models
 
 from myapp.models import StockFavs_test168
-from myapp.models import StockFavs_jonyi
-from myapp.models import StockFavs_chenchi
+
 from myapp.models import StockFavDB
 
-from myapp.models import PriEPSPER_DB
-
+from myapp.models import Stock6Sign202402
+from myapp.models import Stock6Sign202403
+from myapp.models import Stock6Sign202404
 
 from module import func0
 from module import func
@@ -96,15 +43,14 @@ from module_PERseg import Price5yDB, Price5y, PERseg, PERsegPEG, PERsegPEGxDB, P
 from module_Kn import KnQuery, Kn8yPrice
 
 from myapp import views
-from .views_monthlyAlterStuff import DBfunc 
 DBv = DBfunc()
 
 #DBv = DBfunc()
 
 #################每個月換資料庫
-DB1 = Stock6Sign202209
-DB2 = Stock6Sign202208
-DB3 = Stock6Sign202207
+DB1 = Stock6Sign202402
+DB2 = Stock6Sign202403
+DB3 = Stock6Sign202404
 #############################################
 
 #DBv = NowTimeDBs()  #從views_monthlyAlterStuff.py取得每月需要的資料庫變數

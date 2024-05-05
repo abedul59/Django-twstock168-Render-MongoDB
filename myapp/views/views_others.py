@@ -26,71 +26,7 @@ from django.contrib.auth import authenticate
 from django.contrib import auth
 from django.contrib.auth.models import User
 
-from myapp.models import Stock6Sign
-from myapp.models import StockPERseg
 
-from myapp.models import DCStock6Sign202011
-from myapp.models import DCStock6Sign2020Q4
-from myapp.models import DCStock6Sign202101
-from myapp.models import DCStock6Sign202102
-from myapp.models import DCStock6Sign202103
-from myapp.models import DCStock6Sign202104
-from myapp.models import DCStock6Sign202105
-from myapp.models import DCStock6Sign202106
-from myapp.models import DCStock6Sign202107
-from myapp.models import DCStock6Sign202108
-from myapp.models import DCStock6Sign202109
-from myapp.models import DCStock6Sign202110
-from myapp.models import DCStock6Sign202111
-from myapp.models import DCStock6Sign202112
-
-
-from myapp.models import Stock6Sign202005
-from myapp.models import Stock6Sign202006
-
-from myapp.models import Stock6Sign2020Q2
-from myapp.models import Stock6Sign202008
-from myapp.models import Stock6Sign202009
-from myapp.models import Stock6Sign2020Q3
-from myapp.models import Stock6Sign202011
-from myapp.models import Stock6Sign2020Q4
-from myapp.models import Stock6Sign202101
-from myapp.models import Stock6Sign202102
-from myapp.models import Stock6Sign202103
-from myapp.models import Stock6Sign202104
-from myapp.models import Stock6Sign202105
-from myapp.models import Stock6Sign202106
-from myapp.models import Stock6Sign202107
-from myapp.models import Stock6Sign202108
-from myapp.models import Stock6Sign202109
-from myapp.models import Stock6Sign202110
-from myapp.models import Stock6Sign202111
-from myapp.models import Stock6Sign202112
-from myapp.models import Stock6Sign202201
-from myapp.models import Stock6Sign202202
-from myapp.models import Stock6Sign202203
-from myapp.models import Stock6Sign202204
-from myapp.models import Stock6Sign202205
-from myapp.models import Stock6Sign202206
-from myapp.models import Stock6Sign202207
-from myapp.models import Stock6Sign202208
-from myapp.models import Stock6Sign202209
-from myapp.models import Stock6Sign202210
-from myapp.models import Stock6Sign202211
-from myapp.models import Stock6Sign202212
-
-from myapp.models import Stock6Sign202301
-from myapp.models import Stock6Sign202302
-from myapp.models import Stock6Sign202303
-from myapp.models import Stock6Sign202304
-from myapp.models import Stock6Sign202305
-from myapp.models import Stock6Sign202306
-from myapp.models import Stock6Sign202307
-from myapp.models import Stock6Sign202308
-from myapp.models import Stock6Sign202309
-from myapp.models import Stock6Sign202310
-from myapp.models import Stock6Sign202311
-from myapp.models import Stock6Sign202312
 
 from myapp.models import Stock6Sign202401
 from myapp.models import Stock6Sign202402
@@ -98,129 +34,17 @@ from myapp.models import Stock6Sign202403
 from myapp.models import Stock6Sign202404
 from myapp.models import Stock6Sign202405
 from myapp.models import Stock6Sign202406
-#from myapp.models import Stock6sta2021
-#from myapp.models import Stock6Sign202109
-#from myapp.models import Stock6Sign202110
-#from myapp.models import Stock6Sign202111
-#from myapp.models import Stock6Sign202112
 
 
 
-from myapp.models import StockPERseg202005
-from myapp.models import StockPERseg202006
-from myapp.models import StockPERseg2020Q2
-from myapp.models import StockPERseg202008
-from myapp.models import StockPERseg202009
-from myapp.models import StockPERseg2020Q3
-from myapp.models import StockPERseg202011
-from myapp.models import StockPERseg2020Q4
-from myapp.models import StockPERseg202101
-from myapp.models import StockPERseg202102
-from myapp.models import StockPERseg202103
-from myapp.models import StockPERseg202104
-from myapp.models import StockPERseg202105
-from myapp.models import StockPERseg202106
-from myapp.models import StockPERseg202107
-from myapp.models import StockPERseg202108
-from myapp.models import StockPERseg202109
-from myapp.models import StockPERseg202110
-from myapp.models import StockPERseg202111
-from myapp.models import StockPERseg202112
-from myapp.models import StockPERseg202201
-from myapp.models import StockPERseg202202
-from myapp.models import StockPERseg202203
-from myapp.models import StockPERseg202204
-from myapp.models import StockPERseg202205
-from myapp.models import StockPERseg202206
-from myapp.models import StockPERseg202207
-from myapp.models import StockPERseg202208
-from myapp.models import StockPERseg202209
-from myapp.models import StockPERseg202210
-from myapp.models import StockPERseg202211
-from myapp.models import StockPERseg202212
-
-from myapp.models import StockPERseg202301
-from myapp.models import StockPERseg202302
-from myapp.models import StockPERseg202303
-from myapp.models import StockPERseg202304
-from myapp.models import StockPERseg202305
-from myapp.models import StockPERseg202306
-from myapp.models import StockPERseg202307
-from myapp.models import StockPERseg202308
-from myapp.models import StockPERseg202309
-from myapp.models import StockPERseg202310
-from myapp.models import StockPERseg202311
-from myapp.models import StockPERseg202312
-
-from myapp.models import StockPERseg202401
-from myapp.models import StockPERseg202402
-from myapp.models import StockPERseg202403
-from myapp.models import StockPERseg202404
-from myapp.models import StockPERseg202405
-from myapp.models import StockPERseg202406
-
-from myapp.models import EpsProfit2020Q1
-from myapp.models import EpsProfit2020Q2
-from myapp.models import EpsProfit2020Q3
-from myapp.models import EpsProfit2020Q4
-from myapp.models import EpsProfit2021Q1
-from myapp.models import EpsProfit2021Q2
-from myapp.models import EpsProfit2021Q3
-from myapp.models import EpsProfit2021Q4
-from myapp.models import EpsProfit2022Q1
-from myapp.models import EpsProfit2022Q3
-
-from myapp.models import StockPERsegStable2020
-from myapp.models import StockPERsegStable2020Q2
-from myapp.models import StockPERsegStable2020Q3
-from myapp.models import StockPERsegStable2020Q3x
-from myapp.models import StockPERsegStable2020Q4
-from myapp.models import StockPERsegStable2021Q1
-from myapp.models import StockPERsegStable2021Q2
-from myapp.models import StockPERsegStable2021Q3
-from myapp.models import StockPERsegStable2021Q4
-from myapp.models import StockPERsegStable2022Q1
-from myapp.models import StockPERsegStable2022Q3
 
 
 
-from myapp.models import EPSachieve
-from myapp.models import EPSachieve2020Q2
-from myapp.models import EPSachieve2020Q3
-from myapp.models import EPSachieve2021Q1
-from myapp.models import EPSachieve2021Q2
-from myapp.models import EPSachieve2021Q3
-from myapp.models import EPSachieve2022Q1
-from myapp.models import EPSachieve2022Q3
-
-from myapp.models import StockCapVar
-from myapp.models import StockCapVar2020Q2
-from myapp.models import StockCapVar2020Q3
-from myapp.models import StockCapVar2020Q4
-from myapp.models import StockCapVar2021Q1
-from myapp.models import StockCapVar2021Q2
-from myapp.models import StockCapVar2021Q3
-from myapp.models import StockCapVar2021Q4
-from myapp.models import StockCapVar2022Q1
-from myapp.models import StockCapVar2022Q3
-
-from myapp.models import SubCats202011
-from myapp.models import SubCats202102
-from myapp.models import SubCats202103
-from myapp.models import SubCats202104
-from myapp.models import SubCats202105
-from myapp.models import SubCats202106
-from myapp.models import SubCats202107
-from myapp.models import SubCats202108
-from myapp.models import SubCats202109
-from myapp.models import SubCats202110
-from myapp.models import SubCats202111
-from myapp.models import SubCats202112
 
 from myapp.models import StockFavs_test168
 from myapp.models import StockFavDB
 
-from myapp.models import PriEPSPER_DB
+
 
 #from django.contrib.auth.decorators import login_required
 from django.contrib.auth.decorators import permission_required
