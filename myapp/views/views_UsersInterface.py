@@ -70,8 +70,7 @@ from myapp.models import Stock6Sign202201
 from myapp import models
 
 from myapp.models import StockFavs_test168
-from myapp.models import StockFavs_jonyi
-from myapp.models import StockFavs_chenchi
+
 from myapp.models import StockFavDB
 
 from myapp.models import PriEPSPER_DB
@@ -174,10 +173,7 @@ def usersmain_common(request, username=None, pageindex=None):  #使用者功能�
 		DB = StockFavs_test168
 	elif username=='test168':
 		DB = StockFavs_test168    
-	elif username=='jonyi729':
-		DB = StockFavs_jonyi    
-	elif username=='chenchi':
-		DB = StockFavs_chenchi
+
 	global page1
 	pagesize = 20  #8
 	newsall = DB.objects.all().order_by('-id')

@@ -209,19 +209,7 @@ from myapp.models import SubCats202112
 from myapp.models import StockFavs_test168
 
 
-from myapp.models import StockFavs_bobmax
-from myapp.models import StockFavs_deno36
-from myapp.models import StockFavs_donhonlin
-from myapp.models import StockFavs_goldsilver
-from myapp.models import StockFavs_hyeth
-from myapp.models import StockFavs_magicjohn
-from myapp.models import StockFavs_jonyi
-from myapp.models import StockFavs_hakkai
-from myapp.models import StockFavs_bakylews
-from myapp.models import StockFavs_chenchi
-from myapp.models import StockFavs_yuhuahsiao
-from myapp.models import StockFavs_liusnow
-from myapp.models import StockFavs_kevinlee
+
 
 
 from myapp.models import PriEPSPER_DB
@@ -245,60 +233,6 @@ admin.site.register(models.USBondYieldDB)
 class StockFavs_test168Admin(admin.ModelAdmin):
     list_display=('id','cStockID','cStockName','cDBURL','cScore1st','cScore2nd','cScore3rd','cTodayClose','cPredict_EPS','cPredict_high_price','cPredict_low_price','cNew_up_profit','cNew_down_loss','cRisk_reward','cPredict_high_price_down30','cPredict_low_price_down30','cNew_up_profit_down30','cNew_down_loss_down30','cRisk_reward_down30','cEPSach','cStCap','cEPSnPrf','cPERstab','pubtime')
 admin.site.register(StockFavs_test168,StockFavs_test168Admin)
-
-
-class StockFavs_bobmaxAdmin(admin.ModelAdmin):
-    list_display=('id','cStockID','cStockName','cDBURL','cScore1st','cScore2nd','cScore3rd','cTodayClose','cPredict_EPS','cPredict_high_price','cPredict_low_price','cNew_up_profit','cNew_down_loss','cRisk_reward','cEPSach','cStCap','cEPSnPrf','cPERstab','pubtime')
-admin.site.register(StockFavs_bobmax,StockFavs_bobmaxAdmin)
-
-class StockFavs_deno36Admin(admin.ModelAdmin):
-    list_display=('id','cStockID','cStockName','cDBURL','cScore1st','cScore2nd','cScore3rd','cTodayClose','cPredict_EPS','cPredict_high_price','cPredict_low_price','cNew_up_profit','cNew_down_loss','cRisk_reward','cEPSach','cStCap','cEPSnPrf','cPERstab','pubtime')
-admin.site.register(StockFavs_deno36,StockFavs_deno36Admin)
-
-class StockFavs_donhonlinAdmin(admin.ModelAdmin):
-    list_display=('id','cStockID','cStockName','cDBURL','cScore1st','cScore2nd','cScore3rd','cTodayClose','cPredict_EPS','cPredict_high_price','cPredict_low_price','cNew_up_profit','cNew_down_loss','cRisk_reward','cEPSach','cStCap','cEPSnPrf','cPERstab','pubtime')
-admin.site.register(StockFavs_donhonlin,StockFavs_donhonlinAdmin)
-
-class StockFavs_goldsilverAdmin(admin.ModelAdmin):
-    list_display=('id','cStockID','cStockName','cDBURL','cScore1st','cScore2nd','cScore3rd','cTodayClose','cPredict_EPS','cPredict_high_price','cPredict_low_price','cNew_up_profit','cNew_down_loss','cRisk_reward','cEPSach','cStCap','cEPSnPrf','cPERstab','pubtime')
-admin.site.register(StockFavs_goldsilver,StockFavs_goldsilverAdmin)
-
-class StockFavs_hyethAdmin(admin.ModelAdmin):
-    list_display=('id','cStockID','cStockName','cDBURL','cScore1st','cScore2nd','cScore3rd','cTodayClose','cPredict_EPS','cPredict_high_price','cPredict_low_price','cNew_up_profit','cNew_down_loss','cRisk_reward','cEPSach','cStCap','cEPSnPrf','cPERstab','pubtime')
-admin.site.register(StockFavs_hyeth,StockFavs_hyethAdmin)
-
-class StockFavs_magicjohnAdmin(admin.ModelAdmin):
-    list_display=('id','cStockID','cStockName','cDBURL','cScore1st','cScore2nd','cScore3rd','cTodayClose','cPredict_EPS','cPredict_high_price','cPredict_low_price','cNew_up_profit','cNew_down_loss','cRisk_reward','cEPSach','cStCap','cEPSnPrf','cPERstab','pubtime')
-admin.site.register(StockFavs_magicjohn,StockFavs_magicjohnAdmin)
-
-class StockFavs_jonyiAdmin(admin.ModelAdmin):
-    list_display=('id','cStockID','cStockName','cDBURL','cScore1st','cScore2nd','cScore3rd','cTodayClose','cPredict_EPS','cPredict_high_price','cPredict_low_price','cNew_up_profit','cNew_down_loss','cRisk_reward','cPredict_high_price_down30','cPredict_low_price_down30','cNew_up_profit_down30','cNew_down_loss_down30','cRisk_reward_down30','cEPSach','cStCap','cEPSnPrf','cPERstab','pubtime')
-admin.site.register(StockFavs_jonyi,StockFavs_jonyiAdmin)
-
-class StockFavs_hakkaiAdmin(admin.ModelAdmin):
-    list_display=('id','cStockID','cStockName','cDBURL','cScore1st','cScore2nd','cScore3rd','cTodayClose','cPredict_EPS','cPredict_high_price','cPredict_low_price','cNew_up_profit','cNew_down_loss','cRisk_reward','cEPSach','cStCap','cEPSnPrf','cPERstab','pubtime')
-admin.site.register(StockFavs_hakkai,StockFavs_hakkaiAdmin)
-
-class StockFavs_bakylewsAdmin(admin.ModelAdmin):
-    list_display=('id','cStockID','cStockName','cDBURL','cScore1st','cScore2nd','cScore3rd','cTodayClose','cPredict_EPS','cPredict_high_price','cPredict_low_price','cNew_up_profit','cNew_down_loss','cRisk_reward','cEPSach','cStCap','cEPSnPrf','cPERstab','pubtime')
-admin.site.register(StockFavs_bakylews,StockFavs_bakylewsAdmin)
-
-class StockFavs_chenchiAdmin(admin.ModelAdmin):
-    list_display=('id','cStockID','cStockName','cDBURL','cScore1st','cScore2nd','cScore3rd','cTodayClose','cPredict_EPS','cPredict_high_price','cPredict_low_price','cNew_up_profit','cNew_down_loss','cRisk_reward','cPredict_high_price_down30','cPredict_low_price_down30','cNew_up_profit_down30','cNew_down_loss_down30','cRisk_reward_down30','cEPSach','cStCap','cEPSnPrf','cPERstab','pubtime')
-admin.site.register(StockFavs_chenchi,StockFavs_chenchiAdmin)
-
-class StockFavs_yuhuahsiaoAdmin(admin.ModelAdmin):
-    list_display=('id','cStockID','cStockName','cDBURL','cScore1st','cScore2nd','cScore3rd','cTodayClose','cPredict_EPS','cPredict_high_price','cPredict_low_price','cNew_up_profit','cNew_down_loss','cRisk_reward','cEPSach','cStCap','cEPSnPrf','cPERstab','pubtime')
-admin.site.register(StockFavs_yuhuahsiao,StockFavs_yuhuahsiaoAdmin)
-
-class StockFavs_liusnowAdmin(admin.ModelAdmin):
-    list_display=('id','cStockID','cStockName','cDBURL','cScore1st','cScore2nd','cScore3rd','cTodayClose','cPredict_EPS','cPredict_high_price','cPredict_low_price','cNew_up_profit','cNew_down_loss','cRisk_reward','cEPSach','cStCap','cEPSnPrf','cPERstab','pubtime')
-admin.site.register(StockFavs_liusnow,StockFavs_liusnowAdmin)
-
-class StockFavs_kevinleeAdmin(admin.ModelAdmin):
-    list_display=('id','cStockID','cStockName','cDBURL','cScore1st','cScore2nd','cScore3rd','cTodayClose','cPredict_EPS','cPredict_high_price','cPredict_low_price','cNew_up_profit','cNew_down_loss','cRisk_reward','cEPSach','cStCap','cEPSnPrf','cPERstab','pubtime')
-admin.site.register(StockFavs_kevinlee,StockFavs_kevinleeAdmin)
-
 
 
 
