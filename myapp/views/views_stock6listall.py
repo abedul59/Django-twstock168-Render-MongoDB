@@ -212,18 +212,6 @@ from myapp.models import StockCapVar2021Q4
 from myapp.models import StockCapVar2022Q1
 from myapp.models import StockCapVar2022Q3
 
-from myapp.models import SubCats202011
-from myapp.models import SubCats202102
-from myapp.models import SubCats202103
-from myapp.models import SubCats202104
-from myapp.models import SubCats202105
-from myapp.models import SubCats202106
-from myapp.models import SubCats202107
-from myapp.models import SubCats202108
-from myapp.models import SubCats202109
-from myapp.models import SubCats202110
-from myapp.models import SubCats202111
-from myapp.models import SubCats202112
 
 from myapp.models import StockFavs_test168
 from myapp.models import StockFavDB
