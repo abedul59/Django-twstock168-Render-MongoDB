@@ -20,7 +20,7 @@ def EPSach(stock_id):
     url = bank_url0 + sheet_type + stock_id +'.djhtm'
     r = requests.get(url)
     soup = BeautifulSoup(r.content, 'html.parser')
-    table = soup.find_all('table')[0];
+    table = soup.find_all('table')[0]
     dfs0 = pd.read_html(str(table))
     print(dfs0)
 
