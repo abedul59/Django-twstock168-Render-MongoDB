@@ -5,23 +5,36 @@ Created on Thu Jun 18 08:15:54 2020
 @author: PCUSER
 """
 def EPSach(stock_id):
-
-
     import pandas as pd 
     import requests
     from bs4 import BeautifulSoup    
     
-    
-    #取得股票名
-    bank_url0 = 'http://jdata.yuanta.com.tw/' #國泰世華
-    sheet_type = 'z/zc/zca/zca_' #基本資料
-    ###MoneyDJ
+    # 取得股票名
+    bank_url0 = 'http://jdata.yuanta.com.tw/' # 國泰世華 / 元大
+    sheet_type = 'z/zc/zca/zca_' # 基本資料
     url = bank_url0 + sheet_type + stock_id +'.djhtm'
-    r = requests.get(url)
+    
+    # 1. 加上 headers 偽裝成正常瀏覽器
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'
+    }
+    
+    r = requests.get(url, headers=headers) # 記得把 headers 放進來
     soup = BeautifulSoup(r.content, 'html.parser')
-    table = soup.find_all('table')[0];
+    
+    # 2. 加上防錯機制，確認真的有抓到表格再進行下一步
+    tables = soup.find_all('table')
+    if not tables:
+        # 如果沒抓到表格，印出提示或網頁原始碼方便 Debug
+        print(f"找不到股票 {stock_id} 的表格，HTTP 狀態碼: {r.status_code}")
+        # 回傳預設值或錯誤訊息，避免後續程式碼崩潰
+        return "N/A", "N/A", "N/A", "未知的股票", "N/A", "N/A", "N/A"
+        
+    table = tables[0]
     dfs0 = pd.read_html(str(table))
     print(dfs0)
+    
+    # ... 下方的程式碼保持不變 ...
 
 #print(table)
     #stock_id_name = dfs[2][0][0][:-24] #股票代號和名稱
