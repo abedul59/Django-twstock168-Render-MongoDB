@@ -4,7 +4,6 @@ Created on Thu Jun 18 08:15:54 2020
 
 @author: PCUSER
 """
-
 def EPSach(stock_id):
 
 
@@ -20,7 +19,7 @@ def EPSach(stock_id):
     url = bank_url0 + sheet_type + stock_id +'.djhtm'
     r = requests.get(url)
     soup = BeautifulSoup(r.content, 'html.parser')
-    table = soup.find_all('table')[0]
+    table = soup.find_all('table')[0];
     dfs0 = pd.read_html(str(table))
     print(dfs0)
 
@@ -103,7 +102,6 @@ def EPSach(stock_id):
     #+'%'
     
     return eps1, epsq1, epsAchieveRate, stock_name, epsq2, epsq3, epsq1N
-
 
 
 def StockCap(stock_id):   #計算股本變動
